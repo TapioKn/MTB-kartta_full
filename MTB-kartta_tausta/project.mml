@@ -231,7 +231,7 @@
         "extent_cache": "auto",
         "extent": "1208977.18100533,7159071.11973415,4224200.43002062,11228036.8150679",
         "id": "waterway_high",
-        "project": "MTB-kartta",
+        "project": "MTB-kartta_tausta",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "class": "",
@@ -350,7 +350,7 @@
         "key_field": "",
         "password": "postgres",
         "port": "5432",
-        "project": "MTB-kartta",
+        "project": "MTB-kartta_tausta",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT osm_id, way, \"natural\", way_area AS area, COALESCE(leisure, boundary) AS land_type, wetland AS wetland_type\n  FROM planet_osm_polygon\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
@@ -603,7 +603,7 @@
         "user": "postgres",
         "password": "postgres",
         "id": "paths_and_tracks",
-        "project": "MTB-kartta",
+        "project": "MTB-kartta_tausta",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "paths_and_tracks",
@@ -634,7 +634,7 @@
         "user": "postgres",
         "password": "postgres",
         "id": "roads_construction",
-        "project": "MTB-kartta",
+        "project": "MTB-kartta_tausta",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "roads_construction",
@@ -653,7 +653,7 @@
         "key_field": "",
         "password": "postgres",
         "port": "5432",
-        "project": "MTB-kartta",
+        "project": "MTB-kartta_tausta",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "/* roads_high */\n( SELECT way, 0 AS tunnel, 0 AS bridge, 'fill' AS render,\n  CASE\n    WHEN highway = 'motorway' THEN 'motorway'\n    WHEN highway = 'motorway_link' THEN 'motorway_link'\n    WHEN highway = 'trunk' THEN 'trunk'\n    WHEN highway = 'trunk_link' THEN 'trunk_link'\n    WHEN highway = 'primary' THEN 'primary'\n    WHEN highway = 'primary_link' THEN 'primary_link'\n    WHEN highway IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN highway IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN highway = 'residential' THEN 'residential'\n    WHEN highway = 'living_street' THEN 'living_street'\n    WHEN highway = 'service' AND service = 'parking_aisle' THEN 'parking_aisle' \n    WHEN highway = 'service' AND service = 'driveway' THEN 'driveway' \n    WHEN highway IN ('service', 'unclassified', 'road') THEN 'service'\n\n\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND bicycle = 'designated' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND cycleway = 'track' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND \"mtb:scale\" >= '0' THEN 'other'\n    WHEN highway = 'footway' AND bicycle = 'no' THEN 'footway'\n    WHEN highway = 'footway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'footpath' AND bicycle = 'no' THEN 'footway'\n    WHEN highway = 'footpath' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'pedestrian' AND bicycle = 'no' THEN 'footway'\n    WHEN highway = 'pedestrian' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'path' AND bicycle = 'no' THEN 'footway'\n    WHEN highway = 'cycleway' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'footway'\n  \n\n    WHEN highway = 'path' THEN 'other'\n    WHEN highway = 'track' THEN 'other'\n    WHEN highway = 'steps' THEN 'steps'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    WHEN railway IN ('abandoned', 'disused') THEN 'rail_abandoned'\n    WHEN railway = 'platform' THEN 'footway'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
         "type": "postgis",
@@ -783,7 +783,7 @@
         "user": "postgres",
         "password": "postgres",
         "id": "constructs_line",
-        "project": "MTB-kartta",
+        "project": "MTB-kartta_tausta",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "constructs_line",
@@ -814,7 +814,7 @@
         "user": "postgres",
         "password": "postgres",
         "id": "constructs_point",
-        "project": "MTB-kartta",
+        "project": "MTB-kartta_tausta",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "constructs_point",
@@ -895,7 +895,7 @@
         "key_field": "",
         "password": "postgres",
         "port": "5432",
-        "project": "MTB-kartta",
+        "project": "MTB-kartta_tausta",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "/* motorway_label */\n( SELECT way, highway AS type, name, ref, tunnel, oneway, CHAR_LENGTH(ref) AS reflen\n    FROM planet_osm_line\n    WHERE highway IN ('motorway', 'trunk')\n      AND (name IS NOT NULL OR ref IS NOT NULL)\n) AS data",
         "type": "postgis",
@@ -984,5 +984,5 @@
   "metatile": 3,
   "attribution": "Data © OpenStreetMap (and) contributors, ODbL",
   "description": "",
-  "name": "MTB-kartta"
+  "name": "MTB-kartta_tausta"
 }
