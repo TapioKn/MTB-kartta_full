@@ -496,24 +496,6 @@ come in as well.
   [type='other']        { line-opacity: 0; }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ---- Ways under construction ------------------------------------- */
 #roads_construction [zoom>=12] {
   ::case {

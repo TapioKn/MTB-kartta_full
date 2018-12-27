@@ -33,7 +33,7 @@ Map { font-directory: url(./fonts); }
 /* Some fonts are larger or smaller than others. Use this variable to
    globally increase or decrease the font sizes. */
 /* Note this is only implemented for certain things so far */
-@text_adjust: 0;
+@text_adjust: 0; 
 
 /* ================================================================== */
 /* LANDUSE & LANDCOVER COLORS
