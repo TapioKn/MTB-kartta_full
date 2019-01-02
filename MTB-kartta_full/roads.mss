@@ -162,7 +162,7 @@ come in as well.
   }
   [tunnel=1] { line-opacity: 0; }
 
-  [type='other'] { line-opacity: 0; }
+  [type='other'], [type='path'] { line-opacity: 0; }
 
   /* -- Line casing widths -- */
   [zoom=11] {
@@ -180,6 +180,7 @@ come in as well.
     [type='service']       { line-width: 0; }
     [type='cycleway']      { line-width: 0; }
 	  [type='footway']       { line-width: 0; }
+    [type='path']          { line-width: 0; }
     [type='railway']       { line-width: 0; }
     [type='rail_abandoned']{ line-width: 0; }
   }
@@ -198,6 +199,7 @@ come in as well.
     [type='service']       { line-width: 0; }
     [type='cycleway']      { line-width: 0; }
 	  [type='footway']       { line-width: 0; }
+    [type='path']          { line-width: 0; }
     [type='railway']       { line-width: 0; }
     [type='rail_abandoned']{ line-width: 0; }
   }
@@ -216,6 +218,7 @@ come in as well.
     [type='service']       { line-width: 0; }
     [type='cycleway']      { line-width: 0; }
 	  [type='footway']       { line-width: 0; }
+    [type='path']          { line-width: 0; }
     [type='railway']       { line-width: 0; }
   }
   [zoom=14] {
@@ -233,6 +236,7 @@ come in as well.
     [type='service']       { line-width: 0; }
     [type='cycleway']      { line-width: 0; }
 	  [type='footway']       { line-width: 0; }
+    [type='path']          { line-width: 0; }
     [type='railway']       { line-width: 0; }
     [type='rail_abandoned']{ line-width: 0; }
   }
@@ -250,6 +254,7 @@ come in as well.
     [type='service']       { line-width: @rdz15_ser + 2; }
     [type='cycleway']      { line-width: @cwz15_cw + 2; }
 	  [type='footway']       { line-width: @fwz15_cw + 2; }
+    [type='path']          { line-width: 0; }
     [type='railway']       { line-width: 1.5 + 2; }
     [type='rail_abandoned']{ line-width: 1.5 + 2; }
   }
@@ -268,11 +273,12 @@ come in as well.
     [type='service']       { line-width: @rdz16_ser + 2; }
     [type='cycleway']      { line-width: @cwz16_cw + 2; }
 	  [type='footway']       { line-width: @fwz16_cw + 2; }
+    [type='path']          { line-width: 0; }
     [type='railway']       { line-width: 2 + 2; }
     [type='rail_abandoned']{ line-width: 2 + 2; }
   }
 
-  [type='other']      { line-opacity: 0; }
+  [type='other'],[type='path']      { line-opacity: 0; }
 }
 
 /* ---- Way fill lines ----------------------------------------------- */
@@ -329,9 +335,10 @@ come in as well.
     line-cap: round;
     line-join: round;
   }
+  /* No lines for paths/tracks, defined in their own style */
   [type='path'],
   [type='track'] {
-    line-color: #000000;
+    line-opacity: 0;
   }
   [tunnel=1] {
     line-cap: butt;
@@ -469,6 +476,7 @@ come in as well.
  	   [type='footway']       { ::footwaybg    { line-width: @fwz16_cw; line-color: @footwaybg; }
                               ::footwayline  { line-color: @footway;  line-width: @fwz16_lw; line-dasharray: 1, 2; }
      }
+
      /* XXXXXXXXXXXXXXXX   HUOM, BICYCLE=NO HUOMIOINTI TULISI OLLA VAIN, JOS EI OLE MTB:SCALE-TAGIA XXXXXXXXXXXXXXXX */
      /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 

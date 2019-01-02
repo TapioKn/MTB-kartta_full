@@ -592,37 +592,6 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT way, seasonal, \"mtb:scale\", \"mtb:winter\", obstacle, surface, noexit,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND bicycle = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' THEN 'other'\n    WHEN highway = 'cycleway' THEN 'other'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" >= '0' THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility,\n  CASE\n    WHEN width IN ('0.1', '0.2', '0.3', '0.4', '0.5') THEN 'narrow'\n    ELSE 'wide' END AS width\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL AND highway NOT IN ('motorway', 'motorway_link', 'trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'living_street', 'service', 'road', 'cycleway'))\n ORDER BY z_order\n) AS data",
-        "key_field": "",
-        "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "1208977.18100533,7159071.11973415,4224200.43002062,11228036.8150679",
-        "dbname": "osm",
-        "host": "localhost",
-        "port": "5432",
-        "user": "postgres",
-        "password": "postgres",
-        "id": "paths_and_tracks",
-        "project": "MTB-kartta_full",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      },
-      "id": "paths_and_tracks",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "paths_and_tracks"
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        10.860426798488211,
-        53.941427294730666,
-        37.94663809471778,
-        70.48379529530938
-      ],
-      "Datasource": {
-        "type": "postgis",
         "table": "/* roads_high */\n( SELECT way,\n  CASE\n    WHEN construction = 'motorway' THEN 'motorway'\n    WHEN construction = 'motorway_link' THEN 'motorway_link'\n    WHEN construction = 'trunk' THEN 'trunk'\n    WHEN construction = 'trunk_link' THEN 'trunk_link'\n    WHEN construction = 'primary' THEN 'primary'\n    WHEN construction = 'primary_link' THEN 'primary_link'\n    WHEN construction IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN construction IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN construction = 'residential' THEN 'residential'\n    WHEN construction = 'living_street' THEN 'living_street'\n    WHEN construction = 'service' AND service = 'parking_aisle' THEN 'parking_aisle' \n    WHEN construction = 'service' AND service = 'driveway' THEN 'driveway' \n    WHEN construction IN ('service', 'unclassified', 'road') THEN 'service'\n    WHEN construction IN ('footway', 'footpath') THEN 'footway'\n    WHEN construction = 'cycleway' THEN 'cycleway'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE (construction IS NOT NULL)\n  ORDER BY z_order\n) AS data",
         "key_field": "",
         "geometry_field": "",
@@ -643,6 +612,37 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "roads_construction"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        10.860426798488211,
+        53.941427294730666,
+        37.94663809471778,
+        70.48379529530938
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, seasonal, \"mtb:scale\", \"mtb:winter\", obstacle, surface, noexit,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND bicycle = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' THEN 'other'\n    WHEN highway = 'cycleway' THEN 'other'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" >= '0' THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility,\n  CASE\n    WHEN width IN ('0.1', '0.2', '0.3', '0.4', '0.5') THEN 'narrow'\n    ELSE 'wide' END AS width\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL AND highway NOT IN ('motorway', 'motorway_link', 'trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'living_street', 'service', 'road', 'cycleway'))\n ORDER BY z_order\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "1208977.18100533,7159071.11973415,4224200.43002062,11228036.8150679",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres",
+        "id": "paths_and_tracks",
+        "project": "MTB-kartta_full",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "paths_and_tracks",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "paths_and_tracks"
     },
     {
       "Datasource": {
@@ -730,6 +730,34 @@
         70.4065457953023
       ],
       "advanced": {}
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        22.333054496891226,
+        60.99399609477055,
+        23.98148979666173,
+        62.00328089479925
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, bridge, seasonal, \"mtb:scale\", \"mtb:winter\", obstacle, surface, noexit,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND bicycle = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' THEN 'other'\n    WHEN highway = 'cycleway' THEN 'other'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" >= '0' THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility,\n  CASE\n    WHEN width IN ('0.1', '0.2', '0.3', '0.4', '0.5') THEN 'narrow'\n    ELSE 'wide' END AS width\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL AND highway NOT IN ('motorway', 'motorway_link', 'trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'living_street', 'service', 'road', 'cycleway'))\n ORDER BY z_order\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "2486104.25445236,8624444.74465984,2669607.23262847,8859920.79701009",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres"
+      },
+      "id": "paths_and_tracks_bridge",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "paths_and_tracks_bridge"
     },
     {
       "Datasource": {

@@ -173,3 +173,9 @@ Map { font-directory: url(./fonts); }
 /* Also used for other small places: hamlets, suburbs, localities */
 @village_text:      #888;
 @village_halo:      @place_halo;
+
+
+#paths_and_tracks_bridge {
+  line-width:1;
+  line-color:#168;
+}
