@@ -7,7 +7,7 @@ from Queue import Queue
 import threading
 
 try:
-    import mapnik2 as mapnik
+    import mapnik3 as mapnik
 except:
     import mapnik
 
@@ -96,7 +96,7 @@ class RenderThread:
         # Render image with default Agg renderer
         im = mapnik.Image(render_size, render_size)
         mapnik.render(self.m, im)
-        im.save(tile_uri, 'jpeg100')
+        im.save(tile_uri, 'png')
 
 
     def loop(self):
@@ -201,13 +201,14 @@ if __name__ == "__main__":
     # mapfile="/home/nissiant/mapnik-style/pkk_osm_style_summer_map_with_winter_paths.xml"
     # KESAKUUKAUSINA
     #mapfile="/home/nissiant/mapnik-style/pkk_osm_style_summer_map.xml"
-    mapfile="D:/Kartoitus/TMProjects/project/MTB-kartta_full/project.xml"
+    mapfile="D:/Kartoitus/TMProjects/project/MTB-kartta_tausta/project.xml"
     #try:
     #    tile_dir = os.environ['MAPNIK_TILE_DIR']
     #except KeyError:
     #    tile_dir = home + "/osm/tiles/"
 
-    tile_dir = "D:/Kartoitus/MTB-tiles_full/"
+    #tile_dir = "/home/nissiant/tiles_tmp/"
+    tile_dir = "D:/Kartoitus/MTB-tiles_tausta/"
 
 
     if not tile_dir.endswith('/'):
@@ -241,5 +242,4 @@ if __name__ == "__main__":
 
     # Nokia
     bbox = (23.43, 61.43, 23.64, 61.52)
-    render_tiles(bbox, mapfile, tile_dir, 15, 16, "Nokia")
-
+    render_tiles(bbox, mapfile, tile_dir, 15, 15, "Nokia")

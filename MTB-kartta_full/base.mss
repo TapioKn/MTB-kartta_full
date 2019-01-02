@@ -94,8 +94,8 @@
     line-pattern-file: url("./images/natural_cliff.png");
   }
 }
-#landuse_overlays {
 
+#landuse_overlays {
 /* Wetlands */
   [zoom>11] {
     [natural='wetland']            { polygon-fill: @forest; polygon-pattern-file:url(images/natural_wetland.png); }
@@ -149,7 +149,7 @@ Map { background-color: @water; }
 }
 
 /* ================================================================== */
-/* WATER WAYS
+/* WATERWAYS
 /* ================================================================== */
 
 #waterway_low[zoom>=8][zoom<=12] {
@@ -161,7 +161,7 @@ Map { background-color: @water; }
   [zoom=12]{ line-width: 0.8; }
 }
 
-#waterway_med[zoom>=13][zoom<=14] {
+#waterway_med[zoom=13] {
   line-color: @water;
   [type='river'],
   [type='canal'] {
