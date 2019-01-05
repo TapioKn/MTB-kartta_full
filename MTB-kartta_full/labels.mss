@@ -350,15 +350,18 @@
 /* ================================================================== */
 #constructs_point[zoom>=15] {
   [fixme='continue'] {
-    marker-file: url(images/fixme_continue.png);
+    [zoom=15] { marker-file: url(images/fixme_continue-M.png); }
+    [zoom>=16] { marker-file: url(images/fixme_continue-L.png); }
     marker-placement: point;
   }
   [fixme='resurvey'] {
-    marker-file: url(images/fixme_resurvey.png);
+    [zoom=15] { marker-file: url(images/fixme_resurvey-M.png); }
+    [zoom>=16] { marker-file: url(images/fixme_resurvey-L.png); }
     marker-placement: point;
   }
   [noexit='yes'] {
-    marker-file: url(images/noexit_yes.png);
+    [zoom=15] { marker-file: url(images/noexit_yes-M.png); }
+    [zoom>=16] { marker-file: url(images/noexit_yes-L.png); }
     marker-placement: point;
   }
 }
