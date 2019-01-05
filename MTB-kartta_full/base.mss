@@ -53,10 +53,6 @@
                              }
   [type='landfill']          { polygon-fill: @landfill; }
   [type='meadow']            { polygon-fill: @meadow; }
-  [type='military']          { polygon-pattern-file: url("./images/landuse_military.png");
-                               line-width: 3.0;
-                               line-color: @military;
-                               line-opacity: 0.75;  }
   [type='orchard']           { polygon-fill: @farmyard; }
   [type='park']              { polygon-fill: @park; }
   [type='parking']           { polygon-fill: @parking; }
@@ -92,6 +88,14 @@
 
   [type="cliff"][zoom>=14] {
     line-pattern-file: url("./images/natural_cliff.png");
+  }
+  ::military {
+    [type='military'] {
+      polygon-pattern-file: url("./images/landuse_military.png");
+      polygon-pattern-opacity: 0.5;
+      line-width: 1.5;
+      line-color: @military;
+      line-opacity: 0.5;  }
   }
 }
 

@@ -349,7 +349,7 @@
 }
 
 /* ================================================================== */
-/* FIXME/NOEXIT LABELS
+/* FIXME/NOEXIT/PARKING LABELS
 /* ================================================================== */
 #constructs_point[zoom>=15] {
   [fixme='continue'] {
@@ -367,4 +367,5 @@
     [zoom>=16] { marker-file: url(images/noexit_yes-L.png); }
     marker-placement: point;
   }
+
 }
