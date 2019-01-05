@@ -54,7 +54,7 @@ Map { font-directory: url(./fonts); }
 @grassland:         desaturate(lighten(#eeffcc, 3%), 5%);      /* #eeffcc; */
 @hedge:             desaturate(lighten(#9fb77b, 3%), 5%);      /* #9fb77b; */
 @hospital:          desaturate(lighten(#fadbe1, 3%), 5%);      /* #ff0037; */
-@industrial:        desaturate(lighten(#f0f3f4, 3%), 0%);      /* #f0f3f4; */
+@industrial:        desaturate(lighten(#eaeff1, 3%), 0%);      /* #eaeff1; */
 @land:              desaturate(lighten(#f5f5f5, 3%), 5%);      /* Base color for the map */ /* testing color: #f4c3f3;*/
 @landfill:          desaturate(lighten(#ccc3b3, 3%), 5%);      /* #ccc3b3; */
 @meadow:            desaturate(lighten(#f5fadb, 3%), 5%);      /* #f5fadb; */
