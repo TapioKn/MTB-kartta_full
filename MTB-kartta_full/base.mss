@@ -66,7 +66,7 @@
   [type='railway']           { polygon-fill: @industrial; }
   [type='recreation_ground'] { polygon-fill: @park; }
   [type='residential']       { polygon-fill: @residential;
-                               [zoom>=15] { 
+                               [zoom>=15] {
                                line-width: 0.8;
                                line-color: @residential * 0.8;
                                line-opacity: 1.0;
@@ -77,6 +77,17 @@
   [type='school']            { polygon-fill: @school; }
   [type='scrub']             { polygon-fill: #f2ffcc;
                                polygon-pattern-file: url("./images/natural_scrub.png"); }
+  [type='substation'],
+  [type='sub_station'],
+  [type='station'],
+  [type='plant'] {
+    polygon-fill: desaturate(darken(@industrial,20%),10%);
+    [zoom>=15] {
+    line-width: 0.8;
+    line-color: @industrial * 0.6;
+    line-opacity: 1.0;
+    }
+  }
   [type='clearcut']          { polygon-fill: #f2ffcc;
                                polygon-pattern-file: url("./images/natural_scrub.png"); }
   [type='sports_center']     { polygon-fill: @sports; }
