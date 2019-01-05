@@ -6,7 +6,7 @@
 
 #place::city[type='city'][zoom>=8][zoom<=15] {
   text-name:'[name]';
-  text-face-name:@sans;
+  text-face-name:@sans_bold;
   text-placement:point;
   text-fill:@city_text;
   text-halo-fill:@city_halo;
@@ -57,7 +57,7 @@
 
 #place::town[type='town'][zoom>=9][zoom<=17] {
   text-name:'[name]';
-  text-face-name:@sans;
+  text-face-name:@sans_bold;
   text-placement:point;
   text-fill:@town_text;
   text-size:9;
@@ -102,7 +102,7 @@
 #place::small[type='hamlet'][zoom>=13],
 #place::small[type='neighbourhood'][zoom>=13] {
   text-name:'[name]';
-  text-face-name:@sans;
+  text-face-name:@sans_bold;
   text-placement:point;
   text-fill:@other_text;
   text-size:10;
@@ -170,10 +170,12 @@
     text-fill: #4b4b4b;
     text-halo-fill: #fff;
     // Specific style overrides for different types of areas:
-    [type='park'][zoom>=10] {
+    [type='park'][zoom>=14],
+    [type='forest'][zoom>=14],
+    [type='wood'][zoom>=14] {
       text-face-name: @sans_lt;
       text-fill: @park * 0.6;
-      text-halo-fill: lighten(@park, 90%);
+      text-halo-fill: lighten(@park, 80%);
     }
     [type='golf_course'][zoom>=10] {
       text-fill: @sports * 0.6;
@@ -193,7 +195,8 @@
       text-fill: @school * 0.6;
       text-halo-fill: lighten(@school, 90%);
     }
-    [type='water'][zoom>=10] {
+    [type='water'][zoom>=10],
+    [type='wetland'][zoom>=14] {
       text-fill: @water * 0.1;
       text-halo-fill: lighten(@water, 90%);
     }
@@ -230,17 +233,17 @@
 
 #waterway_label[type='river'][zoom>=13],
 #waterway_label[type='canal'][zoom>=15],
-#waterway_label[type='stream'][zoom>=17] {
+#waterway_label[type='stream'][zoom>=16] {
   text-name: '[name]';
   text-face-name: @sans_italic;
   text-fill: @water * 0.75;
-  text-halo-fill: fadeout(lighten(@water,5%),25%);
-  text-halo-radius: 1;
+  text-halo-fill: fadeout(lighten(@water,25%),25%);
+  text-halo-radius: 1.25;
   text-placement: line;
   text-min-distance: 400;
   text-size: 10;
   [type='river'][zoom=15],
-  [type='canal'][zoom=16] {
+  [type='canal'][zoom>=16] {
     text-size: 11;
   }
   [type='river'][zoom>=16] {
