@@ -62,10 +62,11 @@
   [type='playground']        { polygon-fill: @sports; }
   [type='pier']              { polygon-fill: @plaza; }
   [type='port']              { polygon-fill: @industrial; }
+  [type='quarry']            { polygon-fill: desaturate(@landfill,30%); }
   [type='railway']           { polygon-fill: @industrial; }
   [type='recreation_ground'] { polygon-fill: @park; }
   [type='residential']       { polygon-fill: @residential;
-                               [zoom>=15] {
+                               [zoom>=15] { 
                                line-width: 0.8;
                                line-color: @residential * 0.8;
                                line-opacity: 1.0;
