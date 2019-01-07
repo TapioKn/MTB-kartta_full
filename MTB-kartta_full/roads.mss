@@ -77,7 +77,7 @@ come in as well.
 @cwz12_cw: 1.5;  @cwz12_lw: 1.0;  @cwz12_da: 4, 2;
 @cwz13_cw: 2.0;  @cwz13_lw: 1.5;  @cwz13_da: 4, 2;
 @cwz14_cw: 2.0;  @cwz14_lw: 1.5;  @cwz14_da: 4, 2;
-@cwz15_cw: 3.0;  @cwz15_lw: 1.8;  @cwz15_da: 4, 2;
+@cwz15_cw: 3.0;  @cwz15_lw: 1.6;  @cwz15_da: 4, 2;
 @cwz16_cw: 4.0;  @cwz16_lw: 1.8;  @cwz16_da: 4, 2;
 
 /* Footway case widths, line widths and dasharrays */
@@ -85,7 +85,7 @@ come in as well.
 @fwz12_cw: 0.5;  @fwz12_lw: 0.0;  @fwz12_da: 3, 2;
 @fwz13_cw: 0.0;  @fwz13_lw: 0.0;  @fwz13_da: 3, 2;
 @fwz14_cw: 1.5;  @fwz14_lw: 1.0;  @fwz14_da: 3, 2;
-@fwz15_cw: 2.0;  @fwz15_lw: 1.4;  @fwz15_da: 3, 2;
+@fwz15_cw: 2.0;  @fwz15_lw: 1.2;  @fwz15_da: 3, 2;
 @fwz16_cw: 3.0;  @fwz16_lw: 1.4;  @fwz16_da: 3, 2;
 
 /* Path case widths, line widths and dasharrays */
