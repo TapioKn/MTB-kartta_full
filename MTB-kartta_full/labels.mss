@@ -174,7 +174,7 @@
     [type='forest'][zoom>=14],
     [type='wood'][zoom>=14] {
       text-face-name: @sans_lt;
-      text-fill: @park * 0.6;
+      text-fill: @park * 0.5;
       text-halo-fill: lighten(@park, 80%);
     }
     [type='golf_course'][zoom>=10] {
@@ -205,16 +205,23 @@
       text-halo-fill: lighten(@water, 90%);
     }
   }
-  [zoom=15][area>1600000],
-  [zoom=16][area>80000] {
+  [zoom=15][area>1500000] {
     text-name: "[name]";
     text-size: 12;
     text-wrap-width: 60;
     text-character-spacing: 1;
     text-halo-radius: 2;
   }
+  [zoom=16][area>50000] {
+    text-name: "[name]";
+    text-size: 12;
+    text-wrap-width: 60;
+    text-character-spacing: 1;
+    text-halo-radius: 1.5;
+  }
 }
 
+[zoom=16][area>80000]
 #poi[type='university'][zoom>=15],
 #poi[type='hospital'][zoom>=16],
 #poi[type='school'][zoom>=17],

@@ -484,7 +484,7 @@ come in as well.
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz16_lw; line-dasharray: @cwz16_da; }
      }
  	   [type='footway']       { ::footwaybg    { line-width: @fwz16_cw; line-color: @footwaybg; }
-                              ::footwayline  { line-color: @footway;  line-width: @fwz16_lw; line-dasharray: 1, 2; }
+                              ::footwayline  { line-color: @footway;  line-width: @fwz16_lw; line-dasharray: @fwz16_da; }
      }
 
      /* XXXXXXXXXXXXXXXX   HUOM, BICYCLE=NO HUOMIOINTI TULISI OLLA VAIN, JOS EI OLE MTB:SCALE-TAGIA XXXXXXXXXXXXXXXX */
@@ -821,7 +821,7 @@ come in as well.
       [type='service']       { line-width: @rdz16_ser; }
       [type='parking_aisle'] { line-width: @trz16_cw - 2; }
       [type='cycleway']      { line-color: @cycleway; line-width: @cwz16_lw; line-dasharray: @cwz16_da; }
-      [type='footway']       { line-color: @footway;  line-width: @fwz16_lw; line-dasharray: @fwz16_da; }
+      [type='footway']       { line-color: @footway;  line-width: @fwz15_lw; line-dasharray: @fwz16_da; }
     }
   }
 }
