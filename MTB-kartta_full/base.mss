@@ -26,10 +26,15 @@
   [type='camp_site']         { polygon-fill: @park; }
   [type='college']           { polygon-fill: @school; }
   [type='commercial']        { polygon-fill: @commercial;
-                               [zoom>=15] {
-                               line-width: 0.8;
                                line-color: @commercial * 0.8;
-                               line-opacity: 1.0;
+                               line-opacity: 0;
+                               [zoom=15] {
+                                 line-opacity: 1.0;
+                                 line-width: 0.5;
+                               }
+                               [zoom>=16] {
+                                 line-opacity: 1.0;
+                                 line-width: 0.8;
                                }
                              }
   [type='common']            { polygon-fill: @park; }
@@ -44,11 +49,17 @@
   [type='grass']             { polygon-fill: @grass; }
   [type='grassland']         { polygon-fill: @grassland; }
   [type='hospital']          { polygon-fill: @hospital; }
+  [type='nursing_home']      { polygon-fill: desaturate(@hospital, 20%); }
   [type='industrial']        { polygon-fill: @industrial;
-                               [zoom>=15] {
-                               line-width: 0.8;
                                line-color: @industrial * 0.8;
-                               line-opacity: 1.0;
+                               line-opacity: 0;
+                               [zoom=15] {
+                                 line-opacity: 1.0;
+                                 line-width: 0.5;
+                               }
+                               [zoom>=16] {
+                                 line-opacity: 1.0;
+                                 line-width: 0.8;
                                }
                              }
   [type='landfill']          { polygon-fill: @landfill; }
@@ -66,10 +77,15 @@
   [type='railway']           { polygon-fill: @industrial; }
   [type='recreation_ground'] { polygon-fill: @park; }
   [type='residential']       { polygon-fill: @residential;
-                               [zoom>=15] {
-                               line-width: 0.8;
                                line-color: @residential * 0.8;
+                               line-opacity: 0;
+                               [zoom=15] {
                                line-opacity: 1.0;
+                               line-width: 0.5;
+                               }
+                               [zoom>=16] {
+                               line-opacity: 1.0;
+                               line-width: 0.8;
                                }
                              }
   [type='reservoir']         { polygon-fill: @water; }
