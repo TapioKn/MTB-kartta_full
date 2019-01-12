@@ -371,8 +371,11 @@ come in as well.
      [type='cycleway'] { ::cyclewaybg   { line-width: @cwz15_cw; line-color: @cyclewaybg; }
                          ::cyclewayline { line-color: @cycleway; line-width: @cwz11_lw; line-dasharray: @cwz11_da; }
      }
- 	  [type='footway']  { ::footwaybg    { line-width: @fwz11_cw; line-color: @footwaybg; }
+ 	   [type='footway']  { ::footwaybg    { line-width: @fwz11_cw; line-color: @footwaybg; }
                          ::footwayline  { line-color: @footway;  line-width: @fwz11_lw; line-dasharray: @fwz11_da; }
+     }
+     [type='nocycle']  {  ::nocyclebg    { line-width: @fwz11_cw; line-color: @footwaybg; }
+                          ::nocycleline  { line-color: @footway;  line-width: @fwz11_lw; line-dasharray: 1, 2; }
      }
    }
    [zoom=12] {
@@ -392,8 +395,14 @@ come in as well.
      [type='cycleway'] { ::cyclewaybg   { line-width: @cwz12_cw; line-color: @cyclewaybg; }
                          ::cyclewayline { line-color: @cycleway; line-width: @cwz12_lw; line-dasharray: @cwz12_da; }
      }
- 	  [type='footway']  { ::footwaybg    { line-width: @fwz12_cw; line-color: @footwaybg; }
+ 	   [type='footway']  { ::footwaybg    { line-width: @fwz12_cw; line-color: @footwaybg; }
                          ::footwayline  { line-color: @footway;  line-width: @fwz12_lw; line-dasharray: @fwz12_da; }
+     }
+     [type='nocycle']  {  ::nocyclebg    { line-width: @fwz12_cw; line-color: @footwaybg; }
+                          ::nocycleline  { line-color: @footway;  line-width: @fwz12_lw; line-dasharray: 1, 2; }
+     }
+     [type='nocycle']  {  ::nocyclebg    { line-width: @fwz12_cw; line-color: @footwaybg; }
+                          ::nocycleline  { line-color: @footway;  line-width: @fwz12_lw; line-dasharray: 1, 2; }
      }
    }
    [zoom=13] {
@@ -414,8 +423,11 @@ come in as well.
      [type='cycleway'] { ::cyclewaybg   { line-width: @cwz15_cw; line-color: @cyclewaybg; }
                          ::cyclewayline { line-color: @cycleway; line-width: @cwz13_lw; line-dasharray: @cwz13_da; }
      }
- 	  [type='footway']  { ::footwaybg    { line-width: @fwz13_cw; line-color: @footwaybg; }
+ 	   [type='footway']  { ::footwaybg    { line-width: @fwz13_cw; line-color: @footwaybg; }
                          ::footwayline  { line-color: @footway;  line-width: @fwz13_lw; line-dasharray: @fwz13_da; }
+     }
+     [type='nocycle']  {  ::nocyclebg    { line-width: @fwz13_cw; line-color: @footwaybg; }
+                          ::nocycleline  { line-color: @footway;  line-width: @fwz13_lw; line-dasharray: 1, 2; }
      }
    }
    [zoom=14] {
@@ -437,8 +449,11 @@ come in as well.
                          ::cyclewayline { line-color: @cycleway; line-width: @cwz14_lw; line-dasharray: @cwz14_da; }
      }
      /* Cycleways/footways under construction zlvl>=14 */
- 	  [type='footway']  { ::footwaybg    { line-width: @fwz14_cw; line-color: @footwaybg; }
+ 	   [type='footway']  { ::footwaybg    { line-width: @fwz14_cw; line-color: @footwaybg; }
                          ::footwayline  { line-color: @footway;  line-width: @fwz14_lw; line-dasharray: @fwz14_da; }
+     }
+     [type='nocycle']  {  ::nocyclebg    { line-width: @fwz14_cw; line-color: @footwaybg; }
+                          ::nocycleline  { line-color: @footway;  line-width: @fwz14_lw; line-dasharray: 1, 2; }
      }
      [type='steps']         { line-width: @cwz16_cw; line-color: @footway; line-dasharray: 1, 2.5; }
    }
@@ -460,8 +475,11 @@ come in as well.
      [type='cycleway'] { ::cyclewaybg   { line-width: @cwz15_cw; line-color: @cyclewaybg; }
                          ::cyclewayline { line-color: @cycleway; line-width: @cwz15_lw; line-dasharray: @cwz15_da; }
      }
- 	  [type='footway']  { ::footwaybg    { line-width: @fwz15_cw; line-color: @footwaybg; }
+     [type='footway']  { ::footwaybg    { line-width: @fwz15_cw; line-color: @footwaybg; }
                          ::footwayline  { line-color: @footway;  line-width: @fwz15_lw; line-dasharray: @fwz15_da; }
+     }
+     [type='nocycle']  {  ::nocyclebg    { line-width: @fwz15_cw; line-color: @footwaybg; }
+                          ::nocycleline  { line-color: @footway;  line-width: @fwz15_lw; line-dasharray: 1, 2; }
      }
      [type='steps']         { line-width: @cwz16_cw; line-color: @footway; line-dasharray: 1, 2.5; }
    }
@@ -486,16 +504,12 @@ come in as well.
  	   [type='footway']       { ::footwaybg    { line-width: @fwz16_cw; line-color: @footwaybg; }
                               ::footwayline  { line-color: @footway;  line-width: @fwz16_lw; line-dasharray: @fwz16_da; }
      }
-
-     /* XXXXXXXXXXXXXXXX   HUOM, BICYCLE=NO HUOMIOINTI TULISI OLLA VAIN, JOS EI OLE MTB:SCALE-TAGIA XXXXXXXXXXXXXXXX */
-     /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
-
-    /* [type='cycleway']  	  { ::cyclewaybg    { line-width: @cwz16_cw; line-color: @footwaybg; }
-                              ::cyclewayline  { line-color: @footway;  line-width: @cwz16_lw; line-dasharray: @cwz16_da; }
-     }*/
+     [type='nocycle']  {  ::nocyclebg    { line-width: @fwz16_cw; line-color: @footwaybg; }
+                          ::nocycleline  { line-color: @footway;  line-width: @fwz16_lw; line-dasharray: 1, 2; }
+     }
      [type='steps']         { line-width: @cwz16_cw; line-color: @footway; line-dasharray: 1, 2.5; }
    }
-   [type='other']           { line-color: #ff00e6; line-opacity: 0; }
+   [type='other']           { line-color: #ff00e6; line-opacity: 0; } /* For checking missing rendering */
  }
 
 
