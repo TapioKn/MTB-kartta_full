@@ -373,6 +373,7 @@
     [zoom=15] { marker-file: url(images/noexit_yes-M.png); }
     [zoom>=16] { marker-file: url(images/noexit_yes-L.png); }
     marker-placement: point;
+    marker-opacity: 0.5;
   }
 
 }
