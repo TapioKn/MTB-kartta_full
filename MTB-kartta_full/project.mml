@@ -138,7 +138,7 @@
         "port": "5432",
         "project": "MTB-kartta_full",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT osm_id, way, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism, man_made, power) AS type\n  FROM planet_osm_polygon\n  ORDER BY way_area DESC\n) AS data",
+        "table": "( SELECT osm_id, way, area AS areatype, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism, man_made, power) AS type\n  FROM planet_osm_polygon\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
         "user": "postgres",
         "extent_cache": "auto",
@@ -800,7 +800,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "/* constructs_line */\n( SELECT way,\n  CASE\n    WHEN aerialway = 'drag_lift' THEN 'minor_line'\n    WHEN power = 'minor_line' THEN 'minor_line'\n    WHEN power = 'line' THEN 'major_line'\n    WHEN barrier = 'fence' THEN 'fence'\n    WHEN barrier = 'hedge' THEN 'hedge'\n    WHEN barrier = 'wall' THEN 'wall'\n    WHEN \"natural\"='cliff' THEN 'cliff'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE (aerialway IS NOT NULL OR power IS NOT NULL OR barrier IS NOT NULL OR \"natural\" IS NOT NULL)\n) AS data",
+        "table": "/* constructs_line */\n( SELECT way, area,\n  CASE\n    WHEN aerialway = 'drag_lift' THEN 'minor_line'\n    WHEN power = 'minor_line' THEN 'minor_line'\n    WHEN power = 'line' THEN 'major_line'\n    WHEN barrier = 'fence' THEN 'fence'\n    WHEN barrier = 'hedge' AND area = 'yes' THEN 'areahedge'\n    WHEN barrier = 'hedge' THEN 'hedge'\n    WHEN barrier = 'wall' THEN 'wall'\n    WHEN \"natural\"='cliff' THEN 'cliff'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE (aerialway IS NOT NULL OR power IS NOT NULL OR barrier IS NOT NULL OR \"natural\" IS NOT NULL)\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",

@@ -48,6 +48,10 @@
   [type='golf_course']       { polygon-fill: @golf_course; }
   [type='grass']             { polygon-fill: @grass; }
   [type='grassland']         { polygon-fill: @grassland; }
+  [type='hedge'][areatype='yes'] {
+    line-opacity: 0;
+    [zoom>=14] { polygon-fill: @hedge; }
+  }
   [type='hospital']          { polygon-fill: @hospital; }
   [type='nursing_home']      { polygon-fill: desaturate(@hospital, 20%); }
   [type='industrial']        { polygon-fill: @industrial;
