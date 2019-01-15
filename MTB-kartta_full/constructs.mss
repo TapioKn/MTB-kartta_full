@@ -7,10 +7,6 @@
     [zoom=15]  { line-width: 1; }
     [zoom<=14] { line-width: 0; }
   }
-  [type='areahedge'] {
-    line-opacity: 0;
-    [zoom>=14] { polygon-fill: @hedge; }
-  }
   [type='wall'] {
     line-width: 1.5;
     line-color: @building;

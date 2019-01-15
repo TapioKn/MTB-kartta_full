@@ -84,26 +84,26 @@ Map { font-directory: url(./fonts); }
  */
 
 @motorway_line:    #ffc34d;
-@motorway_fill:    lighten(@motorway_line,10%);
+@motorway_fill:    lighten(@motorway_line,5%);
 @motorway_case:    @motorway_line * 0.3;
 
 @trunk_line:       #ffe18f;
-@trunk_fill:       lighten(@trunk_line,10%);
+@trunk_fill:       lighten(@trunk_line,5%);
 @trunk_case:       @trunk_line * 0.3;
 
 @primary_line:     #ffe8aa;
-@primary_fill:     lighten(@primary_line,10%);
+@primary_fill:     lighten(@primary_line,5%);
 @primary_case:     @primary_line * 0.3;
 
 @mainroad_line:    #ffe18f;
-@mainroad_fill:    lighten(@mainroad_line,10%);
+@mainroad_fill:    lighten(@mainroad_line,5%);
 @mainroad_case:    @mainroad_line * 0.3;
 
 @road_line:        #8c8c8c;
 @road_fill:        #ffffff;
 @road_case:        @land * 0.3;
 
-@rail_regular:     #999999;
+@rail_regular:     #7c7b7b;
 @rail_abandoned:   #bfbfbf;
 @rail_fill:        #ffffff;
 
@@ -161,7 +161,7 @@ Map { font-directory: url(./fonts); }
 
 @poi_text:          #4b4b4b;
 
-@road_text:         #4b4b4b;
+@road_text:         #222222;
 @road_halo:         #fff;
 
 @other_text:        #4b4b4b;
