@@ -95,7 +95,7 @@
   [type='reservoir']         { polygon-fill: @water; }
   [type='retail']            { polygon-fill: @commercial; }
   [type='school']            { polygon-fill: @school; }
-  [type='scrub']             { polygon-fill: #f2ffcc;
+  [type='scrub']             { polygon-fill: @grass;
                                polygon-pattern-file: url("./images/natural_scrub.png"); }
   [type='substation'],
   [type='sub_station'],
