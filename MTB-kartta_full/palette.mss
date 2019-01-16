@@ -119,7 +119,7 @@ Map { font-directory: url(./fonts); }
 
 /* Dash colors                     BACKUP      */
 @footway:         #d9002f;
-@cycleway:        #0241e2;      /* #1448b8     */
+@cycleway:        #0042ec;      /* #0241e2     */
 @path:            #00f504;
 @forbidden:       #cc002c;
 
