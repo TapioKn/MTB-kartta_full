@@ -3130,37 +3130,37 @@
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.8" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.6" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.6" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.4" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.4" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <MinScaleDenominator>50000</MinScaleDenominator>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.2" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.2" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>200000</MaxScaleDenominator>
       <MinScaleDenominator>100000</MinScaleDenominator>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="0.8" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="0.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>400000</MaxScaleDenominator>
       <MinScaleDenominator>200000</MinScaleDenominator>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="0" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="0" />
     </Rule>
   </Style>
   <Style filter-mode="first" name="tunnel-cyclewaybg">
@@ -7503,31 +7503,31 @@
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.8" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.6" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.6" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.4" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.4" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <MinScaleDenominator>50000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.2" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.2" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>200000</MaxScaleDenominator>
       <MinScaleDenominator>100000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="0.8" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="0.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>5000</MaxScaleDenominator>
@@ -14803,37 +14803,37 @@
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.8" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.6" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.6" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.4" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.4" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <MinScaleDenominator>50000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.2" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.2" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>200000</MaxScaleDenominator>
       <MinScaleDenominator>100000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="0.8" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="0.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>400000</MaxScaleDenominator>
       <MinScaleDenominator>200000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="0" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="0" />
     </Rule>
   </Style>
   <Style filter-mode="first" name="roads_high-cyclewaybg">
@@ -26710,37 +26710,37 @@
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.8" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.6" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.6" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.4" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.4" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <MinScaleDenominator>50000</MinScaleDenominator>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="1.2" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="1.2" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>200000</MaxScaleDenominator>
       <MinScaleDenominator>100000</MinScaleDenominator>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="0.8" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="0.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>400000</MaxScaleDenominator>
       <MinScaleDenominator>200000</MinScaleDenominator>
       <Filter><![CDATA[([render] = '3_inline') and ([type] = 'cycleway')]]></Filter>
-      <LineSymbolizer stroke="#0241e2" stroke-dasharray="4, 2" stroke-width="0" />
+      <LineSymbolizer stroke="#0042ec" stroke-dasharray="4, 2" stroke-width="0" />
     </Rule>
   </Style>
   <Style filter-mode="first" name="bridge-cyclewaybg">

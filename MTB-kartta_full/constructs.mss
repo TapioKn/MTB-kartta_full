@@ -7,15 +7,15 @@
     [zoom=15]  { line-width: 1; }
     [zoom<=14] { line-width: 0; }
   }
-  [type='wall'] {
-    line-width: 1.5;
-    line-color: @building;
-    [zoom<=15] { line-width: 1; }
-  }
-  [type='fence'] {
+  [type='wall'][zoom>=15] {
     line-width: 1;
-    line-color: @building;
-    [zoom<=15] { line-width: 0; }
+    line-color: darken(@building, 10%);
+    [zoom>=15] { line-width: 1.5; }
+  }
+  [type='fence'][zoom>=15] {
+    line-width: 0.75;
+    line-color: darken(@building, 10%);
+    [zoom>=15] { line-width: 1; }
   }
   [type='minor_line'] {
     line-width: 1;

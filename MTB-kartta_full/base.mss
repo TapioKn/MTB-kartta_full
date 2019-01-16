@@ -18,13 +18,6 @@
 #landuse_gen0[zoom>3][zoom<=9],
 #landuse_gen1[zoom>9][zoom<=12],
 #landuse[zoom>12] {
-  [type='allotments']        { polygon-fill: @allotments; }
-  [type='bare_rock']         { polygon-fill: @rock; }
-  [type='beach']             { polygon-fill: @beach; }
-  [type='brownfield']        { polygon-fill: @construction; }
-  [type='cemetery']          { polygon-fill: @cemetery; }
-  [type='camp_site']         { polygon-fill: @park; }
-  [type='college']           { polygon-fill: @school; }
   [type='commercial']        { polygon-fill: @commercial;
                                line-color: @commercial * 0.8;
                                line-opacity: 0;
@@ -37,49 +30,18 @@
                                  line-width: 0.8;
                                }
                              }
-  [type='common']            { polygon-fill: @park; }
-  [type='construction']      { polygon-fill: @construction; }
-  [type='dog_park']          { polygon-fill: @sports; }
-  [type='farmland']          { polygon-fill: @farmland; }
-  [type='farmyard']          { polygon-fill: @farmyard; }
-  [type='footpath']          { polygon-fill: @plaza; }
-  [type='footway']           { polygon-fill: @plaza; }
-  [type='forest']            { polygon-fill: @forest; }
-  [type='golf_course']       { polygon-fill: @golf_course; }
-  [type='grass']             { polygon-fill: @grass; }
-  [type='grassland']         { polygon-fill: @grassland; }
-  [type='hedge'][areatype='yes'] {
-    line-opacity: 0;
-    [zoom>=14] { polygon-fill: @hedge; }
-  }
-  [type='hospital']          { polygon-fill: @hospital; }
-  [type='nursing_home']      { polygon-fill: desaturate(@hospital, 20%); }
   [type='industrial']        { polygon-fill: @industrial;
-                               line-color: @industrial * 0.8;
-                               line-opacity: 0;
-                               [zoom=15] {
-                                 line-opacity: 1.0;
-                                 line-width: 0.5;
-                               }
-                               [zoom>=16] {
-                                 line-opacity: 1.0;
-                                 line-width: 0.8;
-                               }
-                             }
-  [type='landfill']          { polygon-fill: @landfill; }
-  [type='meadow']            { polygon-fill: @meadow; }
-  [type='orchard']           { polygon-fill: @farmyard; }
-  [type='park']              { polygon-fill: @park; }
-  [type='parking']           { polygon-fill: @parking; }
-  [type='pedestrian']        { polygon-fill: @plaza; }
-  [type='pitch']             { polygon-fill: @sports; }
-  [type='plant_nursery']     { polygon-fill: @plant_nursery; }
-  [type='playground']        { polygon-fill: @sports; }
-  [type='pier']              { polygon-fill: @plaza; }
-  [type='port']              { polygon-fill: @industrial; }
-  [type='quarry']            { polygon-fill: desaturate(@landfill,30%); }
-  [type='railway']           { polygon-fill: @industrial; }
-  [type='recreation_ground'] { polygon-fill: @park; }
+                                line-color: @industrial * 0.8;
+                                line-opacity: 0;
+                                [zoom=15] {
+                                  line-opacity: 1.0;
+                                  line-width: 0.5;
+                                }
+                                [zoom>=16] {
+                                  line-opacity: 1.0;
+                                  line-width: 0.8;
+                                }
+                              }
   [type='residential']       { polygon-fill: @residential;
                                line-color: @residential * 0.8;
                                line-opacity: 0;
@@ -92,34 +54,75 @@
                                line-width: 0.8;
                                }
                              }
-  [type='reservoir']         { polygon-fill: @water; }
-  [type='retail']            { polygon-fill: @commercial; }
-  [type='school']            { polygon-fill: @school; }
-  [type='scrub']             { polygon-fill: @grass;
-                               polygon-pattern-file: url("./images/natural_scrub.png"); }
-  [type='substation'],
-  [type='sub_station'],
-  [type='station'],
-  [type='plant'] {
-    polygon-fill: desaturate(darken(@industrial,20%),10%);
-    [zoom>=15] {
-    line-width: 0.8;
-    line-color: @industrial * 0.6;
-    line-opacity: 1.0;
+  ::nonbackground{
+    [type='allotments']        { polygon-fill: @allotments; }
+    [type='bare_rock']         { polygon-fill: @rock; }
+    [type='beach']             { polygon-fill: @beach; }
+    [type='brownfield']        { polygon-fill: @construction; }
+    [type='cemetery']          { polygon-fill: @cemetery; }
+    [type='camp_site']         { polygon-fill: @park; }
+    [type='college']           { polygon-fill: @school; }
+    [type='common']            { polygon-fill: @park; }
+    [type='construction']      { polygon-fill: @construction; }
+    [type='dog_park']          { polygon-fill: @sports; }
+    [type='farmland']          { polygon-fill: @farmland; }
+    [type='farmyard']          { polygon-fill: @farmyard; }
+    [type='footpath']          { polygon-fill: @plaza; }
+    [type='footway']           { polygon-fill: @plaza; }
+    [type='forest']            { polygon-fill: @forest; }
+    [type='golf_course']       { polygon-fill: @golf_course; }
+    [type='grass']             { polygon-fill: @grass; }
+    [type='grassland']         { polygon-fill: @grassland; }
+    [type='graveyard']         { polygon-fill: @cemetery; }
+    [type='hedge'][areatype='yes'] {
+      line-opacity: 0;
+      [zoom>=14] { polygon-fill: @hedge; }
     }
-  }
-  [type='clearcut']          { polygon-fill: #f2ffcc;
-                               polygon-pattern-file: url("./images/natural_scrub.png"); }
-  [type='sports_center']     { polygon-fill: @sports; }
-  [type='stadium']           { polygon-fill: @sports; }
-  [type='track']             { polygon-fill: @sports; }
-  [type='university']        { polygon-fill: @school; }
-  [type='village_green']     { polygon-fill: @park; }
-  [type='vineyard']          { polygon-fill: @farmyard; }
-  [type='wood']              { polygon-fill: @forest; }
+    [type='hospital']          { polygon-fill: @hospital; }
+    [type='nursing_home']      { polygon-fill: desaturate(@hospital, 20%); }
+    [type='landfill']          { polygon-fill: @landfill; }
+    [type='meadow']            { polygon-fill: @meadow; }
+    [type='orchard']           { polygon-fill: @farmyard; }
+    [type='park']              { polygon-fill: @park; }
+    [type='parking']           { polygon-fill: @parking; }
+    [type='pedestrian']        { polygon-fill: @plaza; }
+    [type='pitch']             { polygon-fill: @sports; }
+    [type='plant_nursery']     { polygon-fill: @plant_nursery; }
+    [type='playground']        { polygon-fill: @sports; }
+    [type='pier']              { polygon-fill: @plaza; }
+    [type='port']              { polygon-fill: @industrial; }
+    [type='quarry']            { polygon-fill: desaturate(@landfill,30%); }
+    [type='railway']           { polygon-fill: @industrial; }
+    [type='recreation_ground'] { polygon-fill: @park; }
+    [type='reservoir']         { polygon-fill: @water; }
+    [type='retail']            { polygon-fill: @commercial; }
+    [type='school']            { polygon-fill: @school; }
+    [type='scrub']             { polygon-fill: @grass;
+                                 polygon-pattern-file: url("./images/natural_scrub.png"); }
+    [type='substation'],
+    [type='sub_station'],
+    [type='station'],
+    [type='plant'] {
+      polygon-fill: desaturate(darken(@industrial,20%),10%);
+      [zoom>=15] {
+      line-width: 0.8;
+      line-color: @industrial * 0.6;
+      line-opacity: 1.0;
+      }
+    }
+    [type='clearcut']          { polygon-fill: #f2ffcc;
+                                 polygon-pattern-file: url("./images/natural_scrub.png"); }
+    [type='sports_center']     { polygon-fill: @sports; }
+    [type='stadium']           { polygon-fill: @sports; }
+    [type='track']             { polygon-fill: @sports; }
+    [type='university']        { polygon-fill: @school; }
+    [type='village_green']     { polygon-fill: @park; }
+    [type='vineyard']          { polygon-fill: @farmyard; }
+    [type='wood']              { polygon-fill: @forest; }
 
-  [type="cliff"][zoom>=14] {
-    line-pattern-file: url("./images/natural_cliff.png");
+    [type="cliff"][zoom>=14] {
+      line-pattern-file: url("./images/natural_cliff.png");
+    }
   }
   ::military {
     [type='military'] {
