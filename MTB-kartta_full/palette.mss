@@ -125,7 +125,7 @@ Map { font-directory: url(./fonts); }
 
 /* Case colors                     BACKUP      */
 @cyclewaybg:      #ffffff;      /* #ffffff     */
-@footwaybg:       @cyclewaybg;  /* @cyclewaybg */
+@footwaybg:       @cyclewaybg;  /*             */
 @mtbscale0:       #88f41c;      /* #99f53d     */
 @mtbscale1:       #f4f41d;      /* #f5f53d     */
 @mtbscale2:       #f4881d;      /* #f5993d     */
