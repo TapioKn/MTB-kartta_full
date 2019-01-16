@@ -6,4 +6,4 @@ Subfolders include separate tile rendering rules for path+tracks+labels and back
 'MTB-kartta_polut-talvi' currently non-functional, needs to be adjusted after fixing 'MTB-kartta_polut'.
 
 Rendered sample area of the full version at z15 below:
-![Rendered sample area](https://i.imgur.com/ZTL3zNZ.jpg)
+![Rendered sample area](https://raw.githubusercontent.com/TapioKn/MTB-kartta_Mapnik_styles/master/MTB-kartta_full/sample_area-z15.png)
