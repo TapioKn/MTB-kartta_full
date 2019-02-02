@@ -298,12 +298,12 @@
 #motorway_label[type='motorway'][zoom>9],
 #motorway_label[type='trunk'][zoom>9] {
   text-name:"[name]";
-  text-face-name:@sans_bold;
+  text-face-name:@sans;
   text-placement:line;
   text-fill:@road_text;
   text-halo-fill:@road_halo;
   text-halo-radius:1;
-  text-min-distance:60;
+  text-min-distance:120;
   text-size:10;
   [zoom=11] { text-min-distance:70; }
   [zoom=12] { text-min-distance:80; }

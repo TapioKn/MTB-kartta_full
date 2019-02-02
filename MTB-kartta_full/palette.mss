@@ -21,14 +21,14 @@
 Map { font-directory: url(./fonts); }
 
 /* set up font sets for various weights and styles */
-@sans_lt:           "Asap Regular";
-@sans_lt_italic:    "Asap Italic";
+@sans_lt:           "Calibri Regular";
+@sans_lt_italic:    "Calibri Italic";
 
-@sans:              "Asap Regular";
-@sans_italic:       "Asap Italic";
+@sans:              "Calibri Regular";
+@sans_italic:       "Calibri Italic";
 
-@sans_bold:         "Asap Bold";
-@sans_bold_italic:  "Asap Bold Italic";
+@sans_bold:         "Calibri Bold";
+@sans_bold_italic:  "Calibri Bold Italic";
 
 /* Some fonts are larger or smaller than others. Use this variable to
    globally increase or decrease the font sizes. */
@@ -45,7 +45,7 @@ Map { font-directory: url(./fonts); }
 @cemetery:          desaturate(lighten(#deedde, 3%), 5%);      /* #deedde; */
 @commercial:        desaturate(lighten(#eef4f6, 3%), 0%);      /* #eef4f6; */
 @conservation:      desaturate(lighten(#73a45b, 3%), 5%);      /* #73a45b; */
-@construction:      desaturate(lighten(#d5dbdd, 3%), 5%);      /* #d5dbdd; */
+@construction:      desaturate(lighten(#ccc3b3, 3%), 10%);      /* #d5dbdd; */
 @farmland:          desaturate(lighten(#faf8d9, 3%), 5%);      /* #faf8d9; */
 @farmyard:          desaturate(lighten(#f8f3d3, 3%), 5%);      /* #f8f3d3; */
 @forest:            desaturate(lighten(#c3d2ad, 3%), 5%);      /* #c3d2ad; */
@@ -85,23 +85,23 @@ Map { font-directory: url(./fonts); }
 
 @motorway_line:    #ffc34d;
 @motorway_fill:    lighten(@motorway_line,5%);
-@motorway_case:    @motorway_line * 0.3;
+@motorway_case:    @motorway_line * 0.5;
 
 @trunk_line:       #ffe18f;
 @trunk_fill:       lighten(@trunk_line,5%);
-@trunk_case:       @trunk_line * 0.3;
+@trunk_case:       @trunk_line * 0.5;
 
 @primary_line:     #ffe8aa;
 @primary_fill:     lighten(@primary_line,5%);
-@primary_case:     @primary_line * 0.3;
+@primary_case:     @primary_line * 0.5;
 
 @mainroad_line:    #ffe18f;
 @mainroad_fill:    lighten(@mainroad_line,5%);
-@mainroad_case:    @mainroad_line * 0.3;
+@mainroad_case:    @mainroad_line * 0.5;
 
 @road_line:        #8c8c8c;
 @road_fill:        #ffffff;
-@road_case:        @land * 0.3;
+@road_case:        @land * 0.5;
 
 @rail_regular:     #7c7b7b;
 @rail_abandoned:   #bfbfbf;

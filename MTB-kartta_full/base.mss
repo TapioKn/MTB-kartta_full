@@ -72,7 +72,8 @@
     [type='forest']            { polygon-fill: @forest; }
     [type='golf_course']       { polygon-fill: @golf_course; }
     [type='grass']             { polygon-fill: @grass; }
-    [type='grassland']         { polygon-fill: @grassland; }
+    [type='grassland']         { polygon-fill: @grassland;
+                                 polygon-pattern-file: url("./images/natural_grassland.png"); }
     [type='graveyard']         { polygon-fill: @cemetery; }
     [type='hedge'][areatype='yes'] {
       line-opacity: 0;
