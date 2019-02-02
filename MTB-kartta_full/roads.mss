@@ -76,8 +76,8 @@ come in as well.
 @cwz11_cw: 0.0;  @cwz11_lw: 0.0;  @cwz11_da: 4, 2;
 @cwz12_cw: 1.2;  @cwz12_lw: 0.8;  @cwz12_da: 4, 2;
 @cwz13_cw: 1.6;  @cwz13_lw: 1.2;  @cwz13_da: 4, 2;
-@cwz14_cw: 1.8;  @cwz14_lw: 1.4;  @cwz14_da: 4, 2;
-@cwz15_cw: 2.5;  @cwz15_lw: 1.6;  @cwz15_da: 4, 2;
+@cwz14_cw: 1.8;  @cwz14_lw: 1.3;  @cwz14_da: 4, 2;
+@cwz15_cw: 2.3;  @cwz15_lw: 1.4;  @cwz15_da: 4, 2;
 @cwz16_cw: 3.5;  @cwz16_lw: 1.8;  @cwz16_da: 4, 2;
 
 /* Footway case widths, line widths and dasharrays */
@@ -264,7 +264,7 @@ come in as well.
     [type='primary_link']  { line-width: @rdz15_pri; }
     [type='mainroad']      { line-width: @rdz15_mai + 2; }
     [type='mainroad_link'] { line-width: @rdz15_mai; }
-    [type='residential']   { line-width: @rdz15_res + 2; }
+    [type='residential']   { line-width: @rdz15_res + 1.5; }
     [type='living_street'] { line-width: @rdz15_res + 1; }
     [type='driveway']      { line-width: @rdz15_res + 0; }
     [type='raceway']       { line-width: @rdz15_ser + 1; }

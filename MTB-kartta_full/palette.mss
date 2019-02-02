@@ -1,5 +1,5 @@
 /* ****************************************************************** */
-/* OSM BRIGHT for Imposm                                              */
+/* OSM BRIGHT for Imposm                                            */
 /* ****************************************************************** */
 
 /* For basic style customization you can simply edit the colors and
@@ -43,7 +43,7 @@ Map { font-directory: url(./fonts); }
 @beach:             desaturate(lighten(#f7f4c9, 3%), 5%);      /* #f7f4c9; */
 @building:          desaturate(lighten(#595959, 3%), 0%);      /* #595959; */
 @cemetery:          desaturate(lighten(#deedde, 3%), 5%);      /* #deedde; */
-@commercial:        desaturate(lighten(#eef4f6, 3%), 0%);      /* #eef4f6; */
+@commercial:        desaturate(lighten(#e5eff2, 3%), 0%);      /* #eef4f6; */
 @conservation:      desaturate(lighten(#73a45b, 3%), 5%);      /* #73a45b; */
 @construction:      desaturate(lighten(#ccc3b3, 3%), 10%);      /* #d5dbdd; */
 @farmland:          desaturate(lighten(#faf8d9, 3%), 5%);      /* #faf8d9; */
@@ -64,6 +64,7 @@ Map { font-directory: url(./fonts); }
 @plant_nursery:     desaturate(lighten(#e7eedd, 3%), 5%);      /* #e7eedd; */
 @plaza:             desaturate(lighten(#f2f0e3, 3%), 0%);      /* #f2f0e3; */
 @residential:       desaturate(lighten(#f6f5ee, 3%), 0%);      /* #f6f5ee; */
+@retail:            desaturate(lighten(#f2e5e5, 3%), 0%);      /* #eef4f6; */
 @rock:              desaturate(lighten(#e6e8e3, 3%), 0%);      /* #e6e8e3; */
 @school:            desaturate(lighten(#f9f8f0, 3%), 5%);      /* #f9f8f0; */
 @sports:            desaturate(lighten(#d0ffb3, 3%), 5%);      /* #d0ffb3; */

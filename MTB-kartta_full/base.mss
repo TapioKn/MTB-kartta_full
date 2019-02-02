@@ -54,6 +54,18 @@
                                line-width: 0.8;
                                }
                              }
+  [type='retail']            { polygon-fill: @retail;
+                               line-color: @retail * 0.8;
+                               line-opacity: 0;
+                               [zoom=15] {
+                               line-opacity: 1.0;
+                               line-width: 0.5;
+                               }
+                               [zoom>=16] {
+                               line-opacity: 1.0;
+                               line-width: 0.8;
+                               }
+                             }
   ::nonbackground{
     [type='allotments']        { polygon-fill: @allotments; }
     [type='bare_rock']         { polygon-fill: @rock; }
@@ -168,10 +180,10 @@
 /* ---- BUILDINGS ---- */
 #buildings[zoom>=12][zoom<=16] {
   polygon-fill: lighten(@building, 20%);
-  [zoom=15]  { polygon-fill: lighten(@building, 25%) }
-  [zoom=14]  { polygon-fill: lighten(@building, 30%) }
-  [zoom=13]  { polygon-fill: lighten(@building, 35%) }
-  [zoom<=12] { polygon-fill: lighten(@building, 40%) }
+  [zoom=15]  { polygon-fill: lighten(@building, 30%) }
+  [zoom=14]  { polygon-fill: lighten(@building, 35%) }
+  [zoom=13]  { polygon-fill: lighten(@building, 40%) }
+  [zoom<=12] { polygon-fill: lighten(@building, 45%) }
 
 }
 
