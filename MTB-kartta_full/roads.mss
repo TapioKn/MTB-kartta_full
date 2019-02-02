@@ -895,9 +895,9 @@ come in as well.
 }
 #turning_circle_case,
 #turning_circle_fill {
-  [zoom=14] { marker-width:@rdz14_res * 1.1; }
-  [zoom=15] { marker-width:@rdz15_res * 1.1; }
-  [zoom=16] { marker-width:@rdz16_res * 1.1; }
+  [zoom=14] { marker-width:@rdz14_res * 2; }
+  [zoom=15] { marker-width:@rdz15_res * 2; }
+  [zoom=16] { marker-width:@rdz16_res * 2; }
 }
 
 /* ================================================================== */
