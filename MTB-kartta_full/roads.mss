@@ -263,11 +263,11 @@ come in as well.
     [type='primary_link']  { line-width: @rdz15_pri; }
     [type='mainroad']      { line-width: @rdz15_mai + 2; }
     [type='mainroad_link'] { line-width: @rdz15_mai; }
-    [type='residential']   { line-width: @rdz15_res + 1.5; }
+    [type='residential']   { line-width: @rdz15_res + 2.2; }
     [type='living_street'] { line-width: @rdz15_res + 1; }
     [type='driveway']      { line-width: @rdz15_res + 0; }
     [type='raceway']       { line-width: @rdz15_ser + 1; }
-    [type='service']       { line-width: @rdz15_ser + 1.5; }
+    [type='service']       { line-width: @rdz15_ser + 1.7; }
     [type='driveway']      { line-width: @rdz15_ser + 0.5; }
     [type='construction']  { line-width: @rdz15_ser + 1; }
     [type='cycleway']      { line-width: @cwz15_cw ; }

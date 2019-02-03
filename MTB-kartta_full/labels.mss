@@ -159,7 +159,7 @@
     [type='forest'][zoom>=14],
     [type='wood'][zoom>=14] {
       text-face-name: @sans_lt;
-      text-fill: @park * 0.5;
+      text-fill: @park * 0.4;
       text-halo-fill: lighten(@park, 80%);
     }
     [type='golf_course'][zoom>=10] {
@@ -222,21 +222,15 @@
 
 #markers {
   // Markers for parking
-  [type='parking'] {
+  [type='parking'][zoom>=16] {
     text-name: "'P'";
     text-face-name: @sans_bold;
     text-fill: @parking-label;
     text-halo-fill: #fff;
+    text-size: 12;
+    text-halo-radius: 1.0;
     [access!=''][access!='permissive'][access!='yes'] {
       text-opacity: 0.33;
-    }
-    [zoom>=15] {
-      text-size: 10;
-      text-halo-radius: 0.7;
-    }
-    [zoom>=16] {
-      text-size: 12;
-      text-halo-radius: 1.0;
     }
   }
 }
