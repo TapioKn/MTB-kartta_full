@@ -167,7 +167,7 @@
     text-face-name:@sans;
     text-size: 10;
     text-wrap-width:30;
-    text-fill: #4b4b4b;
+    text-fill: @poi_text;
     text-halo-fill: #fff;
     // Specific style overrides for different types of areas:
     [type='park'][zoom>=14],

@@ -41,7 +41,7 @@ Map { font-directory: url(./fonts); }
                                    /* BACKUPS  */
 @allotments:        desaturate(lighten(#f1efe4, 3%), 5%);      /* #f1efe4; */
 @beach:             desaturate(lighten(#f7f4c9, 3%), 5%);      /* #f7f4c9; */
-@building:          desaturate(lighten(#595959, 3%), 0%);      /* #595959; */
+@building:          #938f8b;      /* #595959; */
 @cemetery:          desaturate(lighten(#deedde, 3%), 5%);      /* #deedde; */
 @commercial:        desaturate(lighten(#e5eff2, 3%), 0%);      /* #eef4f6; */
 @conservation:      desaturate(lighten(#73a45b, 3%), 5%);      /* #73a45b; */
@@ -68,7 +68,7 @@ Map { font-directory: url(./fonts); }
 @rock:              desaturate(lighten(#e6e8e3, 3%), 0%);      /* #e6e8e3; */
 @school:            desaturate(lighten(#f9f8f0, 3%), 5%);      /* #f9f8f0; */
 @sports:            desaturate(lighten(#d0ffb3, 3%), 5%);      /* #d0ffb3; */
-@water:             desaturate(lighten(#578fab, 10%), 20%);      /* #66aacc; */
+@water:             #94c1e2;      /* #66aacc; desaturate(lighten(#578fab, 10%), 20%)*/
 
 
 /* ================================================================== */
@@ -107,7 +107,6 @@ Map { font-directory: url(./fonts); }
 @rail_regular:     #7c7b7b;
 @rail_abandoned:   #bfbfbf;
 @rail_fill:        #ffffff;
-
 
 @aeroway:          @building;
 

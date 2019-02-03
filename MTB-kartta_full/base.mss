@@ -180,11 +180,12 @@
 /* ---- BUILDINGS ---- */
 #buildings[zoom>=12][zoom<=16] {
   polygon-fill: lighten(@building, 20%);
-  [zoom=15]  { polygon-fill: lighten(@building, 30%) }
-  [zoom=14]  { polygon-fill: lighten(@building, 35%) }
-  [zoom=13]  { polygon-fill: lighten(@building, 40%) }
-  [zoom<=12] { polygon-fill: lighten(@building, 45%) }
-
+  line-color:   @building;
+  line-width:   1;
+  [zoom=15]  { polygon-fill: lighten(@building, 30%); line-color: lighten(@building, 10%); }
+  [zoom=14]  { polygon-fill: lighten(@building, 35%); line-color: lighten(@building, 15%); }
+  [zoom=13]  { polygon-fill: lighten(@building, 40%); line-color: lighten(@building, 20%); }
+  [zoom<=12] { polygon-fill: lighten(@building, 45%); line-color: lighten(@building, 25%); }
 }
 
 

@@ -73,18 +73,18 @@ come in as well.
 /* Living streets defined in later code as 1 narrower than residential */
 
 /* Cycleway case widths, line widths and dasharrays */
-@cwz11_cw: 0.0;  @cwz11_lw: 0.0;  @cwz11_da: 4, 2;
-@cwz12_cw: 1.2;  @cwz12_lw: 0.8;  @cwz12_da: 4, 2;
-@cwz13_cw: 1.6;  @cwz13_lw: 1.2;  @cwz13_da: 4, 2;
-@cwz14_cw: 1.8;  @cwz14_lw: 1.3;  @cwz14_da: 4, 2;
+@cwz11_cw: 0.0;  @cwz11_lw: 1.0;  @cwz11_da: 4, 2;
+@cwz12_cw: 0.0;  @cwz12_lw: 1.0;  @cwz12_da: 4, 2;
+@cwz13_cw: 0.0;  @cwz13_lw: 1.0;  @cwz13_da: 4, 2;
+@cwz14_cw: 0.0;  @cwz14_lw: 1.0;  @cwz14_da: 4, 2;
 @cwz15_cw: 2.3;  @cwz15_lw: 1.4;  @cwz15_da: 4, 2;
 @cwz16_cw: 3.5;  @cwz16_lw: 1.8;  @cwz16_da: 4, 2;
 
 /* Footway case widths, line widths and dasharrays */
 @fwz11_cw: 0.0;  @fwz11_lw: 0.0;  @fwz11_da: 3, 2;
 @fwz12_cw: 0.0;  @fwz12_lw: 0.0;  @fwz12_da: 3, 2;
-@fwz13_cw: 1.2;  @fwz13_lw: 0.8;  @fwz13_da: 3, 2;
-@fwz14_cw: 1.5;  @fwz14_lw: 1.0;  @fwz14_da: 3, 2;
+@fwz13_cw: 0.0;  @fwz13_lw: 0.8;  @fwz13_da: 3, 2;
+@fwz14_cw: 0.0;  @fwz14_lw: 0.8;  @fwz14_da: 3, 2;
 @fwz15_cw: 2.0;  @fwz15_lw: 1.2;  @fwz15_da: 3, 2;
 @fwz16_cw: 3.0;  @fwz16_lw: 1.4;  @fwz16_da: 3, 2;
 
@@ -185,8 +185,8 @@ come in as well.
     [type='service']       { line-width: 0; }
     [type='driveway']      { line-width: 0; }
     [type='construction']  { line-width: 0; }
-    [type='cycleway']      { line-width: 0; }
-	  [type='footway']       { line-width: 0; }
+    [type='cycleway']      { line-width: @cwz11_cw; }
+	  [type='footway']       { line-width: @fwz11_cw; }
     [type='path']          { line-width: 0; }
     [type='railway']       { line-width: 0; }
     [type='rail_abandoned']{ line-width: 0; }
@@ -206,8 +206,8 @@ come in as well.
     [type='service']       { line-width: 0; }
     [type='driveway']      { line-width: 0; }
     [type='construction']  { line-width: 0; }
-    [type='cycleway']      { line-width: 0; }
-	  [type='footway']       { line-width: 0; }
+    [type='cycleway']      { line-width: @cwz12_cw; }
+	  [type='footway']       { line-width: @fwz12_cw; }
     [type='path']          { line-width: 0; }
     [type='railway']       { line-width: 0; }
     [type='rail_abandoned']{ line-width: 0; }
@@ -228,8 +228,8 @@ come in as well.
     /* No minor ways yet */
     [type='driveway']      { line-width: 0; }
     [type='construction']  { line-width: 0; }
-    [type='cycleway']      { line-width: 0; }
-	  [type='footway']       { line-width: 0; }
+    [type='cycleway']      { line-width: @cwz13_cw; }
+	  [type='footway']       { line-width: @fwz13_cw; }
     [type='path']          { line-width: 0; }
     [type='railway']       { line-width: 0; }
   }
@@ -249,8 +249,8 @@ come in as well.
     [type='driveway']      { line-width: @rdz14_ser + 1; }
     [type='construction']  { line-width: @rdz14_ser + 1; }
     /* No minor ways yet */
-    [type='cycleway']      { line-width: 0; }
-	  [type='footway']       { line-width: 0; }
+    [type='cycleway']      { line-width: @cwz14_cw; }
+	  [type='footway']       { line-width: @fwz14_cw; }
     [type='path']          { line-width: 0; }
     [type='railway']       { line-width: 0; }
     [type='rail_abandoned']{ line-width: 0; }
@@ -271,8 +271,8 @@ come in as well.
     [type='service']       { line-width: @rdz15_ser + 1.5; }
     [type='driveway']      { line-width: @rdz15_ser + 0.5; }
     [type='construction']  { line-width: @rdz15_ser + 1; }
-    [type='cycleway']      { line-width: @cwz15_cw + 2; }
-	  [type='footway']       { line-width: @fwz15_cw + 2; }
+    [type='cycleway']      { line-width: @cwz15_cw ; }
+	  [type='footway']       { line-width: @fwz15_cw ; }
     [type='path']          { line-width: 0; }
     [type='railway']       { line-width: 1.5 + 2; }
     [type='rail_abandoned']{ line-width: 1.5 + 2; }
@@ -293,8 +293,8 @@ come in as well.
     [type='service']       { line-width: @rdz16_ser + 2; }
     [type='driveway']      { line-width: @rdz16_ser + 1; }
     [type='construction']  { line-width: @rdz16_ser + 1; }
-    [type='cycleway']      { line-width: @cwz16_cw + 2; }
-	  [type='footway']       { line-width: @fwz16_cw + 2; }
+    [type='cycleway']      { line-width: @cwz16_cw; }
+	  [type='footway']       { line-width: @fwz16_cw; }
     [type='path']          { line-width: 0; }
     [type='railway']       { line-width: 2 + 2; }
     [type='rail_abandoned']{ line-width: 2 + 2; }
