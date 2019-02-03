@@ -156,12 +156,12 @@
 
 #area_label {
   // Bring in labels gradually as one zooms in, bases on polygon area
-  [zoom>=10][area>102400000],
-  [zoom>=11][area>25600000],
-  [zoom>=13][area>1600000],
-  [zoom>=14][area>320000],
-  [zoom>=15][area>80000],
-  [zoom>=16][area>20000] {
+  [zoom>=10][area>102400000][type!='building'],
+  [zoom>=11][area>25600000][type!='building'],
+  [zoom>=13][area>1600000][type!='building'],
+  [zoom>=14][area>320000][type!='building'],
+  [zoom>=15][area>80000][type!='building'],
+  [zoom>=16][area>20000][type!='building'] {
     text-name: "[name]";
     text-halo-radius: 1.5;
     text-face-name:@sans;
@@ -169,6 +169,20 @@
     text-wrap-width:30;
     text-fill: @poi_text;
     text-halo-fill: #fff;
+    [zoom=15][area>1500000] {
+      text-name: "[name]";
+      text-size: 12;
+      text-wrap-width: 60;
+      text-character-spacing: 1;
+      text-halo-radius: 2;
+    }
+    [zoom=16][area>50000] {
+      text-name: "[name]";
+      text-size: 12;
+      text-wrap-width: 60;
+      text-character-spacing: 1;
+      text-halo-radius: 1.5;
+    }
     // Specific style overrides for different types of areas:
     [type='park'][zoom>=14],
     [type='forest'][zoom>=14],
@@ -205,35 +219,21 @@
       text-halo-fill: lighten(@water, 90%);
     }
   }
-  [zoom=15][area>1500000] {
-    text-name: "[name]";
-    text-size: 12;
-    text-wrap-width: 60;
-    text-character-spacing: 1;
-    text-halo-radius: 2;
-  }
-  [zoom=16][area>50000] {
-    text-name: "[name]";
-    text-size: 12;
-    text-wrap-width: 60;
-    text-character-spacing: 1;
-    text-halo-radius: 1.5;
-  }
 }
 
-[zoom=16][area>80000]
-#poi[type='university'][zoom>=15],
-#poi[type='hospital'][zoom>=16],
-#poi[type='school'][zoom>=17],
-#poi[type='library'][zoom>=17] {
-  text-name:"[name]";
-  text-face-name:@sans;
-  text-size:10;
-  text-wrap-width:30;
-  text-fill: @poi_text;
+#area_label {
+  // Labels for buildings
+  [zoom>=15][area>4000][type='building'],
+  [zoom>=16][area>2000][type='building'] {
+    text-name: "[name]";
+    text-halo-radius: 1.2;
+    text-face-name:@sans;
+    text-size: 10;
+    text-wrap-width:30;
+    text-fill: darken(@building, 20%);
+    text-halo-fill: #fff;
+  }
 }
-
-
 /* ================================================================== */
 /* WATERWAY LABELS
 /* ================================================================== */
