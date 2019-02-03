@@ -21,14 +21,14 @@
 Map { font-directory: url(./fonts); }
 
 /* set up font sets for various weights and styles */
-@sans_lt:           "Calibri Regular";
-@sans_lt_italic:    "Calibri Italic";
+@sans_lt:           "Asap Regular";
+@sans_lt_italic:    "Asap Italic";
 
-@sans:              "Calibri Regular";
-@sans_italic:       "Calibri Italic";
+@sans:              "Asap Regular";
+@sans_italic:       "Asap Italic";
 
-@sans_bold:         "Calibri Bold";
-@sans_bold_italic:  "Calibri Bold Italic";
+@sans_bold:         "Asap Regular";
+@sans_bold_italic:  "Asap Bold Italic";
 
 /* Some fonts are larger or smaller than others. Use this variable to
    globally increase or decrease the font sizes. */

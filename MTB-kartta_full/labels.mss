@@ -126,28 +126,13 @@
   [zoom>=16] {
     text-size:13;
     text-halo-radius: 2;
-    text-transform: uppercase;
+
     text-character-spacing: 2;
-    text-wrap-width: 120;
+    text-wrap-width: 1200;
     text-line-spacing: 2;
   }
 }
 
-#place::small[type='locality'][zoom>=15] {
-  text-name:'[name]';
-  text-face-name:@sans;
-  text-placement:point;
-  text-fill:@locality_text;
-  text-size:9;
-  text-halo-fill:@locality_halo;
-  text-halo-radius:1;
-  text-wrap-width: 30;
-  [zoom>=16] {
-    text-size:10;
-    text-wrap-width: 60;
-    text-line-spacing: 1;
-  }
-}
 
 
 /* ===================================================================== */
@@ -169,20 +154,6 @@
     text-wrap-width:30;
     text-fill: @poi_text;
     text-halo-fill: #fff;
-    [zoom=15][area>1500000] {
-      text-name: "[name]";
-      text-size: 12;
-      text-wrap-width: 60;
-      text-character-spacing: 1;
-      text-halo-radius: 2;
-    }
-    [zoom=16][area>50000] {
-      text-name: "[name]";
-      text-size: 12;
-      text-wrap-width: 60;
-      text-character-spacing: 1;
-      text-halo-radius: 1.5;
-    }
     // Specific style overrides for different types of areas:
     [type='park'][zoom>=14],
     [type='forest'][zoom>=14],
@@ -217,6 +188,20 @@
     [type='bay'][zoom>=13] {
       text-fill: @water * 0.6;
       text-halo-fill: lighten(@water, 90%);
+    }
+    [zoom=15][area>1500000] {
+      text-name: "[name]";
+      text-size: 12;
+      text-wrap-width: 60;
+      text-character-spacing: 1;
+      text-halo-radius: 2;
+    }
+    [zoom=16][area>50000] {
+      text-name: "[name]";
+      text-size: 12;
+      text-wrap-width: 60;
+      text-character-spacing: 1;
+      text-halo-radius: 1.5;
     }
   }
 }
