@@ -57,20 +57,19 @@ more than just automobile routes - railways, footways, and cycleways
 come in as well.
 
 /* Road width variables that are used in road & bridge styles */
-@rdz11_mot: 2;   @rdz11_tru: 2;   @rdz11_pri: 1.5;
-@rdz12_mot: 3;   @rdz12_tru: 3.5; @rdz12_pri: 2.5;
-@rdz13_mot: 4;   @rdz13_tru: 5;   @rdz13_pri: 4;
-@rdz14_mot: 6;   @rdz14_tru: 6;   @rdz14_pri: 5;
-@rdz15_mot: 8;   @rdz15_tru: 7;   @rdz15_pri: 6;
-@rdz16_mot: 10;  @rdz16_tru: 8;   @rdz16_pri: 7;
+@rdz11_mot: 2.0; @rdz11_tru: 2.0; @rdz11_pri: 1.5;
+@rdz12_mot: 3.0; @rdz12_tru: 3.0; @rdz12_pri: 2.5;
+@rdz13_mot: 4.0; @rdz13_tru: 3.5; @rdz13_pri: 3.0;
+@rdz14_mot: 6.0; @rdz14_tru: 5.0; @rdz14_pri: 4.0;
+@rdz15_mot: 8.0; @rdz15_tru: 7.0; @rdz15_pri: 6.0;
+@rdz16_mot: 10;  @rdz16_tru: 8.0; @rdz16_pri: 7.0;
 
-@rdz11_mai: 1;   @rdz11_res: 0.5; @rdz11_ser: 0.5;
-@rdz12_mai: 1.5; @rdz12_res: 1;   @rdz12_ser: 1;
-@rdz13_mai: 2.5; @rdz13_res: 1.5; @rdz13_ser: 1.2;
-@rdz14_mai: 3;   @rdz14_res: 2;   @rdz14_ser: 1.8;
-@rdz15_mai: 4;   @rdz15_res: 2.5; @rdz15_ser: 2.0;
-@rdz16_mai: 6;   @rdz16_res: 4;   @rdz16_ser: 3.0;
-/* Living streets defined in later code as 1 narrower than residential */
+@rdz11_mai: 1.0; @rdz11_res: 0.5; @rdz11_ser: 0.5;
+@rdz12_mai: 1.5; @rdz12_res: 1.0; @rdz12_ser: 1.0;
+@rdz13_mai: 2.0; @rdz13_res: 1.2; @rdz13_ser: 1.0;
+@rdz14_mai: 2.5; @rdz14_res: 2.0; @rdz14_ser: 1.8;
+@rdz15_mai: 4.0; @rdz15_res: 2.5; @rdz15_ser: 2.0;
+@rdz16_mai: 6.0; @rdz16_res: 4.0; @rdz16_ser: 3.0;
 
 /* Cycleway case widths, line widths and dasharrays */
 @cwz11_cw: 0.0;  @cwz11_lw: 1.0;  @cwz11_da: 4, 2;
@@ -93,7 +92,7 @@ come in as well.
 @paz12_cw: 2.0;  @paz12_lw: 0.5;  @paz12_da: 3, 3;
 @paz13_cw: 2.5;  @paz13_lw: 1.0;  @paz13_da: 3, 3;
 @paz14_cw: 3.0;  @paz14_lw: 1.0;  @paz14_da: 3, 3;
-@paz15_cw: 3.5;  @paz15_lw: 1.5;  @paz15_da: 4, 4;
+@paz15_cw: 3.2;  @paz15_lw: 1.3;  @paz15_da: 4, 4;
 @paz16_cw: 4.0;  @paz16_lw: 1.5;  @paz16_da: 5, 5;
 
 /* Track case widths, line widths and dasharrays */
@@ -101,7 +100,7 @@ come in as well.
 @trz12_cw: 2.0;  @trz12_lw: 0.5;  @trz12_da: 6, 1.5;
 @trz13_cw: 2.5;  @trz13_lw: 1.0;  @trz13_da: 6, 1.5;
 @trz14_cw: 3.0;  @trz14_lw: 1.0;  @trz14_da: 6, 1.5;
-@trz15_cw: 3.5;  @trz15_lw: 1.5;  @trz15_da: 8, 2.0;
+@trz15_cw: 3.2;  @trz15_lw: 1.3;  @trz15_da: 8, 2.0;
 @trz16_cw: 4.0;  @trz16_lw: 1.5;  @trz16_da: 10, 2.5;
 
 /* ---- CASING ----------------------------------------------- */
@@ -388,7 +387,7 @@ come in as well.
      [type='construction']  { line-width: @rdz11_ser - 1; line-dasharray: @cwz11_da; }
      [type='parking_aisle'] { line-width: @trz11_cw - 2; }
      [type='railway']       { line-width: 2; }
-     [type='cycleway']      { ::cyclewaybg   { line-width: @cwz15_cw; line-color: @cyclewaybg; }
+     [type='cycleway']      { ::cyclewaybg   { line-width: @cwz11_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz11_lw; line-dasharray: @cwz11_da; }
      }
  	   [type='footway']       { ::footwaybg    { line-width: @fwz11_cw; line-color: @footwaybg; }
@@ -423,9 +422,6 @@ come in as well.
      [type='nocycle']       { ::nocyclebg    { line-width: @fwz12_cw; line-color: @footwaybg; }
                               ::nocycleline  { line-color: @footway;  line-width: @fwz12_lw; line-dasharray: 1, 2; }
      }
-     [type='nocycle']       { ::nocyclebg    { line-width: @fwz12_cw; line-color: @footwaybg; }
-                              ::nocycleline  { line-color: @footway;  line-width: @fwz12_lw; line-dasharray: 1, 2; }
-     }
    }
    [zoom=13] {
      [type='motorway']      { line-width: @rdz13_mot; }
@@ -443,7 +439,7 @@ come in as well.
      [type='construction']  { line-width: @rdz13_ser - 1; line-dasharray: @cwz13_da; }
      [type='parking_aisle'] { line-width: @trz13_cw - 2; }
      [type='railway']       { line-width: 2; }
-     [type='cycleway']      { ::cyclewaybg   { line-width: @cwz15_cw; line-color: @cyclewaybg; }
+     [type='cycleway']      { ::cyclewaybg   { line-width: @cwz13_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz13_lw; line-dasharray: @cwz13_da; }
      }
  	   [type='footway']       { ::footwaybg    { line-width: @fwz13_cw; line-color: @footwaybg; }
@@ -469,7 +465,7 @@ come in as well.
      [type='construction']  { line-width: @rdz14_ser - 1; line-dasharray: @cwz14_da; }
      [type='parking_aisle'] { line-width: @trz14_cw - 2; }
      [type='railway']       { line-width: 2; }
-     [type='cycleway']      { ::cyclewaybg   { line-width: @cwz15_cw; line-color: @cyclewaybg; }
+     [type='cycleway']      { ::cyclewaybg   { line-width: @cwz14_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz14_lw; line-dasharray: @cwz14_da; }
      }
      /* Cycleways/footways under construction zlvl>=14 */
