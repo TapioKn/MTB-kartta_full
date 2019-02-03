@@ -219,6 +219,28 @@
     text-halo-fill: #fff;
   }
 }
+
+#markers {
+  // Markers for parking
+  [type='parking'] {
+    text-name: "'P'";
+    text-face-name: @sans_bold;
+    text-fill: @parking-label;
+    text-halo-fill: #fff;
+    [access!=''][access!='permissive'][access!='yes'] {
+      text-opacity: 0.33;
+    }
+    [zoom>=15] {
+      text-size: 10;
+      text-halo-radius: 0.7;
+    }
+    [zoom>=16] {
+      text-size: 12;
+      text-halo-radius: 1.0;
+    }
+  }
+}
+
 /* ================================================================== */
 /* WATERWAY LABELS
 /* ================================================================== */
@@ -341,7 +363,7 @@
 }
 
 /* ================================================================== */
-/* FIXME/NOEXIT/PARKING LABELS
+/* FIXME/NOEXIT LABELS
 /* ================================================================== */
 #constructs_point[zoom>=15] {
   [fixme='continue'] {

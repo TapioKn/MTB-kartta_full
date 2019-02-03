@@ -61,6 +61,7 @@ Map { font-directory: url(./fonts); }
 @military:          desaturate(lighten(#ff5555, 3%), 5%);      /* #ff5555; */
 @park:              desaturate(lighten(#e6ffcc, 3%), 5%);      /* #e6ffcc; */
 @parking:           desaturate(lighten(#e9eaed, 3%), 5%);      /* #e9eaed; */
+@parking-label:     #0241e2;
 @plant_nursery:     desaturate(lighten(#e7eedd, 3%), 5%);      /* #e7eedd; */
 @plaza:             desaturate(lighten(#f2f0e3, 3%), 0%);      /* #f2f0e3; */
 @residential:       desaturate(lighten(#f6f5ee, 3%), 0%);      /* #f6f5ee; */

@@ -894,7 +894,7 @@
         "port": "5432",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT COALESCE(landuse, leisure, \"natural\", highway, amenity, tourism, access) AS type,\n    name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND way && !bbox!\n    AND ST_IsValid(way)\n\n  UNION ALL\n\n  SELECT 'building' AS type, name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND building NOT IN ('', 'no', '0', 'false')\n    AND way && !bbox!\n    AND ST_IsValid(way)\n  ORDER BY area DESC\n) AS data",
+        "table": "( SELECT COALESCE(landuse, leisure, \"natural\", highway, tourism, amenity, access) AS type,\n    name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND way && !bbox!\n    AND ST_IsValid(way)\n\n  UNION ALL\n\n  SELECT 'building' AS type, name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND building NOT IN ('', 'no', '0', 'false')\n    AND way && !bbox!\n    AND ST_IsValid(way)\n  ORDER BY area DESC\n) AS data",
         "type": "postgis",
         "user": "postgres",
         "extent_cache": "auto",
@@ -1006,6 +1006,36 @@
         70.48379529530938
       ],
       "advanced": {}
+    },
+    {
+      "extent": [
+        23.340669496750962,
+        61.416733994781836,
+        23.67404209670452,
+        61.55463679478574
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT amenity AS type, way_area AS area, access,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE amenity IN ('parking')\n    AND way && !bbox!\n    AND ST_IsValid(way)\n  ORDER BY area DESC\n\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "2598271.44315241,8722145.70849513,2635382.31122367,8754303.21981004",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres",
+        "id": "markers",
+        "project": "MTB-kartta_full",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "markers",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "markers"
     }
   ],
   "scale": 1,
