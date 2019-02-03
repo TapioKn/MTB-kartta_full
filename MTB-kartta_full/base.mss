@@ -101,10 +101,6 @@
     [type='grass']             { polygon-fill: @grass; }
     [type='grassland']         { polygon-fill: @grassland;
                                  polygon-pattern-file: url("./images/natural_grassland.png"); }
-    [type='hedge'][areatype='yes'] {
-      line-opacity: 0;
-      [zoom>=14] { polygon-fill: @hedge; }
-    }
     [type='hospital']          { polygon-fill: @hospital; }
     [type='nursing_home']      { polygon-fill: desaturate(@hospital, 20%); }
     [type='landfill']          { polygon-fill: @landfill; }
@@ -173,6 +169,10 @@
     [wetland_type='marsh']         { polygon-fill: @forest; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
     [wetland_type='reedbed']       { polygon-pattern-file:url(images/wetland_reedbed.png); }
     [wetland_type='swamp']         { polygon-fill: @forest; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
+  }
+/* Hedges defined as areas */
+  [barrier='hedge'] {
+    [zoom>=14] { polygon-fill: @hedge; }
   }
 
 /* Conservation areas and such. Overlap with boundary/leisure keys since tagging is so varied */
