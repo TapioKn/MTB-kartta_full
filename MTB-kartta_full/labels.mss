@@ -227,7 +227,7 @@
   [zoom>=16][area>2000][type='building'] {
     text-name: "[name]";
     text-halo-radius: 1.2;
-    text-face-name:@sans;
+    text-face-name: @sans;
     text-size: 10;
     text-wrap-width:30;
     text-fill: darken(@building, 20%);

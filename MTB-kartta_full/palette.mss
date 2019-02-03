@@ -55,7 +55,7 @@ Map { font-directory: url(./fonts); }
 @hedge:             desaturate(lighten(#9fb77b, 3%), 5%);      /* #9fb77b; */
 @hospital:          desaturate(lighten(#fadbe1, 3%), 5%);      /* #ff0037; */
 @industrial:        desaturate(lighten(#eaeff1, 3%), 0%);      /* #eaeff1; */
-@land:              desaturate(lighten(#f5f5f5, 3%), 5%);      /* Base color for the map */ /* testing color: #f4c3f3;*/
+@land:              #f5f3ea;      /* Base color for the map */ /* testing color: #f4c3f3;*/
 @landfill:          desaturate(lighten(#ccc3b3, 3%), 5%);      /* #ccc3b3; */
 @meadow:            desaturate(lighten(#f5fadb, 3%), 5%);      /* #f5fadb; */
 @military:          desaturate(lighten(#ff5555, 3%), 5%);      /* #ff5555; */
@@ -74,15 +74,6 @@ Map { font-directory: url(./fonts); }
 /* ================================================================== */
 /* ROAD COLORS
 /* ================================================================== */
-
-/* For each class of road there are three color variables:
- * - line: for lower zoomlevels when the road is represented by a
- *         single solid line.
- * - case: for higher zoomlevels, this color is for the road's
- *         casing (outline).
- * - fill: for higher zoomlevels, this color is for the road's
- *         inner fill (inline).
- */
 
 @motorway_line:    #ffc34d;
 @motorway_fill:    lighten(@motorway_line,5%);

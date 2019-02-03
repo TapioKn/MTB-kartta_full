@@ -29,7 +29,7 @@
                                  line-opacity: 1.0;
                                  line-width: 0.8;
                                }
-                             }
+  }
   [type='industrial']        { polygon-fill: @industrial;
                                 line-color: @industrial * 0.8;
                                 line-opacity: 0;
@@ -41,7 +41,7 @@
                                   line-opacity: 1.0;
                                   line-width: 0.8;
                                 }
-                              }
+  }
   [type='residential']       { polygon-fill: @residential;
                                line-color: @residential * 0.8;
                                line-opacity: 0;
@@ -53,7 +53,7 @@
                                line-opacity: 1.0;
                                line-width: 0.8;
                                }
-                             }
+  }
   [type='retail']            { polygon-fill: @retail;
                                line-color: @retail * 0.8;
                                line-opacity: 0;
@@ -65,7 +65,20 @@
                                line-opacity: 1.0;
                                line-width: 0.8;
                                }
-                             }
+  }
+  [type='childcare'],
+  [type='kindergarten']      { polygon-fill: @school;
+                               line-color: @school * 0.8;
+                               line-opacity: 0;
+                               [zoom=15] {
+                               line-opacity: 1.0;
+                               line-width: 0.5;
+                               }
+                               [zoom>=16] {
+                               line-opacity: 1.0;
+                                line-width: 0.8;
+                              }
+  }
   ::nonbackground{
     [type='allotments']        { polygon-fill: @allotments; }
     [type='bare_rock']         { polygon-fill: @rock; }
