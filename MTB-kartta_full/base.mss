@@ -115,7 +115,10 @@
                                  line-width: 0.8;
                                  line-color: @parking * 0.8; }
     [type='pedestrian']        { polygon-fill: @plaza; }
-    [type='pitch']             { polygon-fill: @sports; }
+    [type='pitch'],
+    [type='track']             { polygon-fill: @sports;
+                                 line-width: 0.8;
+                                 line-color: @sports * 0.9; }
     [type='plant_nursery']     { polygon-fill: @plant_nursery; }
     [type='playground']        { polygon-fill: @sports; }
     [type='pier']              { polygon-fill: @plaza; }
@@ -143,7 +146,6 @@
                                  polygon-pattern-file: url("./images/natural_scrub.png"); }
     [type='sports_center']     { polygon-fill: @sports; }
     [type='stadium']           { polygon-fill: @sports; }
-    [type='track']             { polygon-fill: @sports; }
     [type='university']        { polygon-fill: @school; }
     [type='village_green']     { polygon-fill: @park; }
     [type='vineyard']          { polygon-fill: @farmyard; }
