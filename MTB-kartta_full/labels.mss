@@ -126,9 +126,9 @@
   [zoom>=16] {
     text-size:13;
     text-halo-radius: 2;
-
+    text-transform: uppercase;
     text-character-spacing: 2;
-    text-wrap-width: 1200;
+    text-wrap-width: 120;
     text-line-spacing: 2;
   }
 }

@@ -27,7 +27,7 @@ Map { font-directory: url(./fonts); }
 @sans:              "Asap Regular";
 @sans_italic:       "Asap Italic";
 
-@sans_bold:         "Asap Regular";
+@sans_bold:         "Asap Bold";
 @sans_bold_italic:  "Asap Bold Italic";
 
 /* Some fonts are larger or smaller than others. Use this variable to
