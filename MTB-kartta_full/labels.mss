@@ -211,11 +211,11 @@
   [zoom>=15][area>4000][type='building'],
   [zoom>=16][area>2000][type='building'] {
     text-name: "[name]";
-    text-halo-radius: 1.2;
+    text-halo-radius: 1;
     text-face-name: @sans;
     text-size: 10;
     text-wrap-width:30;
-    text-fill: darken(@building, 20%);
+    text-fill: darken(@building, 40%);
     text-halo-fill: #fff;
   }
 }
@@ -229,8 +229,9 @@
     text-halo-fill: #fff;
     text-size: 12;
     text-halo-radius: 1.0;
+    text-opacity: 0.6;
     [access!=''][access!='permissive'][access!='yes'] {
-      text-opacity: 0.33;
+      text-opacity: 0.3;
     }
   }
 }

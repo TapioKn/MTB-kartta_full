@@ -84,7 +84,9 @@
     [type='bare_rock']         { polygon-fill: @rock; }
     [type='beach']             { polygon-fill: @beach; }
     [type='brownfield']        { polygon-fill: @construction; }
-    [type='cemetery']          { polygon-fill: @cemetery; }
+    [type='cemetery'],
+      [type='graveyard'],
+      [type='grave_yard']      { polygon-fill: @cemetery; }
     [type='camp_site']         { polygon-fill: @park; }
     [type='college']           { polygon-fill: @school; }
     [type='common']            { polygon-fill: @park; }
@@ -99,7 +101,6 @@
     [type='grass']             { polygon-fill: @grass; }
     [type='grassland']         { polygon-fill: @grassland;
                                  polygon-pattern-file: url("./images/natural_grassland.png"); }
-    [type='graveyard']         { polygon-fill: @cemetery; }
     [type='hedge'][areatype='yes'] {
       line-opacity: 0;
       [zoom>=14] { polygon-fill: @hedge; }
@@ -110,7 +111,9 @@
     [type='meadow']            { polygon-fill: @meadow; }
     [type='orchard']           { polygon-fill: @farmyard; }
     [type='park']              { polygon-fill: @park; }
-    [type='parking']           { polygon-fill: @parking; }
+    [type='parking']           { polygon-fill: @parking;
+                                 line-width: 0.8;
+                                 line-color: @parking * 0.8; }
     [type='pedestrian']        { polygon-fill: @plaza; }
     [type='pitch']             { polygon-fill: @sports; }
     [type='plant_nursery']     { polygon-fill: @plant_nursery; }
@@ -200,7 +203,17 @@
   [zoom=13]  { polygon-fill: lighten(@building, 40%); line-color: lighten(@building, 20%); }
   [zoom<=12] { polygon-fill: lighten(@building, 45%); line-color: lighten(@building, 25%); }
 }
-
+#roofs[zoom>=12][zoom<=16] {
+  polygon-fill:    lighten(@building, 20%);
+  polygon-opacity: 0.7;
+  line-color:      @building;
+  line-width:      1;
+  line-opacity:    0.7;
+  [zoom=15]  { polygon-fill: lighten(@building, 30%); line-color: lighten(@building, 10%); }
+  [zoom=14]  { polygon-fill: lighten(@building, 35%); line-color: lighten(@building, 15%); }
+  [zoom=13]  { polygon-fill: lighten(@building, 40%); line-color: lighten(@building, 20%); }
+  [zoom<=12] { polygon-fill: lighten(@building, 45%); line-color: lighten(@building, 25%); }
+}
 
 /* ================================================================== */
 /* WATER AREAS
