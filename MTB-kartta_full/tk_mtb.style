@@ -87,7 +87,7 @@ node,way   barrier      text         linear
 node,way   bicycle      text         linear
 node,way   brand        text         linear
 node,way   bridge       text         linear
-node,way   boundary     text         linear
+node,way   boundary     text         polygon
 node,way   building     text         polygon
 node,way   capital      text         linear
 node,way   construction text         linear

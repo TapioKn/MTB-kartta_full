@@ -17,7 +17,7 @@
       [zoom=15]  { line-width: @paz15_cw + 2.5;
                    [width='narrow'] { line-width: @paz15_cw / 1.7 + 2.5; }
       }
-      [zoom>=16] { line-width: @paz16_cw + 3.0;
+      [zoom>=16] { line-width: @paz16_cw + 10.0;
                    [width='narrow'] { line-width: @paz16_cw / 1.7 + 3.0; }
       }
       ['noexit'='yes'] {line-opacity: 0; }
