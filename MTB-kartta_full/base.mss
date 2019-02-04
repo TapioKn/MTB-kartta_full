@@ -170,10 +170,7 @@
     [wetland_type='reedbed']       { polygon-pattern-file:url(images/wetland_reedbed.png); }
     [wetland_type='swamp']         { polygon-fill: @forest; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
   }
-/* Hedges defined as areas */
-  [barrier='hedge'] {
-    [zoom>=14] { polygon-fill: @hedge; }
-  }
+
 
 /* Conservation areas and such. Overlap with boundary/leisure keys since tagging is so varied */
   [land_type='national_park'],
@@ -194,7 +191,12 @@
     [zoom>=12] { line-width: 3.0; }
   }
 
+  /* Hedges defined as areas */
+    [barrier='hedge'] {
+      [zoom>=14] { polygon-fill: @hedge; }
+    }
 }
+
 /* ---- BUILDINGS ---- */
 #buildings[zoom>=12][zoom<=16] {
   polygon-fill: lighten(@building, 20%);
