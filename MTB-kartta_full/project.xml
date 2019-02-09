@@ -54,18 +54,6 @@
     <Rule>
       <MaxScaleDenominator>50000000</MaxScaleDenominator>
       <MinScaleDenominator>750000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'hedge') and ([areatype] = 'yes')]]></Filter>
-      <LineSymbolizer stroke-opacity="0" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>50000000</MaxScaleDenominator>
-      <MinScaleDenominator>750000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'station')]]></Filter>
-      <PolygonSymbolizer fill="#bcc5c8" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>50000000</MaxScaleDenominator>
-      <MinScaleDenominator>750000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'plant')]]></Filter>
       <PolygonSymbolizer fill="#bcc5c8" />
     </Rule>
@@ -73,6 +61,12 @@
       <MaxScaleDenominator>50000000</MaxScaleDenominator>
       <MinScaleDenominator>750000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'sub_station')]]></Filter>
+      <PolygonSymbolizer fill="#bcc5c8" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'station')]]></Filter>
       <PolygonSymbolizer fill="#bcc5c8" />
     </Rule>
     <Rule>
@@ -104,12 +98,6 @@
       <MinScaleDenominator>750000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'university')]]></Filter>
       <PolygonSymbolizer fill="#fdfdfb" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>50000000</MaxScaleDenominator>
-      <MinScaleDenominator>750000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'track')]]></Filter>
-      <PolygonSymbolizer fill="#dafdc4" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000000</MaxScaleDenominator>
@@ -200,8 +188,16 @@
     <Rule>
       <MaxScaleDenominator>50000000</MaxScaleDenominator>
       <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'track')]]></Filter>
+      <PolygonSymbolizer fill="#dafdc4" />
+      <LineSymbolizer stroke="#c4e4b0" stroke-width="0.8" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'pitch')]]></Filter>
       <PolygonSymbolizer fill="#dafdc4" />
+      <LineSymbolizer stroke="#c4e4b0" stroke-width="0.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000000</MaxScaleDenominator>
@@ -214,6 +210,7 @@
       <MinScaleDenominator>750000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'parking')]]></Filter>
       <PolygonSymbolizer fill="#f2f2f3" />
+      <LineSymbolizer stroke="#c2c2c2" stroke-width="0.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000000</MaxScaleDenominator>
@@ -243,19 +240,13 @@
       <MaxScaleDenominator>50000000</MaxScaleDenominator>
       <MinScaleDenominator>750000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'nursing_home')]]></Filter>
-      <PolygonSymbolizer fill="#f9ecee" />
+      <PolygonSymbolizer fill="#f7f4f5" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000000</MaxScaleDenominator>
       <MinScaleDenominator>750000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'hospital')]]></Filter>
-      <PolygonSymbolizer fill="#fbe9ed" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>50000000</MaxScaleDenominator>
-      <MinScaleDenominator>750000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'graveyard')]]></Filter>
-      <PolygonSymbolizer fill="#e9f2e9" />
+      <PolygonSymbolizer fill="#f9f2f4" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000000</MaxScaleDenominator>
@@ -339,6 +330,18 @@
     <Rule>
       <MaxScaleDenominator>50000000</MaxScaleDenominator>
       <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'graveyard')]]></Filter>
+      <PolygonSymbolizer fill="#e9f2e9" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'grave_yard')]]></Filter>
+      <PolygonSymbolizer fill="#e9f2e9" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'cemetery')]]></Filter>
       <PolygonSymbolizer fill="#e9f2e9" />
     </Rule>
@@ -371,14 +374,14 @@
     <Rule>
       <MaxScaleDenominator>50000000</MaxScaleDenominator>
       <MinScaleDenominator>750000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'childcare')]]></Filter>
+      <Filter><![CDATA[([type] = 'kindergarten')]]></Filter>
       <PolygonSymbolizer fill="#fdfdfb" />
       <LineSymbolizer stroke="#cacac9" stroke-opacity="0" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000000</MaxScaleDenominator>
       <MinScaleDenominator>750000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'kindergarten')]]></Filter>
+      <Filter><![CDATA[([type] = 'childcare')]]></Filter>
       <PolygonSymbolizer fill="#fdfdfb" />
       <LineSymbolizer stroke="#cacac9" stroke-opacity="0" />
     </Rule>
@@ -449,18 +452,6 @@
     <Rule>
       <MaxScaleDenominator>750000</MaxScaleDenominator>
       <MinScaleDenominator>100000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'hedge') and ([areatype] = 'yes')]]></Filter>
-      <LineSymbolizer stroke-opacity="0" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>750000</MaxScaleDenominator>
-      <MinScaleDenominator>100000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'station')]]></Filter>
-      <PolygonSymbolizer fill="#bcc5c8" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>750000</MaxScaleDenominator>
-      <MinScaleDenominator>100000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'substation')]]></Filter>
       <PolygonSymbolizer fill="#bcc5c8" />
     </Rule>
@@ -474,6 +465,12 @@
       <MaxScaleDenominator>750000</MaxScaleDenominator>
       <MinScaleDenominator>100000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'plant')]]></Filter>
+      <PolygonSymbolizer fill="#bcc5c8" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'station')]]></Filter>
       <PolygonSymbolizer fill="#bcc5c8" />
     </Rule>
     <Rule>
@@ -499,12 +496,6 @@
       <MinScaleDenominator>100000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'university')]]></Filter>
       <PolygonSymbolizer fill="#fdfdfb" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>750000</MaxScaleDenominator>
-      <MinScaleDenominator>100000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'track')]]></Filter>
-      <PolygonSymbolizer fill="#dafdc4" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>750000</MaxScaleDenominator>
@@ -595,8 +586,16 @@
     <Rule>
       <MaxScaleDenominator>750000</MaxScaleDenominator>
       <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'track')]]></Filter>
+      <PolygonSymbolizer fill="#dafdc4" />
+      <LineSymbolizer stroke="#c4e4b0" stroke-width="0.8" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'pitch')]]></Filter>
       <PolygonSymbolizer fill="#dafdc4" />
+      <LineSymbolizer stroke="#c4e4b0" stroke-width="0.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>750000</MaxScaleDenominator>
@@ -609,6 +608,7 @@
       <MinScaleDenominator>100000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'parking')]]></Filter>
       <PolygonSymbolizer fill="#f2f2f3" />
+      <LineSymbolizer stroke="#c2c2c2" stroke-width="0.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>750000</MaxScaleDenominator>
@@ -638,19 +638,13 @@
       <MaxScaleDenominator>750000</MaxScaleDenominator>
       <MinScaleDenominator>100000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'nursing_home')]]></Filter>
-      <PolygonSymbolizer fill="#f9ecee" />
+      <PolygonSymbolizer fill="#f7f4f5" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>750000</MaxScaleDenominator>
       <MinScaleDenominator>100000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'hospital')]]></Filter>
-      <PolygonSymbolizer fill="#fbe9ed" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>750000</MaxScaleDenominator>
-      <MinScaleDenominator>100000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'graveyard')]]></Filter>
-      <PolygonSymbolizer fill="#e9f2e9" />
+      <PolygonSymbolizer fill="#f9f2f4" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>750000</MaxScaleDenominator>
@@ -734,7 +728,19 @@
     <Rule>
       <MaxScaleDenominator>750000</MaxScaleDenominator>
       <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'graveyard')]]></Filter>
+      <PolygonSymbolizer fill="#e9f2e9" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'cemetery')]]></Filter>
+      <PolygonSymbolizer fill="#e9f2e9" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'grave_yard')]]></Filter>
       <PolygonSymbolizer fill="#e9f2e9" />
     </Rule>
     <Rule>
@@ -766,14 +772,14 @@
     <Rule>
       <MaxScaleDenominator>750000</MaxScaleDenominator>
       <MinScaleDenominator>100000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'kindergarten')]]></Filter>
+      <Filter><![CDATA[([type] = 'childcare')]]></Filter>
       <PolygonSymbolizer fill="#fdfdfb" />
       <LineSymbolizer stroke="#cacac9" stroke-opacity="0" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>750000</MaxScaleDenominator>
       <MinScaleDenominator>100000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'childcare')]]></Filter>
+      <Filter><![CDATA[([type] = 'kindergarten')]]></Filter>
       <PolygonSymbolizer fill="#fdfdfb" />
       <LineSymbolizer stroke="#cacac9" stroke-opacity="0" />
     </Rule>
@@ -842,18 +848,6 @@
   <Style filter-mode="first" name="landuse-nonbackground">
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
-      <Filter><![CDATA[([type] = 'hedge') and ([areatype] = 'yes')]]></Filter>
-      <LineSymbolizer stroke-opacity="0" />
-      <PolygonSymbolizer fill="#a5b88a" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>100000</MaxScaleDenominator>
-      <MinScaleDenominator>50000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'hedge') and ([areatype] = 'yes')]]></Filter>
-      <LineSymbolizer stroke-opacity="0" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>50000</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'cliff')]]></Filter>
       <LinePatternSymbolizer file="./images/natural_cliff.png" />
     </Rule>
@@ -871,6 +865,18 @@
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'plant')]]></Filter>
+      <PolygonSymbolizer fill="#bcc5c8" />
+      <LineSymbolizer stroke="#929494" stroke-opacity="1" stroke-width="0.8" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'plant')]]></Filter>
+      <PolygonSymbolizer fill="#bcc5c8" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'sub_station')]]></Filter>
       <PolygonSymbolizer fill="#bcc5c8" />
       <LineSymbolizer stroke="#929494" stroke-opacity="1" stroke-width="0.8" />
@@ -891,18 +897,6 @@
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <Filter><![CDATA[([type] = 'substation')]]></Filter>
-      <PolygonSymbolizer fill="#bcc5c8" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>25000</MaxScaleDenominator>
-      <Filter><![CDATA[([type] = 'plant')]]></Filter>
-      <PolygonSymbolizer fill="#bcc5c8" />
-      <LineSymbolizer stroke="#929494" stroke-opacity="1" stroke-width="0.8" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>100000</MaxScaleDenominator>
-      <MinScaleDenominator>25000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'plant')]]></Filter>
       <PolygonSymbolizer fill="#bcc5c8" />
     </Rule>
     <Rule>
@@ -924,11 +918,6 @@
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'university')]]></Filter>
       <PolygonSymbolizer fill="#fdfdfb" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>100000</MaxScaleDenominator>
-      <Filter><![CDATA[([type] = 'track')]]></Filter>
-      <PolygonSymbolizer fill="#dafdc4" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
@@ -1006,6 +995,13 @@
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'pitch')]]></Filter>
       <PolygonSymbolizer fill="#dafdc4" />
+      <LineSymbolizer stroke="#c4e4b0" stroke-width="0.8" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'track')]]></Filter>
+      <PolygonSymbolizer fill="#dafdc4" />
+      <LineSymbolizer stroke="#c4e4b0" stroke-width="0.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
@@ -1016,6 +1012,7 @@
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'parking')]]></Filter>
       <PolygonSymbolizer fill="#f2f2f3" />
+      <LineSymbolizer stroke="#c2c2c2" stroke-width="0.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
@@ -1040,17 +1037,12 @@
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'nursing_home')]]></Filter>
-      <PolygonSymbolizer fill="#f9ecee" />
+      <PolygonSymbolizer fill="#f7f4f5" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'hospital')]]></Filter>
-      <PolygonSymbolizer fill="#fbe9ed" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>100000</MaxScaleDenominator>
-      <Filter><![CDATA[([type] = 'graveyard')]]></Filter>
-      <PolygonSymbolizer fill="#e9f2e9" />
+      <PolygonSymbolizer fill="#f9f2f4" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
@@ -1120,6 +1112,16 @@
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'graveyard')]]></Filter>
+      <PolygonSymbolizer fill="#e9f2e9" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'grave_yard')]]></Filter>
+      <PolygonSymbolizer fill="#e9f2e9" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'cemetery')]]></Filter>
       <PolygonSymbolizer fill="#e9f2e9" />
     </Rule>
@@ -1147,41 +1149,41 @@
   <Style filter-mode="first" name="landuse">
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
-      <Filter><![CDATA[([type] = 'kindergarten')]]></Filter>
+      <Filter><![CDATA[([type] = 'childcare')]]></Filter>
       <PolygonSymbolizer fill="#fdfdfb" />
       <LineSymbolizer stroke="#cacac9" stroke-opacity="1" stroke-width="0.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'kindergarten')]]></Filter>
+      <Filter><![CDATA[([type] = 'childcare')]]></Filter>
       <PolygonSymbolizer fill="#fdfdfb" />
       <LineSymbolizer stroke="#cacac9" stroke-opacity="1" stroke-width="0.5" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'kindergarten')]]></Filter>
+      <Filter><![CDATA[([type] = 'childcare')]]></Filter>
       <PolygonSymbolizer fill="#fdfdfb" />
       <LineSymbolizer stroke="#cacac9" stroke-opacity="0" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
-      <Filter><![CDATA[([type] = 'childcare')]]></Filter>
+      <Filter><![CDATA[([type] = 'kindergarten')]]></Filter>
       <PolygonSymbolizer fill="#fdfdfb" />
       <LineSymbolizer stroke="#cacac9" stroke-opacity="1" stroke-width="0.8" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'childcare')]]></Filter>
+      <Filter><![CDATA[([type] = 'kindergarten')]]></Filter>
       <PolygonSymbolizer fill="#fdfdfb" />
       <LineSymbolizer stroke="#cacac9" stroke-opacity="1" stroke-width="0.5" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'childcare')]]></Filter>
+      <Filter><![CDATA[([type] = 'kindergarten')]]></Filter>
       <PolygonSymbolizer fill="#fdfdfb" />
       <LineSymbolizer stroke="#cacac9" stroke-opacity="0" />
     </Rule>
@@ -1383,6 +1385,1258 @@
   </Layer>
   <Style filter-mode="first" name="landuse_overlays">
     <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'swamp')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'swamp')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'marsh')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'marsh')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'bog')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'bog')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([natural] = 'wetland')]]></Filter>
+      <PolygonPatternSymbolizer file="images/natural_wetland.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([natural] = 'wetland')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/natural_wetland.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'nature_reserve')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'swamp')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'swamp')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'marsh')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'marsh')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'bog')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'bog')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([natural] = 'wetland')]]></Filter>
+      <PolygonPatternSymbolizer file="images/natural_wetland.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([natural] = 'wetland')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/natural_wetland.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'national_park')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <PolygonPatternSymbolizer file="images/natural_wetland.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/natural_wetland.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#a5b88a" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([land_type] = 'protected_area')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([wetland_type] = 'swamp')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <PolygonSymbolizer fill="#a5b88a" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([wetland_type] = 'swamp')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <PolygonSymbolizer fill="#a5b88a" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" />
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([wetland_type] = 'reedbed')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <PolygonSymbolizer fill="#a5b88a" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([wetland_type] = 'reedbed')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([wetland_type] = 'marsh')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <PolygonSymbolizer fill="#a5b88a" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([wetland_type] = 'marsh')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([wetland_type] = 'bog')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <PolygonSymbolizer fill="#a5b88a" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([wetland_type] = 'bog')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([natural] = 'wetland')]]></Filter>
+      <PolygonPatternSymbolizer file="images/natural_wetland.png" />
+      <PolygonSymbolizer fill="#a5b88a" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge') and ([natural] = 'wetland')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" />
+      <PolygonPatternSymbolizer file="images/natural_wetland.png" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <Filter><![CDATA[([barrier] = 'hedge')]]></Filter>
+      <PolygonSymbolizer fill="#a5b88a" />
+    </Rule>
+    <Rule>
       <MaxScaleDenominator>200000</MaxScaleDenominator>
       <Filter><![CDATA[([land_type] = 'nature_reserve') and ([wetland_type] = 'swamp')]]></Filter>
       <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
@@ -1719,341 +2973,6 @@
     </Rule>
     <Rule>
       <MaxScaleDenominator>200000</MaxScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
-      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
-      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>400000</MaxScaleDenominator>
-      <MinScaleDenominator>200000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>750000</MaxScaleDenominator>
-      <MinScaleDenominator>400000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>1500000</MaxScaleDenominator>
-      <MinScaleDenominator>750000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>3000000</MaxScaleDenominator>
-      <MinScaleDenominator>1500000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>6500000</MaxScaleDenominator>
-      <MinScaleDenominator>3000000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MinScaleDenominator>6500000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>200000</MaxScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
-      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
-      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>400000</MaxScaleDenominator>
-      <MinScaleDenominator>200000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>750000</MaxScaleDenominator>
-      <MinScaleDenominator>400000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>1500000</MaxScaleDenominator>
-      <MinScaleDenominator>750000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>3000000</MaxScaleDenominator>
-      <MinScaleDenominator>1500000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>6500000</MaxScaleDenominator>
-      <MinScaleDenominator>3000000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MinScaleDenominator>6500000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>200000</MaxScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
-      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>400000</MaxScaleDenominator>
-      <MinScaleDenominator>200000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>750000</MaxScaleDenominator>
-      <MinScaleDenominator>400000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>1500000</MaxScaleDenominator>
-      <MinScaleDenominator>750000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>3000000</MaxScaleDenominator>
-      <MinScaleDenominator>1500000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>6500000</MaxScaleDenominator>
-      <MinScaleDenominator>3000000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MinScaleDenominator>6500000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>200000</MaxScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
-      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
-      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>400000</MaxScaleDenominator>
-      <MinScaleDenominator>200000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>750000</MaxScaleDenominator>
-      <MinScaleDenominator>400000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>1500000</MaxScaleDenominator>
-      <MinScaleDenominator>750000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>3000000</MaxScaleDenominator>
-      <MinScaleDenominator>1500000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>6500000</MaxScaleDenominator>
-      <MinScaleDenominator>3000000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MinScaleDenominator>6500000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>200000</MaxScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
-      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
-      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>400000</MaxScaleDenominator>
-      <MinScaleDenominator>200000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>750000</MaxScaleDenominator>
-      <MinScaleDenominator>400000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>1500000</MaxScaleDenominator>
-      <MinScaleDenominator>750000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>3000000</MaxScaleDenominator>
-      <MinScaleDenominator>1500000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>6500000</MaxScaleDenominator>
-      <MinScaleDenominator>3000000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MinScaleDenominator>6500000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>200000</MaxScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
-      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
-      <PolygonPatternSymbolizer file="images/natural_wetland.png" />
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>400000</MaxScaleDenominator>
-      <MinScaleDenominator>200000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>750000</MaxScaleDenominator>
-      <MinScaleDenominator>400000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>1500000</MaxScaleDenominator>
-      <MinScaleDenominator>750000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>3000000</MaxScaleDenominator>
-      <MinScaleDenominator>1500000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>6500000</MaxScaleDenominator>
-      <MinScaleDenominator>3000000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MinScaleDenominator>6500000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>200000</MaxScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>400000</MaxScaleDenominator>
-      <MinScaleDenominator>200000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>750000</MaxScaleDenominator>
-      <MinScaleDenominator>400000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>1500000</MaxScaleDenominator>
-      <MinScaleDenominator>750000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>3000000</MaxScaleDenominator>
-      <MinScaleDenominator>1500000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>6500000</MaxScaleDenominator>
-      <MinScaleDenominator>3000000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MinScaleDenominator>6500000</MinScaleDenominator>
-      <Filter><![CDATA[([land_type] = 'protected_area')]]></Filter>
-      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
-      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>200000</MaxScaleDenominator>
       <Filter><![CDATA[([land_type] = 'national_park') and ([wetland_type] = 'swamp')]]></Filter>
       <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
       <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
@@ -2384,6 +3303,341 @@
     <Rule>
       <MinScaleDenominator>6500000</MinScaleDenominator>
       <Filter><![CDATA[([land_type] = 'national_park')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'swamp')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <PolygonPatternSymbolizer file="images/wetland_reedbed.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'reedbed')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'marsh')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/wetland_marsh_bog_swamp.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([wetland_type] = 'bog')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <PolygonSymbolizer fill="#cad5ba" fill-opacity="0.2" />
+      <PolygonPatternSymbolizer file="images/natural_wetland.png" />
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area') and ([natural] = 'wetland')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="3" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>400000</MaxScaleDenominator>
+      <MinScaleDenominator>200000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2.5" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>750000</MaxScaleDenominator>
+      <MinScaleDenominator>400000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="2" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>1500000</MaxScaleDenominator>
+      <MinScaleDenominator>750000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="1" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>3000000</MaxScaleDenominator>
+      <MinScaleDenominator>1500000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.7" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>6500000</MaxScaleDenominator>
+      <MinScaleDenominator>3000000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area')]]></Filter>
+      <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" stroke-width="0.4" />
+      <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
+    </Rule>
+    <Rule>
+      <MinScaleDenominator>6500000</MinScaleDenominator>
+      <Filter><![CDATA[([land_type] = 'protected_area')]]></Filter>
       <LineSymbolizer stroke="#7da36b" stroke-opacity="0.4" />
       <PolygonSymbolizer fill="#7da36b" fill-opacity="0.2" />
     </Rule>
@@ -2435,7 +3689,7 @@
       <Parameter name="port"><![CDATA[5432]]></Parameter>
       <Parameter name="project"><![CDATA[MTB-kartta_full]]></Parameter>
       <Parameter name="srs"><![CDATA[+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over]]></Parameter>
-      <Parameter name="table"><![CDATA[( SELECT osm_id, way, "natural", way_area AS area, COALESCE(leisure, boundary) AS land_type, wetland AS wetland_type
+      <Parameter name="table"><![CDATA[( SELECT osm_id, way, "natural", way_area AS area, COALESCE(leisure, boundary) AS land_type, wetland AS wetland_type, barrier
   FROM planet_osm_polygon
   ORDER BY way_area DESC
 ) AS data]]></Parameter>
@@ -2504,13 +3758,13 @@
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <MinScaleDenominator>50000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'river')]]></Filter>
+      <Filter><![CDATA[([type] = 'canal')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <MinScaleDenominator>50000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'canal')]]></Filter>
+      <Filter><![CDATA[([type] = 'river')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" />
     </Rule>
     <Rule>
@@ -2542,18 +3796,18 @@
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'drain') and ([tunnel] = 'yes')]]></Filter>
+      <Filter><![CDATA[([type] = 'drain') and ([tunnel] = 'culvert')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" stroke-width="2" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'drain') and ([tunnel] = 'yes')]]></Filter>
+      <Filter><![CDATA[([type] = 'drain') and ([tunnel] = 'culvert')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" stroke-width="1" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
-      <Filter><![CDATA[([type] = 'drain') and ([tunnel] = 'yes')]]></Filter>
+      <Filter><![CDATA[([type] = 'drain') and ([tunnel] = 'culvert')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" />
     </Rule>
     <Rule>
@@ -2576,18 +3830,18 @@
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'drain') and ([tunnel] = 'culvert')]]></Filter>
+      <Filter><![CDATA[([type] = 'drain') and ([tunnel] = 'yes')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" stroke-width="2" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'drain') and ([tunnel] = 'culvert')]]></Filter>
+      <Filter><![CDATA[([type] = 'drain') and ([tunnel] = 'yes')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" stroke-width="1" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
-      <Filter><![CDATA[([type] = 'drain') and ([tunnel] = 'culvert')]]></Filter>
+      <Filter><![CDATA[([type] = 'drain') and ([tunnel] = 'yes')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" />
     </Rule>
     <Rule>
@@ -2606,23 +3860,6 @@
       <MaxScaleDenominator>50000</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'ditch') and ([tunnel] = 'culvert')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>12500</MaxScaleDenominator>
-      <MinScaleDenominator>5000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
-      <LineSymbolizer stroke="#94c1e2" stroke-width="2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>25000</MaxScaleDenominator>
-      <MinScaleDenominator>12500</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
-      <LineSymbolizer stroke="#94c1e2" stroke-width="1" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>50000</MaxScaleDenominator>
-      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
-      <LineSymbolizer stroke="#94c1e2" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -2644,25 +3881,19 @@
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'stream') and ([tunnel] = 'yes')]]></Filter>
-      <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" stroke-width="3" />
+      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
+      <LineSymbolizer stroke="#94c1e2" stroke-width="2" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'stream') and ([tunnel] = 'yes')]]></Filter>
-      <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" stroke-width="2.5" />
+      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
+      <LineSymbolizer stroke="#94c1e2" stroke-width="1" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
-      <MinScaleDenominator>25000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'stream') and ([tunnel] = 'yes')]]></Filter>
-      <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" stroke-width="2" />
-    </Rule>
-    <Rule>
-      <MaxScaleDenominator>5000</MaxScaleDenominator>
-      <Filter><![CDATA[([type] = 'stream') and ([tunnel] = 'yes')]]></Filter>
-      <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" />
+      <Filter><![CDATA[([type] = 'ditch')]]></Filter>
+      <LineSymbolizer stroke="#94c1e2" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -2685,6 +3916,29 @@
     <Rule>
       <MaxScaleDenominator>5000</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'stream') and ([tunnel] = 'culvert')]]></Filter>
+      <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'stream') and ([tunnel] = 'yes')]]></Filter>
+      <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" stroke-width="3" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'stream') and ([tunnel] = 'yes')]]></Filter>
+      <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" stroke-width="2.5" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <Filter><![CDATA[([type] = 'stream') and ([tunnel] = 'yes')]]></Filter>
+      <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" stroke-width="2" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>5000</MaxScaleDenominator>
+      <Filter><![CDATA[([type] = 'stream') and ([tunnel] = 'yes')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-opacity="0.5" />
     </Rule>
     <Rule>
@@ -2759,47 +4013,47 @@
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'yes')]]></Filter>
+      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'culvert')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5" stroke-width="5" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'yes')]]></Filter>
+      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'culvert')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5" stroke-width="4.5" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'yes')]]></Filter>
+      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'culvert')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5" stroke-width="4" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>5000</MaxScaleDenominator>
-      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'yes')]]></Filter>
+      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'culvert')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'culvert')]]></Filter>
+      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'yes')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5" stroke-width="5" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'culvert')]]></Filter>
+      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'yes')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5" stroke-width="4.5" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
-      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'culvert')]]></Filter>
+      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'yes')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5" stroke-width="4" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>5000</MaxScaleDenominator>
-      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'culvert')]]></Filter>
+      <Filter><![CDATA[([type] = 'canal') and ([tunnel] = 'yes')]]></Filter>
       <LineSymbolizer stroke="#94c1e2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity="0.5" />
     </Rule>
     <Rule>
@@ -2966,7 +4220,7 @@
       <Parameter name="port"><![CDATA[5432]]></Parameter>
       <Parameter name="table"><![CDATA[( SELECT way, "building" AS type
   FROM planet_osm_polygon
-  WHERE building NOT IN ('', '0','false', 'no')
+  WHERE building NOT IN ('', '0','false', 'no', 'roof')
   ORDER BY ST_YMin(ST_Envelope(way)) DESC
 ) AS data]]></Parameter>
       <Parameter name="type"><![CDATA[postgis]]></Parameter>
@@ -15169,7 +16423,7 @@
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'path') and ([mtb:scale] != 'X') and ([noexit] = 'yes')]]></Filter>
-      <LineSymbolizer stroke="#ffffff" stroke-opacity="0" stroke-width="7" />
+      <LineSymbolizer stroke="#ffffff" stroke-opacity="0" stroke-width="14" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -15197,7 +16451,7 @@
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'track') and ([mtb:scale] != 'X') and ([noexit] = 'yes')]]></Filter>
-      <LineSymbolizer stroke="#ffffff" stroke-opacity="0" stroke-width="7" />
+      <LineSymbolizer stroke="#ffffff" stroke-opacity="0" stroke-width="14" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -15225,7 +16479,7 @@
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'path') and ([mtb:scale] != 'X')]]></Filter>
-      <LineSymbolizer stroke="#ffffff" stroke-opacity="0.2" stroke-width="7" />
+      <LineSymbolizer stroke="#ffffff" stroke-opacity="0.2" stroke-width="14" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -15253,7 +16507,7 @@
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'track') and ([mtb:scale] != 'X')]]></Filter>
-      <LineSymbolizer stroke="#ffffff" stroke-opacity="0.2" stroke-width="7" />
+      <LineSymbolizer stroke="#ffffff" stroke-opacity="0.2" stroke-width="14" />
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
@@ -33561,59 +34815,59 @@
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 102400000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
       <Filter><![CDATA[([area] > 102400000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="2" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="2" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>5000</MaxScaleDenominator>
       <Filter><![CDATA[([area] > 102400000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 102400000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>750000</MaxScaleDenominator>
       <MinScaleDenominator>50000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 102400000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 25600000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
       <Filter><![CDATA[([area] > 25600000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="2" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="2" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>5000</MaxScaleDenominator>
       <Filter><![CDATA[([area] > 25600000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 25600000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>400000</MaxScaleDenominator>
       <MinScaleDenominator>50000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 25600000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -34078,30 +35332,30 @@
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 1600000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
       <Filter><![CDATA[([area] > 1600000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="2" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="2" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>5000</MaxScaleDenominator>
       <Filter><![CDATA[([area] > 1600000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 1600000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>100000</MaxScaleDenominator>
       <MinScaleDenominator>50000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 1600000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -34413,24 +35667,24 @@
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 1500000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <MinScaleDenominator>12500</MinScaleDenominator>
       <Filter><![CDATA[([area] > 1500000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="2" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="2" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>5000</MaxScaleDenominator>
       <Filter><![CDATA[([area] > 1500000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 1500000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -34706,18 +35960,18 @@
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 320000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <Filter><![CDATA[([area] > 320000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>50000</MaxScaleDenominator>
       <MinScaleDenominator>25000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 320000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -34957,12 +36211,12 @@
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 80000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <Filter><![CDATA[([area] > 80000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -35130,12 +36384,12 @@
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <MinScaleDenominator>5000</MinScaleDenominator>
       <Filter><![CDATA[([area] > 50000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer character-spacing="1" face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="12" wrap-width="60"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>5000</MaxScaleDenominator>
       <Filter><![CDATA[([area] > 50000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -35236,7 +36490,7 @@
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <Filter><![CDATA[([area] > 20000) and ([type] = 'hospital')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#978c8e" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#959192" halo-fill="#ffffff" halo-radius="1.5" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -35266,12 +36520,12 @@
     <Rule>
       <MaxScaleDenominator>25000</MaxScaleDenominator>
       <Filter><![CDATA[([area] > 4000) and ([type] = 'building')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#5f5c59" halo-fill="#ffffff" halo-radius="1.2" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#2a2928" halo-fill="#ffffff" halo-radius="1" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <Filter><![CDATA[([area] > 2000) and ([type] = 'building')]]></Filter>
-      <TextSymbolizer face-name="Asap Regular" fill="#5f5c59" halo-fill="#ffffff" halo-radius="1.2" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Regular" fill="#2a2928" halo-fill="#ffffff" halo-radius="1" size="10" wrap-width="30"><![CDATA[[name]]]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
@@ -43314,16 +44568,68 @@
       <Parameter name="extent"><![CDATA[1208977.18100533,7159071.11973415,4224200.43002062,11228036.8150679]]></Parameter>
     </Datasource>
   </Layer>
+  <Style filter-mode="first" name="roofs">
+    <Rule>
+      <MaxScaleDenominator>200000</MaxScaleDenominator>
+      <MinScaleDenominator>100000</MinScaleDenominator>
+      <PolygonSymbolizer fill="#ffffff" fill-opacity="0.7" />
+      <LineSymbolizer stroke="#d0cfcd" stroke-opacity="0.7" stroke-width="1" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>100000</MaxScaleDenominator>
+      <MinScaleDenominator>50000</MinScaleDenominator>
+      <PolygonSymbolizer fill="#f5f5f5" fill-opacity="0.7" />
+      <LineSymbolizer stroke="#c4c2c0" stroke-opacity="0.7" stroke-width="1" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>50000</MaxScaleDenominator>
+      <MinScaleDenominator>25000</MinScaleDenominator>
+      <PolygonSymbolizer fill="#e9e8e7" fill-opacity="0.7" />
+      <LineSymbolizer stroke="#b8b5b3" stroke-opacity="0.7" stroke-width="1" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>25000</MaxScaleDenominator>
+      <MinScaleDenominator>12500</MinScaleDenominator>
+      <PolygonSymbolizer fill="#dddcda" fill-opacity="0.7" />
+      <LineSymbolizer stroke="#aca9a5" stroke-opacity="0.7" stroke-width="1" />
+    </Rule>
+    <Rule>
+      <MaxScaleDenominator>12500</MaxScaleDenominator>
+      <MinScaleDenominator>5000</MinScaleDenominator>
+      <PolygonSymbolizer fill="#c4c2c0" fill-opacity="0.7" />
+      <LineSymbolizer stroke="#938f8b" stroke-opacity="0.7" stroke-width="1" />
+    </Rule>
+  </Style>
+  <Layer name="roofs" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName><![CDATA[roofs]]></StyleName>
+    <Datasource>
+      <Parameter name="type"><![CDATA[postgis]]></Parameter>
+      <Parameter name="table"><![CDATA[( SELECT way, "building" AS type
+  FROM planet_osm_polygon
+  WHERE building IN ('roof')
+  ORDER BY ST_YMin(ST_Envelope(way)) DESC
+) AS data]]></Parameter>
+      <Parameter name="key_field"><![CDATA[]]></Parameter>
+      <Parameter name="geometry_field"><![CDATA[]]></Parameter>
+      <Parameter name="extent_cache"><![CDATA[auto]]></Parameter>
+      <Parameter name="extent"><![CDATA[2572173.45683159,8672502.28630925,2668033.06370938,8767435.44246225]]></Parameter>
+      <Parameter name="dbname"><![CDATA[osm]]></Parameter>
+      <Parameter name="host"><![CDATA[localhost]]></Parameter>
+      <Parameter name="port"><![CDATA[5432]]></Parameter>
+      <Parameter name="user"><![CDATA[postgres]]></Parameter>
+      <Parameter name="password"><![CDATA[postgres]]></Parameter>
+    </Datasource>
+  </Layer>
   <Style filter-mode="first" name="markers">
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'parking') and ([access] != '') and ([access] != 'permissive') and ([access] != 'yes')]]></Filter>
-      <TextSymbolizer face-name="Asap Bold" fill="#0241e2" halo-fill="#ffffff" halo-radius="1" opacity="0.33" size="12"><![CDATA['P']]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Bold" fill="#0241e2" halo-fill="#ffffff" halo-radius="1" opacity="0.3" size="12"><![CDATA['P']]></TextSymbolizer>
     </Rule>
     <Rule>
       <MaxScaleDenominator>12500</MaxScaleDenominator>
       <Filter><![CDATA[([type] = 'parking')]]></Filter>
-      <TextSymbolizer face-name="Asap Bold" fill="#0241e2" halo-fill="#ffffff" halo-radius="1" size="12"><![CDATA['P']]></TextSymbolizer>
+      <TextSymbolizer face-name="Asap Bold" fill="#0241e2" halo-fill="#ffffff" halo-radius="1" opacity="0.6" size="12"><![CDATA['P']]></TextSymbolizer>
     </Rule>
   </Style>
   <Layer name="markers" srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
