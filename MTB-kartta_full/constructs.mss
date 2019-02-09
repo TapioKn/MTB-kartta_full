@@ -55,7 +55,8 @@
     marker-allow-overlap: true;
     marker-file: url('./images/natural_peak.png');
     text-name: "[name]";
-    text-placement:point;
+    text-placement: point;
+    text-allow-overlap: true;
     text-dy: 8;
     text-face-name: @sans_lt;
     text-size: 10;

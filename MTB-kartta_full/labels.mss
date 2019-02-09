@@ -100,9 +100,11 @@
 #place::small[type='village'][zoom>=13],
 #place::small[type='suburb'][zoom>=13],
 #place::small[type='hamlet'][zoom>=13],
-#place::small[type='neighbourhood'][zoom>=13] {
+#place::small[type='neighbourhood'][zoom>=13],
+#place::small[type='locality'][zoom>=14] {
   text-name:'[name]';
   text-face-name:@sans_bold;
+  [type='locality'] { text-face-name:@sans; }
   text-placement:point;
   text-fill:@other_text;
   text-size:10;
@@ -110,24 +112,27 @@
   text-halo-radius:1;
   text-wrap-width: 30;
   [zoom=14] {
-    text-size:11;
+    text-size: 11;
+    [type='locality'] { text-size: 10; }
     text-character-spacing: 1;
     text-wrap-width: 40;
     text-line-spacing: 1;
   }
   [zoom=15] {
-    text-size:12;
-    text-halo-radius: 2;
-    text-transform: uppercase;
+    text-size: 12;
+    [type='locality'] { text-size: 11; }
+    [type!='locality'] { text-transform: uppercase; }
+    text-halo-radius: 1.5;
     text-character-spacing: 1;
     text-wrap-width: 60;
     text-line-spacing: 1;
   }
   [zoom>=16] {
-    text-size:13;
+    text-size: 13;
+    [type='locality'] { text-size: 11; }
+    [type!='locality'] { text-transform: uppercase;
+                         text-character-spacing: 2; }
     text-halo-radius: 2;
-    text-transform: uppercase;
-    text-character-spacing: 2;
     text-wrap-width: 120;
     text-line-spacing: 2;
   }
