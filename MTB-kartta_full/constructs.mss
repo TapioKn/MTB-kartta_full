@@ -59,6 +59,7 @@
     text-dy: 8;
     text-face-name: @sans_lt;
     text-size: 10;
+    [zoom<=14] { text-size: 9; }
     text-wrap-width:30;
     text-fill: @rock * 0.2;
     text-halo-fill: lighten(@rock, 80%);
