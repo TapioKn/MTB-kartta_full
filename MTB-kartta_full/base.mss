@@ -198,7 +198,7 @@
 }
 
 /* ---- BUILDINGS ---- */
-#buildings[zoom>=12][zoom<=16] {
+#buildings[zoom>=12] {
   polygon-fill: lighten(@building, 20%);
   line-color:   @building;
   line-width:   1;
@@ -207,7 +207,7 @@
   [zoom=13]  { polygon-fill: lighten(@building, 40%); line-color: lighten(@building, 20%); }
   [zoom<=12] { polygon-fill: lighten(@building, 45%); line-color: lighten(@building, 25%); }
 }
-#roofs[zoom>=12][zoom<=16] {
+#roofs[zoom>=12] {
   polygon-fill:    lighten(@building, 20%);
   polygon-opacity: 0.7;
   line-color:      @building;

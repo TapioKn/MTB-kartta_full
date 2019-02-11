@@ -57,51 +57,59 @@ more than just automobile routes - railways, footways, and cycleways
 come in as well.
 
 /* Road width variables that are used in road & bridge styles */
-@rdz11_mot: 2.0; @rdz11_tru: 2.0; @rdz11_pri: 1.5;
-@rdz12_mot: 3.0; @rdz12_tru: 3.0; @rdz12_pri: 2.5;
-@rdz13_mot: 4.0; @rdz13_tru: 3.5; @rdz13_pri: 3.0;
-@rdz14_mot: 6.0; @rdz14_tru: 5.0; @rdz14_pri: 4.0;
-@rdz15_mot: 8.0; @rdz15_tru: 7.0; @rdz15_pri: 6.0;
-@rdz16_mot: 10;  @rdz16_tru: 8.0; @rdz16_pri: 7.0;
+@rdz11_mot: 2.0;  @rdz11_tru: 2.0;  @rdz11_pri: 1.5;
+@rdz12_mot: 3.0;  @rdz12_tru: 3.0;  @rdz12_pri: 2.5;
+@rdz13_mot: 4.0;  @rdz13_tru: 3.5;  @rdz13_pri: 3.0;
+@rdz14_mot: 6.0;  @rdz14_tru: 5.0;  @rdz14_pri: 4.0;
+@rdz15_mot: 8.0;  @rdz15_tru: 7.0;  @rdz15_pri: 6.0;
+@rdz16_mot: 10.0; @rdz16_tru: 8.0;  @rdz16_pri: 7.0;
+@rdz17_mot: 15.0; @rdz17_tru: 13.0; @rdz17_pri: 11.0;
 
-@rdz11_mai: 1.0; @rdz11_res: 0.5; @rdz11_ser: 0.5;
-@rdz12_mai: 1.5; @rdz12_res: 1.0; @rdz12_ser: 1.0;
-@rdz13_mai: 2.0; @rdz13_res: 1.2; @rdz13_ser: 1.0;
-@rdz14_mai: 2.5; @rdz14_res: 2.0; @rdz14_ser: 1.8;
-@rdz15_mai: 4.0; @rdz15_res: 2.5; @rdz15_ser: 2.0;
-@rdz16_mai: 6.0; @rdz16_res: 4.0; @rdz16_ser: 3.0;
+@rdz11_mai: 1.0;  @rdz11_res: 0.5;  @rdz11_ser: 0.5;
+@rdz12_mai: 1.5;  @rdz12_res: 1.0;  @rdz12_ser: 1.0;
+@rdz13_mai: 2.0;  @rdz13_res: 1.2;  @rdz13_ser: 1.0;
+@rdz14_mai: 2.5;  @rdz14_res: 2.0;  @rdz14_ser: 1.8;
+@rdz15_mai: 4.0;  @rdz15_res: 2.5;  @rdz15_ser: 2.0;
+@rdz16_mai: 6.0;  @rdz16_res: 4.0;  @rdz16_ser: 3.0;
+@rdz17_mai: 10.0; @rdz17_res: 8.0;  @rdz17_ser: 5.0;
 
 /* Cycleway case widths, line widths and dasharrays */
-@cwz11_cw: 0.0;  @cwz11_lw: 1.0;  @cwz11_da: 4, 2;
-@cwz12_cw: 0.0;  @cwz12_lw: 1.0;  @cwz12_da: 4, 2;
-@cwz13_cw: 0.0;  @cwz13_lw: 1.0;  @cwz13_da: 4, 2;
-@cwz14_cw: 0.0;  @cwz14_lw: 1.0;  @cwz14_da: 4, 2;
-@cwz15_cw: 2.3;  @cwz15_lw: 1.4;  @cwz15_da: 4, 2;
-@cwz16_cw: 3.5;  @cwz16_lw: 1.8;  @cwz16_da: 4, 2;
+@cwz11_cw: 0.0;   @cwz11_lw: 1.0;   @cwz11_da: 4, 2;
+@cwz12_cw: 0.0;   @cwz12_lw: 1.0;   @cwz12_da: 4, 2;
+@cwz13_cw: 0.0;   @cwz13_lw: 1.0;   @cwz13_da: 4, 2;
+@cwz14_cw: 0.0;   @cwz14_lw: 1.0;   @cwz14_da: 4, 2;
+@cwz15_cw: 2.3;   @cwz15_lw: 1.4;   @cwz15_da: 4, 2;
+@cwz16_cw: 3.5;   @cwz16_lw: 1.8;   @cwz16_da: 4, 2;
+@cwz17_cw: 4.0;   @cwz17_lw: 2.0;   @cwz17_da: 4, 2;
 
 /* Footway case widths, line widths and dasharrays */
-@fwz11_cw: 0.0;  @fwz11_lw: 0.0;  @fwz11_da: 3, 2;
-@fwz12_cw: 0.0;  @fwz12_lw: 0.0;  @fwz12_da: 3, 2;
-@fwz13_cw: 0.0;  @fwz13_lw: 0.8;  @fwz13_da: 3, 2;
-@fwz14_cw: 0.0;  @fwz14_lw: 0.8;  @fwz14_da: 3, 2;
-@fwz15_cw: 2.0;  @fwz15_lw: 1.2;  @fwz15_da: 3, 2;
-@fwz16_cw: 3.0;  @fwz16_lw: 1.4;  @fwz16_da: 3, 2;
+@fwz11_cw: 0.0;   @fwz11_lw: 0.0;   @fwz11_da: 3, 2;
+@fwz12_cw: 0.0;   @fwz12_lw: 0.0;   @fwz12_da: 3, 2;
+@fwz13_cw: 0.0;   @fwz13_lw: 0.8;   @fwz13_da: 3, 2;
+@fwz14_cw: 0.0;   @fwz14_lw: 0.8;   @fwz14_da: 3, 2;
+@fwz15_cw: 2.0;   @fwz15_lw: 1.2;   @fwz15_da: 3, 2;
+@fwz16_cw: 3.0;   @fwz16_lw: 1.4;   @fwz16_da: 3, 2;
+@fwz17_cw: 3.5;   @fwz17_lw: 1.8;   @fwz17_da: 3, 2;
 
 /* Path case widths, line widths and dasharrays */
-@paz11_cw: 2.0;  @paz11_lw: 0.5;  @paz11_da: 3, 3;
-@paz12_cw: 2.0;  @paz12_lw: 0.5;  @paz12_da: 3, 3;
-@paz13_cw: 2.5;  @paz13_lw: 1.0;  @paz13_da: 3, 3;
-@paz14_cw: 3.0;  @paz14_lw: 1.0;  @paz14_da: 3, 3;
-@paz15_cw: 3.2;  @paz15_lw: 1.3;  @paz15_da: 4, 4;
-@paz16_cw: 4.0;  @paz16_lw: 1.5;  @paz16_da: 5, 5;
+@paz11_cw: 2.0;   @paz11_lw: 0.5;   @paz11_da: 3, 3;
+@paz12_cw: 2.0;   @paz12_lw: 0.5;   @paz12_da: 3, 3;
+@paz13_cw: 2.5;   @paz13_lw: 1.0;   @paz13_da: 3, 3;
+@paz14_cw: 3.0;   @paz14_lw: 1.0;   @paz14_da: 3, 3;
+@paz15_cw: 3.2;   @paz15_lw: 1.3;   @paz15_da: 4, 4;
+@paz16_cw: 4.0;   @paz16_lw: 1.5;   @paz16_da: 5, 5;
+@paz17_cw: 5.0;   @paz17_lw: 2.5;   @paz17_da: 5, 5;
 
 /* Track case widths, line widths and dasharrays */
-@trz11_cw: 2.0;  @trz11_lw: 0.5;  @trz11_da: 6, 1.5;
-@trz12_cw: 2.0;  @trz12_lw: 0.5;  @trz12_da: 6, 1.5;
-@trz13_cw: 2.5;  @trz13_lw: 1.0;  @trz13_da: 6, 1.5;
-@trz14_cw: 3.0;  @trz14_lw: 1.0;  @trz14_da: 6, 1.5;
-@trz15_cw: 3.2;  @trz15_lw: 1.3;  @trz15_da: 8, 2.0;
-@trz16_cw: 4.0;  @trz16_lw: 1.5;  @trz16_da: 10, 2.5;
+@trz11_cw: 2.0;   @trz11_lw: 0.5;   @trz11_da: 6, 1.5;
+@trz12_cw: 2.0;   @trz12_lw: 0.5;   @trz12_da: 6, 1.5;
+@trz13_cw: 2.5;   @trz13_lw: 1.0;   @trz13_da: 6, 1.5;
+@trz14_cw: 3.0;   @trz14_lw: 1.0;   @trz14_da: 6, 1.5;
+@trz15_cw: 3.2;   @trz15_lw: 1.3;   @trz15_da: 8, 2.0;
+@trz16_cw: 4.0;   @trz16_lw: 1.5;   @trz16_da: 10, 2.5;
+@trz17_cw: 5.0;   @trz17_lw: 2.5;   @trz17_da: 10, 2.5;
+
+
 
 /* ---- CASING ----------------------------------------------- */
 
@@ -294,6 +302,28 @@ come in as well.
     [type='construction']  { line-width: @rdz16_ser + 1; }
     [type='cycleway']      { line-width: @cwz16_cw; }
 	  [type='footway']       { line-width: @fwz16_cw; }
+    [type='path']          { line-width: 0; }
+    [type='railway']       { line-width: 2 + 2; }
+    [type='rail_abandoned']{ line-width: 2 + 2; }
+  }
+  [zoom=17] {
+    [type='motorway']      { line-width: @rdz17_mot + 2.5; }
+    [type='motorway_link'] { line-width: @rdz17_mot - 1.0; }
+    [type='trunk']         { line-width: @rdz17_tru + 2; }
+    [type='trunk_link']    { line-width: @rdz17_tru; }
+    [type='primary']       { line-width: @rdz17_pri + 2; }
+    [type='primary_link']  { line-width: @rdz17_pri; }
+    [type='mainroad']      { line-width: @rdz17_mai + 2; }
+    [type='mainroad_link'] { line-width: @rdz17_mai - 1 ; }
+    [type='residential']   { line-width: @rdz17_res + 2; }
+    [type='living_street'] { line-width: @rdz17_res + 1; }
+    [type='driveway']      { line-width: @rdz17_res + 0.5; }
+    [type='raceway']       { line-width: @rdz17_ser + 1; }
+    [type='service']       { line-width: @rdz17_ser + 2; }
+    [type='driveway']      { line-width: @rdz17_ser + 1; }
+    [type='construction']  { line-width: @rdz17_ser + 1; }
+    [type='cycleway']      { line-width: @cwz17_cw; }
+    [type='footway']       { line-width: @fwz17_cw; }
     [type='path']          { line-width: 0; }
     [type='railway']       { line-width: 2 + 2; }
     [type='rail_abandoned']{ line-width: 2 + 2; }
@@ -530,6 +560,33 @@ come in as well.
                               ::nocycleline  { line-color: @footway;  line-width: @fwz16_lw; line-dasharray: 1, 2; }
      }
      [type='steps']         { line-width: @cwz16_cw; line-color: @footway; line-dasharray: 1, 2.5; }
+   }
+   [zoom=17] {
+     [type='motorway']      { line-width: @rdz17_mot; }
+     [type='motorway_link'] { line-width: @rdz17_mot - 3.5; }
+     [type='trunk']         { line-width: @rdz17_tru; }
+     [type='trunk_link']    { line-width: @rdz17_tru - 2; }
+     [type='primary']       { line-width: @rdz17_pri; }
+     [type='primary_link']  { line-width: @rdz17_pri - 2; }
+     [type='mainroad']      { line-width: @rdz17_mai; }
+     [type='mainroad_link'] { line-width: @rdz17_mai - 2; }
+     [type='residential']   { line-width: @rdz17_res; }
+     [type='living_street'] { line-width: @rdz17_res - 0.5; }
+     [type='service']       { line-width: @rdz17_ser; }
+     [type='driveway']      { line-width: @rdz17_ser - 1; }
+     [type='construction']  { line-width: @rdz17_ser - 1; line-dasharray: @cwz17_da; }
+     [type='parking_aisle'] { line-width: @trz17_cw - 2; }
+     [type='railway']       { line-width: 2; }
+     [type='cycleway']      { ::cyclewaybg   { line-width: @cwz17_cw; line-color: @cyclewaybg; }
+                              ::cyclewayline { line-color: @cycleway; line-width: @cwz17_lw; line-dasharray: @cwz17_da; }
+     }
+ 	   [type='footway']       { ::footwaybg    { line-width: @fwz17_cw; line-color: @footwaybg; }
+                              ::footwayline  { line-color: @footway;  line-width: @fwz17_lw; line-dasharray: @fwz17_da; }
+     }
+     [type='nocycle']       { ::nocyclebg    { line-width: @fwz17_cw; line-color: @footwaybg; }
+                              ::nocycleline  { line-color: @footway;  line-width: @fwz17_lw; line-dasharray: 1, 2; }
+     }
+     [type='steps']         { line-width: @cwz17_cw; line-color: @footway; line-dasharray: 1, 2.5; }
    }
    [type='other']           { line-color: #ff00e6; line-opacity: 0; } /* For checking missing rendering */
  }
