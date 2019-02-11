@@ -22,7 +22,7 @@
                                line-color: @commercial * 0.8;
                                line-opacity: 0;
                                [zoom=15] {
-                                 line-opacity: 1.0;
+                                 line-opacity: 0.6;
                                  line-width: 0.5;
                                }
                                [zoom>=16] {
@@ -34,7 +34,7 @@
                                 line-color: @industrial * 0.8;
                                 line-opacity: 0;
                                 [zoom=15] {
-                                  line-opacity: 1.0;
+                                  line-opacity: 0.6;
                                   line-width: 0.5;
                                 }
                                 [zoom>=16] {
@@ -46,7 +46,7 @@
                                line-color: @residential * 0.8;
                                line-opacity: 0;
                                [zoom=15] {
-                               line-opacity: 1.0;
+                               line-opacity: 0.6;
                                line-width: 0.5;
                                }
                                [zoom>=16] {
@@ -58,7 +58,7 @@
                                line-color: @retail * 0.8;
                                line-opacity: 0;
                                [zoom=15] {
-                               line-opacity: 1.0;
+                               line-opacity: 0.6;
                                line-width: 0.5;
                                }
                                [zoom>=16] {
@@ -71,7 +71,7 @@
                                line-color: @school * 0.8;
                                line-opacity: 0;
                                [zoom=15] {
-                               line-opacity: 1.0;
+                               line-opacity: 0.6;
                                line-width: 0.5;
                                }
                                [zoom>=16] {
