@@ -148,7 +148,7 @@ come in as well.
   [type='residential'],
   [type='living_street'],
   [type='service'],
-  [type='driveway'] {
+  [type='driveway'], {
     line-color: @road_case;
     [bridge=1] { line-color: @road_case * 0.8; }
   }
@@ -156,6 +156,11 @@ come in as well.
     line-color: lighten(@road_case,40%);
     [bridge=1] { line-color: lighten(@road_case,40%); }
   }
+  [type='parking_aisle'] {
+    line-color: lighten(@road_case,30%);
+    [bridge=1] { line-color: lighten(@road_case,30%); }
+  }
+
   /* Cycleway and footway backgrounds are defined in one go with their lines later */
   /* as they use dashed lines and thus can't be constructed in the same way. Only  */
   /* their bridge casing can be defined here.                                      */
@@ -192,6 +197,7 @@ come in as well.
     [type='service']       { line-width: 0; }
     [type='driveway']      { line-width: 0; }
     [type='construction']  { line-width: 0; }
+    [type='parking_aisle'] { line-width: 0; }
     [type='cycleway']      { line-width: @cwz11_cw; }
 	  [type='footway']       { line-width: @fwz11_cw; }
     [type='path']          { line-width: 0; }
@@ -213,6 +219,7 @@ come in as well.
     [type='service']       { line-width: 0; }
     [type='driveway']      { line-width: 0; }
     [type='construction']  { line-width: 0; }
+    [type='parking_aisle'] { line-width: 0; }
     [type='cycleway']      { line-width: @cwz12_cw; }
 	  [type='footway']       { line-width: @fwz12_cw; }
     [type='path']          { line-width: 0; }
@@ -235,6 +242,7 @@ come in as well.
     /* No minor ways yet */
     [type='driveway']      { line-width: 0; }
     [type='construction']  { line-width: 0; }
+    [type='parking_aisle'] { line-width: 0; }
     [type='cycleway']      { line-width: @cwz13_cw; }
 	  [type='footway']       { line-width: @fwz13_cw; }
     [type='path']          { line-width: 0; }
@@ -256,6 +264,7 @@ come in as well.
     [type='driveway']      { line-width: @rdz14_ser + 1; }
     [type='construction']  { line-width: @rdz14_ser + 1; }
     /* No minor ways yet */
+    [type='parking_aisle'] { line-width: 0; }
     [type='cycleway']      { line-width: @cwz14_cw; }
 	  [type='footway']       { line-width: @fwz14_cw; }
     [type='path']          { line-width: 0; }
@@ -278,6 +287,7 @@ come in as well.
     [type='service']       { line-width: @rdz15_ser + 1.7; }
     [type='driveway']      { line-width: @rdz15_ser + 0.5; }
     [type='construction']  { line-width: @rdz15_ser + 1; }
+    [type='parking_aisle'] { line-width: @trz15_cw - 2; }
     [type='cycleway']      { line-width: @cwz15_cw ; }
 	  [type='footway']       { line-width: @fwz15_cw ; }
     [type='path']          { line-width: 0; }
@@ -300,6 +310,7 @@ come in as well.
     [type='service']       { line-width: @rdz16_ser + 2; }
     [type='driveway']      { line-width: @rdz16_ser + 1; }
     [type='construction']  { line-width: @rdz16_ser + 1; }
+    [type='parking_aisle'] { line-width: @trz16_cw - 2; }
     [type='cycleway']      { line-width: @cwz16_cw; }
 	  [type='footway']       { line-width: @fwz16_cw; }
     [type='path']          { line-width: 0; }
@@ -322,6 +333,7 @@ come in as well.
     [type='service']       { line-width: @rdz17_ser + 2; }
     [type='driveway']      { line-width: @rdz17_ser + 1; }
     [type='construction']  { line-width: @rdz17_ser + 1; }
+    [type='parking_aisle'] { line-width: @trz17_cw - 2; }
     [type='cycleway']      { line-width: @cwz17_cw; }
     [type='footway']       { line-width: @fwz17_cw; }
     [type='path']          { line-width: 0; }
@@ -376,7 +388,6 @@ come in as well.
     [zoom>15] { line-dasharray: 5,5; }
   }
 
-  [type='parking_aisle'],
   [type='service'],
   [type='driveway'],
   [type='living_street'],
@@ -388,9 +399,10 @@ come in as well.
     line-cap: round;
     line-join: round;
   }
-  /* No lines for paths/tracks, defined in their own style */
+  /* No lines for paths/tracks, or parking aisles defined in their own style */
   [type='path'],
-  [type='track'] {
+  [type='track'],
+  [type='parking_aisle'] {
     line-opacity: 0;
   }
   [tunnel=1] {
@@ -415,7 +427,6 @@ come in as well.
      [type='service']       { line-width: @rdz11_ser; }
      [type='driveway']      { line-width: @rdz11_ser - 1; }
      [type='construction']  { line-width: @rdz11_ser - 1; line-dasharray: @cwz11_da; }
-     [type='parking_aisle'] { line-width: @trz11_cw - 2; }
      [type='railway']       { line-width: 2; }
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz11_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz11_lw; line-dasharray: @cwz11_da; }
@@ -443,7 +454,6 @@ come in as well.
      [type='service']       { line-width: @rdz12_ser; }
      [type='driveway']      { line-width: @rdz12_ser - 1; }
      [type='construction']  { line-width: @rdz12_ser - 1; line-dasharray: @cwz12_da; }
-     [type='parking_aisle'] { line-width: @trz12_cw - 2; }
      [type='railway']       { line-width: 2; }
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz12_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz12_lw; line-dasharray: @cwz12_da; }
@@ -471,7 +481,6 @@ come in as well.
      [type='service']       { line-width: @rdz13_ser; }
      [type='driveway']      { line-width: @rdz13_ser - 1; }
      [type='construction']  { line-width: @rdz13_ser - 1; line-dasharray: @cwz13_da; }
-     [type='parking_aisle'] { line-width: @trz13_cw - 2; }
      [type='railway']       { line-width: 2; }
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz13_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz13_lw; line-dasharray: @cwz13_da; }
@@ -499,7 +508,6 @@ come in as well.
      [type='service']       { line-width: @rdz14_ser; }
      [type='driveway']      { line-width: @rdz14_ser - 1; }
      [type='construction']  { line-width: @rdz14_ser - 1; line-dasharray: @cwz14_da; }
-     [type='parking_aisle'] { line-width: @trz14_cw - 2; }
      [type='railway']       { line-width: 2; }
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz14_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz14_lw; line-dasharray: @cwz14_da; }
@@ -529,7 +537,6 @@ come in as well.
      [type='service']       { line-width: @rdz15_ser; }
      [type='driveway']      { line-width: @rdz15_ser - 1; }
      [type='construction']  { line-width: @rdz15_ser - 1; line-dasharray: @cwz15_da; }
-     [type='parking_aisle'] { line-width: @trz15_cw - 2; }
      [type='railway']       { line-width: 2; }
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz15_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz15_lw; line-dasharray: @cwz15_da; }
@@ -558,7 +565,6 @@ come in as well.
      [type='service']       { line-width: @rdz16_ser; }
      [type='driveway']      { line-width: @rdz16_ser - 1; }
      [type='construction']  { line-width: @rdz16_ser - 1; line-dasharray: @cwz16_da; }
-     [type='parking_aisle'] { line-width: @trz16_cw - 2; }
      [type='railway']       { line-width: 2; }
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz16_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz16_lw; line-dasharray: @cwz16_da; }
@@ -587,7 +593,6 @@ come in as well.
      [type='service']       { line-width: @rdz17_ser; }
      [type='driveway']      { line-width: @rdz17_ser - 1; }
      [type='construction']  { line-width: @rdz17_ser - 1; line-dasharray: @cwz17_da; }
-     [type='parking_aisle'] { line-width: @trz17_cw - 2; }
      [type='railway']       { line-width: 2; }
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz17_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz17_lw; line-dasharray: @cwz17_da; }
