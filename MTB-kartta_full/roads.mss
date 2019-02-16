@@ -421,7 +421,9 @@ come in as well.
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz11_lw; line-dasharray: @cwz11_da; }
      }
  	   [type='footway']       { ::footwaybg    { line-width: @fwz11_cw; line-color: @footwaybg; }
-                              ::footwayline  { line-color: @footway;  line-width: @fwz11_lw; line-dasharray: @fwz11_da; }
+                              ::footwayline  { line-color: @footway;  line-width: @fwz11_lw; line-dasharray: @fwz11_da;
+                                               [access='no'],[access='private'] { line-dasharray: 1, 2; }
+                                             }
      }
      [type='nocycle']       { ::nocyclebg    { line-width: @fwz11_cw; line-color: @footwaybg; }
                               ::nocycleline  { line-color: @footway;  line-width: @fwz11_lw; line-dasharray: 1, 2; }
@@ -447,7 +449,9 @@ come in as well.
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz12_lw; line-dasharray: @cwz12_da; }
      }
  	   [type='footway']       { ::footwaybg    { line-width: @fwz12_cw; line-color: @footwaybg; }
-                              ::footwayline  { line-color: @footway;  line-width: @fwz12_lw; line-dasharray: @fwz12_da; }
+                              ::footwayline  { line-color: @footway;  line-width: @fwz12_lw; line-dasharray: @fwz12_da;
+                                               [access='no'],[access='private'] { line-dasharray: 1, 2; }
+                                             }
      }
      [type='nocycle']       { ::nocyclebg    { line-width: @fwz12_cw; line-color: @footwaybg; }
                               ::nocycleline  { line-color: @footway;  line-width: @fwz12_lw; line-dasharray: 1, 2; }
@@ -473,7 +477,9 @@ come in as well.
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz13_lw; line-dasharray: @cwz13_da; }
      }
  	   [type='footway']       { ::footwaybg    { line-width: @fwz13_cw; line-color: @footwaybg; }
-                              ::footwayline  { line-color: @footway;  line-width: @fwz13_lw; line-dasharray: @fwz13_da; }
+                              ::footwayline  { line-color: @footway;  line-width: @fwz13_lw; line-dasharray: @fwz13_da;
+                                               [access='no'],[access='private'] { line-dasharray: 1, 2; }
+                                             }
      }
      [type='nocycle']       {  ::nocyclebg    { line-width: @fwz13_cw; line-color: @footwaybg; }
                                ::nocycleline  { line-color: @footway;  line-width: @fwz13_lw; line-dasharray: 1, 2; }
@@ -500,7 +506,9 @@ come in as well.
      }
      /* Cycleways/footways under construction zlvl>=14 */
  	   [type='footway']       { ::footwaybg    { line-width: @fwz14_cw; line-color: @footwaybg; }
-                              ::footwayline  { line-color: @footway;  line-width: @fwz14_lw; line-dasharray: @fwz14_da; }
+                              ::footwayline  { line-color: @footway;  line-width: @fwz14_lw; line-dasharray: @fwz14_da;
+                                               [access='no'],[access='private'] { line-dasharray: 1, 2; }
+                                             }
      }
      [type='nocycle']       { ::nocyclebg    { line-width: @fwz14_cw; line-color: @footwaybg; }
                               ::nocycleline  { line-color: @footway;  line-width: @fwz14_lw; line-dasharray: 1, 2; }
@@ -527,7 +535,9 @@ come in as well.
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz15_lw; line-dasharray: @cwz15_da; }
      }
      [type='footway']       { ::footwaybg    { line-width: @fwz15_cw; line-color: @footwaybg; }
-                              ::footwayline  { line-color: @footway;  line-width: @fwz15_lw; line-dasharray: @fwz15_da; }
+                              ::footwayline  { line-color: @footway;  line-width: @fwz15_lw; line-dasharray: @fwz15_da;
+                                               [access='no'],[access='private'] { line-dasharray: 1, 2; }
+                                             }
      }
      [type='nocycle']       {  ::nocyclebg    { line-width: @fwz15_cw; line-color: @footwaybg; }
                                ::nocycleline  { line-color: @footway;  line-width: @fwz15_lw; line-dasharray: 1, 2; }
@@ -554,7 +564,9 @@ come in as well.
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz16_lw; line-dasharray: @cwz16_da; }
      }
  	   [type='footway']       { ::footwaybg    { line-width: @fwz16_cw; line-color: @footwaybg; }
-                              ::footwayline  { line-color: @footway;  line-width: @fwz16_lw; line-dasharray: @fwz16_da; }
+                              ::footwayline  { line-color: @footway;  line-width: @fwz16_lw; line-dasharray: @fwz16_da;
+                                               [access='no'],[access='private'] { line-dasharray: 1, 2; }
+                                             }
      }
      [type='nocycle']       { ::nocyclebg    { line-width: @fwz16_cw; line-color: @footwaybg; }
                               ::nocycleline  { line-color: @footway;  line-width: @fwz16_lw; line-dasharray: 1, 2; }
@@ -581,7 +593,9 @@ come in as well.
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz17_lw; line-dasharray: @cwz17_da; }
      }
  	   [type='footway']       { ::footwaybg    { line-width: @fwz17_cw; line-color: @footwaybg; }
-                              ::footwayline  { line-color: @footway;  line-width: @fwz17_lw; line-dasharray: @fwz17_da; }
+                              ::footwayline  { line-color: @footway;  line-width: @fwz17_lw; line-dasharray: @fwz17_da;
+                                               [access='no'],[access='private'] { line-dasharray: 1, 2; }
+                                             }
      }
      [type='nocycle']       { ::nocyclebg    { line-width: @fwz17_cw; line-color: @footwaybg; }
                               ::nocycleline  { line-color: @footway;  line-width: @fwz17_lw; line-dasharray: 1, 2; }
