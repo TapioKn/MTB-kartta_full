@@ -1,3 +1,5 @@
+
+
 #paths_and_tracks {
   [type='path'],
   [type='track'] {
@@ -95,26 +97,3 @@
 
 
 
-
-
-/*
-Path case widths, line widths and dasharrays
-@paz11_cw: 2.0;  @paz11_lw: 0.5;  @paz11_da: 3, 3;
-@paz12_cw: 2.0;  @paz12_lw: 0.5;  @paz12_da: 3, 3;
-@paz13_cw: 2.5;  @paz13_lw: 1.0;  @paz13_da: 3, 3;
-@paz14_cw: 3.0;  @paz14_lw: 1.0;  @paz14_da: 3, 3;
-@paz15_cw: 3.5;  @paz15_lw: 1.5;  @paz15_da: 4, 4;
-@paz16_cw: 4.0;  @paz16_lw: 1.5;  @paz16_da: 5, 5;
-@paz17_cw: 4.0;  @paz17_lw: 1.5;  @paz17_da: 5, 5;
-@paz18_cw: 4.0;  @paz18_lw: 1.5;  @paz18_da: 5, 5;
-
-Track case widths, line widths and dasharrays
-@trz11_cw: 2.0;  @trz11_lw: 0.5;  @trz11_da: 6, 1.5;
-@trz12_cw: 2.0;  @trz12_lw: 0.5;  @trz12_da: 6, 1.5;
-@trz13_cw: 2.5;  @trz13_lw: 1.0;  @trz13_da: 6, 1.5;
-@trz14_cw: 3.0;  @trz14_lw: 1.0;  @trz14_da: 6, 1.5;
-@trz15_cw: 3.5;  @trz15_lw: 1.5;  @trz15_da: 8, 2.0;
-@trz16_cw: 4.0;  @trz16_lw: 1.5;  @trz16_da: 10, 2.5;
-@trz17_cw: 4.0;  @trz17_lw: 1.5;  @trz17_da: 10, 2.5;
-@trz18_cw: 4.0;  @trz18_lw: 1.5;  @trz18_da: 10, 2.5;
-*/

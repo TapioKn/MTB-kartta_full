@@ -275,26 +275,26 @@
   shield-size: 9;
   shield-face-name: @sans_bold;
   shield-fill: #fff;
-  shield-file: url(img/shield-motorway-1.png);
+  shield-file: url(images/shield-motorway-1.png);
   [type='motorway'] {
-    [reflen=1] { shield-file: url(img/shield-motorway-1.png); }
-    [reflen=2] { shield-file: url(img/shield-motorway-2.png); }
-    [reflen=3] { shield-file: url(img/shield-motorway-3.png); }
-    [reflen=4] { shield-file: url(img/shield-motorway-4.png); }
-    [reflen=5] { shield-file: url(img/shield-motorway-5.png); }
-    [reflen=6] { shield-file: url(img/shield-motorway-6.png); }
-    [reflen=7] { shield-file: url(img/shield-motorway-7.png); }
-    [reflen=8] { shield-file: url(img/shield-motorway-8.png); }
+    [reflen=1] { shield-file: url(images/shield-motorway-1.png); }
+    [reflen=2] { shield-file: url(images/shield-motorway-2.png); }
+    [reflen=3] { shield-file: url(images/shield-motorway-3.png); }
+    [reflen=4] { shield-file: url(images/shield-motorway-4.png); }
+    [reflen=5] { shield-file: url(images/shield-motorway-5.png); }
+    [reflen=6] { shield-file: url(images/shield-motorway-6.png); }
+    [reflen=7] { shield-file: url(images/shield-motorway-7.png); }
+    [reflen=8] { shield-file: url(images/shield-motorway-8.png); }
   }
   [type='trunk'] {
-    [reflen=1] { shield-file: url(img/shield-trunk-1.png); }
-    [reflen=2] { shield-file: url(img/shield-trunk-2.png); }
-    [reflen=3] { shield-file: url(img/shield-trunk-3.png); }
-    [reflen=4] { shield-file: url(img/shield-trunk-4.png); }
-    [reflen=5] { shield-file: url(img/shield-trunk-5.png); }
-    [reflen=6] { shield-file: url(img/shield-trunk-6.png); }
-    [reflen=7] { shield-file: url(img/shield-trunk-7.png); }
-    [reflen=8] { shield-file: url(img/shield-trunk-8.png); }
+    [reflen=1] { shield-file: url(images/shield-trunk-1.png); }
+    [reflen=2] { shield-file: url(images/shield-trunk-2.png); }
+    [reflen=3] { shield-file: url(images/shield-trunk-3.png); }
+    [reflen=4] { shield-file: url(images/shield-trunk-4.png); }
+    [reflen=5] { shield-file: url(images/shield-trunk-5.png); }
+    [reflen=6] { shield-file: url(images/shield-trunk-6.png); }
+    [reflen=7] { shield-file: url(images/shield-trunk-7.png); }
+    [reflen=8] { shield-file: url(images/shield-trunk-8.png); }
   }
   [zoom=11] { shield-min-distance: 60; } //50
   [zoom=12] { shield-min-distance: 80; } //60
@@ -356,8 +356,8 @@
    marker-placement:line;
    marker-max-error: 0.5;
    marker-spacing: 200;
-   marker-file: url(img/icon/oneway.svg);
-   [oneway='-1'] { marker-file: url(img/icon/oneway-reverse.svg); }
+   marker-file: url(images/oneway.svg);
+   [oneway='-1'] { marker-file: url(images/oneway-reverse.svg); }
    [zoom=16] { marker-transform: "scale(0.7)"; }
   }
 }

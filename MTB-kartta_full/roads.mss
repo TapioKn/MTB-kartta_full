@@ -157,7 +157,7 @@ come in as well.
     [bridge=1] { line-color: lighten(@road_case,40%); }
   }
   [type='parking_aisle'] {
-    line-color: lighten(@road_case,30%);
+    line-color: lighten(@road_case,3110%);
     [bridge=1] { line-color: lighten(@road_case,30%); }
   }
 

@@ -89,7 +89,7 @@
         [type='path']  { line-dasharray: @paz15_da; }
         [type='track'] { line-dasharray: @trz15_da; }
         [visibility='bad'] { line-dasharray: 1.8, 4; }
-        ['mtb:scale'='-1']   { line-pattern-file: url('.\images\forbidden-line-z15.png');  }
+        ['mtb:scale'='-1']   { line-pattern-file: url('images\forbidden-line-z15.png');  }
       }
       [zoom<=14] {
 	    line-width: @paz14_lw;
@@ -97,7 +97,7 @@
         [type='path']  { line-dasharray: @paz14_da; }
         [type='track'] { line-dasharray: @trz14_da; }
         [visibility='bad'] { line-dasharray: 1.3, 3; }
-        ['mtb:scale'='-1']   { line-pattern-file: url('.\images\forbidden-line-z14.png');  }
+        ['mtb:scale'='-1']   { line-pattern-file: url('images\forbidden-line-z14.png');  }
       }
       [zoom<=13] {
 	    line-width: @paz13_lw;
@@ -105,7 +105,7 @@
         [type='path']  { line-dasharray: @paz13_da; }
         [type='track'] { line-dasharray: @trz13_da; }
         [visibility='bad'] { line-dasharray: 1.3, 3; }
-        ['mtb:scale'='-1']   { line-pattern-file: url('.\images\forbidden-line-z13.png');  }
+        ['mtb:scale'='-1']   { line-pattern-file: url('images\forbidden-line-z13.png');  }
       }
       [zoom<=12] {
 	    line-width: @paz12_lw;
@@ -113,7 +113,7 @@
         [type='path']  { line-dasharray: @paz12_da; }
         [type='track'] { line-dasharray: @trz12_da; }
         [visibility='bad'] { line-dasharray: 1.3, 3; }
-        ['mtb:scale'='-1']   { line-pattern-file: url('.\images\forbidden-line-z13.png');  }
+        ['mtb:scale'='-1']   { line-pattern-file: url('images\forbidden-line-z13.png');  }
       }
     [visibility='bad'] { line-dasharray: 2, 2; }
     }
@@ -211,7 +211,7 @@
         [type='path']  { line-dasharray: @paz15_da; }
         [type='track'] { line-dasharray: @trz15_da; }
         [visibility='bad'] { line-dasharray: 1.8, 4; }
-        ['mtb:scale'='-1']   { line-pattern-file: url('.\images\forbidden-line-z15.png');  }
+        ['mtb:scale'='-1']   { line-pattern-file: url('images\forbidden-line-z15.png');  }
       }
       [zoom<=14] {
 	    line-width: @paz14_lw;
@@ -219,7 +219,7 @@
         [type='path']  { line-dasharray: @paz14_da; }
         [type='track'] { line-dasharray: @trz14_da; }
         [visibility='bad'] { line-dasharray: 1.3, 3; }
-        ['mtb:scale'='-1']   { line-pattern-file: url('.\images\forbidden-line-z14.png');  }
+        ['mtb:scale'='-1']   { line-pattern-file: url('images\forbidden-line-z14.png');  }
       }
       [zoom<=13] {
 	    line-width: @paz13_lw;
@@ -227,7 +227,7 @@
         [type='path']  { line-dasharray: @paz13_da; }
         [type='track'] { line-dasharray: @trz13_da; }
         [visibility='bad'] { line-dasharray: 1.3, 3; }
-        ['mtb:scale'='-1']   { line-pattern-file: url('.\images\forbidden-line-z13.png');  }
+        ['mtb:scale'='-1']   { line-pattern-file: url('images\forbidden-line-z13.png');  }
       }
       [zoom<=12] {
 	    line-width: @paz12_lw;
@@ -235,7 +235,7 @@
         [type='path']  { line-dasharray: @paz12_da; }
         [type='track'] { line-dasharray: @trz12_da; }
         [visibility='bad'] { line-dasharray: 1.3, 3; }
-        ['mtb:scale'='-1']   { line-pattern-file: url('.\images\forbidden-line-z13.png');  }
+        ['mtb:scale'='-1']   { line-pattern-file: url('images\forbidden-line-z13.png');  }
       }
     [visibility='bad'] { line-dasharray: 2, 2; }
     }

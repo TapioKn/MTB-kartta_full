@@ -1,7 +1,10 @@
 /* ==================================================================
    ROAD & RAIL LINES
 /* ================================================================== */
-
+#contours { 
+  line-width: 1.0;
+  line-color: #000000;
+}  
 
 /* ================ LOW =================*/
 /* At lower zoomlevels, just show major automobile routes: motorways

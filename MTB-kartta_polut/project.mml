@@ -12,7 +12,7 @@
   ],
   "format": "png8",
   "interactivity": false,
-  "minzoom": 12,
+  "minzoom": 4,
   "maxzoom": 16,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
@@ -21,6 +21,37 @@
     "roads.mss"
   ],
   "Layer": [
+    {
+      "geometry": "linestring",
+      "extent": [
+        23.406226195831646,
+        61.37638455806693,
+        23.61873030282708,
+        61.48966845202131
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT geom, ryhma\n    FROM contours\n) AS data",
+        "key_field": "",
+        "geometry_field": "geom",
+        "extent_cache": "auto",
+        "extent": "308000,6810000,320000,6822000",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres",
+        "id": "contours",
+        "project": "MTB-kartta_polut",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "contours",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=utm +zone=35 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs",
+      "advanced": {},
+      "name": "contours"
+    },
     {
       "geometry": "linestring",
       "extent": [

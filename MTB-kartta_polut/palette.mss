@@ -6,7 +6,7 @@
  * fonts defined in this file. For more detailed / advanced
  * adjustments explore the other files.
  *
- * GENERAL NOTES
+ * GENERAL NOTES 
  *
  * There is a slight performance cost in rendering line-caps.  An
  * effort has been made to restrict line-cap definitions to styles
