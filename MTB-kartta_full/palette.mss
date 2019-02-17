@@ -48,7 +48,7 @@ Map { font-directory: url(./fonts); }
 @construction:      desaturate(lighten(#ccc3b3, 3%), 10%);      /* #d5dbdd; */
 @farmland:          desaturate(lighten(#faf8d9, 3%), 5%);      /* #faf8d9; */
 @farmyard:          desaturate(lighten(#f8f3d3, 3%), 5%);      /* #f8f3d3; */
-@forest:            desaturate(lighten(#c3d2ad, 3%), 5%);      /* #c3d2ad; */
+@forest:            desaturate(lighten(#c7d2a7, 3%), 5%);      /* #c5d2ae; */
 @golf_course:       desaturate(lighten(#d0ffb3, 3%), 5%);      /* #d0ffb3; */
 @grass:             desaturate(lighten(#eeffcc, 3%), 5%);      /* #eeffcc; */
 @grassland:         desaturate(lighten(#dfeebf, 3%), 5%);      /* #eeffcc; */
