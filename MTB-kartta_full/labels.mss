@@ -168,21 +168,21 @@
       text-halo-fill: lighten(@park, 80%);
     }
     [type='golf_course'][zoom>=10] {
-      text-fill: @sports * 0.6;
+      text-fill: @sports * 0.4;
       text-halo-fill: lighten(@sports, 90%);
     }
     [type='cemetery'][zoom>=10] {
-      text-fill: @cemetery * 0.6;
+      text-fill: @cemetery * 0.4;
       text-halo-fill: lighten(@cemetery, 90%);
     }
     [type='hospital'][zoom>=10] {
-      text-fill: @hospital * 0.6;
+      text-fill: @hospital * 0.4;
       text-halo-fill: lighten(@hospital, 90%);
     }
     [type='college'][zoom>=10],
     [type='school'][zoom>=10],
     [type='university'][zoom>=10] {
-      text-fill: @school * 0.6;
+      text-fill: @school * 0.4;
       text-halo-fill: lighten(@school, 90%);
     }
     [type='water'][zoom>=10],
