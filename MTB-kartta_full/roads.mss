@@ -395,9 +395,13 @@ come in as well.
   [type='living_street'],
   [type='residential'],
   [type='mainroad'],
+  [type='mainroad_link'],
   [type='primary'],
+  [type='primary_link'],
   [type='trunk'],
-  [type='motorway'] {
+  [type='trunk_link'],
+  [type='motorway'],
+  [type='motorway_link'] {
     line-cap: round;
     line-join: round;
   }
