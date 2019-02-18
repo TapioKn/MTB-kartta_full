@@ -76,19 +76,19 @@ Map { font-directory: url(./fonts); }
 /* ROAD COLORS
 /* ================================================================== */
 
-@motorway_line:    #ffc34d;
+@motorway_line:    #ffb84d;  //BACKUP: #ffc34d;
 @motorway_fill:    lighten(@motorway_line,5%);
 @motorway_case:    @motorway_line * 0.5;
 
-@trunk_line:       #ffe18f;
+@trunk_line:       #fcd681;  //BACKUP: #ffe18f;
 @trunk_fill:       lighten(@trunk_line,5%);
 @trunk_case:       @trunk_line * 0.5;
 
-@primary_line:     #ffe8aa;
+@primary_line:     #fcd681;  //BACKUP: #ffe18f;
 @primary_fill:     lighten(@primary_line,5%);
 @primary_case:     @primary_line * 0.5;
 
-@mainroad_line:    #ffe18f;
+@mainroad_line:    #fade97;  //BACKUP: #ffe8aa;
 @mainroad_fill:    lighten(@mainroad_line,5%);
 @mainroad_case:    @mainroad_line * 0.5;
 
@@ -104,8 +104,8 @@ Map { font-directory: url(./fonts); }
 
 @tunnel_opacity:   0.5;
 
-@unpaved_case:     #968565;
-@unpaved_fill:     #faf0dd;
+@unpaved_case:     #937c53;
+@unpaved_fill:     #fffbf4;
 
 /* ================================================================== */
 /* BICYCLE AND PEDESTRIAN WAYS
