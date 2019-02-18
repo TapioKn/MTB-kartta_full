@@ -1,5 +1,5 @@
 /* ****************************************************************** */
-/* OSM BRIGHT for Imposm                                           */
+/* OSM BRIGHT for Imposm                                          */
 /* ****************************************************************** */
 
 /* For basic style customization you can simply edit the colors and
@@ -104,6 +104,8 @@ Map { font-directory: url(./fonts); }
 
 @tunnel_opacity:   0.5;
 
+@unpaved_case:     #968565;
+@unpaved_fill:     #faf0dd;
 
 /* ================================================================== */
 /* BICYCLE AND PEDESTRIAN WAYS

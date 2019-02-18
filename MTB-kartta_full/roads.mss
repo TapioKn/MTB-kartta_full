@@ -160,6 +160,8 @@ come in as well.
     line-color: lighten(@road_case,3110%);
     [bridge=1] { line-color: lighten(@road_case,30%); }
   }
+  // Case color for unpaved roads
+  [surface='unpaved'] { line-color: @unpaved_case; }
 
   /* Cycleway and footway backgrounds are defined in one go with their lines later */
   /* as they use dashed lines and thus can't be constructed in the same way. Only  */
@@ -405,6 +407,10 @@ come in as well.
     line-cap: round;
     line-join: round;
   }
+
+  // Light brown fill for unpaved roads
+  [surface='unpaved'] { line-color: @unpaved_fill; }
+
   /* No lines for paths/tracks, or parking aisles defined in their own style */
   [type='path'],
   [type='track'],
