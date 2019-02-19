@@ -1,20 +1,5 @@
-/* ****************************************************************** */
-/* OSM BRIGHT for Imposm                                          */
-/* ****************************************************************** */
-
-/* For basic style customization you can simply edit the colors and
- * fonts defined in this file. For more detailed / advanced
- * adjustments explore the other files.
- *
- * GENERAL NOTES
- *
- * There is a slight performance cost in rendering line-caps.  An
- * effort has been made to restrict line-cap definitions to styles
- * where the results will be visible (lines at least 2 pixels thick).
- */
-
 /* ================================================================== */
-/* FONTS
+/* FONTS 
 /* ================================================================== */
 
 /* directory to load fonts from in addition to the system directories */

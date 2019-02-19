@@ -1,11 +1,3 @@
-/* BASE.MSS CONTENTS
- * - Landuse & landcover
- * - Water areas
- * - Water ways
- * - Administrative Boundaries 
- *
- */
-
 /* ================================================================== */
 /* LANDUSE & LANDCOVER
 /* ================================================================== */
