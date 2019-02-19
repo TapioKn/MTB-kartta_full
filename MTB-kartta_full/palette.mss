@@ -1,5 +1,5 @@
 /* ================================================================== */
-/* FONTS 
+/* FONTS
 /* ================================================================== */
 
 /* directory to load fonts from in addition to the system directories */
@@ -92,38 +92,37 @@ Map { font-directory: url(./fonts); }
 @unpaved_case:     #815b15;
 @unpaved_fill:     #fffbf4;
 
-/* ================================================================== */
-/* BICYCLE AND PEDESTRIAN WAYS
-/* ================================================================== */
+// ==================================================================
+// BICYCLE AND PEDESTRIAN WAY COLORS
+// ==================================================================
 
-/* Dash colors                     BACKUP      */
+// Dash colors
 @footway:         #d9002f;
-@cycleway:        #0444eb;      /* #0241e2     */
+@cycleway:        #0444eb;
 @path:            #00f504;
 @forbidden:       #cc002c;
 
-/* Case colors                     BACKUP      */
-@cyclewaybg:      #ffffff;      /* #ffffff     */
-@footwaybg:       @cyclewaybg;  /*             */
-@mtbscale0:       #88f41c;      /* #99f53d     */
-@mtbscale1:       #f4f41d;      /* #f5f53d     */
-@mtbscale2:       #f4881d;      /* #f5993d     */
-@mtbscale3:       #f92828;      /* #f53d3d     */
-@mtbscale4:       #ee2099;      /* #eb47a7     */
-@mtbscale5:       #bf1cf5;      /* #c73df5     */
+// Case colors
+@cyclewaybg:      @land;
+@footwaybg:       @cyclewaybg;
+@mtbscale0:       #88f41c;
+@mtbscale1:       #f4f41d;
+@mtbscale2:       #f4881d;
+@mtbscale3:       #f92828;
+@mtbscale4:       #ee2099;
+@mtbscale5:       #bf1cf5;
 
-/* ================================================================== */
-/* BOUNDARY COLORS
-/* ================================================================== */
+// ==================================================================
+// BOUNDARY COLORS
+// ==================================================================
 
 @admin_2:           #324;
 
-/* ================================================================== */
-/* LABEL COLORS
-/* ================================================================== */
+// ==================================================================
+// LABEL COLORS
+// ==================================================================
 
-/* We set up a default halo color for places so you can edit them all
-   at once or override each individually. */
+
 @place_halo:        fadeout(#ffffff,10%);
 
 @country_text:      #4b4b4b;
@@ -152,9 +151,3 @@ Map { font-directory: url(./fonts); }
 /* Also used for other small places: hamlets, suburbs, localities */
 @village_text:      #888;
 @village_halo:      @place_halo;
-
-
-#paths_and_tracks_bridge {
-  line-width:1;
-  line-color:#168;
-}
