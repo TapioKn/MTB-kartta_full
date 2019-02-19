@@ -104,7 +104,7 @@ Map { font-directory: url(./fonts); }
 
 @tunnel_opacity:   0.5;
 
-@unpaved_case:     #937c53;
+@unpaved_case:     #815b15;
 @unpaved_fill:     #fffbf4;
 
 /* ================================================================== */
@@ -113,7 +113,7 @@ Map { font-directory: url(./fonts); }
 
 /* Dash colors                     BACKUP      */
 @footway:         #d9002f;
-@cycleway:        #0042ec;      /* #0241e2     */
+@cycleway:        #0444eb;      /* #0241e2     */
 @path:            #00f504;
 @forbidden:       #cc002c;
 
