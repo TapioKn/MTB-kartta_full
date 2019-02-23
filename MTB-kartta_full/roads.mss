@@ -152,10 +152,6 @@ come in as well.
     line-color: @road_case;
     [bridge=1] { line-color: @road_case * 0.8; }
   }
-  [type='construction'] {
-    line-color: lighten(@road_case,40%);
-    [bridge=1] { line-color: lighten(@road_case,40%); }
-  }
   [type='parking_aisle'] {
     line-color: lighten(@road_case,3110%);
     [bridge=1] { line-color: lighten(@road_case,30%); }
@@ -199,7 +195,6 @@ come in as well.
     [type='raceway']       { line-width: 0; }
     [type='service']       { line-width: 0; }
     [type='driveway']      { line-width: 0; }
-    [type='construction']  { line-width: 0; }
     [type='parking_aisle'] { line-width: 0; }
     [type='cycleway']      { line-width: @cwz11_cw; }
 	  [type='footway']       { line-width: @fwz11_cw; }
@@ -222,7 +217,6 @@ come in as well.
     [type='raceway']       { line-width: 0; }
     [type='service']       { line-width: 0; }
     [type='driveway']      { line-width: 0; }
-    [type='construction']  { line-width: 0; }
     [type='parking_aisle'] { line-width: 0; }
     [type='cycleway']      { line-width: @cwz12_cw; }
 	  [type='footway']       { line-width: @fwz12_cw; }
@@ -245,7 +239,6 @@ come in as well.
     [type='service']       { line-width: @rdz13_ser + 2; }
     /* No minor ways yet */
     [type='driveway']      { line-width: 0; }
-    [type='construction']  { line-width: 0; }
     [type='parking_aisle'] { line-width: 0; }
     [type='cycleway']      { line-width: @cwz13_cw; }
 	  [type='footway']       { line-width: @fwz13_cw; }
@@ -266,7 +259,6 @@ come in as well.
     [type='raceway']       { line-width: @rdz14_ser + 2; }
     [type='service']       { line-width: @rdz14_ser + 2; }
     [type='driveway']      { line-width: @rdz14_ser + 1; }
-    [type='construction']  { line-width: @rdz14_ser + 1; }
     /* No minor ways yet */
     [type='parking_aisle'] { line-width: 0; }
     [type='cycleway']      { line-width: @cwz14_cw; }
@@ -290,7 +282,6 @@ come in as well.
     [type='raceway']       { line-width: @rdz15_ser + 1.7; }
     [type='service']       { line-width: @rdz15_ser + 1.7; }
     [type='driveway']      { line-width: @rdz15_ser + 0.5; }
-    [type='construction']  { line-width: @rdz15_ser + 1; }
     [type='parking_aisle'] { line-width: @trz15_cw - 2; }
     [type='cycleway']      { line-width: @cwz15_cw ; }
 	  [type='footway']       { line-width: @fwz15_cw ; }
@@ -313,7 +304,6 @@ come in as well.
     [type='raceway']       { line-width: @rdz16_ser + 2; }
     [type='service']       { line-width: @rdz16_ser + 2; }
     [type='driveway']      { line-width: @rdz16_ser + 1; }
-    [type='construction']  { line-width: @rdz16_ser + 1; }
     [type='parking_aisle'] { line-width: @trz16_cw - 2; }
     [type='cycleway']      { line-width: @cwz16_cw; }
 	  [type='footway']       { line-width: @fwz16_cw; }
@@ -336,7 +326,6 @@ come in as well.
     [type='raceway']       { line-width: @rdz17_ser + 2; }
     [type='service']       { line-width: @rdz17_ser + 2; }
     [type='driveway']      { line-width: @rdz17_ser + 1; }
-    [type='construction']  { line-width: @rdz17_ser + 1; }
     [type='parking_aisle'] { line-width: @trz17_cw - 2; }
     [type='cycleway']      { line-width: @cwz17_cw; }
     [type='footway']       { line-width: @fwz17_cw; }
@@ -348,7 +337,7 @@ come in as well.
   [type='other'],[type='path']      { line-opacity: 0; }
 }
 
-/* ---- WAY FILL COLORS ----------------------------------------------- */
+/* ---- WAY FILLS ----------------------------------------------- */
 #roads_high[zoom>=11][zoom<=20],
 #tunnel[render='3_inline'][zoom>=11][zoom<=20],
 #bridge[render='3_inline'][zoom>=11][zoom<=20]{
@@ -440,7 +429,6 @@ come in as well.
      [type='raceway']       { line-width: @rdz11_ser; }
      [type='service']       { line-width: @rdz11_ser; }
      [type='driveway']      { line-width: @rdz11_ser - 1; }
-     [type='construction']  { line-width: @rdz11_ser - 1; line-dasharray: @cwz11_da; }
      [type='railway']       { line-width: 2; }
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz11_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz11_lw; line-dasharray: @cwz11_da; }
@@ -468,7 +456,6 @@ come in as well.
      [type='raceway']       { line-width: @rdz12_ser; }
      [type='service']       { line-width: @rdz12_ser; }
      [type='driveway']      { line-width: @rdz12_ser - 1; }
-     [type='construction']  { line-width: @rdz12_ser - 1; line-dasharray: @cwz12_da; }
      [type='railway']       { line-width: 2; }
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz12_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz12_lw; line-dasharray: @cwz12_da; }
@@ -496,7 +483,6 @@ come in as well.
      [type='raceway']       { line-width: @rdz13_ser; }
      [type='service']       { line-width: @rdz13_ser; }
      [type='driveway']      { line-width: @rdz13_ser - 1; }
-     [type='construction']  { line-width: @rdz13_ser - 1; line-dasharray: @cwz13_da; }
      [type='railway']       { line-width: 2; }
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz13_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz13_lw; line-dasharray: @cwz13_da;
@@ -526,14 +512,12 @@ come in as well.
      [type='raceway']       { line-width: @rdz14_ser; }
      [type='service']       { line-width: @rdz14_ser; }
      [type='driveway']      { line-width: @rdz14_ser - 0.7; }
-     [type='construction']  { line-width: @rdz14_ser - 1; line-dasharray: @cwz14_da; }
      [type='railway']       { line-width: 2; }
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz14_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz14_lw; line-dasharray: @cwz14_da;
                                                [surface='paved']   { line-dasharray: @cwz14_pda; }
                                              }
      }
-     /* Cycleways/footways under construction zlvl>=14 */
  	   [type='footway']       { ::footwaybg    { line-width: @fwz14_cw; line-color: @footwaybg; }
                               ::footwayline  { line-color: @footway;  line-width: @fwz14_lw; line-dasharray: @fwz14_da;
                                                [access='no'],[access='private'] { line-dasharray: 1, 2; }
@@ -558,7 +542,6 @@ come in as well.
      [type='raceway']       { line-width: @rdz15_ser; }
      [type='service']       { line-width: @rdz15_ser; }
      [type='driveway']      { line-width: @rdz15_ser - 1; }
-     [type='construction']  { line-width: @rdz15_ser - 1; line-dasharray: @cwz15_da; }
      [type='railway']       { line-width: 2; }
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz15_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz15_lw; line-dasharray: @cwz15_da;
@@ -589,7 +572,6 @@ come in as well.
      [type='raceway']       { line-width: @rdz16_ser; }
      [type='service']       { line-width: @rdz16_ser; }
      [type='driveway']      { line-width: @rdz16_ser - 1; }
-     [type='construction']  { line-width: @rdz16_ser - 1; line-dasharray: @cwz16_da; }
      [type='railway']       { line-width: 2; }
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz16_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz16_lw; line-dasharray: @cwz16_da;
@@ -620,7 +602,6 @@ come in as well.
      [type='raceway']       { line-width: @rdz17_ser; }
      [type='service']       { line-width: @rdz17_ser; }
      [type='driveway']      { line-width: @rdz17_ser - 1; }
-     [type='construction']  { line-width: @rdz17_ser - 1; line-dasharray: @cwz17_da; }
      [type='railway']       { line-width: 2; }
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz17_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz17_lw; line-dasharray: @cwz17_da;
@@ -655,20 +636,6 @@ come in as well.
   }
   [type='other']        { line-opacity: 0; }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -735,7 +702,7 @@ come in as well.
       [type='mainroad']      { line-width: @rdz13_mai + 2.5; }
       [type='mainroad_link'] { line-width: @rdz13_mai; }
       [type='residential']   { line-width: @rdz13_res + 2; }
-      [type='living_street'] { line-width: @rdz16_res + 1; }
+      [type='living_street'] { line-width: @rdz13_res + 1; }
     }
     [zoom=14] {
       line-width: 0;
@@ -748,7 +715,7 @@ come in as well.
       [type='mainroad']      { line-width: @rdz14_mai + 2.5; }
       [type='mainroad_link'] { line-width: @rdz14_mai; }
       [type='residential']   { line-width: @rdz14_res + 2; }
-      [type='living_street'] { line-width: @rdz16_res + 1; }
+      [type='living_street'] { line-width: @rdz14_res + 1; }
     }
     [zoom=15] {
       line-width: 0;
@@ -782,6 +749,23 @@ come in as well.
       [type='service']       { line-width: @rdz16_ser + 2; }
       [type='cycleway']      { line-width: @cwz16_cw + 2; }
       [type='footway']       { line-width: @fwz16_cw + 2; }
+    }
+    [zoom=17] {
+      line-width: 0;
+      [type='motorway']      { line-width: @rdz17_mot + 2.5; }
+      [type='motorway_link'] { line-width: @rdz17_mot; }
+      [type='trunk']         { line-width: @rdz17_tru + 2; }
+      [type='trunk_link']    { line-width: @rdz17_tru; }
+      [type='primary']       { line-width: @rdz17_pri + 2; }
+      [type='primary_link']  { line-width: @rdz17_pri; }
+      [type='mainroad']      { line-width: @rdz17_mai + 2.5; }
+      [type='mainroad_link'] { line-width: @rdz17_mai; }
+      [type='residential']   { line-width: @rdz17_res + 2; }
+      [type='living_street'] { line-width: @rdz17_res + 1; }
+      [type='driveway']      { line-width: @rdz17_res + 0; }
+      [type='service']       { line-width: @rdz17_ser + 2; }
+      [type='cycleway']      { line-width: @cwz17_cw + 2; }
+      [type='footway']       { line-width: @fwz17_cw + 2; }
     }
   }
   ::line-background {
@@ -856,6 +840,20 @@ come in as well.
       [type='service']       { line-width: @rdz16_ser; }
       [type='parking_aisle'] { line-width: @trz16_cw - 2; }
     }
+    [zoom=17] {
+      [type='motorway']      { line-width: @rdz17_mot; }
+      [type='motorway_link'] { line-width: @rdz17_mot - 2; }
+      [type='trunk']         { line-width: @rdz17_tru; }
+      [type='trunk_link']    { line-width: @rdz17_tru - 2; }
+      [type='primary']       { line-width: @rdz17_pri; }
+      [type='primary_link']  { line-width: @rdz17_pri - 2; }
+      [type='mainroad']      { line-width: @rdz17_mai; }
+      [type='residential']   { line-width: @rdz17_res; }
+      [type='living_street'] { line-width: @rdz17_res - 1; }
+      [type='driveway']      { line-width: @rdz17_res - 2; }
+      [type='service']       { line-width: @rdz17_ser; }
+      [type='parking_aisle'] { line-width: @trz17_cw - 2; }
+    }
   }
   ::line {
     /* -- Way under construction line fill colors -- */
@@ -899,8 +897,8 @@ come in as well.
       [type='living_street'] { line-width: @rdz12_res - 1; }
       [type='driveway']      { line-width: @rdz12_res - 2; }
       [type='service']       { line-width: @rdz12_ser; }
-      [type='cycleway']      { line-color: @cycleway; line-width: @cwz12_lw; line-dasharray: @cwz12_da; }
-      [type='footway']       { line-color: @footway;  line-width: @fwz12_lw; line-dasharray: @fwz12_da; }
+      [type='cycleway']      { line-color: lighten(@cycleway,30%); line-width: @cwz12_lw; line-dasharray: @cwz12_da; }
+      [type='footway']       { line-color: lighten(@footway,30%);  line-width: @fwz12_lw; line-dasharray: @fwz12_da; }
     }
     [zoom=13] {
       [type='motorway']      { line-width: @rdz13_mot; }
@@ -915,8 +913,8 @@ come in as well.
       [type='driveway']      { line-width: @rdz13_res - 2; }
       [type='service']       { line-width: @rdz13_ser; }
       [type='parking_aisle'] { line-width: @trz13_cw - 2; }
-      [type='cycleway']      { line-color: @cycleway; line-width: @cwz13_lw; line-dasharray: @cwz13_da; }
-      [type='footway']       { line-color: @footway;  line-width: @fwz13_lw; line-dasharray: @fwz13_da; }
+      [type='cycleway']      { line-color: lighten(@cycleway,30%); line-width: @cwz13_lw; line-dasharray: @cwz13_da; }
+      [type='footway']       { line-color: lighten(@footway,30%);  line-width: @fwz13_lw; line-dasharray: @fwz13_da; }
     }
     [zoom=14] {
       [type='motorway']      { line-width: @rdz14_mot; }
@@ -931,8 +929,8 @@ come in as well.
       [type='driveway']      { line-width: @rdz14_res - 2; }
       [type='service']       { line-width: @rdz14_ser; }
       [type='parking_aisle'] { line-width: @trz14_cw - 2; }
-      [type='cycleway']      { line-color: @cycleway; line-width: @cwz14_lw; line-dasharray: @cwz14_da; }
-      [type='footway']       { line-color: @footway;  line-width: @fwz14_lw; line-dasharray: @fwz14_da; }
+      [type='cycleway']      { line-color: lighten(@cycleway,30%); line-width: @cwz14_lw; line-dasharray: @cwz14_da; }
+      [type='footway']       { line-color: lighten(@footway,30%);  line-width: @fwz14_lw; line-dasharray: @fwz14_da; }
     }
     [zoom=15] {
       [type='motorway']      { line-width: @rdz15_mot; }
@@ -947,8 +945,8 @@ come in as well.
       [type='driveway']      { line-width: @rdz15_res - 2; }
       [type='service']       { line-width: @rdz15_ser; }
       [type='parking_aisle'] { line-width: @trz15_cw - 2; }
-      [type='cycleway']      { line-color: @cycleway; line-width: @cwz15_lw; line-dasharray: @cwz15_da; }
-      [type='footway']       { line-color: @footway;  line-width: @fwz15_lw; line-dasharray: @fwz15_da; }
+      [type='cycleway']      { line-color: lighten(@cycleway,30%); line-width: @cwz15_lw; line-dasharray: @cwz15_da; }
+      [type='footway']       {line-color: lighten(@footway,30%);  line-width: @fwz15_lw; line-dasharray: @fwz15_da; }
     }
     [zoom=16] {
       [type='motorway']      { line-width: @rdz16_mot; }
@@ -963,8 +961,24 @@ come in as well.
       [type='driveway']      { line-width: @rdz16_res - 2; }
       [type='service']       { line-width: @rdz16_ser; }
       [type='parking_aisle'] { line-width: @trz16_cw - 2; }
-      [type='cycleway']      { line-color: @cycleway; line-width: @cwz16_lw; line-dasharray: @cwz16_da; }
-      [type='footway']       { line-color: @footway;  line-width: @fwz15_lw; line-dasharray: @fwz16_da; }
+      [type='cycleway']      { line-color: lighten(@cycleway,30%); line-width: @cwz16_lw; line-dasharray: @cwz16_da; }
+      [type='footway']       { line-color: lighten(@footway,30%);  line-width: @fwz15_lw; line-dasharray: @fwz16_da; }
+    }
+    [zoom=17] {
+      [type='motorway']      { line-width: @rdz17_mot; }
+      [type='motorway_link'] { line-width: @rdz17_mot - 2; }
+      [type='trunk']         { line-width: @rdz17_tru; }
+      [type='trunk_link']    { line-width: @rdz17_tru - 2; }
+      [type='primary']       { line-width: @rdz17_pri; }
+      [type='primary_link']  { line-width: @rdz17_pri - 2; }
+      [type='mainroad']      { line-width: @rdz17_mai; }
+      [type='residential']   { line-width: @rdz17_res; }
+      [type='living_street'] { line-width: @rdz17_res - 1; }
+      [type='driveway']      { line-width: @rdz17_res - 2; }
+      [type='service']       { line-width: @rdz17_ser; }
+      [type='parking_aisle'] { line-width: @trz17_cw - 2; }
+      [type='cycleway']      { line-color: lighten(@cycleway,30%); line-width: @cwz17_lw; line-dasharray: @cwz17_da; }
+      [type='footway']       { line-color: lighten(@footway,30%);  line-width: @fwz15_lw; line-dasharray: @fwz17_da; }
     }
   }
 }
@@ -987,6 +1001,7 @@ come in as well.
   [zoom=14] { marker-width:@rdz14_res * 2; }
   [zoom=15] { marker-width:@rdz15_res * 2; }
   [zoom=16] { marker-width:@rdz16_res * 2; }
+  [zoom=17] { marker-width:@rdz17_res * 2; }
 }
 
 /* ================================================================== */
