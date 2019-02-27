@@ -1,0 +1,9 @@
+/* Blend settings for overlay layers */
+.hlsBlending {
+  filter: brightness(140%);
+  mix-blend-mode: multiply;
+}
+.ctrBlending {
+  filter: opacity(40%);
+  mix-blend-mode: darken;
+}

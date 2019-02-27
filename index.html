@@ -7,13 +7,14 @@
     <meta name="author" content="Tapio K.">
     <title>MTB-kartta demo</title>
 
+    <script src="./MTB-kartta_demo/leaflet/leaflet-src.js"></script>        <!--  For map display -->
+    <script src="./MTB-kartta_demo/scripts/jquery-3.1.1.min.js"></script>   <!--  For styling tile layers with css -->
     <link rel="stylesheet" href="./MTB-kartta_demo/leaflet/leaflet.css"/>
-    <script src="./MTB-kartta_demo/leaflet/leaflet-src.js"></script>
+    <link rel="stylesheet" href="./MTB-kartta_demo/scripts/MTB-kartta.css"/>
   </head>
   <body>
     <!-- Map screen -->
-    <div id="map" style="height: 100%; width: 100%">
-    </div>
+    <div id="map" style="height: 100%; width: 100%"></div>
 
     <!-- Map display -->
     <script type="text/javascript">
@@ -30,30 +31,35 @@
           maxZoom:16,
           maxNativeZoom:16
         }),
+        mml	= L.tileLayer('http://tiles.kartat.kapsi.fi/peruskartta/{z}/{x}/{y}.jpg', {
+          id:'MML-kartta',
+          maxZoom:16,
+          maxNativeZoom:16
+        }),
+/* Hillshading
         hls	= L.tileLayer('https://www.finomena.fi/varjomap2m/{z}/{x}/{y}.png', {
           id:'Rinnevarjostus',
           maxZoom:16,
           maxNativeZoom:15,
           minNativeZoom:15,
           opacity:0.5
-        });
-
-
-    /* Contours by MapAnt
-        var ctr	= L.tileLayer('https://wmts.mapant.fi/wmts_EPSG3857.php?z={z}&x={x}&y={y}&style=contours', {
+        }),
+*/
+        ctr	= L.tileLayer('https://wmts.mapant.fi/wmts_EPSG3857.php?z={z}&x={x}&y={y}&style=contours', {
           id:'Korkeuskäyrät',
           maxZoom:16,
           maxNativeZoom:16
         });
-    */
+
 
     // Defining the layer(group)s for the layercontrol and creating the control
     var baseLayers = {
       "MTB-kartta":mtb,
       "Arpotechno-kartta":arp,
+      "MML-kartta":mml,
     };
     var overlayMaps = {
-      "Rinnevarjostus":hls,
+      "Korkeuskäyrät":ctr,
     };
 
     // Creating the main map, with mtb-layer as default
@@ -66,6 +72,14 @@
     // Adding the layer control panel
     var layerControl = L.control.layers( baseLayers, overlayMaps, {visible:true, position:'topright', collapsed:false, });
     map.addControl(layerControl);
+
+    // Setting overlay layer blending options fom CSS
+    $(ctr.getContainer()).addClass('ctrBlending');
+    // Reapply overlay layer blending options from CSS each time the layer is added
+    map.on("overlayadd", function (event) {
+      $(ctr.getContainer()).addClass('ctrBlending');
+    });
+
     </script>
   </body>
 </html>
