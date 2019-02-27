@@ -10,6 +10,5 @@
 
 /* Blend settings to make MML map less garish with path overlays */
 .mmlBlending {
-  filter: grayscale(50%);
-  opacity:(70%);
+  filter: grayscale(50%) opacity(80%);
 }
