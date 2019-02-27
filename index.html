@@ -36,17 +36,13 @@
           maxZoom:16,
           maxNativeZoom:16
         }),
-/* Hillshading
-        hls	= L.tileLayer('https://www.finomena.fi/varjomap2m/{z}/{x}/{y}.png', {
-          id:'Rinnevarjostus',
-          maxZoom:16,
-          maxNativeZoom:15,
-          minNativeZoom:15,
-          opacity:0.5
-        }),
-*/
         ctr	= L.tileLayer('https://wmts.mapant.fi/wmts_EPSG3857.php?z={z}&x={x}&y={y}&style=contours', {
           id:'Korkeuskäyrät',
+          maxZoom:16,
+          maxNativeZoom:16
+        }),
+        pth	= L.tileLayer('./MTB-tiles_polut/{z}/{x}/{y}.png', {
+          id:'Polut',
           maxZoom:16,
           maxNativeZoom:16
         });
@@ -60,6 +56,7 @@
     };
     var overlayMaps = {
       "Korkeuskäyrät":ctr,
+      "Polut":pth,
     };
 
     // Creating the main map, with mtb-layer as default
@@ -73,12 +70,18 @@
     var layerControl = L.control.layers( baseLayers, overlayMaps, {visible:true, position:'topright', collapsed:false, });
     map.addControl(layerControl);
 
-    // Setting overlay layer blending options fom CSS
-    $(ctr.getContainer()).addClass('ctrBlending');
-    // Reapply overlay layer blending options from CSS each time the layer is added
+
+    // Apply overlay layer blending options from CSS when the layer is added, remove when layer is removed.
     map.on("overlayadd", function (event) {
       $(ctr.getContainer()).addClass('ctrBlending');
+      $(mml.getContainer()).addClass('mmlBlending');
     });
+    map.on("overlayremove", function (event) {
+      $(ctr.getContainer()).removeClass('ctrBlending');
+      $(mml.getContainer()).removeClass('mmlBlending');
+    });
+
+
 
     </script>
   </body>
