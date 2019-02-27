@@ -1,3 +1,71 @@
-<html>
-<p>Placeholder</p>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="MTB-kartta demo">
+    <meta name="author" content="Tapio K.">
+    <title>MTB-kartta demo</title>
+
+    <link rel="stylesheet" href="./MTB-kartta_demo/leaflet/leaflet.css"/>
+    <script src="./MTB-kartta_demo/leaflet/leaflet-src.js"></script>
+  </head>
+  <body>
+    <!-- Map screen -->
+    <div id="map" style="height: 100%; width: 100%">
+    </div>
+
+    <!-- Map display -->
+    <script type="text/javascript">
+
+    var	mtb	= L.tileLayer('./MTB-tiles_full/{z}/{x}/{y}.png', {
+          id:'MTB-kartta',
+          minZoom:14,
+          minNativeZoom:14,
+          maxZoom:16,
+          maxNativeZoom:16
+        }),
+        arp	= L.tileLayer('https://arpotechno.finomena.fi/tiles/{z}/{x}/{y}.png', {
+          id:'Arpotechno-kartta',
+          maxZoom:16,
+          maxNativeZoom:16
+        }),
+        hls	= L.tileLayer('https://www.finomena.fi/varjomap2m/{z}/{x}/{y}.png', {
+          id:'Rinnevarjostus',
+          maxZoom:16,
+          maxNativeZoom:15,
+          minNativeZoom:15,
+          opacity:0.5
+        });
+
+
+    /* Contours by MapAnt
+        var ctr	= L.tileLayer('https://wmts.mapant.fi/wmts_EPSG3857.php?z={z}&x={x}&y={y}&style=contours', {
+          id:'Korkeuskäyrät',
+          maxZoom:16,
+          maxNativeZoom:16
+        });
+    */
+
+    // Defining the layer(group)s for the layercontrol and creating the control
+    var baseLayers = {
+      "MTB-kartta":mtb,
+      "Arpotechno-kartta":arp,
+    };
+    var overlayMaps = {
+      "Rinnevarjostus":hls,
+    };
+
+    // Creating the main map, with mtb-layer as default
+    var map = L.map('map', {
+      center:[61.4803, 23.5012],
+      zoom:15,
+      layers:[mtb]
+    });
+
+    // Adding the layer control panel
+    var layerControl = L.control.layers( baseLayers, overlayMaps, {visible:true, position:'topright', collapsed:false, });
+    map.addControl(layerControl);
+    </script>
+  </body>
 </html>
