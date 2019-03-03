@@ -1,5 +1,5 @@
 /* ================================================================== */
-/* FONTS 
+/* FONTS
 /* ================================================================== */
 
 /* directory to load fonts from in addition to the system directories */
@@ -63,23 +63,23 @@ Map { font-directory: url(./fonts); }
 
 @motorway_line:    #ffb84d;  //BACKUP: #ffc34d;
 @motorway_fill:    lighten(@motorway_line,5%);
-@motorway_case:    @motorway_line * 0.5;
+@motorway_case:    @motorway_line * 0.4;
 
 @trunk_line:       #fcd681;  //BACKUP: #ffe18f;
 @trunk_fill:       lighten(@trunk_line,5%);
-@trunk_case:       @trunk_line * 0.5;
+@trunk_case:       @trunk_line * 0.4;
 
 @primary_line:     #fcd681;  //BACKUP: #ffe18f;
 @primary_fill:     lighten(@primary_line,5%);
-@primary_case:     @primary_line * 0.5;
+@primary_case:     @primary_line * 0.4;
 
 @mainroad_line:    #fade97;  //BACKUP: #ffe8aa;
 @mainroad_fill:    lighten(@mainroad_line,5%);
-@mainroad_case:    @mainroad_line * 0.5;
+@mainroad_case:    @mainroad_line * 0.4;
 
 @road_line:        #8c8c8c;
 @road_fill:        #ffffff;
-@road_case:        @land * 0.5;
+@road_case:        @land * 0.4;
 
 @rail_regular:     #7c7b7b;
 @rail_abandoned:   #bfbfbf;
@@ -98,7 +98,7 @@ Map { font-directory: url(./fonts); }
 
 // Dash colors
 @footway:         #d9002f;
-@cycleway:        #0444eb;
+@cycleway:        #014ffc;
 @path:            #00f504;
 @forbidden:       #cc002c;
 

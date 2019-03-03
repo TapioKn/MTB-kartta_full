@@ -78,7 +78,7 @@ come in as well.
 @cwz12_cw: 0.0;   @cwz12_lw: 0.0;   @cwz12_da: 4, 2;   @cwz12_pda: 8, 2;
 @cwz13_cw: 0.0;   @cwz13_lw: 1.0;   @cwz13_da: 4, 2;   @cwz13_pda: 8, 2;
 @cwz14_cw: 0.0;   @cwz14_lw: 1.0;   @cwz14_da: 4, 2;   @cwz14_pda: 8, 2;
-@cwz15_cw: 2.0;   @cwz15_lw: 1.0;   @cwz15_da: 4, 2;   @cwz15_pda: 8, 2;
+@cwz15_cw: 2.0;   @cwz15_lw: 1.2;   @cwz15_da: 4, 2;   @cwz15_pda: 8, 2;
 @cwz16_cw: 3.0;   @cwz16_lw: 1.7;   @cwz16_da: 4, 2;   @cwz16_pda: 8, 2;
 @cwz17_cw: 4.0;   @cwz17_lw: 2.0;   @cwz17_da: 5, 2;   @cwz17_pda: 9, 2;
 

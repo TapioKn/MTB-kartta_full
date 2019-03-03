@@ -382,5 +382,4 @@
     marker-placement: point;
     marker-opacity: 0.33;
   }
-
 }
