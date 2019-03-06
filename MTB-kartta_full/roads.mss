@@ -87,8 +87,8 @@ come in as well.
 @fwz12_cw: 0.0;   @fwz12_lw: 0.0;   @fwz12_da: 3, 2;
 @fwz13_cw: 0.0;   @fwz13_lw: 0.8;   @fwz13_da: 3, 2;
 @fwz14_cw: 0.0;   @fwz14_lw: 0.8;   @fwz14_da: 3, 2;
-@fwz15_cw: 2.0;   @fwz15_lw: 1.2;   @fwz15_da: 3, 2;
-@fwz16_cw: 3.0;   @fwz16_lw: 1.4;   @fwz16_da: 3, 2;
+@fwz15_cw: 2.0;   @fwz15_lw: 1.4;   @fwz15_da: 3, 2;
+@fwz16_cw: 3.0;   @fwz16_lw: 1.6;   @fwz16_da: 3, 2;
 @fwz17_cw: 3.5;   @fwz17_lw: 1.8;   @fwz17_da: 3, 2;
 
 /* Path case widths, line widths and dasharrays */
