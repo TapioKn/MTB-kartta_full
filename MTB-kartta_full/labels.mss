@@ -11,6 +11,8 @@
   text-fill:@city_text;
   text-halo-fill:@city_halo;
   text-halo-radius:2;
+  text-clip: false;
+  text-allow-overlap: true;
   [zoom<=8] {
     text-size: 10;
     text-halo-radius:1;
@@ -64,6 +66,8 @@
   text-halo-fill:@town_halo;
   text-halo-radius:1;
   text-wrap-width: 50;
+  text-clip: false;
+  text-allow-overlap: true;
   [zoom>=10] {
     text-halo-radius:2;
     text-size: 10;
@@ -112,6 +116,7 @@
   text-halo-radius:1;
   text-wrap-width: 30;
   text-clip: false;
+  text-allow-overlap: true;
   [zoom=14] {
     text-size: 11;
     [type='locality'] { text-size: 10; }
