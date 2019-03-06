@@ -19,14 +19,14 @@
   }
   [type='minor_line'] {
     line-width: 1;
-    line-color: @building;
-    line-opacity: 0.5;
+    line-color: darken(@building, 10%);
+    line-opacity: 0.7;
     [zoom<=14] { line-width: 0; }
   }
   [type='major_line'] {
     line-width: 1;
-    line-color: @building;
-    line-opacity: 0.5;
+    line-color: darken(@building, 10%);
+    line-opacity: 0.7;
     [zoom<=13] { line-width: 0; }
   }
   [type='cliff'][zoom>=14] {
