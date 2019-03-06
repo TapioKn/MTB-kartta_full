@@ -184,9 +184,9 @@
   }
 
   /* Hedges defined as areas */
-    [barrier='hedge'] {
-      [zoom>=14] { polygon-fill: @hedge; }
-    }
+  [barrier='hedge'] {
+    [zoom>=14] { polygon-fill: @hedge; }
+  }
 }
 
 /* ---- BUILDINGS ---- */
