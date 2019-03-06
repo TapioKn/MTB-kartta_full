@@ -111,6 +111,7 @@
   text-halo-fill:@other_halo;
   text-halo-radius:1;
   text-wrap-width: 30;
+  text-clip: false;
   [zoom=14] {
     text-size: 11;
     [type='locality'] { text-size: 10; }
@@ -159,6 +160,7 @@
     text-wrap-width:30;
     text-fill: @poi_text;
     text-halo-fill: #fff;
+    text-clip: false;
     // Specific style overrides for different types of areas:
     [type='park'][zoom>=14],
     [type='forest'][zoom>=14],
@@ -222,6 +224,7 @@
     text-wrap-width:30;
     text-fill: darken(@building, 40%);
     text-halo-fill: #fff;
+    text-clip: false;
   }
 }
 
