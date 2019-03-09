@@ -15,11 +15,6 @@ Map { font-directory: url(./fonts); }
 @sans_bold:         "Asap Bold";
 @sans_bold_italic:  "Asap Bold Italic";
 
-/* Some fonts are larger or smaller than others. Use this variable to
-   globally increase or decrease the font sizes. */
-/* Note this is only implemented for certain things so far */
-@text_adjust: 0;
-
 /* ================================================================== */
 /* LANDUSE & LANDCOVER COLORS
 /* ================================================================== */
@@ -28,7 +23,7 @@ Map { font-directory: url(./fonts); }
 @beach:             desaturate(lighten(#f7f4c9, 3%), 5%);      /* #f7f4c9; */
 @building:          #938f8b;      /* #595959; */
 @cemetery:          desaturate(lighten(#deedde, 3%), 5%);      /* #deedde; */
-@commercial:        desaturate(lighten(#e5eff2, 3%), 0%);      /* #eef4f6; */
+@commercial:        #eef4f6;
 @conservation:      desaturate(lighten(#73a45b, 3%), 5%);      /* #73a45b; */
 @construction:      desaturate(lighten(#ccc3b3, 3%), 10%);      /* #d5dbdd; */
 @farmland:          desaturate(lighten(#faf8d9, 3%), 5%);      /* #faf8d9; */
@@ -39,7 +34,7 @@ Map { font-directory: url(./fonts); }
 @grassland:         desaturate(lighten(#dfeebf, 3%), 5%);      /* #eeffcc; */
 @hedge:             desaturate(lighten(#9fb77b, 3%), 5%);      /* #9fb77b; */
 @hospital:          desaturate(lighten(#f5e7ea, 3%), 5%);      /* #ff0037; */
-@industrial:        desaturate(lighten(#eaeff1, 3%), 0%);      /* #eaeff1; */
+@industrial:        #eaeff1;
 @land:              #f5f3ea;      /* Base color for the map */ /* testing color: #f4c3f3;*/
 @landfill:          desaturate(lighten(#ccc3b3, 3%), 5%);      /* #ccc3b3; */
 @meadow:            desaturate(lighten(#f5fadb, 3%), 5%);      /* #f5fadb; */
@@ -49,7 +44,7 @@ Map { font-directory: url(./fonts); }
 @parking-label:     #0241e2;
 @plant_nursery:     desaturate(lighten(#e7eedd, 3%), 5%);      /* #e7eedd; */
 @plaza:             desaturate(lighten(#f2f0e3, 3%), 0%);      /* #f2f0e3; */
-@residential:       desaturate(lighten(#f6f5ee, 3%), 0%);      /* #f6f5ee; */
+@residential:       #f6f5ee;
 @retail:            desaturate(lighten(#f2e5e5, 3%), 0%);      /* #eef4f6; */
 @rock:              desaturate(lighten(#e6e8e3, 3%), 0%);      /* #e6e8e3; */
 @school:            desaturate(lighten(#f9f8f0, 3%), 5%);      /* #f9f8f0; */
@@ -61,25 +56,20 @@ Map { font-directory: url(./fonts); }
 /* ROAD COLORS
 /* ================================================================== */
 
-@motorway_line:    #ffb84d;  //BACKUP: #ffc34d;
-@motorway_fill:    lighten(@motorway_line,5%);
-@motorway_case:    @motorway_line * 0.4;
+@motorway_fill:    #f6a42a;  //BACKUP: #ffc34d;
+@motorway_case:    @motorway_fill * 0.3;
 
-@trunk_line:       #fcd681;  //BACKUP: #ffe18f;
-@trunk_fill:       lighten(@trunk_line,5%);
-@trunk_case:       @trunk_line * 0.4;
+@trunk_fill:       #ffb84d;  //BACKUP: #ffe18f;
+@trunk_case:       @trunk_fill * 0.3;
 
-@primary_line:     #fcd681;  //BACKUP: #ffe18f;
-@primary_fill:     lighten(@primary_line,5%);
-@primary_case:     @primary_line * 0.4;
+@primary_fill:     #fcd681;  //BACKUP: #ffe18f;
+@primary_case:     @primary_fill * 0.3;
 
-@mainroad_line:    #fade97;  //BACKUP: #ffe8aa;
-@mainroad_fill:    lighten(@mainroad_line,5%);
-@mainroad_case:    @mainroad_line * 0.4;
+@mainroad_fill:    #fcd681;  //BACKUP: #ffe8aa;
+@mainroad_case:    @mainroad_fill * 0.3;
 
-@road_line:        #8c8c8c;
 @road_fill:        #ffffff;
-@road_case:        @land * 0.4;
+@road_case:        @land * 0.3;
 
 @rail_regular:     #7c7b7b;
 @rail_abandoned:   #bfbfbf;
@@ -98,7 +88,7 @@ Map { font-directory: url(./fonts); }
 
 // Dash colors
 @footway:         #d9002f;
-@cycleway:        #014ffc;
+@cycleway:        #0030ff;
 @path:            #00f504;
 @forbidden:       #cc002c;
 

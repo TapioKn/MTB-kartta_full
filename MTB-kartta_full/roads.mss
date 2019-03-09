@@ -8,8 +8,8 @@
 and trunks. */
 
 #roads_low[zoom>=5][zoom<=8] {
-  [type='motorway'] { line-color: @motorway_line; }
-  [type='trunk'] { line-color: @trunk_line; }
+  [type='motorway'] { line-color: @motorway_fill; }
+  [type='trunk'] { line-color: @trunk_fill; }
   [zoom=5] {
     [type='motorway'] { line-width: 0.4; }
     [type='trunk'] { line-width: 0.2; } }
@@ -30,15 +30,15 @@ as well. */
 #roads_med[zoom>=9][zoom<=10] {
   [type='motorway'],
   [type='motorway_link'] {
-    line-color: @motorway_line;
+    line-color: @motorway_fill;
   }
   [type='trunk'],
   [type='trunk_link'] {
-    line-color: @trunk_line;
+    line-color: @trunk_fill;
   }
-  [type='primary'] { line-color: @primary_line; }
-  [type='mainroad'] { line-color: @mainroad_line; }
-  [type='mainroad'] { line-color: @road_line; }
+  [type='primary'] { line-color: @primary_fill; }
+  [type='mainroad'] { line-color: @mainroad_fill; }
+  [type='mainroad'] { line-color: @road_fill; }
   [zoom=9] {
     [type='motorway'],[type='trunk'] { line-width: 1.4; }
     [type='primary'],[type='mainroad'],
@@ -159,9 +159,6 @@ come in as well.
   // Case color for unpaved roads
   [surface='unpaved'] { line-color: @unpaved_case; }
 
-  /* Cycleway and footway backgrounds are defined in one go with their lines later */
-  /* as they use dashed lines and thus can't be constructed in the same way. Only  */
-  /* their bridge casing can be defined here.                                      */
   [type='cycleway'],
   [type='footway'] {
     line-opacity: 0;
@@ -411,9 +408,6 @@ come in as well.
   [tunnel=1] {
     line-cap: butt;
   }
-/* Cycleways and footways defined completely in the next section      */
-/* as they need two lines (solid and dashed on top of that). Doing    */
-/* them here would cause problems with tunnel rendering.               */
 
   /* -- WAY FILL WIDTHS -- */
   [zoom=11] {
@@ -884,6 +878,12 @@ come in as well.
       line-color: @road_fill;
       line-dasharray: 5, 5;
     }
+    [type='cycleway'] {
+      line-color: lighten(@cycleway,30%);
+    }
+    [type='footway'] {
+      line-color: lighten(@footway,30%);
+    }
 
     /* -- Way line widths -- */
     [zoom=12] {
@@ -898,8 +898,8 @@ come in as well.
       [type='living_street'] { line-width: @rdz12_res - 1; }
       [type='driveway']      { line-width: @rdz12_res - 2; }
       [type='service']       { line-width: @rdz12_ser; }
-      [type='cycleway']      { line-color: lighten(@cycleway,30%); line-width: @cwz12_lw; line-dasharray: @cwz12_da; }
-      [type='footway']       { line-color: lighten(@footway,30%);  line-width: @fwz12_lw; line-dasharray: @fwz12_da; }
+      [type='cycleway']      { line-width: @cwz12_lw; line-dasharray: @cwz12_da; }
+      [type='footway']       { line-width: @fwz12_lw; line-dasharray: @fwz12_da; }
     }
     [zoom=13] {
       [type='motorway']      { line-width: @rdz13_mot; }
@@ -914,8 +914,8 @@ come in as well.
       [type='driveway']      { line-width: @rdz13_res - 2; }
       [type='service']       { line-width: @rdz13_ser; }
       [type='parking_aisle'] { line-width: @trz13_cw - 2; }
-      [type='cycleway']      { line-color: lighten(@cycleway,30%); line-width: @cwz13_lw; line-dasharray: @cwz13_da; }
-      [type='footway']       { line-color: lighten(@footway,30%);  line-width: @fwz13_lw; line-dasharray: @fwz13_da; }
+      [type='cycleway']      { line-width: @cwz13_lw; line-dasharray: @cwz13_da; }
+      [type='footway']       { line-width: @fwz13_lw; line-dasharray: @fwz13_da; }
     }
     [zoom=14] {
       [type='motorway']      { line-width: @rdz14_mot; }
@@ -930,8 +930,8 @@ come in as well.
       [type='driveway']      { line-width: @rdz14_res - 2; }
       [type='service']       { line-width: @rdz14_ser; }
       [type='parking_aisle'] { line-width: @trz14_cw - 2; }
-      [type='cycleway']      { line-color: lighten(@cycleway,30%); line-width: @cwz14_lw; line-dasharray: @cwz14_da; }
-      [type='footway']       { line-color: lighten(@footway,30%);  line-width: @fwz14_lw; line-dasharray: @fwz14_da; }
+      [type='cycleway']      { line-width: @cwz14_lw; line-dasharray: @cwz14_da; }
+      [type='footway']       { line-width: @fwz14_lw; line-dasharray: @fwz14_da; }
     }
     [zoom=15] {
       [type='motorway']      { line-width: @rdz15_mot; }
@@ -946,8 +946,8 @@ come in as well.
       [type='driveway']      { line-width: @rdz15_res - 2; }
       [type='service']       { line-width: @rdz15_ser; }
       [type='parking_aisle'] { line-width: @trz15_cw - 2; }
-      [type='cycleway']      { line-color: lighten(@cycleway,30%); line-width: @cwz15_lw; line-dasharray: @cwz15_da; }
-      [type='footway']       {line-color: lighten(@footway,30%);  line-width: @fwz15_lw; line-dasharray: @fwz15_da; }
+      [type='cycleway']      { line-width: @cwz15_lw; line-dasharray: @cwz15_da; }
+      [type='footway']       { line-width: @fwz15_lw; line-dasharray: @fwz15_da; }
     }
     [zoom=16] {
       [type='motorway']      { line-width: @rdz16_mot; }
@@ -962,8 +962,8 @@ come in as well.
       [type='driveway']      { line-width: @rdz16_res - 2; }
       [type='service']       { line-width: @rdz16_ser; }
       [type='parking_aisle'] { line-width: @trz16_cw - 2; }
-      [type='cycleway']      { line-color: lighten(@cycleway,30%); line-width: @cwz16_lw; line-dasharray: @cwz16_da; }
-      [type='footway']       { line-color: lighten(@footway,30%);  line-width: @fwz15_lw; line-dasharray: @fwz16_da; }
+      [type='cycleway']      { line-width: @cwz16_lw; line-dasharray: @cwz16_da; }
+      [type='footway']       { line-width: @fwz15_lw; line-dasharray: @fwz16_da; }
     }
     [zoom=17] {
       [type='motorway']      { line-width: @rdz17_mot; }
@@ -978,8 +978,8 @@ come in as well.
       [type='driveway']      { line-width: @rdz17_res - 2; }
       [type='service']       { line-width: @rdz17_ser; }
       [type='parking_aisle'] { line-width: @trz17_cw - 2; }
-      [type='cycleway']      { line-color: lighten(@cycleway,30%); line-width: @cwz17_lw; line-dasharray: @cwz17_da; }
-      [type='footway']       { line-color: lighten(@footway,30%);  line-width: @fwz15_lw; line-dasharray: @fwz17_da; }
+      [type='cycleway']      { line-width: @cwz17_lw; line-dasharray: @cwz17_da; }
+      [type='footway']       { line-width: @fwz15_lw; line-dasharray: @fwz17_da; }
     }
   }
 }
