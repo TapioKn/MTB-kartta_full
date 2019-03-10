@@ -18,38 +18,38 @@ Map { font-directory: url(./fonts); }
 /* ================================================================== */
 /* LANDUSE & LANDCOVER COLORS
 /* ================================================================== */
-                                   /* BACKUPS  */
-@allotments:        desaturate(lighten(#f1efe4, 3%), 5%);      /* #f1efe4; */
-@beach:             desaturate(lighten(#f7f4c9, 3%), 5%);      /* #f7f4c9; */
-@building:          #938f8b;      /* #595959; */
-@cemetery:          desaturate(lighten(#deedde, 3%), 5%);      /* #deedde; */
+
+@allotments:        #f5f5ef;
+@beach:             #f6f7d7;
+@building:          #938f8b;
+@cemetery:          #deedde;
 @commercial:        #eef4f6;
-@conservation:      desaturate(lighten(#73a45b, 3%), 5%);      /* #73a45b; */
-@construction:      desaturate(lighten(#ccc3b3, 3%), 10%);      /* #d5dbdd; */
-@farmland:          desaturate(lighten(#faf8d9, 3%), 5%);      /* #faf8d9; */
-@farmyard:          desaturate(lighten(#f8f3d3, 3%), 5%);      /* #f8f3d3; */
-@forest:            desaturate(lighten(#c7d2a7, 3%), 5%);      /* #c5d2ae; */
-@golf_course:       desaturate(lighten(#d0ffb3, 3%), 5%);      /* #d0ffb3; */
-@grass:             desaturate(lighten(#eeffcc, 3%), 5%);      /* #eeffcc; */
-@grassland:         desaturate(lighten(#dfeebf, 3%), 5%);      /* #eeffcc; */
-@hedge:             desaturate(lighten(#9fb77b, 3%), 5%);      /* #9fb77b; */
-@hospital:          desaturate(lighten(#f5e7ea, 3%), 5%);      /* #ff0037; */
-@industrial:        #eaeff1;
-@land:              #f5f3ea;      /* Base color for the map */ /* testing color: #f4c3f3;*/
-@landfill:          desaturate(lighten(#ccc3b3, 3%), 5%);      /* #ccc3b3; */
-@meadow:            desaturate(lighten(#f5fadb, 3%), 5%);      /* #f5fadb; */
-@military:          desaturate(lighten(#ff5555, 3%), 5%);      /* #ff5555; */
-@park:              desaturate(lighten(#e6ffcc, 3%), 5%);      /* #e6ffcc; */
-@parking:           desaturate(lighten(#e9eaed, 3%), 5%);      /* #e9eaed; */
+@conservation:      #7ba36c;
+@construction:      #cbc8c1;
+@farmland:          #fafbe7;
+@farmyard:          #f8f3d3;
+@forest:            #c9d4b4;
+@golf_course:       #d7ffc4;
+@grass:             #f1ffdc;
+@grassland:         #e2f1cd;
+@hedge:             #a2b88a;
+@hospital:          #f9f2f4;
+@industrial:        #eaeef1;
+@land:              #f5f3ea;
+@landfill:          #ccc3b3;
+@meadow:            #f7fce9;
+@military:          #f66d6a;
+@park:              #ebffdc;
+@parking:           #f2f2f3;
 @parking-label:     #0241e2;
-@plant_nursery:     desaturate(lighten(#e7eedd, 3%), 5%);      /* #e7eedd; */
-@plaza:             desaturate(lighten(#f2f0e3, 3%), 0%);      /* #f2f0e3; */
+@plant_nursery:     #edf2e8;
+@plaza:             #f6f6ed;
 @residential:       #f6f5ee;
-@retail:            desaturate(lighten(#f2e5e5, 3%), 0%);      /* #eef4f6; */
-@rock:              desaturate(lighten(#e6e8e3, 3%), 0%);      /* #e6e8e3; */
-@school:            desaturate(lighten(#f9f8f0, 3%), 5%);      /* #f9f8f0; */
-@sports:            desaturate(lighten(#d0ffb3, 3%), 5%);      /* #d0ffb3; */
-@water:             #94c1e2;      /* #66aacc; desaturate(lighten(#578fab, 10%), 20%)*/
+@retail:            #f6efef;
+@rock:              #ecefea;
+@school:            #fdfdfb;
+@sports:            #d7ffc4;
+@water:             #94c1e2;
 
 
 /* ================================================================== */
