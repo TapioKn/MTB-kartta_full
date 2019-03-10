@@ -5,7 +5,6 @@
 /* directory to load fonts from in addition to the system directories */
 Map { font-directory: url(./fonts); }
 
-/* set up font sets for various weights and styles */
 @sans_lt:           "Asap Regular";
 @sans_lt_italic:    "Asap Italic";
 
@@ -14,6 +13,8 @@ Map { font-directory: url(./fonts); }
 
 @sans_bold:         "Asap Bold";
 @sans_bold_italic:  "Asap Bold Italic";
+
+
 
 /* ================================================================== */
 /* LANDUSE & LANDCOVER COLORS
@@ -52,6 +53,7 @@ Map { font-directory: url(./fonts); }
 @water:             #94c1e2;
 
 
+
 /* ================================================================== */
 /* ROAD COLORS
 /* ================================================================== */
@@ -71,6 +73,9 @@ Map { font-directory: url(./fonts); }
 @road_fill:        #ffffff;
 @road_case:        @land * 0.3;
 
+@unpaved_fill:     #fffbf4;
+@unpaved_case:     #815b15;
+
 @rail_regular:     #7c7b7b;
 @rail_abandoned:   #bfbfbf;
 @rail_fill:        #ffffff;
@@ -79,8 +84,7 @@ Map { font-directory: url(./fonts); }
 
 @tunnel_opacity:   0.5;
 
-@unpaved_case:     #815b15;
-@unpaved_fill:     #fffbf4;
+
 
 // ==================================================================
 // BICYCLE AND PEDESTRIAN WAY COLORS
@@ -89,7 +93,6 @@ Map { font-directory: url(./fonts); }
 // Dash colors
 @footway:         #d9002f;
 @cycleway:        #0030ff;
-@path:            #00f504;
 @forbidden:       #cc002c;
 
 // Case colors
