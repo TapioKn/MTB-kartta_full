@@ -199,7 +199,7 @@
   [zoom=13]  { polygon-fill: lighten(@building, 40%); line-color: lighten(@building, 35%); }
   [zoom<=12] { polygon-opcaity: 0; line-opacity: 0; }
 }
-#roofs[zoom>=12] {
+#roofs[zoom>=13] {
   polygon-fill:    lighten(@building, 20%);
   polygon-opacity: 0.7;
   line-color:      @building;
