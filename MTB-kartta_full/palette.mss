@@ -5,14 +5,14 @@
 /* directory to load fonts from in addition to the system directories */
 Map { font-directory: url(./fonts); }
 
-@sans_lt:           "Calibri Light";
-@sans_lt_italic:    "Calibri Light Italic";
+@sans_lt:           "Asap Regular";
+@sans_lt_italic:    "Asap Italic";
 
-@sans:              "Calibri Regular";
-@sans_italic:       "Calibri Italic";
+@sans:              "Asap Regular";
+@sans_italic:       "Asap Italic";
 
-@sans_bold:         "Calibri Bold";
-@sans_bold_italic:  "Calibri Bold Italic";
+@sans_bold:         "Asap Bold";
+@sans_bold_italic:  "Asap Bold Italic";
 
 
 
