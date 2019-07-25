@@ -151,7 +151,7 @@
 /* ===================================================================== */
 
 #area_label {
-  // Bring in labels gradually as one zooms in, bases on polygon area
+  // Bring in labels gradually as one zooms in, based on polygon area
   [zoom>=10][area>102400000][type!='building'],
   [zoom>=11][area>25600000][type!='building'],
   [zoom>=13][area>1600000][type!='building'],
@@ -162,7 +162,7 @@
     text-halo-radius: 1.5;
     text-face-name:@sans;
     text-size: 10;
-    text-wrap-width:30;
+    text-wrap-width:40;
     text-fill: @poi_text;
     text-halo-fill: #fff;
     text-clip: false;
@@ -171,25 +171,25 @@
     [type='forest'][zoom>=14],
     [type='wood'][zoom>=14] {
       text-face-name: @sans_lt;
-      text-fill: @park * 0.4;
+      text-fill: @park * 0.1;
       text-halo-fill: lighten(@park, 80%);
     }
     [type='golf_course'][zoom>=10] {
-      text-fill: @sports * 0.4;
+      text-fill: @sports * 0.3;
       text-halo-fill: lighten(@sports, 90%);
     }
     [type='cemetery'][zoom>=10] {
-      text-fill: @cemetery * 0.4;
+      text-fill: @cemetery * 0.3;
       text-halo-fill: lighten(@cemetery, 90%);
     }
     [type='hospital'][zoom>=10] {
-      text-fill: @hospital * 0.4;
+      text-fill: @hospital * 0.3;
       text-halo-fill: lighten(@hospital, 90%);
     }
     [type='college'][zoom>=10],
     [type='school'][zoom>=10],
     [type='university'][zoom>=10] {
-      text-fill: @school * 0.4;
+      text-fill: @school * 0.3;
       text-halo-fill: lighten(@school, 90%);
     }
     [type='water'][zoom>=10],
@@ -198,7 +198,7 @@
       text-halo-fill: lighten(@water, 90%);
     }
     [type='bay'][zoom>=13] {
-      text-fill: @water * 0.6;
+      text-fill: @water * 0.5;
       text-halo-fill: lighten(@water, 90%);
     }
     [zoom=15][area>1500000] {
@@ -227,7 +227,7 @@
     text-face-name: @sans;
     text-size: 10;
     text-wrap-width:30;
-    text-fill: darken(@building, 40%);
+    text-fill: darken(@building, 50%);
     text-halo-fill: #fff;
     text-clip: false;
   }
@@ -391,4 +391,47 @@
     marker-placement: point;
     marker-opacity: 0.33;
   }
+}
+
+/* ================================================================== */
+/* MTB:DESCRIPTION LABELS
+/* ================================================================== */
+/*
+#description_labels[zoom>=16] {
+  shield-name: '[mtb:description]';
+  shield-size: 11;
+  shield-face-name: @sans;
+  shield-justify-alignment: left;
+  shield-fill: #000;
+  shield-halo-fill: #FFF;
+  shield-halo-radius: 1.5;
+  shield-file: url(images/shield-motorway-1.png);
+  shield-allow-overlap: true;
+  shield-dy:
+  shield-wrap-width: 60;
+  shield-spacing: 1000;
+}
+*/
+
+#description_labels[zoom>=15] {
+  marker-file: url(images/decription-L.png);
+  marker-placement: interior;
+  marker-opacity: 1;
+  marker-allow-overlap: true;
+
+  text-name: '[mtb:description]';
+  text-placement: interior;
+  text-horizontal-alignment: right;
+  text-vertical-alignment: middle;
+  text-dx: 12;
+  text-align: left;
+  text-min-distance: 999;
+  text-halo-radius: 1.5;
+  text-face-name: @sans;
+  text-size: 11;
+  text-wrap-width:60;
+  text-fill: #000;
+  text-halo-fill: #f4f9ff;
+  text-clip: false;
+  text-allow-overlap: true;
 }

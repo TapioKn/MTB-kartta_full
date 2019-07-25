@@ -5,14 +5,14 @@
 /* directory to load fonts from in addition to the system directories */
 Map { font-directory: url(./fonts); }
 
-@sans_lt:           "Asap Regular";
-@sans_lt_italic:    "Asap Italic";
+@sans_lt:           "Calibri Light";
+@sans_lt_italic:    "Calibri Light Italic";
 
-@sans:              "Asap Regular";
-@sans_italic:       "Asap Italic";
+@sans:              "Calibri Regular";
+@sans_italic:       "Calibri Italic";
 
-@sans_bold:         "Asap Bold";
-@sans_bold_italic:  "Asap Bold Italic";
+@sans_bold:         "Calibri Bold";
+@sans_bold_italic:  "Calibri Bold Italic";
 
 
 
@@ -29,7 +29,7 @@ Map { font-directory: url(./fonts); }
 @construction:      #cbc8c1;
 @farmland:          #fafbe7;
 @farmyard:          #f8f3d3;
-@forest:            #c9d4b4;
+@forest:            lighten(#c9d4b4, 10%);
 @golf_course:       #d7ffc4;
 @grass:             #f1ffdc;
 @grassland:         #e2f1cd;
@@ -71,7 +71,7 @@ Map { font-directory: url(./fonts); }
 @mainroad_case:    @mainroad_fill * 0.3;
 
 @road_fill:        #ffffff;
-@road_case:        @land * 0.3;
+@road_case:        @building * 0.3;
 
 @unpaved_fill:     #fffbf4;
 @unpaved_case:     #815b15;
@@ -92,7 +92,7 @@ Map { font-directory: url(./fonts); }
 
 // Dash colors
 @footway:         #d9002f;
-@cycleway:        #0030ff;
+@cycleway:        #0021ff;
 @forbidden:       #cc002c;
 
 // Case colors
