@@ -41,6 +41,11 @@
           maxZoom:16,
           maxNativeZoom:16
         }),
+        txt = L.tileLayer('./MTB-tiles_textnotes/{z}/{x}/{y}.png', {
+          id:'Tekstimerkinnät',
+          maxZoom:16,
+          maxNativeZoom:16
+        }),
         pth	= L.tileLayer('./MTB-tiles_polut/{z}/{x}/{y}.png', {
           id:'Polut',
           maxZoom:16,
@@ -56,6 +61,7 @@
     };
     var overlayMaps = {
       "Korkeuskäyrät":ctr,
+      "Tekstimerkinnät":txt,
       "Polut":pth,
     };
 

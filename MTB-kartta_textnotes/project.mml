@@ -1,0 +1,56 @@
+{
+  "bounds": [
+    23.4392,
+    61.4285,
+    23.6448,
+    61.5241
+  ],
+  "center": [
+    23.5042,
+    61.4849,
+    15
+  ],
+  "format": "png8",
+  "interactivity": false,
+  "minzoom": 12,
+  "maxzoom": 17,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "labels.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "linestring",
+      "extent": [
+        22.333054496891226,
+        59.81454699474467,
+        29.02572219595959,
+        66.02622779497807
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, \"mtb:description\"\n  FROM planet_osm_line\n  WHERE (\"mtb:description\" IS NOT NULL)\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "2486104.25445236,8358564.05750451,3231128.61476124,9884027.85711558",
+        "dbname": "osm",
+        "host": "localhost",
+        "port": "5432",
+        "user": "postgres",
+        "password": "postgres"
+      },
+      "id": "description_labels",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "description_labels"
+    }
+  ],
+  "scale": 1,
+  "metatile": 3,
+  "attribution": "Data © OpenStreetMap (and) contributors, ODbL",
+  "description": "",
+  "name": "MTB-kartta_textnotes"
+}

@@ -394,24 +394,11 @@
 }
 
 /* ================================================================== */
-/* MTB:DESCRIPTION LABELS
+/* MTB:DESCRIPTION LABELS, currently in separate file but can be included here alternatively
 /* ================================================================== */
 /*
-#description_labels[zoom>=16] {
-  shield-name: '[mtb:description]';
-  shield-size: 11;
-  shield-face-name: @sans;
-  shield-justify-alignment: left;
-  shield-fill: #000;
-  shield-halo-fill: #FFF;
-  shield-halo-radius: 1.5;
-  shield-file: url(images/shield-motorway-1.png);
-  shield-allow-overlap: true;
-  shield-dy:
-  shield-wrap-width: 60;
-  shield-spacing: 1000;
-}
-*/
+
+
 
 #description_labels[zoom>=15] {
   marker-file: url(images/decription-L.png);
@@ -435,3 +422,4 @@
   text-clip: false;
   text-allow-overlap: true;
 }
+*/
