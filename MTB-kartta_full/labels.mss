@@ -156,7 +156,7 @@
   [zoom>=11][area>25600000][type!='building'],
   [zoom>=13][area>1600000][type!='building'],
   [zoom>=14][area>320000][type!='building'],
-  [zoom>=15][area>80000][type!='building'],
+  [zoom>=15][area>120000][type!='building'],
   [zoom>=16][area>20000][type!='building'] {
     text-name: "[name]";
     text-halo-radius: 1.5;
@@ -378,16 +378,19 @@
   [fixme='continue'] {
     [zoom=15] { marker-file: url(images/fixme_continue-M.png); }
     [zoom>=16] { marker-file: url(images/fixme_continue-L.png); }
+    marker-allow-overlap: true;
     marker-placement: point;
   }
   [fixme='resurvey'] {
     [zoom=15] { marker-file: url(images/fixme_resurvey-M.png); }
     [zoom>=16] { marker-file: url(images/fixme_resurvey-L.png); }
+    marker-allow-overlap: true;
     marker-placement: point;
   }
   [noexit='yes'] {
     [zoom=15] { marker-file: url(images/noexit_yes-M.png); }
     [zoom>=16] { marker-file: url(images/noexit_yes-L.png); }
+    marker-allow-overlap: true;
     marker-placement: point;
     marker-opacity: 0.33;
   }
@@ -397,8 +400,6 @@
 /* MTB:DESCRIPTION LABELS, currently in separate file but can be included here alternatively
 /* ================================================================== */
 /*
-
-
 
 #description_labels[zoom>=15] {
   marker-file: url(images/decription-L.png);

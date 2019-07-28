@@ -270,8 +270,8 @@ Map { background-color: @water; }
   }
   [type='ditch'],
   [type='drain'] {
-    [zoom=15]{ line-width: 1.0; }
-    [zoom=16]{ line-width: 2.0; }
+    [zoom=15]{ line-width: 1.2; }
+    [zoom=16]{ line-width: 2.5; }
 	[tunnel='yes'],[tunnel='culvert'] { line-opacity: @tunnel_opacity; }
   }
 }

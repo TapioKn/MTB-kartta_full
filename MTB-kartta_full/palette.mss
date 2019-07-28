@@ -50,7 +50,7 @@ Map { font-directory: url(./fonts); }
 @rock:              #ecefea;
 @school:            #fdfdfb;
 @sports:            #d7ffc4;
-@water:             #b5cddf;
+@water:             #a3c5de; /*Previous backup: #b5cddf*/
 
 
 
