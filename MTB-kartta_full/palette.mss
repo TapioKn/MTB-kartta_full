@@ -5,14 +5,14 @@
 /* directory to load fonts from in addition to the system directories */
 Map { font-directory: url(./fonts); }
 
-@sans_lt:           "Asap Regular";
-@sans_lt_italic:    "Asap Italic";
+@sans_lt:           "Noto Sans Light";
+@sans_lt_italic:    "Noto Sans Light Italic";
 
-@sans:              "Asap Regular";
-@sans_italic:       "Asap Italic";
+@sans:              "Noto Sans Regular";
+@sans_italic:       "Noto Sans Italic";
 
-@sans_bold:         "Asap Bold";
-@sans_bold_italic:  "Asap Bold Italic";
+@sans_bold:         "Noto Sans Bold";
+@sans_bold_italic:  "Noto Sans Bold Italic";
 
 
 

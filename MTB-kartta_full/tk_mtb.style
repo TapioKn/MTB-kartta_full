@@ -99,6 +99,7 @@ node,way   disused      text         linear
 node,way   ele          text         linear
 node,way   embankment   text         linear
 node,way   foot         text         linear
+node,way   ford         text         linear
 node,way   generator:source    text  linear
 node,way   harbour      text         polygon
 node,way   highway      text         linear
