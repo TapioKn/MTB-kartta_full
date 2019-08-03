@@ -372,7 +372,7 @@
 }
 
 /* ================================================================== */
-/* FIXME/NOEXIT LABELS
+/* FIXME/NOEXIT/ETC LABELS
 /* ================================================================== */
 #constructs_point[zoom>=15] {
   [fixme='continue'] {
@@ -394,33 +394,9 @@
     marker-placement: point;
     marker-opacity: 0.33;
   }
+  [ford='yes'][zoom>=16] {
+    marker-file: url(images/ford_yes-L.png);
+    marker-allow-overlap: true;
+    marker-placement: point;
+  }
 }
-
-/* ================================================================== */
-/* MTB:DESCRIPTION LABELS, currently in separate file but can be included here alternatively
-/* ================================================================== */
-/*
-
-#description_labels[zoom>=15] {
-  marker-file: url(images/decription-L.png);
-  marker-placement: interior;
-  marker-opacity: 1;
-  marker-allow-overlap: true;
-
-  text-name: '[mtb:description]';
-  text-placement: interior;
-  text-horizontal-alignment: right;
-  text-vertical-alignment: middle;
-  text-dx: 12;
-  text-align: left;
-  text-min-distance: 999;
-  text-halo-radius: 1.5;
-  text-face-name: @sans;
-  text-size: 11;
-  text-wrap-width:60;
-  text-fill: #000;
-  text-halo-fill: #f4f9ff;
-  text-clip: false;
-  text-allow-overlap: true;
-}
-*/
