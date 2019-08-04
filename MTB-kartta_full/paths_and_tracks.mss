@@ -1,3 +1,7 @@
+/*####################################################################################*/
+/* PATHS AND TRACKS NOT ON BRIDGES OR IN TUNNELS                                      */
+/*####################################################################################*/
+
 #paths_and_tracks {
   [type='path'],
   [type='track'] {
@@ -135,6 +139,9 @@
   }
 }
 
+/*####################################################################################*/
+/* PATH AND TRACK BRIDGES                                                             */
+/*####################################################################################*/
 
 #paths_and_tracks_bridge {
   line-opacity: 0;
@@ -198,7 +205,6 @@
       }
     }
     ::brptlines {
-      [seasonal='winter'] { line-opacity: 0.25; }
       ['noexit'='yes'] { line-opacity: 0.25; }
       [zoom>=16] {
 	    line-width: @paz16_lw;
@@ -246,9 +252,13 @@
 }
 
 
+/*####################################################################################*/
+/* PATH AND TRACK TUNNELS                                                             */
+/*####################################################################################*/
+
 #paths_and_tracks_tunnel {
   ::tptcases {
-    line-opacity: 1;
+    line-opacity: 0;
     line-color: #ffffff;
     ['mtb:scale'='0'],['mtb:scale'='0-'],['mtb:scale'='0+'] { line-opacity: 1; line-color: lighten(@mtbscale0, 10%); }
     ['mtb:scale'='1'],['mtb:scale'='1-'],['mtb:scale'='1+'] { line-opacity: 1; line-color: lighten(@mtbscale1, 10%); }
@@ -256,7 +266,6 @@
     ['mtb:scale'='3'],['mtb:scale'='3-'],['mtb:scale'='3+'] { line-opacity: 1; line-color: lighten(@mtbscale3, 10%); }
     ['mtb:scale'='4'],['mtb:scale'='4-'],['mtb:scale'='4+'] { line-opacity: 1; line-color: lighten(@mtbscale4, 10%); }
     ['mtb:scale'='5'],['mtb:scale'='5-'],['mtb:scale'='5+'] { line-opacity: 1; line-color: lighten(@mtbscale5, 10%); }
-    ['noexit'='yes'] { line-opacity: 0; }
 
     [zoom>=16] {
     line-width: @paz16_cw;
