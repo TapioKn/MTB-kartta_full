@@ -176,7 +176,6 @@
       ['mtb:scale'='3'],['mtb:scale'='3-'],['mtb:scale'='3+'] { line-color: @mtbscale3; }
       ['mtb:scale'='4'],['mtb:scale'='4-'],['mtb:scale'='4+'] { line-color: @mtbscale4; }
       ['mtb:scale'='5'],['mtb:scale'='5-'],['mtb:scale'='5+'] { line-color: @mtbscale5; }
-      ['noexit'='yes']['mtb:scale'!='99'] { line-opacity: 0.25; }  /* Apply line case dimming only to paths that actually have a casing (i.e. have an mtb:scale -tag), as otherwise an unwanted 25% (grey) case gets rendered. */
       [zoom>=16] {
 	    line-width: @paz16_cw;
         [width<=0.5] { line-width: @paz16_cw / 1.7; }
