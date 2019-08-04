@@ -168,7 +168,7 @@
 
     /* Background, "floor" of the bridge, white or mtb:scale color coded */
     ::brptcases {
-	  line-opacity: 0;
+	  line-opacity: 1;
     line-color: #ffffff;
       ['mtb:scale'='0'],['mtb:scale'='0-'],['mtb:scale'='0+'] { line-opacity: 1; line-color: @mtbscale0; }
       ['mtb:scale'='1'],['mtb:scale'='1-'],['mtb:scale'='1+'] { line-opacity: 1; line-color: @mtbscale1; }
