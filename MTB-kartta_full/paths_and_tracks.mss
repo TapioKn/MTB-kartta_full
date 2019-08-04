@@ -170,12 +170,12 @@
     ::brptcases {
 	  line-opacity: 1;
     line-color: #ffffff;
-      ['mtb:scale'='0'],['mtb:scale'='0-'],['mtb:scale'='0+'] { line-opacity: 1; line-color: @mtbscale0; }
-      ['mtb:scale'='1'],['mtb:scale'='1-'],['mtb:scale'='1+'] { line-opacity: 1; line-color: @mtbscale1; }
-      ['mtb:scale'='2'],['mtb:scale'='2-'],['mtb:scale'='2+'] { line-opacity: 1; line-color: @mtbscale2; }
-      ['mtb:scale'='3'],['mtb:scale'='3-'],['mtb:scale'='3+'] { line-opacity: 1; line-color: @mtbscale3; }
-      ['mtb:scale'='4'],['mtb:scale'='4-'],['mtb:scale'='4+'] { line-opacity: 1; line-color: @mtbscale4; }
-      ['mtb:scale'='5'],['mtb:scale'='5-'],['mtb:scale'='5+'] { line-opacity: 1; line-color: @mtbscale5; }
+      ['mtb:scale'='0'],['mtb:scale'='0-'],['mtb:scale'='0+'] { line-color: @mtbscale0; }
+      ['mtb:scale'='1'],['mtb:scale'='1-'],['mtb:scale'='1+'] { line-color: @mtbscale1; }
+      ['mtb:scale'='2'],['mtb:scale'='2-'],['mtb:scale'='2+'] { line-color: @mtbscale2; }
+      ['mtb:scale'='3'],['mtb:scale'='3-'],['mtb:scale'='3+'] { line-color: @mtbscale3; }
+      ['mtb:scale'='4'],['mtb:scale'='4-'],['mtb:scale'='4+'] { line-color: @mtbscale4; }
+      ['mtb:scale'='5'],['mtb:scale'='5-'],['mtb:scale'='5+'] { line-color: @mtbscale5; }
       ['noexit'='yes']['mtb:scale'!='99'] { line-opacity: 0.25; }  /* Apply line case dimming only to paths that actually have a casing (i.e. have an mtb:scale -tag), as otherwise an unwanted 25% (grey) case gets rendered. */
       [zoom>=16] {
 	    line-width: @paz16_cw;
