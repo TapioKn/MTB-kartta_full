@@ -30,30 +30,12 @@
     }
     ::ptcases {
     line-opacity: 0;
-      ['mtb:scale'='0'],['mtb:scale'='0-'],['mtb:scale'='0+'] {
-        line-color: @mtbscale0;
-        line-opacity: 1;
-      }
-      ['mtb:scale'='1'],['mtb:scale'='1-'],['mtb:scale'='1+'] {
-        line-color: @mtbscale1;
-        line-opacity: 1;
-      }
-      ['mtb:scale'='2'],['mtb:scale'='2-'],['mtb:scale'='2+'] {
-        line-color: @mtbscale2;
-        line-opacity: 1;
-      }
-      ['mtb:scale'='3'],['mtb:scale'='3-'],['mtb:scale'='3+'] {
-        line-color: @mtbscale3;
-        line-opacity: 1;
-      }
-      ['mtb:scale'='4'],['mtb:scale'='4-'],['mtb:scale'='4+'] {
-        line-color: @mtbscale4;
-        line-opacity: 1;
-      }
-      ['mtb:scale'='5'],['mtb:scale'='5-'],['mtb:scale'='5+'] {
-        line-color: @mtbscale5;
-        line-opacity: 1;
-      }
+      ['mtb:scale'='0'],['mtb:scale'='0-'],['mtb:scale'='0+'] { line-color: @mtbscale0; line-opacity: 1; }
+      ['mtb:scale'='1'],['mtb:scale'='1-'],['mtb:scale'='1+'] { line-color: @mtbscale1; line-opacity: 1; }
+      ['mtb:scale'='2'],['mtb:scale'='2-'],['mtb:scale'='2+'] { line-color: @mtbscale2; line-opacity: 1; }
+      ['mtb:scale'='3'],['mtb:scale'='3-'],['mtb:scale'='3+'] { line-color: @mtbscale3; line-opacity: 1; }
+      ['mtb:scale'='4'],['mtb:scale'='4-'],['mtb:scale'='4+'] { line-color: @mtbscale4; line-opacity: 1; }
+      ['mtb:scale'='5'],['mtb:scale'='5-'],['mtb:scale'='5+'] { line-color: @mtbscale5; line-opacity: 1; }
       ['noexit'='yes'] { line-opacity: 0; }
 
       [zoom>=16] {
