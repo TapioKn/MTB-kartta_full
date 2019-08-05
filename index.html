@@ -20,34 +20,29 @@
     <script type="text/javascript">
 
     var	mtb	= L.tileLayer('./MTB-tiles_full/{z}/{x}/{y}.png', {
-          id:'MTB-kartta',
+          id:'MTB-map',
           minZoom:14,
           minNativeZoom:14,
           maxZoom:16,
           maxNativeZoom:16
         }),
-        arp	= L.tileLayer('https://arpotechno.finomena.fi/tiles/{z}/{x}/{y}.png', {
-          id:'Arpotechno-kartta',
-          maxZoom:16,
-          maxNativeZoom:16
-        }),
         mml	= L.tileLayer('http://tiles.kartat.kapsi.fi/peruskartta/{z}/{x}/{y}.jpg', {
-          id:'MML-kartta',
+          id:'NLS-map',
           maxZoom:16,
           maxNativeZoom:16
         }),
         ctr	= L.tileLayer('https://wmts.mapant.fi/wmts_EPSG3857.php?z={z}&x={x}&y={y}&style=contours', {
-          id:'Korkeuskäyrät',
+          id:'Contours',
           maxZoom:16,
           maxNativeZoom:16
         }),
         txt = L.tileLayer('./MTB-tiles_textnotes/{z}/{x}/{y}.png', {
-          id:'Tekstimerkinnät',
+          id:'mtb:description-notes',
           maxZoom:16,
           maxNativeZoom:16
         }),
         pth	= L.tileLayer('./MTB-tiles_polut/{z}/{x}/{y}.png', {
-          id:'Polut',
+          id:'Paths only',
           maxZoom:16,
           maxNativeZoom:16
         });
@@ -55,14 +50,13 @@
 
     // Defining the layer(group)s for the layercontrol and creating the control
     var baseLayers = {
-      "MTB-kartta":mtb,
-      "Arpotechno-kartta":arp,
-      "MML-kartta":mml,
+      "MTB-map":mtb,
+      "NLS-map":mml,
     };
     var overlayMaps = {
-      "Korkeuskäyrät":ctr,
-      "Tekstimerkinnät":txt,
-      "Polut":pth,
+      "Contours":ctr,
+      "mtb:description-notes":txt,
+      "Paths only":pth,
     };
 
     // Creating the main map, with mtb-layer as default
@@ -76,6 +70,7 @@
     var layerControl = L.control.layers( baseLayers, overlayMaps, {visible:true, position:'topright', collapsed:false, });
     map.addControl(layerControl);
 
+    $(".leaflet-control-layers-overlays").prepend("<label>&nbsp;Overlays:</label>");
 
     // Apply overlay layer blending options from CSS when the layer is added, remove when layer is removed.
     map.on("overlayadd", function (event) {
@@ -86,8 +81,6 @@
       $(ctr.getContainer()).removeClass('ctrBlending');
       $(mml.getContainer()).removeClass('mmlBlending');
     });
-
-
 
     </script>
   </body>
