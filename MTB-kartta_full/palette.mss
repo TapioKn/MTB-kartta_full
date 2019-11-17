@@ -4,7 +4,7 @@
 
 /* directory to load fonts from in addition to the system directories */
 Map { font-directory: url(./fonts); }
- 
+
 @sans_lt:           "Noto Sans Light";
 @sans_lt_italic:    "Noto Sans Light Italic";
 
@@ -29,7 +29,7 @@ Map { font-directory: url(./fonts); }
 @construction:      #cbc8c1;
 @farmland:          #fafbe7;
 @farmyard:          #f8f3d3;
-@forest:            lighten(#c9d4b4, 10%);
+@forest:            lighten(#c9d4b4, 12%);
 @golf_course:       #d7ffc4;
 @grass:             #f1ffdc;
 @grassland:         #e2f1cd;
@@ -50,7 +50,7 @@ Map { font-directory: url(./fonts); }
 @rock:              #ecefea;
 @school:            #fdfdfb;
 @sports:            #d7ffc4;
-@water:             #a3c5de; /*Previous backup: #b5cddf*/
+@water:             desaturate(#a3c5de, 20%); /*Previous backup: #b5cddf*/
 
 
 
