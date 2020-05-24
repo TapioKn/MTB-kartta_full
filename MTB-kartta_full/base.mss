@@ -35,7 +35,7 @@
                                 }
   }
   [type='residential']       { polygon-fill: @residential;
-                               line-color: @residential * 0.8;
+                               line-color: @residential * 0.9;
                                line-opacity: 0;
                                [zoom=15] {
                                line-opacity: 0.6;

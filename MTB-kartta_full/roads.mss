@@ -281,8 +281,8 @@ come in as well.
     [type='service']       { line-width: @rdz15_ser + 1.7; }
     [type='driveway']      { line-width: @rdz15_ser + 0.5; }
     [type='parking_aisle'] { line-width: @trz15_cw - 2; }
-    [type='cycleway']      { line-width: @cwz15_cw ; }
-	  [type='footway']       { line-width: @fwz15_cw ; }
+    [type='cycleway']      { line-width: @cwz15_cw; }
+	  [type='footway']       { line-width: @fwz15_cw; }
     [type='railway']       { line-width: @rwzhi_cw; }
     [type='rail_abandoned']{ line-width: @rwzhi_cw; }
   }
@@ -396,7 +396,7 @@ come in as well.
   [surface='unpaved'] { line-color: @unpaved_fill;
                         [zoom>=16] { line-color: darken(@unpaved_fill,3%); } }
 
-  /* No lines for paths/tracks, or parking aisles defined in their own style */
+  /* No lines for paths/tracks or parking aisles, defined in their own style */
   [type='path'],
   [type='track'],
   [type='parking_aisle'] {

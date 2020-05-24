@@ -22,21 +22,21 @@ Map { font-directory: url(./fonts); }
 
 @allotments:        #f5f5ef;
 @beach:             #f6f7d7;
-@building:          #938f8b;
+@building:          darken(#938f8b, 3%);
 @cemetery:          #deedde;
 @commercial:        #eef4f6;
 @conservation:      #7ba36c;
 @construction:      #cbc8c1;
 @farmland:          #fafbe7;
 @farmyard:          #f8f3d3;
-@forest:            lighten(#c9d4b4, 12%);
+@forest:            lighten(#c9d4b4, 14%);
 @golf_course:       #d7ffc4;
 @grass:             #f1ffdc;
 @grassland:         #e2f1cd;
 @hedge:             #a2b88a;
 @hospital:          #f9f2f4;
 @industrial:        #eaeef1;
-@land:              #f5f3ea;
+@land:              lighten(#f5f3ea, 3%);
 @landfill:          #ccc3b3;
 @meadow:            #f7fce9;
 @military:          #f66d6a;
@@ -45,7 +45,7 @@ Map { font-directory: url(./fonts); }
 @parking-label:     #0241e2;
 @plant_nursery:     #edf2e8;
 @plaza:             #f6f6ed;
-@residential:       #f6f5ee;
+@residential:       #e8e7de; /*Previous backup: #f6f5ee*/
 @retail:            #f6efef;
 @rock:              #ecefea;
 @school:            #fdfdfb;
@@ -59,19 +59,19 @@ Map { font-directory: url(./fonts); }
 /* ================================================================== */
 
 @motorway_fill:    #f6a42a;  //BACKUP: #ffc34d;
-@motorway_case:    @motorway_fill * 0.3;
+@motorway_case:    @motorway_fill * 0.1;
 
 @trunk_fill:       #ffb84d;  //BACKUP: #ffe18f;
-@trunk_case:       @trunk_fill * 0.3;
+@trunk_case:       @trunk_fill * 0.1;
 
 @primary_fill:     #fcd681;  //BACKUP: #ffe18f;
-@primary_case:     @primary_fill * 0.3;
+@primary_case:     @primary_fill * 0.1;
 
 @mainroad_fill:    #fcd681;  //BACKUP: #ffe8aa;
-@mainroad_case:    @mainroad_fill * 0.3;
+@mainroad_case:    @mainroad_fill * 0.1;
 
 @road_fill:        #ffffff;
-@road_case:        @building * 0.3;
+@road_case:        #1a1a1a;
 
 @unpaved_fill:     #fffbf4;
 @unpaved_case:     #815b15;
@@ -100,7 +100,7 @@ Map { font-directory: url(./fonts); }
 @footwaybg:       @cyclewaybg;
 @mtbscale0:       #88f41c;
 @mtbscale1:       #f4f41d;
-@mtbscale2:       #f4881d;
+@mtbscale2:       #ff9730;
 @mtbscale3:       #f92828;
 @mtbscale4:       #ee2099;
 @mtbscale5:       #bf1cf5;

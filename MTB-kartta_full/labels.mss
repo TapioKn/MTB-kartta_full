@@ -345,12 +345,12 @@
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:line;
-  [type='path'] { text-dy: 10; }
+  [type='path'],[type='track'] { text-dy: 10; }
   text-size:10;
   text-fill:@road_text;
   text-halo-fill:@road_halo;
   text-halo-radius:1;
-  text-min-distance:60;
+  text-min-distance:40;
   [tunnel='1'] { text-opacity: 0; }
 }
 
