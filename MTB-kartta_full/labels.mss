@@ -388,12 +388,21 @@
     marker-placement: point;
   }
   [noexit='yes'] {
-    [zoom=15] { marker-file: url(images/noexit_yes-M.png); }
-    [zoom>=16] { marker-file: url(images/noexit_yes-L.png); }
+    marker-file: url(images/noexit_yes-M-cross.png);
     marker-allow-overlap: true;
     marker-placement: point;
-    marker-opacity: 0.33;
+    marker-opacity: 0.5;
   }
+  /*
+  [noexit='yes'] {
+    marker-fill :@forest;
+    marker-line-color: @path_line;
+    marker-line-width: 1;
+    marker-line-opacity: 0.5;
+    marker-allow-overlap: true;
+    [zoom=16] { marker-width: @paz16_cw * 2; }
+  }
+  */
   [ford='yes'][zoom>=16] {
     marker-file: url(images/ford_yes-L.png);
     marker-allow-overlap: true;

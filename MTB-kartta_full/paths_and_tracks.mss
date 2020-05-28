@@ -5,6 +5,7 @@
 #paths_and_tracks {
   [type='path'],
   [type='track'] {
+    /*
     ['mtb:scale'!='X'] {
     ::pthalos {
       line-opacity: 0.2;
@@ -21,13 +22,16 @@
       }
       [zoom=15]  { line-width: @paz15_cw + 2.5;
                    [width<=0.5] { line-width: @paz15_cw / 1.7 + 2.5; }
+                   [width>=0.9] { line-width: @paz15_cw * 1.5 + 2.5; }
       }
       [zoom>=16] { line-width: @paz16_cw + 3.0;
-                   [width<=0.5] { line-width: @paz16_cw / 1.7 + 3.0; }
+                   [width<=0.5] { line-width: @paz16_cw / 2.0 + 3.0; }
+                   [width>=0.9] { line-width: @paz16_cw * 1.5 + 2.5; }
       }
       ['noexit'='yes'] {line-opacity: 0; }
       }
     }
+    */
     ::ptcases {
     line-opacity: 0;
       ['mtb:scale'='0'],['mtb:scale'='0-'],['mtb:scale'='0+'] { line-color: @mtbscale0; line-opacity: 1; }
@@ -40,13 +44,15 @@
 
       [zoom>=16] {
 	    line-width: @paz16_cw;
-        [width<=0.5] { line-width: @paz16_cw / 1.7; }
-        [type='track'] { line-width: @paz16_cw * 1.2; }
+        [width<=0.5] { line-width: @paz16_cw / 2.0; }
+        [width>=0.9] { line-width: @paz16_cw * 1.6; }
+        [type='track'] { line-width: @paz16_cw * 2.0; }
       }
       [zoom<=15] {
 	    line-width: @paz15_cw;
         [width<=0.5] { line-width: @paz15_cw / 1.7; }
-        [type='track'] { line-width: @paz15_cw * 1.2; }
+        [width>=0.9] { line-width: @paz15_cw * 1.5; }
+        [type='track'] { line-width: @paz15_cw * 1.7; }
       }
       [zoom<=14] {
 	    line-width: @paz14_cw;
@@ -69,19 +75,21 @@
       ['noexit'='yes'] { line-opacity: 0.5; }
       [zoom>=16] {
 	    line-width: @paz16_lw;
-        [width<=0.5] { line-width: @paz16_lw / 2; }
         [type='path']  { line-dasharray: @paz16_da; }
-        [type='track'],[width>=2.0] { line-dasharray: @trz16_da; }
-        [visibility='bad'] { line-dasharray: 2, 5; }
+        [width<=0.5] { line-width: @paz16_lw / 2; }
+        [width>=0.9] { line-width: @paz16_lw * 1.7; line-color: @path_line; line-dasharray: 5, 5; }    /* Widest trails distinguished only on closer zoom levels */
+        [width>=2.0],[type='track'] { line-dasharray: @trz16_da;  line-width: @paz16_lw * 2.0; line-color: @path_line; } /* Tracks as continuous lines, fix codes when finished */
+        [visibility='bad'] { line-dasharray: 1, 5; }
         ['mtb:scale'='-1'],[access='no'],[access='private']   { line-pattern-file: url('images/forbidden-line-z16.png');  }
       }
       [zoom=15] {
 	    line-width: @paz15_lw;
-        [width<=0.5] { line-width: @paz15_lw / 2; }
-        [type='path']  { line-dasharray: @paz15_da; }
-        [type='track'],[width>=2.0] { line-dasharray: @trz15_da; }
-        [visibility='bad'] { line-dasharray: 1.8, 4; }
-        ['mtb:scale'='-1'],[access='no'],[access='private']   { line-pattern-file: url('images\forbidden-line-z15.png');  }
+      [type='path']  { line-dasharray: @paz16_da; }
+      [width<=0.5] { line-width: @paz15_lw / 2; }
+      [width>=0.9] { line-width: @paz15_lw * 1.7; line-color: @path_line; line-dasharray: 5, 5; }    /* Widest trails distinguished only on closer zoom levels */
+      [width>=2.0],[type='track'] { line-dasharray: @trz15_da;  line-width: @paz15_lw * 2.0; line-color: @path_line; } /* Tracks as continuous lines, fix codes when finished */
+      [visibility='bad'] { line-dasharray: 1, 5; }
+      ['mtb:scale'='-1'],[access='no'],[access='private']   { line-pattern-file: url('images/forbidden-line-z15.png');  }
       }
       [zoom=14] {
 	    line-width: @paz14_lw;

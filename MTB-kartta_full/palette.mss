@@ -73,6 +73,8 @@ Map { font-directory: url(./fonts); }
 @road_fill:        #ffffff;
 @road_case:        #1a1a1a;
 
+@path_line:        @road_case;
+
 @unpaved_fill:     #fffbf4;
 @unpaved_case:     #815b15;
 
@@ -99,9 +101,9 @@ Map { font-directory: url(./fonts); }
 @cyclewaybg:      @land;
 @footwaybg:       @cyclewaybg;
 @mtbscale0:       #88f41c;
-@mtbscale1:       #f4f41d;
-@mtbscale2:       #ff9730;
-@mtbscale3:       #f92828;
+@mtbscale1:       #ffff00;
+@mtbscale2:       #f4a250;
+@mtbscale3:       #ff5858;
 @mtbscale4:       #ee2099;
 @mtbscale5:       #bf1cf5;
 
