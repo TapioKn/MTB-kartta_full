@@ -147,14 +147,15 @@ node,way   z_order      int4         linear # This is calculated during import
 way        way_area     real         linear # This is calculated during import
 
 # Own additions
-way        ski          text        linear
-way        piste:type   text        linear
-way	       mtb:scale    text        linear
-way	       mtb:winter   text        linear
-way        obstacle     text        linear
-way        trail_visibility text    linear
-way        cycleway     text        linear
-node,way   noexit       text        linear
+way        ski              text        linear
+way        piste:type       text        linear
+way	       mtb:scale        text        linear
+way	       mtb:winter       text        linear
+way        obstacle         text        linear
+way        trail_visibility text        linear
+way        cycleway         text        linear
+node,way   noexit           text        linear
+node,way   mtb:description  text        linear
 
 
 # Area tags
@@ -175,8 +176,7 @@ way         area:highway            text    polygon
 
 # These tags are used by mappers to keep track of data.
 # They aren't very useful for rendering.
-node,way    note                    text    delete
-node,way    note:*                  text    delete
+node,way    note                    text    linear
 node,way    source                  text    delete
 node,way    source_ref              text    delete
 node,way    source:*                text    delete

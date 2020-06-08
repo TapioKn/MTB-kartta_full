@@ -99,10 +99,10 @@ come in as well.
 @paz11_cw: 1.0;   @paz11_lw: 0.0;   @paz11_da: 3, 3;
 @paz12_cw: 1.5;   @paz12_lw: 0.0;   @paz12_da: 3, 3;
 @paz13_cw: 2.5;   @paz13_lw: 1.0;   @paz13_da: 3, 3;
-@paz14_cw: 3.0;   @paz14_lw: 1.0;   @paz14_da: 3, 4;
-@paz15_cw: 3.0;   @paz15_lw: 1.3;   @paz15_da: 4, 5;
-@paz16_cw: 3.5;   @paz16_lw: 1.5;   @paz16_da: 4, 5;
-@paz17_cw: 5.0;   @paz17_lw: 2.5;   @paz17_da: 5, 6;
+@paz14_cw: 3.0;   @paz14_lw: 1.0;   @paz14_da: 4, 4;
+@paz15_cw: 3.0;   @paz15_lw: 1.3;   @paz15_da: 5, 5;
+@paz16_cw: 3.5;   @paz16_lw: 1.5;   @paz16_da: 5, 5;
+@paz17_cw: 5.0;   @paz17_lw: 2.5;   @paz17_da: 6, 6;
 
 /* Track case widths, line widths and dasharrays */
 @trz11_cw: 2.0;   @trz11_lw: 0.5;   @trz11_da: 6, 1.5;
@@ -236,7 +236,6 @@ come in as well.
     [type='living_street'] { line-width: @rdz13_res + 1; }
     [type='raceway']       { line-width: @rdz13_ser + 2; }
     [type='service']       { line-width: @rdz13_ser + 2; }
-    /* No minor ways yet */
     [type='driveway']      { line-width: 0; }
     [type='parking_aisle'] { line-width: 0; }
     [type='cycleway']      { line-width: @cwz13_cw; }
@@ -247,18 +246,17 @@ come in as well.
   [zoom=14] {
     [type='motorway']      { line-width: @rdz14_mot + 2.5; }
     [type='motorway_link'] { line-width: @rdz14_mot; }
-    [type='trunk']         { line-width: @rdz14_tru + 2; }
+    [type='trunk']         { line-width: @rdz14_tru + 1.8; }
     [type='trunk_link']    { line-width: @rdz14_tru; }
-    [type='primary']       { line-width: @rdz14_pri + 2; }
+    [type='primary']       { line-width: @rdz14_pri + 1.8; }
     [type='primary_link']  { line-width: @rdz14_pri; }
-    [type='mainroad']      { line-width: @rdz14_mai + 2; }
+    [type='mainroad']      { line-width: @rdz14_mai + 1.8; }
     [type='mainroad_link'] { line-width: @rdz14_mai; }
-    [type='residential']   { line-width: @rdz14_res + 2; }
+    [type='residential']   { line-width: @rdz14_res + 1.6; }
     [type='living_street'] { line-width: @rdz14_res + 1; }
-    [type='raceway']       { line-width: @rdz14_ser + 2; }
+    [type='raceway']       { line-width: @rdz14_ser + 1.5; }
     [type='service']       { line-width: @rdz14_ser + 2; }
     [type='driveway']      { line-width: @rdz14_ser + 1; }
-    /* No minor ways yet */
     [type='parking_aisle'] { line-width: 0; }
     [type='cycleway']      { line-width: @cwz14_cw; }
 	  [type='footway']       { line-width: @fwz14_cw; }

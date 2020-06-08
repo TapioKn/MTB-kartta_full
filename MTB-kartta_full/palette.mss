@@ -101,7 +101,7 @@ Map { font-directory: url(./fonts); }
 @cyclewaybg:      @land;
 @footwaybg:       @cyclewaybg;
 @mtbscale0:       #88f41c;
-@mtbscale1:       #ffff00;
+@mtbscale1:       #ebeb00;
 @mtbscale2:       #f4a250;
 @mtbscale3:       #ff5858;
 @mtbscale4:       #ee2099;
