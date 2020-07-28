@@ -151,7 +151,7 @@ way        ski              text        linear
 way        piste:type       text        linear
 way	       mtb:scale        text        linear
 way	       mtb:winter       text        linear
-way        obstacle         text        linear
+node,way   obstacle         text        linear
 way        trail_visibility text        linear
 way        cycleway         text        linear
 node,way   noexit           text        linear

@@ -408,4 +408,9 @@
     marker-allow-overlap: true;
     marker-placement: point;
   }
+  [obstacle='fallen_tree'][zoom>=16] {
+    marker-file: url(images/obstacle_fallen_tree-M.png);
+    marker-allow-overlap: true;
+    marker-placement: point;
+  }
 }
