@@ -29,7 +29,7 @@ Map { font-directory: url(./fonts); }
 @construction:      #cbc8c1;
 @farmland:          #fafbe7;
 @farmyard:          #f8f3d3;
-@forest:            lighten(#c1d2a0, 14%);
+@forest:            lighten(#bad0aa, 14%);
 @golf_course:       #d7ffc4;
 @grass:             #f1ffdc;
 @grassland:         #e2f1cd;
@@ -50,7 +50,7 @@ Map { font-directory: url(./fonts); }
 @rock:              #ecefea;
 @school:            #fdfdfb;
 @sports:            #d7ffc4;
-@water:             desaturate(#a3c5de, 20%); /*Previous backup: #b5cddf*/
+@water:             desaturate(#8fb0c8, 20%); /*Previous backup: #a3c5de*/
 
 
 
@@ -75,7 +75,7 @@ Map { font-directory: url(./fonts); }
 
 @path_line:        @road_case;
 
-@unpaved_fill:     #fffbf4;
+@unpaved_fill:     #f2eade;
 @unpaved_case:     #815b15;
 
 @rail_regular:     #7c7b7b;

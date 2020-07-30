@@ -385,8 +385,7 @@ come in as well.
   }
 
   // Light brown fill for unpaved roads
-  [surface='unpaved'] { line-color: @unpaved_fill;
-                        [zoom>=16] { line-color: darken(@unpaved_fill,3%); } }
+  [surface='unpaved'] { line-color: @unpaved_fill;}
 
   /* No lines for paths/tracks or parking aisles, defined in their own style */
   [type='path'],
