@@ -71,9 +71,9 @@ Map { font-directory: url(./fonts); }
 @mainroad_case:    @mainroad_fill * 0.1;
 
 @road_fill:        #ffffff;
-@road_case:        #1a1a1a;
+@road_case:        #0b0b0b;
 
-@path_line:        @road_case;
+@path_line:        #000000;
 
 @unpaved_fill:     #f2eade;
 @unpaved_case:     #815b15;

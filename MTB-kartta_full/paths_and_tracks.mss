@@ -47,6 +47,7 @@
 
     }
     ::ptlines {
+      line-color: @path_line;
       [seasonal='winter'],['noexit'='yes'] { line-opacity: 0.5; }
 
       [zoom=12] {
@@ -69,8 +70,8 @@
         line-width: @paz14_lw;
         [type='path']               { line-dasharray: @paz16_da; }
         [width<=0.5]                { line-width: @paz14_lw / 2; }
-        [width>=0.9]                { line-width: @paz14_lw * 1.7; line-color: @path_line; }
-        [width>=1.8],[type='track'] { line-dasharray: @trz15_da;  line-width: @paz14_lw * 2.0; line-color: @path_line; }
+        [width>=0.9]                { line-width: @paz14_lw * 1.7; }
+        [width>=1.8],[type='track'] { line-dasharray: @trz15_da;  line-width: @paz14_lw * 2.0; }
         [visibility='bad']          { line-dasharray: 1, 5; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z14.png');  }
       }
@@ -78,8 +79,8 @@
 	      line-width: @paz15_lw;
         [type='path']               { line-dasharray: @paz15_da; }
         [width<=0.5]                { line-width: @paz15_lw / 2; }
-        [width>=0.9]                { line-width: @paz15_lw * 1.7; line-color: @path_line;  }
-        [width>=1.8],[type='track'] { line-dasharray: @trz15_da;  line-width: @paz15_lw * 2.0; line-color: @path_line; }
+        [width>=0.9]                { line-width: @paz15_lw * 1.7; }
+        [width>=1.8],[type='track'] { line-dasharray: @trz15_da;  line-width: @paz15_lw * 2.0; }
         [visibility='bad']          { line-dasharray: 1, 5; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z15.png');  }
       }
@@ -88,7 +89,7 @@
         [type='path']               { line-dasharray: @paz16_da; }
         [width<=0.5]                { line-width: @paz16_lw / 2; }
         [width>=0.9]                { line-width: @paz16_lw * 1.7; line-color: @path_line; }
-        [width>=1.8],[type='track'] { line-dasharray: @trz16_da;  line-width: @paz16_lw * 2.0; line-color: @path_line; }
+        [width>=1.8],[type='track'] { line-dasharray: @trz16_da;  line-width: @paz16_lw * 2.0; }
         [visibility='bad']          { line-dasharray: 1, 5; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z16.png');  }
       }
@@ -164,11 +165,12 @@
     ::brptlines { /* In case there are path bridges over other paths... quite marginal, could be removed */
       ['noexit'='yes'] { line-opacity: 0.5; }
       /* Widest trails distinguished only on z14+ */
+      line-color: @path_line;
       [zoom=15] {
         line-width: @paz15_lw;
         [type='path']               { line-dasharray: @paz15_da; }
         [width<=0.5]                { line-width: @paz15_lw / 2; }
-        [width>=0.9]                { line-width: @paz15_lw * 1.7; line-color: @path_line;  }
+        [width>=0.9]                { line-width: @paz15_lw * 1.7; }
         [width>=2.0],[type='track'] { line-dasharray: @trz15_da;  line-width: @paz15_lw * 2.0; line-color: @path_line; }
         [visibility='bad'] { line-dasharray: 1, 5; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z15.png');  }
@@ -177,7 +179,7 @@
 	      line-width: @paz16_lw;
         [type='path']               { line-dasharray: @paz16_da; }
         [width<=0.5]                { line-width: @paz16_lw / 2; }
-        [width>=0.9]                { line-width: @paz16_lw * 1.7; line-color: @path_line; }
+        [width>=0.9]                { line-width: @paz16_lw * 1.7; }
         [width>=2.0],[type='track'] { line-dasharray: @trz16_da;  line-width: @paz16_lw * 2.0; line-color: @path_line; }
         [visibility='bad']          { line-dasharray: 1, 5; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z16.png');  }
