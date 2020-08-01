@@ -88,7 +88,7 @@
         line-width: @paz16_lw;
         [type='path']               { line-dasharray: @paz16_da; }
         [width<=0.5]                { line-width: @paz16_lw / 2; }
-        [width>=0.9]                { line-width: @paz16_lw * 1.7; line-color: @path_line; }
+        [width>=0.9]                { line-width: @paz16_lw * 1.8; line-color: @path_line; }
         [width>=1.8],[type='track'] { line-dasharray: @trz16_da;  line-width: @paz16_lw * 2.0; }
         [visibility='bad']          { line-dasharray: 1, 5; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z16.png');  }
