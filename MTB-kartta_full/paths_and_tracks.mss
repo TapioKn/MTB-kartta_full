@@ -56,7 +56,7 @@
         [type='path']               { line-dasharray: @paz12_da; }
         [width>=1.8],[type='track'] { line-dasharray: @trz12_da; }
         [visibility='bad']          { line-dasharray: 1.3, 3; }
-        ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images\forbidden-line-z13.png');  }
+        ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z13.png');  }
       }
       [zoom=13] {
 	      line-width: @paz13_lw;
@@ -64,7 +64,7 @@
         [type='path']               { line-dasharray: @paz13_da; }
         [width>=1.8],[type='track'] { line-dasharray: @trz13_da; }
         [visibility='bad']          { line-dasharray: 1.3, 3; }
-        ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images\forbidden-line-z13.png');  }
+        ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z13.png');  }
       }
       [zoom=14] {
         line-width: @paz14_lw;
@@ -97,16 +97,16 @@
     }
     ::ptoverlays {
       [obstacle='vegetation'] {
-      line-pattern-file: url('./images/obstacle_vegetation-wide.png');
-      [width<=0.5] { line-pattern-file: url('./images/obstacle_vegetation-narrow.png'); }
+      line-pattern-file: url('images/obstacle_vegetation-wide.png');
+      [width<=0.5] { line-pattern-file: url('images/obstacle_vegetation-narrow.png'); }
       }
       [surface='mud'] {
-      line-pattern-file: url('./images/surface_mud-wide.png');
-      [width<=0.5] { line-pattern-file: url('./images/surface_mud-narrow.png'); }
+      line-pattern-file: url('images/surface_mud-wide.png');
+      [width<=0.5] { line-pattern-file: url('images/surface_mud-narrow.png'); }
       }
       [obstacle='vegetation'][surface='mud'] {
-      line-pattern-file: url('./images/obstacle_vegetation_surface_mud-wide.png');
-      [width<=0.5] { line-pattern-file: url('./images/surface_mud-narrow.png'); }
+      line-pattern-file: url('images/obstacle_vegetation_surface_mud-wide.png');
+      [width<=0.5] { line-pattern-file: url('images/surface_mud-narrow.png'); }
       }
     }
   }
@@ -224,7 +224,7 @@
       [type='path']  { line-dasharray: @paz15_da; }
       [type='track'],[width>=2.0] { line-dasharray: @trz15_da; }
       [visibility='bad'] { line-dasharray: 1.8, 4; }
-      ['mtb:scale'='-1'] { line-pattern-file: url('images\forbidden-line-z15.png');  }
+      ['mtb:scale'='-1'] { line-pattern-file: url('images/forbidden-line-z15.png');  }
     }
     [zoom>=16] {
     line-width: @paz16_lw;

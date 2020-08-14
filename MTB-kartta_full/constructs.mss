@@ -30,30 +30,30 @@
     [zoom<=13] { line-width: 0; }
   }
   [type='cliff'][zoom>=14] {
-    line-pattern-file: url("./images/natural_cliff.png");
+    line-pattern-file: url("images/natural_cliff.png");
   }
 }
 /* Point type physical elements, both constructs and natural */
 #constructs_point {
   [power='pole'][zoom>=15] {
-    marker-file: url('./images/power_pole.png');
+    marker-file: url('images/power_pole.png');
   }
   [aerialway='pylon'][zoom>=14] {
-    marker-file: url('./images/aerialway_pylon.png');
+    marker-file: url('images/aerialway_pylon.png');
   }
   [aerialway='station'][zoom>=14] {
-    marker-file: url('./images/aerialway_station.png');
+    marker-file: url('images/aerialway_station.png');
   }
   [power='tower'][zoom>=14] {
-    marker-file: url('./images/power_tower.png');
+    marker-file: url('images/power_tower.png');
   }
   [barrier='gate'][zoom>=15] {
     marker-allow-overlap: true;
-    marker-file: url('./images/barrier_gate.png');
+    marker-file: url('images/barrier_gate.png');
   }
   [natural='peak'][zoom>=14] {
     marker-allow-overlap: true;
-    marker-file: url('./images/natural_peak.png');
+    marker-file: url('images/natural_peak.png');
     text-name: "[name]";
     text-placement: point;
     text-allow-overlap: true;

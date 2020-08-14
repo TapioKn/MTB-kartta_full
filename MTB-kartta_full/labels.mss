@@ -29,7 +29,7 @@
     text-size:12;
     text-character-spacing: 1;
     text-wrap-width: 80;
-  }
+  } 
   [zoom=12] {
     text-size:13;
     text-character-spacing: 1;

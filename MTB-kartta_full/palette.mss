@@ -3,7 +3,7 @@
 /* ================================================================== */
 
 /* directory to load fonts from in addition to the system directories */
-Map { font-directory: url(./fonts); }
+Map { font-directory: url(fonts); }
 
 @sans_lt:           "Noto Sans Light";
 @sans_lt_italic:    "Noto Sans Light Italic";
