@@ -205,7 +205,7 @@
   line-color:      @building;
   line-width:      1;
   line-opacity:    0.7;
-  [zoom=15]  { polygon-fill: lighten(@building, 30%); line-color: lighten(@building, 10%); }
+  [zoom=15]  { polygon-fill: lighten(@building, 35%); line-color: lighten(@building, 25%); }
   [zoom=14]  { polygon-fill: lighten(@building, 35%); line-color: lighten(@building, 25%); }
   [zoom=13]  { polygon-fill: lighten(@building, 40%); line-color: lighten(@building, 35%); }
   [zoom<=12] { polygon-fill: lighten(@building, 45%); line-color: lighten(@building, 40%); }

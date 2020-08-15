@@ -29,7 +29,7 @@ Map { font-directory: url(fonts); }
 @construction:      #cbc8c1;
 @farmland:          #fafbe7;
 @farmyard:          #f8f3d3;
-@forest:            lighten(#bad0aa, 14%);
+@forest:            lighten(#bad0aa, 14%); /* lighten(#bad0aa, 14%); */
 @golf_course:       #d7ffc4;
 @grass:             #f1ffdc;
 @grassland:         #e2f1cd;

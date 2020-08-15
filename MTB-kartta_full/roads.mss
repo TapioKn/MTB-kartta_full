@@ -100,8 +100,8 @@ come in as well.
 /* p/t cases      p/t lines         p dasharrays       t dasharrays */
 @paz11_cw: 1.5;   @paz11_lw: 0.0;   @paz11_da: 3, 3;   @trz11_da: 6, 1.5;
 @paz12_cw: 2.0;   @paz12_lw: 0.5;   @paz12_da: 3, 3;   @trz12_da: 6, 1.5;
-@paz13_cw: 2.8;   @paz13_lw: 1.0;   @paz13_da: 3, 3;   @trz13_da: 6, 1.5;
-@paz14_cw: 3.0;   @paz14_lw: 1.0;   @paz14_da: 4, 4;   @trz14_da: 6, 1.5;
+@paz13_cw: 2.4;   @paz13_lw: 1.0;   @paz13_da: 3, 3;   @trz13_da: 6, 1.5;
+@paz14_cw: 2.7;   @paz14_lw: 1.0;   @paz14_da: 4, 4;   @trz14_da: 6, 1.5;
 @paz15_cw: 3.0;   @paz15_lw: 1.3;   @paz15_da: 5, 5;   @trz15_da: 9, 2.0;
 @paz16_cw: 3.5;   @paz16_lw: 1.5;   @paz16_da: 5, 5;   @trz16_da: 10, 2.0;
 @paz17_cw: 5.0;   @paz17_lw: 2.5;   @paz17_da: 6, 6;   @trz17_da: 10, 2.0;
@@ -264,7 +264,7 @@ come in as well.
     [type='primary_link']  { line-width: @rdz15_pri; }
     [type='mainroad']      { line-width: @rdz15_mai + 2; }
     [type='mainroad_link'] { line-width: @rdz15_mai; }
-    [type='residential']   { line-width: @rdz15_res + 2.2; }
+    [type='residential']   { line-width: @rdz15_res + 2.5; }
     [type='living_street'] { line-width: @rdz15_res + 1; }
     [type='driveway']      { line-width: @rdz15_res + 0; }
     [type='raceway']       { line-width: @rdz15_ser + 1.7; }
