@@ -28,34 +28,32 @@
       }
       [zoom=14] {
         line-width: @paz14_cw;
-        [width<=0.5]                { line-width: @paz14_cw / 2.0; }
-        [width>=0.9]                { line-width: @paz14_cw * 1.2; }
-        [width>=2.0],[type='track'] { line-width: @paz14_cw * 1.4; }
+        [width<=0.5]                { line-width: @paz14_cw / 1.5; }
+        [width>=1.8],[type='track'] { line-width: @paz14_cw * 1.4; }
       }
       [zoom=15] {
         line-width: @paz15_cw;
-        [width<=0.5]                { line-width: @paz15_cw / 2.0; }
-        [width>=0.9]                { line-width: @paz15_cw * 1.6; }
-        [width>=2.0],[type='track'] { line-width: @paz15_cw * 2.0; }
+        [width<=0.5]                { line-width: @paz15_cw / 1.8; }
+        [width>=0.9]                { line-width: @paz15_cw * 1.5; }
+        [width>=1.8],[type='track'] { line-width: @paz15_cw * 1.8; }
       }
       [zoom>=16] {
 	      line-width: @paz16_cw;
         [width<=0.5]                { line-width: @paz16_cw / 2.0; }
         [width>=0.9]                { line-width: @paz16_cw * 1.6; }
-        [width>=2.0],[type='track'] { line-width: @paz16_cw * 2.0; }
+        [width>=1.8],[type='track'] { line-width: @paz16_cw * 2.2; }
       }
 
     }
     ::ptlines {
       line-color: @path_line;
-      [type='track'] { line-color: lighten(@path_line, 40%);}
       [seasonal='winter'],['noexit'='yes'] { line-opacity: 0.5; }
 
       [zoom=12] {
 	      line-width: @paz12_lw;
         [width<=0.5]                { line-width: @paz12_lw / 2; }
         [type='path']               { line-dasharray: @paz12_da; }
-        [width>=1.8],[type='track'] { line-dasharray: @trz12_da; }
+        [width>=1.8],[type='track'] { line-dasharray: @trz12_da; line-color: lighten(@path_line, 35%); }
         [visibility='bad']          { line-dasharray: 1.3, 3; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z13.png');  }
       }
@@ -63,7 +61,7 @@
 	      line-width: @paz13_lw;
         [width<=0.5]                { line-width: @paz13_lw / 2; }
         [type='path']               { line-dasharray: @paz13_da; }
-        [width>=1.8],[type='track'] { line-dasharray: @trz13_da; }
+        [width>=1.8],[type='track'] { line-dasharray: @trz13_da; line-color: lighten(@path_line, 35%); }
         [visibility='bad']          { line-dasharray: 1.3, 3; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z13.png');  }
       }
@@ -71,17 +69,19 @@
         line-width: @paz14_lw;
         [type='path']               { line-dasharray: @paz16_da; }
         [width<=0.5]                { line-width: @paz14_lw / 2; }
+        /* Width 0.6–0.8 uses the "normal" lineweights */
         [width>=0.9]                { line-width: @paz14_lw * 1.5; }
-        [width>=1.8],[type='track'] { line-dasharray: @trz15_da;  line-width: @paz14_lw * 1.8; }
+        [width>=1.8],[type='track'] { line-dasharray: @trz15_da; line-width: @paz14_lw * 1.8; line-color: lighten(@path_line, 35%); }
         [visibility='bad']          { line-dasharray: 1, 5; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z14.png');  }
       }
       [zoom=15] {
 	      line-width: @paz15_lw;
         [type='path']               { line-dasharray: @paz15_da; }
-        [width<=0.5]                { line-width: @paz15_lw / 2; }
-        [width>=0.9]                { line-width: @paz15_lw * 1.7; }
-        [width>=1.8],[type='track'] { line-dasharray: @trz15_da;  line-width: @paz15_lw * 2.0; }
+        [width<=0.5]                { line-width: @paz15_lw / 1.8; }
+        /* Width 0.6–0.8 uses the "normal" lineweights */
+        [width>=0.9]                { line-width: @paz15_lw * 1.5; }
+        [width>=1.8],[type='track'] { line-dasharray: @trz15_da; line-width: @paz15_lw * 1.8; line-color: lighten(@path_line, 35%); }
         [visibility='bad']          { line-dasharray: 1, 5; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z15.png');  }
       }
@@ -89,8 +89,9 @@
         line-width: @paz16_lw;
         [type='path']               { line-dasharray: @paz16_da; }
         [width<=0.5]                { line-width: @paz16_lw / 2; }
-        [width>=0.9]                { line-width: @paz16_lw * 1.8; line-color: @path_line; }
-        [width>=1.8],[type='track'] { line-dasharray: @trz16_da;  line-width: @paz16_lw * 2.0; }
+        /* Width 0.6–0.8 uses the "normal" lineweights */
+        [width>=0.9]                { line-width: @paz16_lw * 1.8; }
+        [width>=1.8],[type='track'] { line-dasharray: @trz16_da; line-width: @paz16_lw * 2.0; line-color: lighten(@path_line, 35%); }
         [visibility='bad']          { line-dasharray: 1, 5; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z16.png');  }
       }
@@ -152,14 +153,16 @@
       [zoom=15] {
         line-width: @paz15_cw;
         [width<=0.5]                { line-width: @paz15_cw / 2.0; }
+        /* Width 0.6–0.8 uses the "normal" lineweights */
         [width>=0.9]                { line-width: @paz15_cw * 1.6; }
-        [width>=2.0],[type='track'] { line-width: @paz15_cw * 2.0; }
+        [width>=1.8],[type='track'] { line-width: @paz15_cw * 2.0; }
       }
       [zoom>=16] {
         line-width: @paz16_cw;
         [width<=0.5]                { line-width: @paz16_cw / 2.0; }
+        /* Width 0.6–0.8 uses the "normal" lineweights */
         [width>=0.9]                { line-width: @paz16_cw * 1.6; }
-        [width>=2.0],[type='track'] { line-width: @paz16_cw * 2.0; }
+        [width>=1.8],[type='track'] { line-width: @paz16_cw * 2.0; }
       }
 
     }
@@ -171,17 +174,19 @@
         line-width: @paz15_lw;
         [type='path']               { line-dasharray: @paz15_da; }
         [width<=0.5]                { line-width: @paz15_lw / 2; }
+        /* Width 0.6–0.8 uses the "normal" lineweights */
         [width>=0.9]                { line-width: @paz15_lw * 1.7; }
-        [width>=2.0],[type='track'] { line-dasharray: @trz15_da;  line-width: @paz15_lw * 2.0; line-color: @path_line; }
-        [visibility='bad'] { line-dasharray: 1, 5; }
+        [width>=1.8],[type='track'] { line-dasharray: @trz15_da; line-width: @paz15_lw * 2.0; line-color: lighten(@path_line, 35%); }
+        [visibility='bad']          { line-dasharray: 1, 5; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z15.png');  }
       }
       [zoom>=16] {
-	      line-width: @paz16_lw;
+        line-width: @paz16_lw;
         [type='path']               { line-dasharray: @paz16_da; }
         [width<=0.5]                { line-width: @paz16_lw / 2; }
-        [width>=0.9]                { line-width: @paz16_lw * 1.7; }
-        [width>=2.0],[type='track'] { line-dasharray: @trz16_da;  line-width: @paz16_lw * 2.0; line-color: @path_line; }
+        /* Width 0.6–0.8 uses the "normal" lineweights */
+        [width>=0.9]                { line-width: @paz16_lw * 1.8; }
+        [width>=1.8],[type='track'] { line-dasharray: @trz16_da; line-width: @paz16_lw * 2.0; line-color: lighten(@path_line, 35%); }
         [visibility='bad']          { line-dasharray: 1, 5; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z16.png');  }
       }
