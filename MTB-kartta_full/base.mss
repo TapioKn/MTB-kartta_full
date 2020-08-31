@@ -217,9 +217,10 @@
 
 Map { background-color: @water; }
 
-#water_gen0[zoom>3][zoom<=9],
-#water_gen1[zoom>9][zoom<=12],
-#water[zoom>12] {
+/*#water_gen0[zoom>3][zoom<=9] { polygon-fill: @water; }
+#water_gen1[zoom>9][zoom<=12] { polygon-fill: @water; } */
+
+#water[zoom>3] {
   polygon-fill: @water;
 }
 
