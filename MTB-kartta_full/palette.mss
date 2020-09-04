@@ -60,15 +60,21 @@ Map { font-directory: url(fonts); }
 
 @motorway_fill:    #f6a42a;  //BACKUP: #ffc34d;
 @motorway_case:    @motorway_fill * 0.1;
+@motorway_farfill: #f6672a;
 
 @trunk_fill:       #ffb84d;  //BACKUP: #ffe18f;
 @trunk_case:       @trunk_fill * 0.1;
+@trunk_farfill:    #ffad4d;
 
 @primary_fill:     #fcd681;  //BACKUP: #ffe18f;
 @primary_case:     @primary_fill * 0.1;
+@primary_farfill:  #f5bf6f;
 
 @mainroad_fill:    #fcd681;  //BACKUP: #ffe8aa;
 @mainroad_case:    @mainroad_fill * 0.1;
+@mainroad_farfill: @primary_farfill;
+
+@residential_farfill: @primary_farfill;
 
 @road_fill:        #ffffff;
 @road_case:        #0b0b0b;

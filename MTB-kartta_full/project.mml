@@ -12,7 +12,7 @@
   ],
   "format": "png8",
   "interactivity": false,
-  "minzoom": 7,
+  "minzoom": 5,
   "maxzoom": 17,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
@@ -683,7 +683,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "table": "( SELECT way, highway AS type\n  FROM planet_osm_roads\n  WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'motorway_link', 'trunk_link')\n) AS data",
+        "table": "( SELECT way, highway,\n  CASE\n    WHEN highway = 'motorway' THEN 'motorway'\n    WHEN highway = 'motorway_link' THEN 'motorway_link'\n    WHEN highway = 'trunk' THEN 'trunk'\n    WHEN highway = 'trunk_link' THEN 'trunk_link'\n    WHEN highway = 'primary' THEN 'primary'\n    WHEN highway = 'primary_link' THEN 'primary_link'\n    WHEN highway IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN highway IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN highway IN ('residential', 'unclassified') THEN 'residential'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'tertiary', 'motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary_link', 'unclassified', 'residential')\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -697,9 +697,9 @@
       "srs-name": "900913",
       "extent": [
         18.709339497395607,
-        58.41733559472438,
+        58.41733559472439,
         37.94663809471778,
-        70.4065457953023
+        70.40654579530234
       ],
       "advanced": {}
     },
@@ -711,7 +711,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "table": "( SELECT way, highway AS type, bridge, tunnel\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk')\n) AS data",
+        "table": "( SELECT way, highway AS type, bridge, tunnel\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'tertiary')\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -725,9 +725,9 @@
       "srs-name": "900913",
       "extent": [
         18.709339497395607,
-        58.41733559472438,
+        58.41733559472439,
         37.94663809471778,
-        70.4065457953023
+        70.40654579530234
       ],
       "advanced": {}
     },
