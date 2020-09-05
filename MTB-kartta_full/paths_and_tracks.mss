@@ -14,6 +14,7 @@
       ['mtb:scale'='3'],['mtb:scale'='3-'],['mtb:scale'='3+'] { line-color: @mtbscale3; line-opacity: 1; }
       ['mtb:scale'='4'],['mtb:scale'='4-'],['mtb:scale'='4+'] { line-color: @mtbscale4; line-opacity: 1; }
       ['mtb:scale'='5'],['mtb:scale'='5-'],['mtb:scale'='5+'] { line-color: @mtbscale5; line-opacity: 1; }
+      ['mtb:scale'='6']                                       { line-color: @mtbscale6; line-opacity: 1; }
       ['noexit'='yes'] { line-opacity: 0; }
 
       [zoom=12] {
@@ -62,6 +63,7 @@
         ['mtb:scale'='3'],['mtb:scale'='3-'],['mtb:scale'='3+'],
         ['mtb:scale'='4'],['mtb:scale'='4-'],['mtb:scale'='4+'],
         ['mtb:scale'='5'],['mtb:scale'='5-'],['mtb:scale'='5+'],
+        ['mtb:scale'='6'],
         ['noexit'='yes'] { line-opacity: 0; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-opacity: 1; line-color: @forbidden; line-dasharray: 2, 1; }
       }
@@ -79,6 +81,7 @@
         ['mtb:scale'='3'],['mtb:scale'='3-'],['mtb:scale'='3+'],
         ['mtb:scale'='4'],['mtb:scale'='4-'],['mtb:scale'='4+'],
         ['mtb:scale'='5'],['mtb:scale'='5-'],['mtb:scale'='5+'],
+        ['mtb:scale'='6'],
         ['noexit'='yes'] { line-opacity: 0; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-opacity: 1; line-color: @forbidden; line-dasharray: 2, 1; }
       }
@@ -172,6 +175,7 @@
       ['mtb:scale'='3'],['mtb:scale'='3-'],['mtb:scale'='3+'] { line-color: @mtbscale3; }
       ['mtb:scale'='4'],['mtb:scale'='4-'],['mtb:scale'='4+'] { line-color: @mtbscale4; }
       ['mtb:scale'='5'],['mtb:scale'='5-'],['mtb:scale'='5+'] { line-color: @mtbscale5; }
+      ['mtb:scale'='6']                                       { line-color: @mtbscale6; line-opacity: 1; }
 
       [zoom=15] {
         line-width: @paz15_cw;
@@ -235,6 +239,7 @@
     ['mtb:scale'='3'],['mtb:scale'='3-'],['mtb:scale'='3+'] { line-opacity: 1; line-color: lighten(@mtbscale3, 10%); }
     ['mtb:scale'='4'],['mtb:scale'='4-'],['mtb:scale'='4+'] { line-opacity: 1; line-color: lighten(@mtbscale4, 10%); }
     ['mtb:scale'='5'],['mtb:scale'='5-'],['mtb:scale'='5+'] { line-opacity: 1; line-color: lighten(@mtbscale5, 10%); }
+    ['mtb:scale'='6']                                       { line-opacity: 1; line-color: lighten(@mtbscale5, 10%); }
 
     [zoom<=15] {
     line-width: @paz15_cw;
