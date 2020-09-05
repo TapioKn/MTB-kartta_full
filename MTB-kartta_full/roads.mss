@@ -9,8 +9,8 @@ and trunks. */
 
 #roads_low[zoom>=5][zoom<=8] {
   [type='motorway']     { line-color: @motorway_farfill; }
-  [type='trunk']        { line-color: @trunk_farfill; }
-  [type='primary']      { line-color: lighten(@trunk_farfill, 10%); }
+  [type='trunk']        { line-color: darken(@trunk_farfill, 10%); }
+  [type='primary']      { line-color: @trunk_farfill; }
   [type='secondary'],
   [type='tertiary']     { line-color: darken(@primary_farfill, 10%); }
 
@@ -27,16 +27,16 @@ and trunks. */
     [type='trunk']      { line-width: 1.0; }
   }
   [zoom=7] {
-    [type='motorway']   { line-width: 1.6; }
-    [type='trunk']      { line-width: 1.0; }
-    [type='primary']    { line-width: 0.6; }
-  }
-  [zoom=8] {
     [type='motorway']   { line-width: 2.0; }
     [type='trunk']      { line-width: 1.6; }
-    [type='primary']    { line-width: 1.3; }
+    [type='primary']    { line-width: 1.0; }
+  }
+  [zoom=8] {
+    [type='motorway']   { line-width: 2.4; }
+    [type='trunk']      { line-width: 2.0; }
+    [type='primary']    { line-width: 1.6; }
     [type='secondary'],
-    [type='tertiary']   { line-width: 1.0; }
+    [type='tertiary']   { line-width: 1.2; }
   }
 }
 
@@ -140,13 +140,13 @@ come in as well.
 
 /* Path & track case widths, line widths and dasharrays */
 /* p/t cases      p/t lines         p dasharrays       t dasharrays */
-@paz11_cw: 1.5;   @paz11_lw: 0.0;   @paz11_da: 3, 3;   @trz11_da: 6, 1.5;
-@paz12_cw: 2.0;   @paz12_lw: 0.5;   @paz12_da: 3, 3;   @trz12_da: 6, 1.5;
-@paz13_cw: 2.4;   @paz13_lw: 1.0;   @paz13_da: 3, 3;   @trz13_da: 6, 1.5;
-@paz14_cw: 2.6;   @paz14_lw: 1.0;   @paz14_da: 4, 4;   @trz14_da: 6, 1.5;
-@paz15_cw: 2.8;   @paz15_lw: 1.1;   @paz15_da: 5, 5;   @trz15_da: 9, 2.0;
-@paz16_cw: 3.5;   @paz16_lw: 1.5;   @paz16_da: 5, 5;   @trz16_da: 10, 2.0;
-@paz17_cw: 5.0;   @paz17_lw: 2.5;   @paz17_da: 6, 6;   @trz17_da: 10, 2.0;
+@paz11_cw: 1.5;   @paz11_lw: 0.0;   @paz11_da: 3, 2;   @trz11_da: 5, 1.2;
+@paz12_cw: 1.5;   @paz12_lw: 1.0;   @paz12_da: 3, 2;   @trz12_da: 5, 1.2;
+@paz13_cw: 2.4;   @paz13_lw: 1.0;   @paz13_da: 3, 2.5; @trz13_da: 6, 1.5;
+@paz14_cw: 2.6;   @paz14_lw: 1.0;   @paz14_da: 4, 3;   @trz14_da: 6, 1.5;
+@paz15_cw: 2.8;   @paz15_lw: 1.1;   @paz15_da: 5, 4;   @trz15_da: 9, 2.0;
+@paz16_cw: 3.5;   @paz16_lw: 1.5;   @paz16_da: 5, 4;   @trz16_da: 10, 2.0;
+@paz17_cw: 5.0;   @paz17_lw: 2.5;   @paz17_da: 6, 5;   @trz17_da: 10, 2.0;
 
 
 
@@ -217,13 +217,13 @@ come in as well.
 
   /* -- WAY CASING WIDTHS -- */
   [zoom=11] {
-    [type='motorway']      { line-width: @rdz11_mot + 2.5; }
-    [type='motorway_link'] { line-width: @rdz11_mot; }
-    [type='trunk']         { line-width: @rdz11_tru + 2; }
+    [type='motorway']      { line-width: @rdz11_mot + 2; }
+    [type='motorway_link'] { line-width: @rdz11_mot - 1; }
+    [type='trunk']         { line-width: @rdz11_tru + 1.5; }
     [type='trunk_link']    { line-width: @rdz11_tru; }
     [type='primary']       { line-width: @rdz11_pri + 2; }
     [type='primary_link']  { line-width: @rdz11_pri; }
-    [type='mainroad']      { line-width: @rdz11_mai + 2; }
+    [type='mainroad']      { line-width: @rdz11_mai + 1.5; }
     [type='mainroad_link'] { line-width: @rdz11_mai; }
     [type='residential']   { line-width: @rdz11_res + 1.5; }
     [type='living_street'] { line-width: 0; }
@@ -238,13 +238,13 @@ come in as well.
 
   }
   [zoom=12] {
-    [type='motorway']      { line-width: @rdz12_mot + 2.5; }
-    [type='motorway_link'] { line-width: @rdz12_mot; }
-    [type='trunk']         { line-width: @rdz12_tru + 2; }
+    [type='motorway']      { line-width: @rdz12_mot + 2; }
+    [type='motorway_link'] { line-width: @rdz12_mot - 1; }
+    [type='trunk']         { line-width: @rdz12_tru + 1.5; }
     [type='trunk_link']    { line-width: @rdz12_tru; }
-    [type='primary']       { line-width: @rdz12_pri + 2; }
+    [type='primary']       { line-width: @rdz12_pri + 1.5; }
     [type='primary_link']  { line-width: @rdz12_pri; }
-    [type='mainroad']      { line-width: @rdz12_mai + 2; }
+    [type='mainroad']      { line-width: @rdz12_mai + 1.5; }
     [type='mainroad_link'] { line-width: @rdz12_mai; }
     [type='residential']   { line-width: @rdz12_res + 1.5; }
     [type='living_street'] { line-width: 0; }

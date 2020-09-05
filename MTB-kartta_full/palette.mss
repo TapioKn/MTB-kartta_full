@@ -27,8 +27,8 @@ Map { font-directory: url(fonts); }
 @commercial:        #eef4f6;
 @conservation:      #7ba36c;
 @construction:      #cbc8c1;
-@farmland:          #fafbe7;
-@farmyard:          #f8f3d3;
+@farmland:          #faf4d2;
+@farmyard:          #f0e9c2;
 @forest:            lighten(#bad0aa, 14%); /* lighten(#bad0aa, 14%); */
 @golf_course:       #d7ffc4;
 @grass:             #f1ffdc;
@@ -38,7 +38,7 @@ Map { font-directory: url(fonts); }
 @industrial:        #eaeef1;
 @land:              lighten(#f5f3ea, 3%);
 @landfill:          #ccc3b3;
-@meadow:            #f7fce9;
+@meadow:            #f4fad2;
 @military:          #f66d6a;
 @park:              #ebffdc;
 @parking:           #f2f2f3;
@@ -107,7 +107,7 @@ Map { font-directory: url(fonts); }
 @cyclewaybg:      @land;
 @footwaybg:       @cyclewaybg;
 @mtbscale0:       #88f41c;
-@mtbscale1:       #ebeb00;
+@mtbscale1:       #dfd600;
 @mtbscale2:       #f4a250;
 @mtbscale3:       #ff5858;
 @mtbscale4:       #ee2099;
