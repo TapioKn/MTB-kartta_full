@@ -51,29 +51,36 @@
 
       [zoom=12] {
         line-width: @paz12_lw;
-        line-opacity: 0;
-
-        /*
-        [width<=0.5]                { line-width: @paz12_lw / 2; }
         [type='path']               { line-dasharray: @paz12_da; }
-        [width>=1.8],[type='track'] { line-dasharray: @trz12_da; line-color: lighten(@path_line, 35%); }
+        [width>=1.8],[type='track'] { line-dasharray: @trz12_da; }
         [visibility='bad']          { line-dasharray: 1.3, 3; }
-        */
 
+        /* Fix the following at some point to use wildcards for mtb:scale... */
+        ['mtb:scale'='0'],['mtb:scale'='0-'],['mtb:scale'='0+'],
+        ['mtb:scale'='1'],['mtb:scale'='1-'],['mtb:scale'='1+'],
+        ['mtb:scale'='2'],['mtb:scale'='2-'],['mtb:scale'='2+'],
+        ['mtb:scale'='3'],['mtb:scale'='3-'],['mtb:scale'='3+'],
+        ['mtb:scale'='4'],['mtb:scale'='4-'],['mtb:scale'='4+'],
+        ['mtb:scale'='5'],['mtb:scale'='5-'],['mtb:scale'='5+'],
+        ['noexit'='yes'] { line-opacity: 0; }
         ['mtb:scale'='-1'],[access='no'],[access='private']  { line-opacity: 1; line-color: @forbidden; line-dasharray: 2, 1; }
-
-        /*
-        ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z13.png');  }
-        */
       }
 
       [zoom=13] {
-	      line-width: @paz13_lw;
-        [width<=0.5]                { line-width: @paz13_lw / 2; }
+        line-width: @paz13_lw;
         [type='path']               { line-dasharray: @paz13_da; }
-        [width>=1.8],[type='track'] { line-dasharray: @trz13_da; line-color: lighten(@path_line, 35%); }
+        [width>=1.8],[type='track'] { line-dasharray: @trz13_da; }
         [visibility='bad']          { line-dasharray: 1.3, 3; }
-        ['mtb:scale'='-1'],[access='no'],[access='private']  { line-pattern-file: url('images/forbidden-line-z13.png');  }
+
+        /* Fix the following at some point to use wildcards for mtb:scale... */
+        ['mtb:scale'='0'],['mtb:scale'='0-'],['mtb:scale'='0+'],
+        ['mtb:scale'='1'],['mtb:scale'='1-'],['mtb:scale'='1+'],
+        ['mtb:scale'='2'],['mtb:scale'='2-'],['mtb:scale'='2+'],
+        ['mtb:scale'='3'],['mtb:scale'='3-'],['mtb:scale'='3+'],
+        ['mtb:scale'='4'],['mtb:scale'='4-'],['mtb:scale'='4+'],
+        ['mtb:scale'='5'],['mtb:scale'='5-'],['mtb:scale'='5+'],
+        ['noexit'='yes'] { line-opacity: 0; }
+        ['mtb:scale'='-1'],[access='no'],[access='private']  { line-opacity: 1; line-color: @forbidden; line-dasharray: 2, 1; }
       }
 
       [zoom=14] {
@@ -112,7 +119,7 @@
     [visibility='bad'] { line-dasharray: 2, 2; }
     }
     ::ptoverlays {
-      [zoom>=13] {
+      [zoom>=14] {
         [obstacle='vegetation'] {
         line-pattern-file: url('images/obstacle_vegetation-wide.png');
         [width<=0.5] { line-pattern-file: url('images/obstacle_vegetation-narrow.png'); }

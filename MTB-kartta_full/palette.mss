@@ -29,7 +29,7 @@ Map { font-directory: url(fonts); }
 @construction:      #cbc8c1;
 @farmland:          #faf4d2;
 @farmyard:          #f0e9c2;
-@forest:            lighten(#bad0aa, 14%); /* lighten(#bad0aa, 14%); */
+@forest:            lighten(#bad0aa, 16%);
 @golf_course:       #d7ffc4;
 @grass:             #f1ffdc;
 @grassland:         #e2f1cd;
@@ -106,7 +106,7 @@ Map { font-directory: url(fonts); }
 // Case colors
 @cyclewaybg:      @land;
 @footwaybg:       @cyclewaybg;
-@mtbscale0:       #88f41c;
+@mtbscale0:       #75e009;
 @mtbscale1:       #dfd600;
 @mtbscale2:       #f4a250;
 @mtbscale3:       #ff5858;
