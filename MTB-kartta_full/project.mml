@@ -486,7 +486,7 @@
       "srs-name": "900913",
       "extent": [
         10.860426798488211,
-        53.941427294730666,
+        53.94142729473068,
         37.94663809471778,
         70.48379529530938
       ],
@@ -645,6 +645,37 @@
       "advanced": {}
     },
     {
+      "geometry": "linestring",
+      "extent": [
+        22.333054496891226,
+        60.75442519476463,
+        25.127405096502272,
+        63.03240199483504
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, highway, sidewalk, \"sidewalk:left:bicycle\", \"sidewalk:right:bicycle\", \"sidewalk:both:bicycle\"\n  FROM planet_osm_line\n  WHERE sidewalk IS NOT NULL\n) AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "2486104.25445236,8569652.2918102,2797169.94029894,9108200.36179441",
+        "dbname": "gis",
+        "host": "localhost",
+        "port": "5432",
+        "user": "renderer",
+        "password": "renderer",
+        "id": "sidewalks",
+        "project": "MTB-kartta_full",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "sidewalks",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "sidewalks"
+    },
+    {
       "Datasource": {
         "dbname": "gis",
         "geometry_field": "way",
@@ -784,7 +815,7 @@
       "srs-name": "900913",
       "extent": [
         10.860426798488211,
-        53.941427294730666,
+        53.94142729473068,
         37.94663809471778,
         70.48379529530938
       ],

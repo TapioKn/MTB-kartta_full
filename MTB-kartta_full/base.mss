@@ -8,7 +8,7 @@
 }
 
 /* Could remove gen0 and gen1 mostly since only military areas are visible */
-#landuse[zoom>12],
+#landuse[zoom>=12],
 #landuse_gen1[zoom<=11] {
   [type='commercial']        { polygon-fill: @commercial;
                                [zoom<=12] { polygon-fill: lighten(@commercial, 5%); }

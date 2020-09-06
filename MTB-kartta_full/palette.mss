@@ -36,7 +36,7 @@ Map { font-directory: url(fonts); }
 @hedge:             #a2b88a;
 @hospital:          #f9f2f4;
 @industrial:        #eaeef1;
-@land:              lighten(#f5f3ea, 3%);
+@land:              lighten(#f5f3ea, 1%);
 @landfill:          #ccc3b3;
 @meadow:            #f4fad2;
 @military:          #f66d6a;
