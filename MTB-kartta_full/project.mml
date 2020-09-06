@@ -496,13 +496,13 @@
       "geometry": "linestring",
       "extent": [
         22.333054496891226,
-        59.81454699474467,
-        29.02572219595959,
+        59.81454699474469,
+        29.025722195959585,
         66.02622779497807
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "/* Paths & tracks tunnel */\n( SELECT way, tunnel, \"mtb:scale\", \"mtb:winter\", noexit, width,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" IS NOT NULL THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL AND tunnel != 'no' AND tunnel IS NOT NULL AND highway NOT IN ('motorway', 'motorway_link', 'trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'living_street', 'service', 'road', 'cycleway'))\n ORDER BY z_order\n) AS data",
+        "table": "/* Paths & tracks tunnel */\n( SELECT way, tunnel, \"mtb:scale\", \"mtb:winter\", noexit, width, access,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" IS NOT NULL THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL AND tunnel != 'no' AND tunnel IS NOT NULL AND highway NOT IN ('motorway', 'motorway_link', 'trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'living_street', 'service', 'road', 'cycleway'))\n ORDER BY z_order\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
@@ -624,7 +624,7 @@
         "port": "5432",
         "project": "osm-bright-master",
         "srs": null,
-        "table": "( SELECT way \n  FROM planet_osm_point \n  WHERE highway = 'turning_circle'\n) AS data",
+        "table": "( SELECT way, surface\n  FROM planet_osm_point \n  WHERE highway = 'turning_circle'\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -637,10 +637,10 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
-        16.76666669766603,
+        16.766666697666025,
         56.7333332947144,
         31.775567495576848,
-        70.17383989528155
+        70.17383989528156
       ],
       "advanced": {}
     },
@@ -770,7 +770,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "table": "( SELECT way \n  FROM planet_osm_point\n  WHERE highway = 'turning_circle'\n) AS data",
+        "table": "( SELECT way, surface\n  FROM planet_osm_point\n  WHERE highway = 'turning_circle'\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -783,10 +783,10 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
-        16.76666669766603,
+        16.766666697666025,
         56.7333332947144,
         31.775567495576848,
-        70.17383989528155
+        70.17383989528156
       ],
       "advanced": {}
     },

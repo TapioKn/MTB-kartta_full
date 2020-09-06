@@ -1191,11 +1191,21 @@ come in as well.
 #turning_circle_case[zoom>=14] {
   marker-fill:@road_fill;
   marker-line-color:@road_case;
+  [surface='unpaved'],
+  [surface='gravel'],
+  [surface='fine_gravel'],
+  [surface='sand'],
+  [surface='ground'] { marker-line-color: @unpaved_case; marker-fill: @unpaved_fill;}
   marker-line-width:2;
   marker-allow-overlap:true;
 }
 #turning_circle_fill[zoom>=14] {
   marker-fill:@road_fill;
+  [surface='unpaved'],
+  [surface='gravel'],
+  [surface='fine_gravel'],
+  [surface='sand'],
+  [surface='ground'] { marker-fill: @unpaved_fill;}
   marker-line-width:0;
   marker-line-opacity:0;
   marker-allow-overlap:true;
