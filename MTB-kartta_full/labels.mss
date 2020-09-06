@@ -345,11 +345,11 @@
   [tunnel='1'] { text-opacity: 0; }
 }
 
-#minorroad_label[zoom>14] {
+#minorroad_label[zoom>=15] {
   text-name:'[name]';
   text-face-name:@sans;
   text-placement:line;
-  [type='path'],[type='track'] { text-dy: 10; }
+  [type='path'],[type='track'] { text-dy: 9; }
   text-size:10;
   text-fill:@road_text;
   text-halo-fill:@road_halo;
@@ -395,7 +395,7 @@
     marker-file: url(images/noexit_yes-M-cross.png);
     marker-allow-overlap: true;
     marker-placement: point;
-    marker-opacity: 0.5;
+    marker-opacity: 0.4;
   }
   /*
   [noexit='yes'] {
@@ -412,8 +412,9 @@
     marker-allow-overlap: true;
     marker-placement: point;
   }
-  [obstacle='fallen_tree'][zoom>=16] {
+  [obstacle='fallen_tree'][zoom>=15] {
     marker-file: url(images/obstacle_fallen_tree-M.png);
+    [zoom>=16] { marker-file: url(images/obstacle_fallen_tree-L.png); }
     marker-allow-overlap: true;
     marker-placement: point;
   }

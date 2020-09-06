@@ -540,7 +540,7 @@ come in as well.
      [type='nocycle']       { ::nocyclebg    { line-width: @fwz14_cw; line-color: @footwaybg; }
                               ::nocycleline  { line-color: @footway;  line-width: @fwz14_lw; line-dasharray: 1, 2; }
      }
-     [type='steps']         { line-width: @cwz16_cw; line-color: @footway; line-dasharray: 1, 2.5; }
+     [type='steps']         { line-width: @cwz16_cw + 1; line-color: @footway; line-dasharray: 1, 2.5; }
    }
    [zoom=15] {
      [type='motorway']      { line-width: @rdz15_mot; }
@@ -571,7 +571,7 @@ come in as well.
      [type='nocycle']       {  ::nocyclebg    { line-width: @fwz15_cw; line-color: @footwaybg; }
                                ::nocycleline  { line-color: @footway;  line-width: @fwz15_lw; line-dasharray: 1, 2; }
      }
-     [type='steps']         { line-width: @cwz16_cw; line-color: @footway; line-dasharray: 1, 2.5; }
+     [type='steps']         { line-width: @cwz16_cw + 1; line-color: @footway; line-dasharray: 1, 2.5; }
    }
    [zoom=16] {
      [type='motorway']      { line-width: @rdz16_mot; }
@@ -602,7 +602,7 @@ come in as well.
      [type='nocycle']       { ::nocyclebg    { line-width: @fwz16_cw; line-color: @footwaybg; }
                               ::nocycleline  { line-color: @footway;  line-width: @fwz16_lw; line-dasharray: 1, 2; }
      }
-     [type='steps']         { line-width: @cwz16_cw; line-color: @footway; line-dasharray: 1, 2.5; }
+     [type='steps']         { line-width: @cwz16_cw + 1; line-color: @footway; line-dasharray: 1, 2.5; }
    }
    [zoom=17] {
      [type='motorway']      { line-width: @rdz17_mot; }
@@ -631,7 +631,7 @@ come in as well.
                                              }
      }
      [type='nocycle']       { ::nocyclebg    { line-width: @fwz17_cw; line-color: @footwaybg; }
-                              ::nocycleline  { line-color: @footway;  line-width: @fwz17_lw; line-dasharray: 1, 2; }
+                              ::nocycleline  { line-color: @footway;  line-width: @fwz17_lw + 1; line-dasharray: 1, 2; }
      }
      [type='steps']         { line-width: @cwz17_cw; line-color: @footway; line-dasharray: 1, 2.5; }
    }
