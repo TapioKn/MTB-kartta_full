@@ -396,6 +396,7 @@
     marker-allow-overlap: true;
     marker-placement: point;
     marker-opacity: 0.4;
+    [highway='turning_circle'] { marker-opacity: 0; }
   }
   /*
   [noexit='yes'] {
