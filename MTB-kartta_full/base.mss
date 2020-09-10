@@ -168,33 +168,37 @@
 }
 
 #landuse_overlays {
-/* Wetlands */
-  [zoom>11] {
-    [natural='wetland']            { polygon-fill: @forest; polygon-pattern-file:url(images/natural_wetland.png); }
-    [wetland_type='bog']           { polygon-fill: @forest; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
-    [wetland_type='marsh']         { polygon-fill: @forest; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
-    [wetland_type='reedbed']       { polygon-pattern-file:url(images/wetland_reedbed.png); }
-    [wetland_type='swamp']         { polygon-fill: @forest; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
+  /* Wetlands */
+  ::wetlands {
+    [zoom>11] {
+      [natural='wetland']            { polygon-fill: @forest; polygon-pattern-file:url(images/natural_wetland.png); }
+      [wetland_type='bog']           { polygon-fill: @forest; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
+      [wetland_type='marsh']         { polygon-fill: @forest; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
+      [wetland_type='reedbed']       { polygon-pattern-file:url(images/wetland_reedbed.png); }
+      [wetland_type='swamp']         { polygon-fill: @forest; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
+    }
   }
 
 
-/* Conservation areas and such. Overlap with boundary/leisure keys since tagging is so varied */
-  [land_type='national_park'],
-  [land_type='nature_reserve'],
-  [land_type='protected_area'],
-  [land_type='national_park'],
-  [land_type='nature_reserve'],
-  [land_type='protected_area'] {
-    line-color: @conservation;
-    line-opacity: 0.4;
-    polygon-fill: @conservation;
-    polygon-opacity: 0.2;
-    [zoom=7] { line-width: 0.4; }
-    [zoom=8] { line-width: 0.7; }
-    [zoom=9] { line-width: 1.0; }
-    [zoom=10] { line-width: 2.0; }
-    [zoom=11] { line-width: 2.5; }
-    [zoom>=12] { line-width: 3.0; }
+  /* Conservation areas and such. Overlap with boundary/leisure keys since tagging is so varied */
+  ::conservation {
+    [land_type='national_park'],
+    [land_type='nature_reserve'],
+    [land_type='protected_area'],
+    [land_type='national_park'],
+    [land_type='nature_reserve'],
+    [land_type='protected_area'] {
+      line-color: @conservation;
+      line-opacity: 0.4;
+      polygon-fill: @conservation;
+      polygon-opacity: 0.2;
+      [zoom=7] { line-width: 0.4; }
+      [zoom=8] { line-width: 0.7; }
+      [zoom=9] { line-width: 1.0; }
+      [zoom=10] { line-width: 2.0; }
+      [zoom=11] { line-width: 2.5; }
+      [zoom>=12] { line-width: 3.0; }
+    }
   }
 
   /* Hedges defined as areas */

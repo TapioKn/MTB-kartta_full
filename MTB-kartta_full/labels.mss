@@ -116,10 +116,13 @@
   text-halo-radius:1;
   text-wrap-width: 30;
   text-clip: false;
-  text-allow-overlap: true;
+  text-allow-overlap: false;
+  text-placement-type: simple;
+  text-placements: N,NE,E,SE,S,SW,W,NW;
   [zoom=14] {
     text-size: 11;
     [type='locality'] { text-size: 10; }
+    [type!='locality'] { text-halo-radius: 1.5; }
     text-character-spacing: 1;
     text-wrap-width: 40;
     text-line-spacing: 1;
@@ -168,7 +171,7 @@
     text-clip: false;
     text-allow-overlap: true;
     text-placement-type: simple;
-    text-placements: NE,NE,E,SE,S,SW,W,NW;
+    text-placements: N,NE,E,SE,S,SW,W,NW;
     // Specific style overrides for different types of areas:
     [type='park'][zoom>=14],
     [type='recreation_ground'][zoom>=14],
@@ -328,7 +331,7 @@
   [zoom=12] { text-min-distance:80; }
   [zoom=13] { text-min-distance:100; }
   [tunnel='yes'],
-  [tunnel='1'] { text-opacity: 0; }
+  [tunnel='1'] { text-opacity: 0; text-halo-radius: 0; }
 }
 
 #mainroad_label[type='primary'][zoom>12],
@@ -342,7 +345,8 @@
   text-halo-radius:1;
   text-min-distance:60;
   text-size:11;
-  [tunnel='1'] { text-opacity: 0; }
+  [tunnel='yes'],
+  [tunnel='1'] { text-opacity: 0; text-halo-radius: 0; }
 }
 
 #minorroad_label[zoom>=15] {
@@ -355,7 +359,8 @@
   text-halo-fill:@road_halo;
   text-halo-radius:1;
   text-min-distance:40;
-  [tunnel='1'] { text-opacity: 0; }
+  [tunnel='yes'],
+  [tunnel='1'] { text-opacity: 0; text-halo-radius: 0; }
 }
 
 /* ================================================================== */
