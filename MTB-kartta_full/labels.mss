@@ -169,7 +169,7 @@
     text-fill: @poi_text;
     text-halo-fill: #fff;
     text-clip: false;
-    text-allow-overlap: true;
+    text-allow-overlap: false;
     text-placement-type: simple;
     text-placements: N,NE,E,SE,S,SW,W,NW;
     // Specific style overrides for different types of areas:
