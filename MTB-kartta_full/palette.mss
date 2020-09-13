@@ -8,8 +8,8 @@ Map { font-directory: url(fonts); }
 @sans_lt:           "Noto Sans Light";
 @sans_lt_italic:    "Noto Sans Light Italic";
 
-@sans:              "Noto Sans Regular";
-@sans_italic:       "Noto Sans Italic";
+@sans:              "Noto Sans Medium";
+@sans_italic:       "Noto Sans Medium Italic";
 
 @sans_bold:         "Noto Sans Bold";
 @sans_bold_italic:  "Noto Sans Bold Italic";
@@ -47,7 +47,7 @@ Map { font-directory: url(fonts); }
 @plaza:             #f6f6ed;
 @residential:       #e8e7de; /*Previous backup: #f6f5ee*/
 @retail:            #f6efef;
-@rock:              #ecefea;
+@rock:              #dce0d9;
 @school:            #fdfdfb;
 @sports:            #d7ffc4;
 @water:             desaturate(#8fb0c8, 20%); /*Previous backup: #a3c5de*/
