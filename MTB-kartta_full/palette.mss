@@ -106,6 +106,7 @@ Map { font-directory: url(fonts); }
 // Case colors
 @cyclewaybg:      @land;
 @footwaybg:       @cyclewaybg;
+@mtbscale0-:      #4ae3be;
 @mtbscale0:       #75e009;
 @mtbscale1:       #dfd600;
 @mtbscale2:       #f4a250;
