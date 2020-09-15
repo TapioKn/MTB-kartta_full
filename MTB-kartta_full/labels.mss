@@ -362,8 +362,12 @@
   text-halo-fill:@road_halo;
   text-halo-radius:1.5;
   text-min-distance:40;
-  [zoom>=16] { text-size:12; text-character-spacing:0.5; text-halo-radius:2.0 }
-  [type='path'],[type='track'] { text-dy: 9; }
+  [type='path'],[type='track'] { text-dy: 7; }
+  [zoom=15]  { [type='path'],[type='track'] { text-size:10; } }
+  [zoom=16]  { text-size:12; text-character-spacing:0.5; text-halo-radius:2.0;
+               [type='path'],[type='track'] { text-size:11; } }
+  [zoom>=17] { text-size:14; text-character-spacing:0.75; text-halo-radius:2.5;
+               [type='path'],[type='track'] { text-size:12; }}
   [tunnel='yes'],
   [tunnel='1'] { text-opacity: 0; text-halo-radius: 0; }
 }
