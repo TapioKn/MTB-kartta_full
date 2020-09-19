@@ -406,10 +406,12 @@
     marker-placement: point;
   }
   [noexit='yes'] {
-    marker-file: url(images/noexit_yes-M-cross.png);
+    [zoom=15] { marker-file: url(images/noexit_yes-S.png); }
+    [zoom=16] { marker-file: url(images/noexit_yes-S.png); }
+    [zoom>=17] { marker-file: url(images/noexit_yes-M.png); }
     marker-allow-overlap: true;
     marker-placement: point;
-    marker-opacity: 0.4;
+    marker-opacity: 1.0;
     [highway='turning_circle'] { marker-opacity: 0; }
   }
   /*
