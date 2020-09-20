@@ -172,10 +172,10 @@
   ::wetlands {
     [zoom>11] {
       [natural='wetland']            { polygon-fill: @forest; polygon-pattern-file:url(images/natural_wetland.png); }
-      [wetland_type='bog']           { polygon-fill: @forest; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
-      [wetland_type='marsh']         { polygon-fill: @forest; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
+      [wetland_type='bog']           { polygon-fill: @bog; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
+      [wetland_type='marsh']         { polygon-fill: @bog; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
       [wetland_type='reedbed']       { polygon-pattern-file:url(images/wetland_reedbed.png); }
-      [wetland_type='swamp']         { polygon-fill: @forest; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
+      [wetland_type='swamp']         { polygon-fill: @bog; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
     }
   }
 
