@@ -153,13 +153,16 @@ way	       mtb:scale                text        linear
 way	       mtb:winter               text        linear
 node,way   obstacle                 text        linear
 way        trail_visibility         text        linear
-way        cycleway                 text        linear
 node,way   noexit                   text        linear
 node,way   mtb:description          text        linear
 way        sidewalk                 text        linear
 way        sidewalk:left:bicycle    text        linear
 way        sidewalk:right:bicycle   text        linear
 way        sidewalk:both:bicycle    text        linear
+way        cycleway                 text        linear
+way        cycleway:left            text        linear
+way        cycleway:right           text        linear
+way        cycleway:both            text        linear
 
 # Area tags
 # We don't make columns for these tags, but objects with them are areas.
