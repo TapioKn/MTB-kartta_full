@@ -120,14 +120,15 @@ come in as well.
 @rwzlo_cw: 2.5;   @rwzlo_lw: 1.0;   @rwzlo_da: 6, 6;
 @rwzhi_cw: 3.5;   @rwzhi_lw: 2.0;   @rwzhi_da: 6, 6;
 
-/* Cycleway case widths, line widths and dasharrays */
-@cwz11_cw: 0.0;   @cwz11_lw: 0.0;   @cwz11_da: 4, 2;   @cwz11_pda: 8, 2;
-@cwz12_cw: 0.0;   @cwz12_lw: 0.0;   @cwz12_da: 4, 2;   @cwz12_pda: 8, 2;
-@cwz13_cw: 0.0;   @cwz13_lw: 1.0;   @cwz13_da: 3, 1.5; @cwz13_pda: 6, 1.5;
-@cwz14_cw: 0.0;   @cwz14_lw: 1.2;   @cwz14_da: 4, 2;   @cwz14_pda: 8, 2;
-@cwz15_cw: 2.0;   @cwz15_lw: 1.5;   @cwz15_da: 4, 2;   @cwz15_pda: 8, 2;
-@cwz16_cw: 3.0;   @cwz16_lw: 2.0;   @cwz16_da: 4, 2;   @cwz16_pda: 8, 2;
-@cwz17_cw: 4.0;   @cwz17_lw: 2.5;   @cwz17_da: 5, 2;   @cwz17_pda: 9, 2;
+/* Cycleway case widths, line widths and dasharrays (surface unknown, paved, unpaved) */
+/* Cycleways not rendered on z<=12 */
+@cwz11_cw: 0.0;   @cwz11_lw: 0.0;   @cwz11_da: 4, 2;   @cwz11_pda: 8, 2;   @cwz11_uda: 8, 2;
+@cwz12_cw: 0.0;   @cwz12_lw: 0.0;   @cwz12_da: 4, 2;   @cwz12_pda: 8, 2;   @cwz12_uda: 8, 2;
+@cwz13_cw: 0.0;   @cwz13_lw: 1.0;   @cwz13_da: 5, 2;   @cwz13_pda: 10, 2;  @cwz13_uda: 2.5, 1.5;
+@cwz14_cw: 0.0;   @cwz14_lw: 1.2;   @cwz14_da: 5, 2;   @cwz14_pda: 10, 2;  @cwz14_uda: 2.5, 1.5;
+@cwz15_cw: 2.0;   @cwz15_lw: 1.5;   @cwz15_da: 5, 2;   @cwz15_pda: 10, 2;  @cwz15_uda: 2.5, 1.5;
+@cwz16_cw: 3.0;   @cwz16_lw: 2.0;   @cwz16_da: 5, 2;   @cwz16_pda: 10, 2;  @cwz16_uda: 2.5, 1.5;
+@cwz17_cw: 4.0;   @cwz17_lw: 2.5;   @cwz17_da: 5, 2;   @cwz17_pda: 10, 2;  @cwz17_uda: 2.5, 1.5;
 
 /* Footway case widths, line widths and dasharrays */
 @fwz11_cw: 0.0;   @fwz11_lw: 0.0;   @fwz11_da: 3, 2;
@@ -500,6 +501,7 @@ come in as well.
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz13_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz13_lw; line-dasharray: @cwz13_da;
                                                [surface='paved']   { line-dasharray: @cwz13_pda; }
+                                               [surface='unpaved'] { line-dasharray: @cwz13_uda; }
                                              }
      }
  	   [type='footway']       { ::footwaybg    { line-width: @fwz13_cw; line-color: @footwaybg; }
@@ -530,6 +532,7 @@ come in as well.
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz14_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz14_lw; line-dasharray: @cwz14_da;
                                                [surface='paved']   { line-dasharray: @cwz14_pda; }
+                                               [surface='unpaved'] { line-dasharray: @cwz14_uda; }
                                              }
      }
  	   [type='footway']       { ::footwaybg    { line-width: @fwz14_cw; line-color: @footwaybg; }
@@ -561,6 +564,7 @@ come in as well.
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz15_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz15_lw; line-dasharray: @cwz15_da;
                                                [surface='paved']   { line-dasharray: @cwz15_pda; }
+                                               [surface='unpaved'] { line-dasharray: @cwz15_uda; }
                                              }
      }
      [type='footway']       { ::footwaybg    { line-width: @fwz15_cw; line-color: @footwaybg; }
@@ -592,6 +596,7 @@ come in as well.
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz16_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz16_lw; line-dasharray: @cwz16_da;
                                                [surface='paved']   { line-dasharray: @cwz16_pda; }
+                                               [surface='unpaved'] { line-dasharray: @cwz16_uda; }
                                              }
      }
  	   [type='footway']       { ::footwaybg    { line-width: @fwz16_cw; line-color: @footwaybg; }
