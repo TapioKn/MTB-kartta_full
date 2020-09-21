@@ -170,12 +170,12 @@
 #landuse_overlays {
   /* Wetlands */
   ::wetlands {
-    [zoom>11] {
+    [zoom>11][wetland_type!='reedbed'] {
       [natural='wetland']            { polygon-fill: @forest; polygon-pattern-file:url(images/natural_wetland.png); }
       [wetland_type='bog']           { polygon-fill: @bog; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
-      [wetland_type='marsh']         { polygon-fill: @bog; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
-      [wetland_type='reedbed']       { polygon-pattern-file:url(images/wetland_reedbed.png); }
-      [wetland_type='swamp']         { polygon-fill: @bog; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
+      [wetland_type='fen']           { polygon-fill: @fen; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
+      [wetland_type='marsh']         { polygon-fill: @fen; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
+      [wetland_type='swamp']         { polygon-fill: @swamp; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
     }
   }
 
@@ -205,6 +205,10 @@
   [barrier='hedge'] {
     [zoom>=14] { polygon-fill: @hedge; }
   }
+}
+
+#reedbeds[zoom>11] {
+  [wetland_type='reedbed']       { polygon-fill: @water; polygon-pattern-file:url(images/wetland_reedbed.png); }
 }
 
 /* ---- BUILDINGS ---- */

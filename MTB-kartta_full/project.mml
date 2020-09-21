@@ -225,37 +225,6 @@
         "dbname": "gis",
         "geometry_field": "way",
         "host": "localhost",
-        "id": "water",
-        "key_field": "",
-        "password": "renderer",
-        "port": "5432",
-        "project": "foss4g-2011",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT osm_id, way, way_area AS area\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')\n) AS data",
-        "type": "postgis",
-        "user": "renderer",
-        "extent_cache": "auto",
-        "extent": "2124333.1973415,8055502.46894884,4224200.43002062,11228955.9943898"
-      },
-      "class": "",
-      "geometry": "polygon",
-      "id": "water",
-      "name": "water",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "extent": [
-        19.083209797343606,
-        58.41733559472438,
-        37.94663809471778,
-        70.48655359530966
-      ],
-      "advanced": {}
-    },
-    {
-      "Datasource": {
-        "dbname": "gis",
-        "geometry_field": "way",
-        "host": "localhost",
         "id": "landuse_overlays",
         "key_field": "",
         "password": "renderer",
@@ -272,6 +241,37 @@
       "geometry": "polygon",
       "id": "landuse_overlays",
       "name": "landuse_overlays",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "extent": [
+        19.083209797343606,
+        58.41733559472438,
+        37.94663809471778,
+        70.48655359530966
+      ],
+      "advanced": {}
+    },
+    {
+      "Datasource": {
+        "dbname": "gis",
+        "geometry_field": "way",
+        "host": "localhost",
+        "id": "water",
+        "key_field": "",
+        "password": "renderer",
+        "port": "5432",
+        "project": "foss4g-2011",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT osm_id, way, way_area AS area\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')\n) AS data",
+        "type": "postgis",
+        "user": "renderer",
+        "extent_cache": "auto",
+        "extent": "2124333.1973415,8055502.46894884,4224200.43002062,11228955.9943898"
+      },
+      "class": "",
+      "geometry": "polygon",
+      "id": "water",
+      "name": "water",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
@@ -1122,6 +1122,33 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "markers"
+    },
+    {
+      "extent": [
+        22.904643696811686,
+        61.18276199477543,
+        24.830032696543626,
+        61.977188894798466
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT osm_id, way, way_area AS area, wetland AS wetland_type\n  FROM planet_osm_polygon\n  WHERE wetland IS NOT NULL\n  ORDER BY way_area DESC\n) AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "2549733.27313044,8667909.35053914,2764066.59615957,8853735.93320143",
+        "dbname": "gis",
+        "host": "localhost",
+        "port": "5432",
+        "user": "renderer",
+        "password": "renderer"
+      },
+      "id": "reedbeds",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "reedbeds"
     }
   ],
   "scale": 1,
