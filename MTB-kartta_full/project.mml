@@ -12,7 +12,7 @@
   ],
   "format": "png8",
   "interactivity": false,
-  "minzoom": 5,
+  "minzoom": 7,
   "maxzoom": 17,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
@@ -198,9 +198,9 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "project": "MTB-kartta_full",
+        "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT osm_id, way, way_area AS area\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')\n    AND way_area > 1000\n) AS data",
+        "table": "( SELECT way, \"natural\" AS type, way_area AS area\n  FROM planet_osm_polygon\n  WHERE (\"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream'))\n    AND way_area > 1000\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -216,7 +216,7 @@
         23.71249411212273,
         61.419703680154306,
         23.98983422372397,
-        61.52875396956328
+        61.528753969563276
       ],
       "advanced": {}
     },
@@ -486,7 +486,7 @@
       "srs-name": "900913",
       "extent": [
         10.860426798488211,
-        53.94142729473068,
+        53.941427294730666,
         37.94663809471778,
         70.48379529530938
       ],
@@ -496,13 +496,13 @@
       "geometry": "linestring",
       "extent": [
         22.333054496891226,
-        59.81454699474469,
-        29.025722195959585,
+        59.81454699474467,
+        29.02572219595959,
         66.02622779497807
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "/* Paths & tracks tunnel */\n( SELECT way, tunnel, \"mtb:scale\", \"mtb:winter\", noexit, width, access,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" IS NOT NULL THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL AND tunnel != 'no' AND tunnel IS NOT NULL AND highway NOT IN ('motorway', 'motorway_link', 'trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'living_street', 'service', 'road', 'cycleway'))\n ORDER BY z_order\n) AS data",
+        "table": "/* Paths & tracks tunnel */\n( SELECT way, tunnel, \"mtb:scale\", \"mtb:winter\", noexit, width,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" IS NOT NULL THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL AND tunnel != 'no' AND tunnel IS NOT NULL AND highway NOT IN ('motorway', 'motorway_link', 'trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'living_street', 'service', 'road', 'cycleway'))\n ORDER BY z_order\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
@@ -624,7 +624,7 @@
         "port": "5432",
         "project": "osm-bright-master",
         "srs": null,
-        "table": "( SELECT way, surface\n  FROM planet_osm_point \n  WHERE highway = 'turning_circle'\n) AS data",
+        "table": "( SELECT way \n  FROM planet_osm_point \n  WHERE highway = 'turning_circle'\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -637,43 +637,12 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
-        16.766666697666025,
+        16.76666669766603,
         56.7333332947144,
         31.775567495576848,
-        70.17383989528156
+        70.17383989528155
       ],
       "advanced": {}
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        22.333054496891226,
-        60.75442519476463,
-        25.127405096502272,
-        63.03240199483504
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "( SELECT way, highway, sidewalk, \"sidewalk:left:bicycle\", \"sidewalk:right:bicycle\", \"sidewalk:both:bicycle\"\n  FROM planet_osm_line\n  WHERE sidewalk IS NOT NULL\n) AS data",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "2486104.25445236,8569652.2918102,2797169.94029894,9108200.36179441",
-        "dbname": "gis",
-        "host": "localhost",
-        "port": "5432",
-        "user": "renderer",
-        "password": "renderer",
-        "id": "sidewalks",
-        "project": "MTB-kartta_full",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      },
-      "id": "sidewalks",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "sidewalks"
     },
     {
       "Datasource": {
@@ -686,7 +655,7 @@
         "port": "5432",
         "project": "MTB-kartta_full",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "/* roads_high */\n( SELECT way, 0 AS tunnel, 0 AS bridge, 'fill' AS render, access AS access,\n  CASE\n    WHEN highway = 'motorway' THEN 'motorway'\n    WHEN highway = 'motorway_link' THEN 'motorway_link'\n    WHEN highway = 'trunk' THEN 'trunk'\n    WHEN highway = 'trunk_link' THEN 'trunk_link'\n    WHEN highway = 'primary' THEN 'primary'\n    WHEN highway = 'primary_link' THEN 'primary_link'\n    WHEN highway IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN highway IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN highway IN ('residential', 'unclassified') THEN 'residential'\n    WHEN highway = 'living_street' THEN 'living_street'\n    WHEN highway = 'service' AND service = 'parking_aisle' THEN 'parking_aisle' \n    WHEN highway = 'service' AND service = 'driveway' THEN 'driveway' \n    WHEN highway IN ('service', 'road') THEN 'service'\n    WHEN highway = 'raceway' THEN 'raceway'\n\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND bicycle = 'designated' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND cycleway = 'track' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND \"mtb:scale\" IS NOT NULL THEN 'other'\n    WHEN highway = 'footway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'footpath' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footpath' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'pedestrian' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'pedestrian' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'path' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'cycleway' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'footway'\n\n    WHEN highway = 'path' THEN 'other'\n    WHEN highway = 'track' THEN 'other'\n    WHEN highway = 'bridleway' THEN 'other'\n    WHEN highway = 'steps' THEN 'steps'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    WHEN railway IN ('abandoned', 'disused') THEN 'rail_abandoned'\n    WHEN railway = 'platform' THEN 'footway'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN surface IN ('paved', 'asphalt', 'concrete', 'paving_stones') THEN 'paved'\n    WHEN surface IS NOT NULL THEN 'unpaved'\n    ELSE 'unknown' END AS surface\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
+        "table": "/* roads_high */\n( SELECT way, 0 AS tunnel, 0 AS bridge, 'fill' AS render, access AS access,\n  CASE\n    WHEN highway = 'motorway' THEN 'motorway'\n    WHEN highway = 'motorway_link' THEN 'motorway_link'\n    WHEN highway = 'trunk' THEN 'trunk'\n    WHEN highway = 'trunk_link' THEN 'trunk_link'\n    WHEN highway = 'primary' THEN 'primary'\n    WHEN highway = 'primary_link' THEN 'primary_link'\n    WHEN highway IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN highway IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN highway IN ('residential', 'unclassified') THEN 'residential'\n    WHEN highway = 'living_street' THEN 'living_street'\n    WHEN highway = 'service' AND service = 'parking_aisle' THEN 'parking_aisle' \n    WHEN highway = 'service' AND service = 'driveway' THEN 'driveway' \n    WHEN highway IN ('service', 'road') THEN 'service'\n    WHEN highway = 'raceway' THEN 'raceway'\n\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND bicycle = 'designated' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND cycleway = 'track' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND \"mtb:scale\" >= '0' THEN 'other'\n    WHEN highway = 'footway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'footpath' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footpath' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'pedestrian' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'pedestrian' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'path' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'cycleway' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'footway'\n\n    WHEN highway = 'path' THEN 'other'\n    WHEN highway = 'track' THEN 'other'\n    WHEN highway = 'bridleway' THEN 'other'\n    WHEN highway = 'steps' THEN 'steps'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    WHEN railway IN ('abandoned', 'disused') THEN 'rail_abandoned'\n    WHEN railway = 'platform' THEN 'footway'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN surface IN ('paved', 'asphalt', 'concrete', 'paving_stones') THEN 'paved'\n    WHEN surface IS NOT NULL THEN 'unpaved'\n    ELSE 'unknown' END AS surface\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -700,7 +669,7 @@
       "srs-name": "900913",
       "extent": [
         10.860426798488211,
-        53.94142729473068,
+        53.941427294730666,
         37.94663809471778,
         70.48379529530938
       ],
@@ -714,7 +683,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "table": "( SELECT way, highway,\n  CASE\n    WHEN highway = 'motorway' THEN 'motorway'\n    WHEN highway = 'motorway_link' THEN 'motorway_link'\n    WHEN highway = 'trunk' THEN 'trunk'\n    WHEN highway = 'trunk_link' THEN 'trunk_link'\n    WHEN highway = 'primary' THEN 'primary'\n    WHEN highway = 'primary_link' THEN 'primary_link'\n    WHEN highway IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN highway IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN highway IN ('residential', 'unclassified') THEN 'residential'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'tertiary', 'motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary_link', 'unclassified', 'residential')\n) AS data",
+        "table": "( SELECT way, highway AS type\n  FROM planet_osm_roads\n  WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'motorway_link', 'trunk_link')\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -728,9 +697,9 @@
       "srs-name": "900913",
       "extent": [
         18.709339497395607,
-        58.41733559472439,
+        58.41733559472438,
         37.94663809471778,
-        70.40654579530234
+        70.4065457953023
       ],
       "advanced": {}
     },
@@ -742,7 +711,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "table": "( SELECT way, highway AS type, bridge, tunnel\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'tertiary')\n) AS data",
+        "table": "( SELECT way, highway AS type, bridge, tunnel\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk')\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -756,9 +725,9 @@
       "srs-name": "900913",
       "extent": [
         18.709339497395607,
-        58.41733559472439,
+        58.41733559472438,
         37.94663809471778,
-        70.40654579530234
+        70.4065457953023
       ],
       "advanced": {}
     },
@@ -770,7 +739,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "table": "( SELECT way, surface\n  FROM planet_osm_point\n  WHERE highway = 'turning_circle'\n) AS data",
+        "table": "( SELECT way \n  FROM planet_osm_point\n  WHERE highway = 'turning_circle'\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -783,10 +752,10 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
-        16.766666697666025,
+        16.76666669766603,
         56.7333332947144,
         31.775567495576848,
-        70.17383989528156
+        70.17383989528155
       ],
       "advanced": {}
     },
@@ -815,7 +784,7 @@
       "srs-name": "900913",
       "extent": [
         10.860426798488211,
-        53.94142729473068,
+        53.941427294730666,
         37.94663809471778,
         70.48379529530938
       ],
@@ -890,7 +859,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT way, aerialway, barrier, power, fixme, noexit, \"natural\", ford, obstacle, highway, name\n    FROM planet_osm_point\n    WHERE (aerialway IS NOT NULL OR barrier IS NOT NULL OR power IS NOT NULL OR fixme IS NOT NULL OR noexit IS NOT NULL OR \"natural\" IS NOT NULL OR ford IS NOT NULL OR obstacle IS NOT NULL OR highway IS NOT NULL)\n) AS data",
+        "table": "( SELECT way, aerialway, barrier, power, fixme, noexit, \"natural\", ford, obstacle, name\n    FROM planet_osm_point\n    WHERE (aerialway IS NOT NULL OR barrier IS NOT NULL OR power IS NOT NULL OR fixme IS NOT NULL OR noexit IS NOT NULL OR \"natural\" IS NOT NULL OR ford IS NOT NULL OR obstacle IS NOT NULL)\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
@@ -910,33 +879,6 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "constructs_point"
-    },
-    {
-      "extent": [
-        23.10622729678361,
-        61.20264329477596,
-        23.96734879666369,
-        61.61077689478734
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building IN ('roof')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "2572173.45683159,8672502.28630925,2668033.06370938,8767435.44246225",
-        "dbname": "gis",
-        "host": "localhost",
-        "port": "5432",
-        "user": "renderer",
-        "password": "renderer"
-      },
-      "id": "roofs",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "roofs"
     },
     {
       "Datasource": {
@@ -1092,6 +1034,33 @@
         70.48379529530938
       ],
       "advanced": {}
+    },
+    {
+      "extent": [
+        23.10622729678361,
+        61.20264329477596,
+        23.96734879666369,
+        61.61077689478734
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building IN ('roof')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "2572173.45683159,8672502.28630925,2668033.06370938,8767435.44246225",
+        "dbname": "gis",
+        "host": "localhost",
+        "port": "5432",
+        "user": "renderer",
+        "password": "renderer"
+      },
+      "id": "roofs",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "roofs"
     },
     {
       "extent": [
