@@ -651,11 +651,11 @@ come in as well.
 
   [sidewalk='left'],
   [sidewalk='both'],
-  ['cycleway:left'='track'],
-  ['cycleway:left'='lane'],
-  ['cycleway:left'='yes'],
-  ['cycleway:both'='track'],
-  ['cycleway:both'='lane'],
+  ['cycleway_left'='track'],
+  ['cycleway_left'='lane'],
+  ['cycleway_left'='yes'],
+  ['cycleway_both'='track'],
+  ['cycleway_both'='lane'],
   ['cycleway'='track']['highway'!='cycleway'],
   ['cycleway'='lane']['highway'!='cycleway'] {
     ::sidewalksleft {
@@ -663,16 +663,16 @@ come in as well.
       /* Line offsets for each zoom and highway type... */
       [zoom=13] {
         line-width: @fwz13_lw; line-dasharray: @fwz13_da;
-        ['sidewalk:left:bicycle'='no'],
-        ['sidewalk:both:bicycle'='no'] {
+        ['sidewalk_left_bicycle'='no'],
+        ['sidewalk_both_bicycle'='no'] {
           line-dasharray: 1, 2;
         }
-        ['sidewalk:left:bicycle'='yes'],
-        ['sidewalk:both:bicycle'='yes'],
-        ['cycleway:left'='track'],
-        ['cycleway:left'='lane'],
-        ['cycleway:both'='track'],
-        ['cycleway:both'='lane'],
+        ['sidewalk_left_bicycle'='yes'],
+        ['sidewalk_both_bicycle'='yes'],
+        ['cycleway_left'='track'],
+        ['cycleway_left'='lane'],
+        ['cycleway_both'='track'],
+        ['cycleway_both'='lane'],
         ['cycleway'='track']['highway'!='cycleway'],
         ['cycleway'='lane']['highway'!='cycleway']  {
           line-color: @cycleway; line-width: @cwz13_lw; line-dasharray: @cwz13_pda;
@@ -691,16 +691,16 @@ come in as well.
       }
       [zoom=14] {
         line-width: @fwz14_lw; line-dasharray: @fwz14_da;
-        ['sidewalk:left:bicycle'='no'],
-        ['sidewalk:both:bicycle'='no'] {
+        ['sidewalk_left_bicycle'='no'],
+        ['sidewalk_both_bicycle'='no'] {
           line-dasharray: 1, 2;
         }
-        ['sidewalk:left:bicycle'='yes'],
-        ['sidewalk:both:bicycle'='yes'],
-        ['cycleway:left'='track'],
-        ['cycleway:left'='lane'],
-        ['cycleway:both'='track'],
-        ['cycleway:both'='lane'],
+        ['sidewalk_left_bicycle'='yes'],
+        ['sidewalk_both_bicycle'='yes'],
+        ['cycleway_left'='track'],
+        ['cycleway_left'='lane'],
+        ['cycleway_both'='track'],
+        ['cycleway_both'='lane'],
         ['cycleway'='track']['highway'!='cycleway'],
         ['cycleway'='lane']['highway'!='cycleway']  {
           line-color: @cycleway; line-width: @cwz14_lw; line-dasharray: @cwz14_pda;
@@ -719,16 +719,16 @@ come in as well.
       }
       [zoom=15] {
         line-width: @fwz15_lw; line-dasharray: @fwz15_da;
-        ['sidewalk:left:bicycle'='no'],
-        ['sidewalk:both:bicycle'='no'] {
+        ['sidewalk_left_bicycle'='no'],
+        ['sidewalk_both_bicycle'='no'] {
           line-dasharray: 1, 2;
         }
-        ['sidewalk:left:bicycle'='yes'],
-        ['sidewalk:both:bicycle'='yes'],
-        ['cycleway:left'='track'],
-        ['cycleway:left'='lane'],
-        ['cycleway:both'='track'],
-        ['cycleway:both'='lane'],
+        ['sidewalk_left_bicycle'='yes'],
+        ['sidewalk_both_bicycle'='yes'],
+        ['cycleway_left'='track'],
+        ['cycleway_left'='lane'],
+        ['cycleway_both'='track'],
+        ['cycleway_both'='lane'],
         ['cycleway'='track']['highway'!='cycleway'],
         ['cycleway'='lane']['highway'!='cycleway']  {
           line-color: @cycleway; line-width: @cwz15_lw; line-dasharray: @cwz15_pda;
@@ -747,16 +747,16 @@ come in as well.
       }
       [zoom=16] {
         line-width: @fwz16_lw; line-dasharray: @fwz16_da;
-        ['sidewalk:left:bicycle'='no'],
-        ['sidewalk:both:bicycle'='no'] {
+        ['sidewalk_left_bicycle'='no'],
+        ['sidewalk_both_bicycle'='no'] {
           line-dasharray: 1, 2;
         }
-        ['sidewalk:left:bicycle'='yes'],
-        ['sidewalk:both:bicycle'='yes'],
-        ['cycleway:left'='track'],
-        ['cycleway:left'='lane'],
-        ['cycleway:both'='track'],
-        ['cycleway:both'='lane'],
+        ['sidewalk_left_bicycle'='yes'],
+        ['sidewalk_both_bicycle'='yes'],
+        ['cycleway_left'='track'],
+        ['cycleway_left'='lane'],
+        ['cycleway_both'='track'],
+        ['cycleway_both'='lane'],
         ['cycleway'='track']['highway'!='cycleway'],
         ['cycleway'='lane']['highway'!='cycleway']  {
           line-color: @cycleway; line-width: @cwz16_lw; line-dasharray: @cwz16_pda;
@@ -775,16 +775,16 @@ come in as well.
       }
       [zoom>=17] {
         line-width: @fwz17_lw; line-dasharray: @fwz17_da;
-        ['sidewalk:left:bicycle'='no'],
-        ['sidewalk:both:bicycle'='no'] {
+        ['sidewalk_left_bicycle'='no'],
+        ['sidewalk_both_bicycle'='no'] {
           line-dasharray: 1, 2;
         }
-        ['sidewalk:left:bicycle'='yes'],
-        ['sidewalk:both:bicycle'='yes'],
-        ['cycleway:left'='track'],
-        ['cycleway:left'='lane'],
-        ['cycleway:both'='track'],
-        ['cycleway:both'='lane'],
+        ['sidewalk_left_bicycle'='yes'],
+        ['sidewalk_both_bicycle'='yes'],
+        ['cycleway_left'='track'],
+        ['cycleway_left'='lane'],
+        ['cycleway_both'='track'],
+        ['cycleway_both'='lane'],
         ['cycleway'='track']['highway'!='cycleway'],
         ['cycleway'='lane']['highway'!='cycleway']  {
           line-color: @cycleway; line-width: @cwz17_lw; line-dasharray: @cwz17_pda;
@@ -811,16 +811,16 @@ come in as well.
       /* Line offsets for each zoom and highway type... */
       [zoom=13] {
         line-width: @fwz13_lw; line-dasharray: @fwz13_da;
-        ['sidewalk:right:bicycle'='no'],
-        ['sidewalk:both:bicycle'='no'] {
+        ['sidewalk_right_bicycle'='no'],
+        ['sidewalk_both_bicycle'='no'] {
           line-dasharray: 1, 2;
         }
-        ['sidewalk:right:bicycle'='yes'],
-        ['sidewalk:both:bicycle'='yes'],
-        ['cycleway:right'='track'],
-        ['cycleway:right'='lane'],
-        ['cycleway:both'='track'],
-        ['cycleway:both'='lane'],
+        ['sidewalk_right_bicycle'='yes'],
+        ['sidewalk_both_bicycle'='yes'],
+        ['cycleway_right'='track'],
+        ['cycleway_right'='lane'],
+        ['cycleway_both'='track'],
+        ['cycleway_both'='lane'],
         ['cycleway'='track']['highway'!='cycleway'],
         ['cycleway'='lane']['highway'!='cycleway'] {
           line-color: @cycleway; line-width: @cwz13_lw; line-dasharray: @cwz13_pda;
@@ -839,16 +839,16 @@ come in as well.
       }
       [zoom=14] {
         line-width: @fwz14_lw; line-dasharray: @fwz14_da;
-        ['sidewalk:right:bicycle'='no'],
-        ['sidewalk:both:bicycle'='no'] {
+        ['sidewalk_right_bicycle'='no'],
+        ['sidewalk_both_bicycle'='no'] {
           line-dasharray: 1, 2;
         }
-        ['sidewalk:right:bicycle'='yes'],
-        ['sidewalk:both:bicycle'='yes'],
-        ['cycleway:right'='track'],
-        ['cycleway:right'='lane'],
-        ['cycleway:both'='track'],
-        ['cycleway:both'='lane'],
+        ['sidewalk_right_bicycle'='yes'],
+        ['sidewalk_both_bicycle'='yes'],
+        ['cycleway_right'='track'],
+        ['cycleway_right'='lane'],
+        ['cycleway_both'='track'],
+        ['cycleway_both'='lane'],
         ['cycleway'='track']['highway'!='cycleway'],
         ['cycleway'='lane']['highway'!='cycleway'] {
           line-color: @cycleway; line-width: @cwz14_lw; line-dasharray: @cwz14_pda;
@@ -867,16 +867,16 @@ come in as well.
       }
       [zoom=15] {
         line-width: @fwz15_lw; line-dasharray: @fwz15_da;
-        ['sidewalk:right:bicycle'='no'],
-        ['sidewalk:both:bicycle'='no'] {
+        ['sidewalk_right_bicycle'='no'],
+        ['sidewalk_both_bicycle'='no'] {
           line-dasharray: 1, 2;
         }
-        ['sidewalk:right:bicycle'='yes'],
-        ['sidewalk:both:bicycle'='yes'],
-        ['cycleway:right'='track'],
-        ['cycleway:right'='lane'],
-        ['cycleway:both'='track'],
-        ['cycleway:both'='lane'],
+        ['sidewalk_right_bicycle'='yes'],
+        ['sidewalk_both_bicycle'='yes'],
+        ['cycleway_right'='track'],
+        ['cycleway_right'='lane'],
+        ['cycleway_both'='track'],
+        ['cycleway_both'='lane'],
         ['cycleway'='track']['highway'!='cycleway'],
         ['cycleway'='lane']['highway'!='cycleway'] {
           line-color: @cycleway; line-width: @cwz15_lw; line-dasharray: @cwz15_pda;
@@ -895,16 +895,16 @@ come in as well.
       }
       [zoom=16] {
         line-width: @fwz16_lw; line-dasharray: @fwz16_da;
-        ['sidewalk:right:bicycle'='no'],
-        ['sidewalk:both:bicycle'='no'] {
+        ['sidewalk_right_bicycle'='no'],
+        ['sidewalk_both_bicycle'='no'] {
           line-dasharray: 1, 2;
         }
-        ['sidewalk:right:bicycle'='yes'],
-        ['sidewalk:both:bicycle'='yes'],
-        ['cycleway:right'='track'],
-        ['cycleway:right'='lane'],
-        ['cycleway:both'='track'],
-        ['cycleway:both'='lane'],
+        ['sidewalk_right_bicycle'='yes'],
+        ['sidewalk_both_bicycle'='yes'],
+        ['cycleway_right'='track'],
+        ['cycleway_right'='lane'],
+        ['cycleway_both'='track'],
+        ['cycleway_both'='lane'],
         ['cycleway'='track']['highway'!='cycleway'],
         ['cycleway'='lane']['highway'!='cycleway'] {
           line-color: @cycleway; line-width: @cwz16_lw; line-dasharray: @cwz16_pda;
@@ -923,16 +923,16 @@ come in as well.
       }
       [zoom>=17] {
         line-width: @fwz17_lw; line-dasharray: @fwz17_da;
-        ['sidewalk:right:bicycle'='no'],
-        ['sidewalk:both:bicycle'='no'] {
+        ['sidewalk_right_bicycle'='no'],
+        ['sidewalk_both_bicycle'='no'] {
           line-dasharray: 1, 2;
         }
-        ['sidewalk:right:bicycle'='yes'],
-        ['sidewalk:both:bicycle'='yes'],
-        ['cycleway:right'='track'],
-        ['cycleway:right'='lane'],
-        ['cycleway:both'='track'],
-        ['cycleway:both'='lane'],
+        ['sidewalk_right_bicycle'='yes'],
+        ['sidewalk_both_bicycle'='yes'],
+        ['cycleway_right'='track'],
+        ['cycleway_right'='lane'],
+        ['cycleway_both'='track'],
+        ['cycleway_both'='lane'],
         ['cycleway'='track']['highway'!='cycleway'],
         ['cycleway'='lane']['highway'!='cycleway'] {
           line-color: @cycleway; line-width: @cwz17_lw; line-dasharray: @cwz17_pda;

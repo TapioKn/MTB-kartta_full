@@ -4,7 +4,7 @@
 
 /* directory to load fonts from in addition to the system directories */
 Map { font-directory: url(fonts); }
- 
+
 @sans_lt:           "Noto Sans Light";
 @sans_lt_italic:    "Noto Sans Light Italic";
 
@@ -61,19 +61,19 @@ Map { font-directory: url(fonts); }
 /* ROAD COLORS
 /* ================================================================== */
 
-@motorway_fill:    #f6a42a;  //BACKUP: #ffc34d;
+@motorway_fill:    #f69e2a;  //BACKUP: #f6a42a;
 @motorway_case:    @motorway_fill * 0.1;
 @motorway_farfill: #f6672a;
 
-@trunk_fill:       #ffb84d;  //BACKUP: #ffe18f;
+@trunk_fill:       #ffad4d;  //BACKUP: #ffb84d;
 @trunk_case:       @trunk_fill * 0.1;
 @trunk_farfill:    #ffad4d;
 
-@primary_fill:     #fcd681;  //BACKUP: #ffe18f;
+@primary_fill:     #fcd281;  //BACKUP: #fcd681;
 @primary_case:     @primary_fill * 0.1;
 @primary_farfill:  #f5bf6f;
 
-@mainroad_fill:    #fcd681;  //BACKUP: #ffe8aa;
+@mainroad_fill:    #fcd281;  //BACKUP: #fcd681;
 @mainroad_case:    @mainroad_fill * 0.1;
 @mainroad_farfill: @primary_farfill;
 
@@ -111,9 +111,9 @@ Map { font-directory: url(fonts); }
 @footwaybg:       @cyclewaybg;
 @mtbscale0-:      #4ae3be;
 @mtbscale0:       #75e009;
-@mtbscale1:       #dfd600;
+@mtbscale1:       #e3e800;
 @mtbscale2:       #f4a250;
-@mtbscale3:       #ff5858;
+@mtbscale3:       #ff4454;
 @mtbscale4:       #ee2099;
 @mtbscale5:       #bf1cf5;
 @mtbscale6:       #8100ac;
