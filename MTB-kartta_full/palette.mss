@@ -112,7 +112,7 @@ Map { font-directory: url(fonts); }
 @mtbscale0-:      #4ae3be;
 @mtbscale0:       #75e009;
 @mtbscale1:       #e3e800;
-@mtbscale2:       #f4a250;
+@mtbscale2:       #feb13e;
 @mtbscale3:       #ff4454;
 @mtbscale4:       #ee2099;
 @mtbscale5:       #bf1cf5;
