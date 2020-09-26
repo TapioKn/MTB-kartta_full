@@ -157,14 +157,7 @@
       }
     }
   }
-  ::military {
-    [type='military'] {
-      polygon-pattern-file: url("images/landuse_military.png");
-      polygon-pattern-opacity: 0.5;
-      line-width: 1.5;
-      line-color: @military;
-      line-opacity: 0.5;  }
-  }
+
 }
 
 #landuse_overlays {
@@ -178,7 +171,6 @@
       [wetland_type='swamp']         { polygon-fill: @swamp; polygon-pattern-file:url(images/wetland_marsh_bog_swamp.png); }
     }
   }
-
 
   /* Conservation areas and such. Overlap with boundary/leisure keys since tagging is so varied */
   ::conservation {
@@ -204,6 +196,15 @@
   /* Hedges defined as areas */
   [barrier='hedge'] {
     [zoom>=14] { polygon-fill: @hedge; }
+  }
+  /* Military areas */
+  ::military {
+    [landuse='military'] {
+      polygon-pattern-file: url("images/landuse_military.png");
+      polygon-pattern-opacity: 0.5;
+      line-width: 1.5;
+      line-color: @military;
+      line-opacity: 0.5;  }
   }
 }
 

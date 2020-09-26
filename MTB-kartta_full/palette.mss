@@ -22,23 +22,23 @@ Map { font-directory: url(fonts); }
 
 @allotments:        #f5f5ef;
 @beach:             #f6f7d7;
-@bog:               lighten(#c1c8a8, 14%);
-@building:          darken(#938f8b, 3%);
+@bog:               #dee4d3; //lighten(#c1c8a8, 14%);
+@building:          #8a8682; //darken(#938f8b, 3%);
 @cemetery:          #c6dac6;
 @commercial:        #eef4f6;
 @conservation:      #7ba36c;
 @construction:      #cbc8c1;
 @farmland:          #faf4d2;
 @farmyard:          #f0e9c2;
-@fen:               lighten(#9dc3b2, 14%);
-@forest:            lighten(#bad0aa, 16%);
+@fen:               #c8ddd4; //lighten(#9dc3b2, 14%);
+@forest:            #e2e6d7; //lighten(#bad0aa, 16%);
 @golf_course:       #d7ffc4;
 @grass:             #f1ffdc;
 @grassland:         #e2f1cd;
 @hedge:             #a2b88a;
 @hospital:          #f9f2f4;
 @industrial:        #eaeef1;
-@land:              lighten(#f5f3ea, 1%);
+@land:              #f6f5ed; //lighten(#f5f3ea, 1%);
 @landfill:          #ccc3b3;
 @meadow:            #f4fad2;
 @military:          #f66d6a;
@@ -52,8 +52,8 @@ Map { font-directory: url(fonts); }
 @rock:              #dce0d9;
 @school:            #fdfdfb;
 @sports:            #d7ffc4;
-@swamp:             lighten(#a8d0cf, 12%);
-@water:             desaturate(#8fb0c8, 20%); /*Previous backup: #a3c5de*/
+@swamp:             #d0e4e4; //lighten(#a8d0cf, 12%);
+@water:             #a0abb5; //desaturate(#8fb0c8, 20%); /*Previous backup: #a3c5de*/
 
 
 
@@ -114,7 +114,7 @@ Map { font-directory: url(fonts); }
 @mtbscale1:       #e3e800;
 @mtbscale2:       #feb13e;
 @mtbscale3:       #ff4454;
-@mtbscale4:       #ee2099;
+@mtbscale4:       #f20bab;
 @mtbscale5:       #bf1cf5;
 @mtbscale6:       #8100ac;
 
