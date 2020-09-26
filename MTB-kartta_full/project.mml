@@ -1,14 +1,14 @@
 {
   "bounds": [
-    23.4392,
-    61.4285,
-    23.6448,
-    61.5241
+    23.7631,
+    61.4978,
+    23.9018,
+    61.5332
   ],
   "center": [
-    23.5042,
-    61.4849,
-    15
+    23.8056,
+    61.5125,
+    16
   ],
   "format": "png8",
   "interactivity": false,
@@ -586,13 +586,13 @@
       "geometry": "linestring",
       "extent": [
         10.860426798488211,
-        53.941427294730666,
+        53.94142729473068,
         37.94663809471778,
         70.48379529530938
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT way, seasonal, \"mtb:scale\", \"mtb:winter\", obstacle, surface, noexit, access, width,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" IS NOT NULL THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility\n  FROM planet_osm_line\n  WHERE (highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway'))\n ORDER BY z_order\n) AS data\n",
+        "table": "( SELECT way, seasonal, \"mtb:scale\", \"mtb:winter\", obstacle, surface, noexit, access, width,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' AND \"mtb:scale\" IS NULL THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' AND \"mtb:scale\" IS NULL THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" IS NOT NULL THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' AND cycleway IS NULL THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility\n  FROM planet_osm_line\n  WHERE (highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway'))\n ORDER BY z_order\n) AS data\n",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
