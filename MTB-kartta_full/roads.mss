@@ -39,7 +39,7 @@ and trunks. */
     [type='tertiary']   { line-width: 1.2; }
   }
 }
-
+ 
 /* ================ MID =================*/
 
 #roads_med[zoom>=9][zoom<=10] {

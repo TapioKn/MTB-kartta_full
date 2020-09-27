@@ -17,6 +17,9 @@
       ['mtb:scale'='5'],['mtb:scale'='5-'],['mtb:scale'='5+'] { line-color: @mtbscale5;  line-opacity: 1; }
       ['mtb:scale'='6']                                       { line-color: @mtbscale6;  line-opacity: 1; }
       ['noexit'='yes'] { line-opacity: 0; }
+      [bicycle='designated']['mtb:scale'='0-'],
+      [bicycle='designated'][surface='paved'],
+      [bicycle='designated'][surface='asphalt'] { line-opacity: 0; }
 
       [zoom=12] {
 	      line-width: @paz12_cw;
@@ -45,11 +48,14 @@
         [width>=0.9]                { line-width: @paz16_cw * 1.6; }
         [width>=1.8],[type='track'] { line-width: @paz16_cw * 2.2; }
       }
-
     }
+
     ::ptlines {
       line-color: @path_line;
       [seasonal='winter'],['noexit'='yes'] { line-opacity: 0.5; }
+      [bicycle='designated']['mtb:scale'='0-'],
+      [bicycle='designated'][surface='paved'],
+      [bicycle='designated'][surface='asphalt'] { line-opacity: 0; }
 
       [zoom=12] {
         line-width: @paz12_lw;
