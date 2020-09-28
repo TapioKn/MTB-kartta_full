@@ -281,21 +281,21 @@ Map { background-color: @water; }
   [type='canal'] {
     line-cap: round;
     line-join: round;
-	[zoom=14]{ line-width: 4.0; }
+	  [zoom=14]{ line-width: 4.0; }
     [zoom=15]{ line-width: 4.5; }
-    [zoom=16]{ line-width: 5.0; }
+    [zoom>=16]{ line-width: 5.0; }
 	[tunnel='yes'],[tunnel='culvert'] { line-opacity: @tunnel_opacity; }
   }
   [type='stream'] {
     [zoom=14]{ line-width: 2.0; }
     [zoom=15]{ line-width: 2.5; }
-    [zoom=16]{ line-width: 3.0; }
+    [zoom>=16]{ line-width: 3.0; }
 	[tunnel='yes'],[tunnel='culvert'] { line-opacity: @tunnel_opacity; }
   }
   [type='ditch'],
   [type='drain'] {
     [zoom=15]{ line-width: 1.2; }
-    [zoom=16]{ line-width: 2.5; }
+    [zoom>=16]{ line-width: 2.5; }
 	[tunnel='yes'],[tunnel='culvert'] { line-opacity: @tunnel_opacity; }
   }
 }
