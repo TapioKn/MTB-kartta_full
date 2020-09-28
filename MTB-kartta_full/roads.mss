@@ -39,7 +39,7 @@ and trunks. */
     [type='tertiary']   { line-width: 1.2; }
   }
 }
- 
+
 /* ================ MID =================*/
 
 #roads_med[zoom>=9][zoom<=10] {
@@ -124,11 +124,11 @@ come in as well.
 /* Cycleways not rendered on z<=12 */
 @cwz11_cw: 0.0;   @cwz11_lw: 0.0;   @cwz11_da: 4, 2;   @cwz11_pda: 8, 2;   @cwz11_uda: 8, 2;
 @cwz12_cw: 0.0;   @cwz12_lw: 0.0;   @cwz12_da: 4, 2;   @cwz12_pda: 8, 2;   @cwz12_uda: 8, 2;
-@cwz13_cw: 0.0;   @cwz13_lw: 1.0;   @cwz13_da: 5, 2;   @cwz13_pda: 10, 2;  @cwz13_uda: 2.5, 1.5;
-@cwz14_cw: 0.0;   @cwz14_lw: 1.2;   @cwz14_da: 5, 2;   @cwz14_pda: 10, 2;  @cwz14_uda: 2.5, 1.5;
-@cwz15_cw: 2.0;   @cwz15_lw: 1.5;   @cwz15_da: 5, 2;   @cwz15_pda: 10, 2;  @cwz15_uda: 2.5, 1.5;
-@cwz16_cw: 3.0;   @cwz16_lw: 2.0;   @cwz16_da: 5, 2;   @cwz16_pda: 10, 2;  @cwz16_uda: 2.5, 1.5;
-@cwz17_cw: 4.0;   @cwz17_lw: 2.5;   @cwz17_da: 5, 2;   @cwz17_pda: 10, 2;  @cwz17_uda: 2.5, 1.5;
+@cwz13_cw: 0.0;   @cwz13_lw: 1.0;   @cwz13_da: 5, 2;   @cwz13_pda: 10, 2;  @cwz13_uda: 2.0, 1.5;
+@cwz14_cw: 0.0;   @cwz14_lw: 1.2;   @cwz14_da: 5, 2;   @cwz14_pda: 10, 2;  @cwz14_uda: 2.0, 1.5;
+@cwz15_cw: 2.0;   @cwz15_lw: 1.5;   @cwz15_da: 5, 2;   @cwz15_pda: 10, 2;  @cwz15_uda: 2.0, 1.5;
+@cwz16_cw: 3.0;   @cwz16_lw: 2.0;   @cwz16_da: 5, 2;   @cwz16_pda: 10, 2;  @cwz16_uda: 2.0, 1.5;
+@cwz17_cw: 4.0;   @cwz17_lw: 2.5;   @cwz17_da: 5, 2;   @cwz17_pda: 10, 2;  @cwz17_uda: 2.0, 1.5;
 
 /* Footway case widths, line widths and dasharrays */
 @fwz11_cw: 0.0;   @fwz11_lw: 0.0;   @fwz11_da: 3, 2;
@@ -340,7 +340,7 @@ come in as well.
     [type='railway']       { line-width: @rwzhi_cw; }
     [type='rail_abandoned']{ line-width: @rwzhi_cw; }
   }
-  [zoom=17] {
+  [zoom>=17] {
     [type='motorway']      { line-width: @rdz17_mot + 2.5; }
     [type='motorway_link'] { line-width: @rdz17_mot - 1.0; }
     [type='trunk']         { line-width: @rdz17_tru + 2; }
@@ -609,7 +609,7 @@ come in as well.
      }
      [type='steps']         { line-width: @cwz16_cw + 1; line-color: @footway; line-dasharray: 1, 2.5; }
    }
-   [zoom=17] {
+   [zoom>=17] {
      [type='motorway']      { line-width: @rdz17_mot; }
      [type='motorway_link'] { line-width: @rdz17_mot - 3.5; }
      [type='trunk']         { line-width: @rdz17_tru; }
@@ -628,6 +628,7 @@ come in as well.
      [type='cycleway']      { ::cyclewaybg   { line-width: @cwz17_cw; line-color: @cyclewaybg; }
                               ::cyclewayline { line-color: @cycleway; line-width: @cwz17_lw; line-dasharray: @cwz17_da;
                                                [surface='paved']   { line-dasharray: @cwz17_pda; }
+                                               [surface='unpaved'] { line-dasharray: @cwz17_uda; }
                                              }
      }
  	   [type='footway']       { ::footwaybg    { line-width: @fwz17_cw; line-color: @footwaybg; }
@@ -1165,7 +1166,7 @@ come in as well.
       [type='service']       { line-width: @rdz16_ser; }
       [type='parking_aisle'] { line-width: @rdz16_ser - 2; }
     }
-    [zoom=17] {
+    [zoom>=17] {
       [type='motorway']      { line-width: @rdz17_mot; }
       [type='motorway_link'] { line-width: @rdz17_mot - 2; }
       [type='trunk']         { line-width: @rdz17_tru; }
@@ -1295,7 +1296,7 @@ come in as well.
       [type='cycleway']      { line-width: @cwz16_lw; line-dasharray: @cwz16_da; }
       [type='footway']       { line-width: @fwz16_lw; line-dasharray: @fwz16_da; }
     }
-    [zoom=17] {
+    [zoom>=17] {
       [type='motorway']      { line-width: @rdz17_mot; }
       [type='motorway_link'] { line-width: @rdz17_mot - 2; }
       [type='trunk']         { line-width: @rdz17_tru; }
@@ -1342,7 +1343,7 @@ come in as well.
   [zoom=14] { marker-width:@rdz14_res * 2; }
   [zoom=15] { marker-width:@rdz15_res * 2; }
   [zoom=16] { marker-width:@rdz16_res * 2; }
-  [zoom=17] { marker-width:@rdz17_res * 2; }
+  [zoom>=17] { marker-width:@rdz17_res * 2; }
 }
 
 /* ================================================================== */
@@ -1360,7 +1361,7 @@ come in as well.
     [zoom=14]{ line-width:7; }
     [zoom=15]{ line-width:11; }
     [zoom=16]{ line-width:15; }
-    [zoom=17]{ line-width:19; }
+    [zoom>=17]{ line-width:19; }
     [zoom>17]{ line-width:23; }
   }
   [type='taxiway'] {
@@ -1371,7 +1372,7 @@ come in as well.
     [zoom=14]{ line-width:1.5; }
     [zoom=15]{ line-width:2; }
     [zoom=16]{ line-width:3; }
-    [zoom=17]{ line-width:4; }
+    [zoom>=17]{ line-width:4; }
     [zoom>17]{ line-width:5; }
   }
 }
