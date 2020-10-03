@@ -102,9 +102,9 @@ Map { font-directory: url(fonts); }
 // ==================================================================
 
 // Dash colors
-@footway:         #d7143f;
+@footway:         #a43820;
 @cycleway:        #0021ff;
-@forbidden:       #db0000;
+@forbidden:       #ff003d;
 
 // Case colors
 @cyclewaybg:      @land;
