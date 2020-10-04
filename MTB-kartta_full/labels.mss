@@ -429,9 +429,14 @@
     marker-allow-overlap: true;
     marker-placement: point;
   }
-  [obstacle='fallen_tree'][zoom>=15] {
+  [obstacle='fallen_tree'] {
     marker-file: url(images/obstacle_fallen_tree-M.png);
     [zoom>=16] { marker-file: url(images/obstacle_fallen_tree-L.png); }
+    marker-allow-overlap: true;
+    marker-placement: point;
+  }
+  [amenity='drinking_water'],[amenity='water_point'] {
+    marker-file: url(images/amenity-drinking_water.png);
     marker-allow-overlap: true;
     marker-placement: point;
   }
