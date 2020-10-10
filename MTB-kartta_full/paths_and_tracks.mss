@@ -125,22 +125,22 @@
     }
     ::accessoverlays[zoom>=14] {
       ['mtb:scale'='-1'],['bicycle'='no'] {
-        line-width: 1.5;
         line-dasharray: 2, 4;
         line-color: @forbidden;
-        line-offset: -3;
-        [zoom=14] { line-width: 1.2; line-offset: -2; }
-        [width<0.6] { line-offset: -2; [zoom=14] { line-offset: -1.5; } }
-        [width>0.8] { line-offset: -5; [zoom=14] { line-offset: -3; } }
+        [zoom=14]  { line-width: 1.5; line-offset: -2.0; }
+        [zoom=15]  { line-width: 1.8; line-offset: -2.5; }
+        [zoom>=16] { line-width: 2.0; line-offset: -3.0; }
+        [width<0.6] { [zoom=14] { line-offset: -1.5; } [zoom=15] { line-offset: -1.8; } [zoom>=16] { line-offset: -2.0; } }
+        [width>0.8] { [zoom=14] { line-offset: -2.5; } [zoom=15] { line-offset: -3.5; } [zoom>=16] { line-offset: -4.5; } }
       }
       [access='no'] {
-        line-width: 1.5;
-                line-dasharray: 2, 2;
+        line-dasharray: 2, 1.5;
         line-color: @forbidden;
-        line-offset: -3;
-        [zoom=14] { line-width: 1.2; line-offset: -2; }
-        [width<0.6] { line-offset: -2; [zoom=14] { line-offset: -1.5; } }
-        [width>0.8] { line-offset: -5; [zoom=14] { line-offset: -3; } }
+        [zoom=14]  { line-width: 1.5; line-offset: -2.0; }
+        [zoom=15]  { line-width: 1.8; line-offset: -2.0; }
+        [zoom>=16] { line-width: 2.0; line-offset: -2.5; }
+        [width<0.6] { [zoom=14] { line-offset: -1.5; } [zoom=15] { line-offset: -1.8; } [zoom>=16] { line-offset: -2.0; } }
+        [width>0.8] { [zoom=14] { line-offset: -2.5; } [zoom=15] { line-offset: -3.5; } [zoom>=16] { line-offset: -4.5; } }
       }
     }
     ::mudorvegoverlay[zoom>=14] {
