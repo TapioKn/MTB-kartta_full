@@ -1,13 +1,13 @@
 {
   "bounds": [
     23.3631,
-    61.4778,
+    61.3778,
     23.9018,
     61.6332
   ],
   "center": [
-    23.86045,
-    61.52167,
+    23.8468,
+    61.4818,
     16
   ],
   "format": "png8",
@@ -555,13 +555,13 @@
       "geometry": "linestring",
       "extent": [
         10.860426798488211,
-        53.941427294730666,
+        53.94142729473068,
         37.94663809471778,
         70.48379529530938
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "/* roads_high */\n( SELECT way,\n  CASE\n    WHEN construction = 'motorway' THEN 'motorway'\n    WHEN construction = 'motorway_link' THEN 'motorway_link'\n    WHEN construction = 'trunk' THEN 'trunk'\n    WHEN construction = 'trunk_link' THEN 'trunk_link'\n    WHEN construction = 'primary' THEN 'primary'\n    WHEN construction = 'primary_link' THEN 'primary_link'\n    WHEN construction IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN construction IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN construction = 'residential' THEN 'residential'\n    WHEN construction = 'living_street' THEN 'living_street'\n    WHEN construction = 'service' AND service = 'parking_aisle' THEN 'parking_aisle' \n    WHEN construction = 'service' AND service = 'driveway' THEN 'driveway' \n    WHEN construction IN ('service', 'unclassified', 'road') THEN 'service'\n    WHEN construction IN ('footway', 'footpath') THEN 'footway'\n    WHEN construction = 'cycleway' THEN 'cycleway'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE (construction IS NOT NULL)\n  ORDER BY z_order\n) AS data",
+        "table": "/* roads_construction */\n( SELECT way,\n  CASE\n    WHEN construction = 'motorway' THEN 'motorway'\n    WHEN construction = 'motorway_link' THEN 'motorway_link'\n    WHEN construction = 'trunk' THEN 'trunk'\n    WHEN construction = 'trunk_link' THEN 'trunk_link'\n    WHEN construction = 'primary' THEN 'primary'\n    WHEN construction = 'primary_link' THEN 'primary_link'\n    WHEN construction IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN construction IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN construction = 'residential' THEN 'residential'\n    WHEN construction = 'living_street' THEN 'living_street'\n    WHEN construction = 'service' AND service = 'parking_aisle' THEN 'parking_aisle' \n    WHEN construction = 'service' AND service = 'driveway' THEN 'driveway' \n    WHEN construction IN ('service', 'unclassified', 'road') THEN 'service'\n    WHEN construction IN ('footway', 'footpath') THEN 'footway'\n    WHEN construction = 'cycleway' THEN 'cycleway'\n    WHEN construction IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE (construction IS NOT NULL)\n  ORDER BY z_order\n) AS data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",

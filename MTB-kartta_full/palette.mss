@@ -32,8 +32,8 @@ Map { font-directory: url(fonts); }
 @farmyard:          #f0e9c2;
 @fen:               #c8ddd4; //lighten(#9dc3b2, 14%);
 @forest:            #e2e6d7; //lighten(#bad0aa, 16%);
-@golf_course:       #d7ffc4;
-@grass:             #f1ffdc;
+@golf_course:       #caedb9;
+@grass:             #d9ffc4; // #f1ffdc;
 @grassland:         #e2f1cd;
 @hedge:             #a2b88a;
 @hospital:          #f9f2f4;
@@ -51,9 +51,9 @@ Map { font-directory: url(fonts); }
 @retail:            #f6efef;
 @rock:              #dce0d9;
 @school:            #fdfdfb;
-@sports:            #d7ffc4;
+@sports:            #d0ffc4;
 @swamp:             #d0e4e4; //lighten(#a8d0cf, 12%);
-@water:             #a0abb5; //desaturate(#8fb0c8, 20%); /*Previous backup: #a3c5de*/
+@water:             #c3d4e3; //#a0abb5  desaturate(#8fb0c8, 20%);
 
 
 

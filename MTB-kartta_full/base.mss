@@ -128,7 +128,7 @@
       [type='reservoir']                  { polygon-fill: @water; }
       [type='retail']                     { polygon-fill: @commercial; }
       [type='school']                     { polygon-fill: @school; }
-      [type='scrub'][zoom>=13]            { polygon-fill: @grass;
+      [type='scrub'][zoom>=13]            { polygon-fill: @grassland;
                                             polygon-pattern-file: url("images/natural_scrub.png");
                                             [zoom=13]  { polygon-pattern-opacity: 0.6; } }
       [type='substation'],
@@ -181,9 +181,9 @@
     [land_type='nature_reserve'],
     [land_type='protected_area'] {
       line-color: @conservation;
-      line-opacity: 0.4;
+      line-opacity: 0.2;
       polygon-fill: @conservation;
-      polygon-opacity: 0.2;
+      polygon-opacity: 0.1;
       [zoom=7] { line-width: 0.4; }
       [zoom=8] { line-width: 0.7; }
       [zoom=9] { line-width: 1.0; }
