@@ -181,9 +181,9 @@
     [land_type='nature_reserve'],
     [land_type='protected_area'] {
       line-color: @conservation;
-      line-opacity: 0.2;
+      line-opacity: 0.3;
       polygon-fill: @conservation;
-      polygon-opacity: 0.1;
+      polygon-opacity: 0.15;
       [zoom=7] { line-width: 0.4; }
       [zoom=8] { line-width: 0.7; }
       [zoom=9] { line-width: 1.0; }

@@ -51,7 +51,7 @@ Map { font-directory: url(fonts); }
 @retail:            #f6efef;
 @rock:              #dce0d9;
 @school:            #fdfdfb;
-@sports:            #d0ffc4;
+@sports:            #a0d193;
 @swamp:             #d0e4e4; //lighten(#a8d0cf, 12%);
 @water:             #c3d4e3; //#a0abb5  desaturate(#8fb0c8, 20%);
 
@@ -103,7 +103,7 @@ Map { font-directory: url(fonts); }
 
 // Dash colors
 @footway:         #a43820;
-@cycleway:        #0021ff;
+@cycleway:        #3046d7;
 @forbidden:       #ff003d;
 
 // Case colors

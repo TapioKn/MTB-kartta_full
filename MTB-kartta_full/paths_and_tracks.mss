@@ -40,13 +40,13 @@
         line-width: @paz15_cw;
         [width<0.6]                { line-width: @paz15_cw / 1.8; }
         [width>0.8]                { line-width: @paz15_cw * 1.5; }
-        [width>1.7],[type='track'] { line-width: @paz15_cw * 1.8; }
+        [width>1.7],[type='track'] { line-width: @paz15_cw * 1.5; }
       }
       [zoom>=16] {
 	      line-width: @paz16_cw;
         [width<0.6]                { line-width: @paz16_cw / 2.0; }
         [width>0.8]                { line-width: @paz16_cw * 1.6; }
-        [width>1.7],[type='track'] { line-width: @paz16_cw * 2.2; }
+        [width>1.7],[type='track'] { line-width: @paz16_cw * 1.6; }
       }
     }
 

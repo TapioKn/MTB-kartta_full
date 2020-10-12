@@ -124,11 +124,11 @@ come in as well.
 /* Cycleways not rendered on z<=12 */
 @cwz11_cw: 0.0;   @cwz11_lw: 0.0;   @cwz11_da: 4, 2;   @cwz11_pda: 8, 2;   @cwz11_uda: 8, 2;
 @cwz12_cw: 0.0;   @cwz12_lw: 0.0;   @cwz12_da: 4, 2;   @cwz12_pda: 8, 2;   @cwz12_uda: 8, 2;
-@cwz13_cw: 0.0;   @cwz13_lw: 1.0;   @cwz13_da: 5, 2;   @cwz13_pda: 10, 2;  @cwz13_uda: 2.5, 1.5;
-@cwz14_cw: 0.0;   @cwz14_lw: 1.2;   @cwz14_da: 5, 2;   @cwz14_pda: 10, 2;  @cwz14_uda: 2.5, 1.5;
-@cwz15_cw: 3.0;   @cwz15_lw: 2.0;   @cwz15_da: 5, 2;   @cwz15_pda: 10, 2;  @cwz15_uda: 2.5, 1.5;
-@cwz16_cw: 3.5;   @cwz16_lw: 2.5;   @cwz16_da: 5, 2;   @cwz16_pda: 10, 2;  @cwz16_uda: 2.5, 1.5;
-@cwz17_cw: 4.0;   @cwz17_lw: 3.0;   @cwz17_da: 5, 2;   @cwz17_pda: 10, 2;  @cwz17_uda: 2.5, 1.5;
+@cwz13_cw: 0.0;   @cwz13_lw: 1.0;   @cwz13_da: 5, 2;   @cwz13_pda: 10, 2;  @cwz13_uda: 2.5, 1.2;
+@cwz14_cw: 0.0;   @cwz14_lw: 1.5;   @cwz14_da: 5, 2;   @cwz14_pda: 10, 2;  @cwz14_uda: 2.5, 1.2;
+@cwz15_cw: 3.5;   @cwz15_lw: 2.5;   @cwz15_da: 5, 2;   @cwz15_pda: 10, 2;  @cwz15_uda: 2.5, 1.2;
+@cwz16_cw: 4.0;   @cwz16_lw: 3.0;   @cwz16_da: 5, 2;   @cwz16_pda: 10, 2;  @cwz16_uda: 2.5, 1.2;
+@cwz17_cw: 4.5;   @cwz17_lw: 3.5;   @cwz17_da: 5, 2;   @cwz17_pda: 10, 2;  @cwz17_uda: 2.5, 1.2;
 
 /* Footway case widths, line widths and dasharrays */
 @fwz11_cw: 0.0;   @fwz11_lw: 0.0;   @fwz11_da: 3, 2;
