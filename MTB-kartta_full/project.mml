@@ -1,13 +1,13 @@
 {
   "bounds": [
     23.3631,
-    61.3778,
-    23.9018,
-    61.6332
+    61.1778,
+    24.9018,
+    61.9332
   ],
   "center": [
-    23.8295,
-    61.4421,
+    23.90848,
+    61.4045,
     16
   ],
   "format": "png8",
@@ -890,7 +890,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT way, aerialway, barrier, power, fixme, noexit, \"natural\", ford, obstacle, highway, name, amenity\n    FROM planet_osm_point\n    WHERE (aerialway IS NOT NULL OR barrier IS NOT NULL OR power IS NOT NULL OR fixme IS NOT NULL OR noexit IS NOT NULL OR \"natural\" IS NOT NULL OR ford IS NOT NULL OR obstacle IS NOT NULL OR highway IS NOT NULL OR amenity IS NOT NULL)\n) AS data",
+        "table": "( SELECT way, aerialway, barrier, power, fixme, noexit, \"natural\", ford, obstacle, highway, name, amenity, shelter_type, leisure\n    FROM planet_osm_point\n    WHERE (aerialway IS NOT NULL OR barrier IS NOT NULL OR power IS NOT NULL OR fixme IS NOT NULL OR noexit IS NOT NULL OR \"natural\" IS NOT NULL OR ford IS NOT NULL OR obstacle IS NOT NULL OR highway IS NOT NULL OR amenity IS NOT NULL OR leisure IS NOT NULL)\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
