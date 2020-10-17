@@ -66,33 +66,40 @@
     text-halo-fill: lighten(@rock, 80%);
     text-halo-radius:1;
   }
-  [amenity='shelter'][zoom>=13] {
+  [leisure='firepit'][zoom>=13] {
     marker-allow-overlap: true;
-    marker-file: url('images/amenity_shelter.svg');
+    marker-file: url('images/leisure_firepit.svg');
+    marker-fill: @parking-label; //#0091da;
     marker-width: 12.0;
     marker-height: 12.0;
-    [zoom>=16] { marker-width: 14.0;  marker-height: 14.0;}
+    [zoom>=14] { marker-width: 13.0;  marker-height: 13.0;}
+    [zoom>=15] { marker-width: 14.0;  marker-height: 14.0;}
+    [zoom>=16] { marker-width: 15.0;  marker-height: 15.0;}
+  }
+  [amenity='shelter'][zoom>=10] {
+    marker-allow-overlap: true;
+    marker-file: url('images/amenity_shelter.svg');
+    marker-fill: @parking-label; //#0091da;
+    marker-width: 13.0;
+    marker-height: 13.0;
+    [zoom>=14] { marker-width: 15.0;  marker-height: 15.0;}
+    [zoom>=15] { marker-width: 16.0;  marker-height: 16.0;}
+    [zoom>=16] { marker-width: 17.0;  marker-height: 17.0;}
     [shelter_type='public_transport'] {marker-opacity: 0;}
-    [zoom>=14] {
+    [zoom>=13] {
       text-name: "[name]";
       text-placement: point;
       text-allow-overlap: true;
       text-dy: 8;
       text-face-name: @sans;
       text-size: 10;
-      [zoom=14] { text-size: 9; }
+      [zoom<=14] { text-size: 9; }
       text-wrap-width:30;
-      text-fill: @unpaved_case * 0.6;
-      text-halo-fill: lighten(@unpaved_case, 80%);
+      text-fill: @parking-label * 0.6;
+      text-halo-fill: lighten(@parking-label, 90%);
       text-halo-radius:1;
       [shelter_type='public_transport'] {text-opacity: 0;}
     }
   }
-  [leisure='firepit'][zoom>=13] {
-    marker-allow-overlap: true;
-    marker-file: url('images/leisure_firepit.svg');
-    marker-width: 12.0;
-    marker-height: 12.0;
-    [zoom>=16] { marker-width: 14.0;  marker-height: 14.0;}
-  }
+
 }
