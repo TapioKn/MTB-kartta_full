@@ -6,8 +6,8 @@
     61.9332
   ],
   "center": [
-    23.90848,
-    61.4045,
+    23.76514,
+    61.49788,
     16
   ],
   "format": "png8",
@@ -231,7 +231,7 @@
         "port": "5432",
         "project": "MTB-kartta_full",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT osm_id, way, \"natural\", way_area AS area, COALESCE(leisure, boundary) AS land_type, wetland AS wetland_type, barrier, landuse\n  FROM planet_osm_polygon\n  WHERE COALESCE(\"natural\", leisure, boundary, wetland, barrier, landuse) IS NOT NULL AND 'boundary' NOT IN ('administrative')\n  ORDER BY way_area DESC\n) AS data",
+        "table": "( SELECT osm_id, way, \"natural\", way_area AS area, COALESCE(leisure, boundary) AS land_type, wetland AS wetland_type, barrier, landuse, man_made\n  FROM planet_osm_polygon\n  WHERE COALESCE(\"natural\", leisure, boundary, wetland, barrier, landuse, man_made) IS NOT NULL AND 'boundary' NOT IN ('administrative')\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -407,14 +407,48 @@
         "dbname": "gis",
         "geometry_field": "way",
         "host": "localhost",
+        "id": "waterway_label",
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building NOT IN ('', '0','false', 'no', 'roof')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
+        "project": "foss4g-2011",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, waterway AS type, name\n  FROM planet_osm_line\n  WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
-        "extent": "2124333.1973415,8055502.46894884,4224200.43002062,11228955.9943898"
+        "extent": "1208977.18100533,7159071.11973415,4224200.43002062,11228036.8150679"
+      },
+      "class": "",
+      "geometry": "linestring",
+      "id": "waterway_label",
+      "name": "waterway_label",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "extent": [
+        10.860426798488211,
+        53.941427294730666,
+        37.94663809471778,
+        70.48379529530938
+      ],
+      "advanced": {}
+    },
+    {
+      "Datasource": {
+        "dbname": "gis",
+        "geometry_field": "way",
+        "host": "localhost",
+        "key_field": "",
+        "password": "renderer",
+        "port": "5432",
+        "table": "( SELECT way, COALESCE(\"building\", \"man_made\") AS type\n  FROM planet_osm_polygon\n  WHERE building NOT IN ('', '0','false', 'no', 'roof') OR man_made IN ('bridge')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
+        "type": "postgis",
+        "user": "renderer",
+        "extent_cache": "auto",
+        "extent": "2124333.1973415,8055502.46894884,4224200.43002062,11228955.9943898",
+        "id": "buildings",
+        "project": "MTB-kartta_full",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "class": "",
       "geometry": "polygon",
@@ -424,7 +458,7 @@
       "srs-name": "900913",
       "extent": [
         19.083209797343606,
-        58.41733559472438,
+        58.41733559472439,
         37.94663809471778,
         70.48655359530966
       ],
@@ -519,37 +553,6 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "paths_and_tracks_tunnel"
-    },
-    {
-      "Datasource": {
-        "dbname": "gis",
-        "geometry_field": "way",
-        "host": "localhost",
-        "id": "waterway_label",
-        "key_field": "",
-        "password": "renderer",
-        "port": "5432",
-        "project": "foss4g-2011",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, waterway AS type, name\n  FROM planet_osm_line\n  WHERE waterway IN ('canal', 'river', 'stream') \n    AND name IS NOT NULL\n) AS data",
-        "type": "postgis",
-        "user": "renderer",
-        "extent_cache": "auto",
-        "extent": "1208977.18100533,7159071.11973415,4224200.43002062,11228036.8150679"
-      },
-      "class": "",
-      "geometry": "linestring",
-      "id": "waterway_label",
-      "name": "waterway_label",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "extent": [
-        10.860426798488211,
-        53.941427294730666,
-        37.94663809471778,
-        70.48379529530938
-      ],
-      "advanced": {}
     },
     {
       "geometry": "linestring",
@@ -791,6 +794,34 @@
       "advanced": {}
     },
     {
+      "geometry": "linestring",
+      "extent": [
+        22.333054496891226,
+        60.99399609477055,
+        23.98148979666173,
+        62.00328089479927
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT way, bridge, \"mtb:scale\", \"mtb:winter\", noexit, width, access,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" >= '0' THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL AND highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway'))\n ORDER BY z_order\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "2486104.25445236,8624444.74465984,2669607.23262847,8859920.79701009",
+        "dbname": "gis",
+        "host": "localhost",
+        "port": "5432",
+        "user": "renderer",
+        "password": "renderer"
+      },
+      "id": "paths_and_tracks_bridge",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "paths_and_tracks_bridge"
+    },
+    {
       "Datasource": {
         "dbname": "gis",
         "geometry_field": "way",
@@ -820,34 +851,6 @@
         70.48379529530938
       ],
       "advanced": {}
-    },
-    {
-      "geometry": "linestring",
-      "extent": [
-        22.333054496891226,
-        60.99399609477055,
-        23.98148979666173,
-        62.00328089479927
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "( SELECT way, bridge, \"mtb:scale\", \"mtb:winter\", noexit, width, access,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" >= '0' THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL AND highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway'))\n ORDER BY z_order\n) AS data",
-        "key_field": "",
-        "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "2486104.25445236,8624444.74465984,2669607.23262847,8859920.79701009",
-        "dbname": "gis",
-        "host": "localhost",
-        "port": "5432",
-        "user": "renderer",
-        "password": "renderer"
-      },
-      "id": "paths_and_tracks_bridge",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "paths_and_tracks_bridge"
     },
     {
       "geometry": "linestring",

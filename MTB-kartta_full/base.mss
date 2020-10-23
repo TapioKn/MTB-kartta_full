@@ -152,12 +152,9 @@
       [type='vineyard']                   { polygon-fill: @farmyard; }
       [type='wood']                       { polygon-fill: @forest; }
 
-      [type="cliff"][zoom>=14] {
-        line-pattern-file: url("images/natural_cliff.png");
-      }
+      [type="cliff"][zoom>=14] { line-pattern-file: url("images/natural_cliff.png"); }
     }
   }
-
 }
 
 #landuse_overlays {
@@ -214,13 +211,19 @@
 
 /* ---- BUILDINGS ---- */
 #buildings[zoom>=13] {
-  polygon-fill: lighten(@building, 20%);
-  line-color:   @building;
-  line-width:   1;
-  [zoom=15]  { polygon-fill: lighten(@building, 30%); line-color: lighten(@building, 10%); }
-  [zoom=14]  { polygon-fill: lighten(@building, 35%); line-color: lighten(@building, 25%); }
-  [zoom=13]  { polygon-fill: lighten(@building, 40%); line-color: lighten(@building, 35%); }
-  [zoom<=12] { polygon-opcaity: 0; line-opacity: 0; }
+  ::polybridges {
+    [zoom>12][type='bridge'] { polygon-fill: @land; }
+  }
+  ::buildings[type!='bridge'] {
+    polygon-fill: lighten(@building, 20%);
+    line-color:   @building;
+    line-width:   1;
+    [zoom=15]  { polygon-fill: lighten(@building, 30%); line-color: lighten(@building, 10%); }
+    [zoom=14]  { polygon-fill: lighten(@building, 35%); line-color: lighten(@building, 25%); }
+    [zoom=13]  { polygon-fill: lighten(@building, 40%); line-color: lighten(@building, 35%); }
+    [zoom<=12] { polygon-opcaity: 0; line-opacity: 0; }
+  }
+
 }
 #roofs[zoom>=13] {
   polygon-fill:    lighten(@building, 20%);
