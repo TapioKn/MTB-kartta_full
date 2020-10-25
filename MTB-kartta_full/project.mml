@@ -6,9 +6,9 @@
     61.9332
   ],
   "center": [
-    23.76514,
-    61.49788,
-    16
+    23.46347,
+    61.48806,
+    17
   ],
   "format": "png8",
   "interactivity": false,
@@ -138,7 +138,7 @@
         "port": "5432",
         "project": "MTB-kartta_full",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT osm_id, way, area AS areatype, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, man_made, power) AS type\n  FROM planet_osm_polygon\n  ORDER BY way_area DESC\n) AS data",
+        "table": "( SELECT osm_id, way, area AS areatype, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, man_made, power) AS type\n  FROM planet_osm_polygon\n  WHERE COALESCE(landuse, leisure, \"natural\", highway, amenity, man_made, power) IS NOT NULL\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -152,7 +152,7 @@
       "srs-name": "900913",
       "extent": [
         19.083209797343606,
-        58.41733559472438,
+        58.41733559472439,
         37.94663809471778,
         70.48655359530966
       ],
@@ -441,7 +441,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "table": "( SELECT way, COALESCE(\"building\", \"man_made\") AS type\n  FROM planet_osm_polygon\n  WHERE building NOT IN ('', '0','false', 'no', 'roof') OR man_made IN ('bridge')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
+        "table": "( SELECT way, COALESCE(\"building\", \"man_made\") AS type\n  FROM planet_osm_polygon\n  WHERE (building IS NOT NULL AND building NOT IN ('', '0','false', 'no', 'roof')) OR man_made IN ('bridge')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -536,7 +536,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "/* Paths & tracks tunnel */\n( SELECT way, tunnel, \"mtb:scale\", \"mtb:winter\", noexit, width, access,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" IS NOT NULL THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL AND tunnel != 'no' AND tunnel IS NOT NULL AND highway NOT IN ('motorway', 'motorway_link', 'trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'living_street', 'service', 'road', 'cycleway'))\n ORDER BY z_order\n) AS data",
+        "table": "/* Paths & tracks tunnel */\n( SELECT way, tunnel, \"mtb:winter\", noexit, width, access,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" IS NOT NULL THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN \"mtb:scale\" = '0-' THEN '0-'\n    WHEN \"mtb:scale\" IN ('0', '0+') THEN '0'\n    WHEN \"mtb:scale\" IN ('1-', '1', '1+') THEN '1'\n    WHEN \"mtb:scale\" IN ('2-', '2', '2+') THEN '2'\n    WHEN \"mtb:scale\" IN ('3-', '3', '3+') THEN '3'\n    WHEN \"mtb:scale\" IN ('4-', '4', '4+') THEN '4'\n    WHEN \"mtb:scale\" IN ('5-', '5', '5+') THEN '5'\n    WHEN \"mtb:scale\" = '6' THEN '6'\n    WHEN \"mtb:scale\" = '-1' THEN '-1'\n    ELSE 'noscale' END AS \"mtb:scale\"\n  FROM planet_osm_line\n  WHERE (highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND tunnel != 'no' AND tunnel IS NOT NULL)\n ORDER BY z_order\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
@@ -595,7 +595,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "\n/* paths_and_tracks */\n( SELECT way, seasonal, \"mtb:scale\", \"mtb:winter\", obstacle, surface, noexit, access, width, bicycle,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' AND \"mtb:scale\" IS NULL THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' AND \"mtb:scale\" IS NULL THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" IS NOT NULL THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' AND cycleway IS NULL THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility\n  FROM planet_osm_line\n  WHERE (highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway'))\n ORDER BY z_order\n) AS data\n",
+        "table": "/* paths_and_tracks */\n( SELECT way, seasonal, \"mtb:winter\", obstacle, surface, noexit, access, width, bicycle,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' AND \"mtb:scale\" IS NULL THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' AND \"mtb:scale\" IS NULL THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" IS NOT NULL THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' AND cycleway IS NULL THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility,\n  CASE\n    WHEN \"mtb:scale\" = '0-' THEN '0-'\n    WHEN \"mtb:scale\" IN ('0', '0+') THEN '0'\n    WHEN \"mtb:scale\" IN ('1-', '1', '1+') THEN '1'\n    WHEN \"mtb:scale\" IN ('2-', '2', '2+') THEN '2'\n    WHEN \"mtb:scale\" IN ('3-', '3', '3+') THEN '3'\n    WHEN \"mtb:scale\" IN ('4-', '4', '4+') THEN '4'\n    WHEN \"mtb:scale\" IN ('5-', '5', '5+') THEN '5'\n    WHEN \"mtb:scale\" = '6' THEN '6'\n    WHEN \"mtb:scale\" = '-1' THEN '-1'\n    ELSE 'noscale' END AS \"mtb:scale\"\n  FROM planet_osm_line\n  WHERE (highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway'))\n ORDER BY z_order\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
@@ -657,7 +657,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT way, highway, sidewalk, \"sidewalk:left:bicycle\" AS \"sidewalk_left_bicycle\", \"sidewalk:right:bicycle\" AS \"sidewalk_right_bicycle\", \"sidewalk:both:bicycle\" AS \"sidewalk_both_bicycle\", cycleway, \"cycleway:left\" AS \"cycleway_left\", \"cycleway:right\" AS \"cycleway_right\", \"cycleway:both\" AS \"cycleway_both\"\n  FROM planet_osm_line\n) AS data",
+        "table": "( SELECT way, highway, sidewalk, \"sidewalk:left:bicycle\" AS \"sidewalk_left_bicycle\", \"sidewalk:right:bicycle\" AS \"sidewalk_right_bicycle\", \"sidewalk:both:bicycle\" AS \"sidewalk_both_bicycle\", cycleway, \"cycleway:left\" AS \"cycleway_left\", \"cycleway:right\" AS \"cycleway_right\", \"cycleway:both\" AS \"cycleway_both\"\n  FROM planet_osm_line\n  WHERE highway IS NOT NULL\n) AS data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",
@@ -803,7 +803,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT way, bridge, \"mtb:scale\", \"mtb:winter\", noexit, width, access,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" >= '0' THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL AND highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway'))\n ORDER BY z_order\n) AS data",
+        "table": "( SELECT way, bridge, \"mtb:winter\", noexit, width, access,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" >= '0' THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility,\n  CASE\n    WHEN \"mtb:scale\" = '0-' THEN '0-'\n    WHEN \"mtb:scale\" IN ('0', '0+') THEN '0'\n    WHEN \"mtb:scale\" IN ('1-', '1', '1+') THEN '1'\n    WHEN \"mtb:scale\" IN ('2-', '2', '2+') THEN '2'\n    WHEN \"mtb:scale\" IN ('3-', '3', '3+') THEN '3'\n    WHEN \"mtb:scale\" IN ('4-', '4', '4+') THEN '4'\n    WHEN \"mtb:scale\" IN ('5-', '5', '5+') THEN '5'\n    WHEN \"mtb:scale\" = '6' THEN '6'\n    WHEN \"mtb:scale\" = '-1' THEN '-1'\n    ELSE 'noscale' END AS \"mtb:scale\"\n  FROM planet_osm_line\n  WHERE (highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bridge IN ('1', 'yes', 'boardwalk'))\n ORDER BY z_order\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
@@ -857,12 +857,12 @@
       "extent": [
         22.333054456894995,
         59.81454700601614,
-        29.025722153188642,
+        29.02572215318864,
         66.02622780550627
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "/* constructs_line */\n( SELECT way, \n  CASE\n    WHEN aerialway IN ('drag_lift', 't-bar') THEN 'minor_line'\n    WHEN power = 'minor_line' THEN 'minor_line'\n    WHEN power = 'line' THEN 'major_line'\n    WHEN barrier = 'fence' THEN 'fence'\n    WHEN barrier = 'hedge' THEN 'hedge'\n    WHEN barrier = 'wall' THEN 'wall'\n    WHEN \"natural\"='cliff' THEN 'cliff'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE (aerialway IS NOT NULL OR power IS NOT NULL OR barrier IS NOT NULL OR \"natural\" IS NOT NULL)\n) AS data",
+        "table": "/* constructs_line */\n( SELECT way,\n  CASE\n    WHEN aerialway IN ('drag_lift', 't-bar') THEN 'minor_line'\n    WHEN power = 'minor_line' THEN 'minor_line'\n    WHEN power = 'line' THEN 'major_line'\n    WHEN barrier = 'fence' THEN 'fence'\n    WHEN barrier = 'hedge' THEN 'hedge'\n    WHEN barrier = 'wall' THEN 'wall'\n    WHEN \"natural\"='cliff' THEN 'cliff'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE COALESCE('aerialway', 'power', 'barrier', \"natural\") IS NOT NULL\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
@@ -893,7 +893,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT way, aerialway, barrier, power, fixme, noexit, \"natural\", ford, obstacle, highway, name, amenity, shelter_type, leisure\n    FROM planet_osm_point\n    WHERE (aerialway IS NOT NULL OR barrier IS NOT NULL OR power IS NOT NULL OR fixme IS NOT NULL OR noexit IS NOT NULL OR \"natural\" IS NOT NULL OR ford IS NOT NULL OR obstacle IS NOT NULL OR highway IS NOT NULL OR amenity IS NOT NULL OR leisure IS NOT NULL)\n) AS data",
+        "table": "( SELECT way, aerialway, barrier, power, fixme, noexit, \"natural\", ford, obstacle, highway, name, amenity, shelter_type, leisure\n    FROM planet_osm_point\n    WHERE COALESCE('aerialway', 'barrier', 'power', 'fixme', 'noexit', \"natural\", 'ford', 'obstacle', 'highway', 'name', 'amenity', 'shelter_type', 'leisure') IS NOT NULL\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
@@ -917,13 +917,13 @@
     {
       "extent": [
         23.10622729678361,
-        61.20264329477596,
+        61.202643294775974,
         23.96734879666369,
-        61.61077689478734
+        61.61077689478736
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building IN ('roof')\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
+        "table": "( SELECT way, \"building\" AS type\n  FROM planet_osm_polygon\n  WHERE building = 'roof'\n  ORDER BY ST_YMin(ST_Envelope(way)) DESC\n) AS data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "auto",

@@ -971,8 +971,6 @@ come in as well.
 
 
 
-
-
 /* ---- Ways under construction ------------------------------------- */
 #roads_construction [zoom>=12] {
   ::case {
