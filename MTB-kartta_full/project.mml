@@ -6,8 +6,8 @@
     61.9332
   ],
   "center": [
-    23.46347,
-    61.48806,
+    23.63752,
+    61.53261,
     17
   ],
   "format": "png8",
@@ -371,6 +371,34 @@
         70.48379529530938
       ],
       "advanced": {}
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        22.333054496891226,
+        60.75442519476463,
+        24.997605896520273,
+        63.03240199483504
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "/* cliffs */\n( SELECT way, \"natural\"\n  FROM planet_osm_line\n  WHERE \"natural\"='cliff'\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "2486104.25445236,8569652.2918102,2782720.75945157,9108200.36179441",
+        "dbname": "gis",
+        "host": "localhost",
+        "port": "5432",
+        "user": "renderer",
+        "password": "renderer"
+      },
+      "id": "cliffs",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "cliffs"
     },
     {
       "Datasource": {
@@ -853,37 +881,6 @@
       "advanced": {}
     },
     {
-      "geometry": "linestring",
-      "extent": [
-        22.333054456894995,
-        59.81454700601614,
-        29.02572215318864,
-        66.02622780550627
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "/* constructs_line */\n( SELECT way,\n  CASE\n    WHEN aerialway IN ('drag_lift', 't-bar') THEN 'minor_line'\n    WHEN power = 'minor_line' THEN 'minor_line'\n    WHEN power = 'line' THEN 'major_line'\n    WHEN barrier = 'fence' THEN 'fence'\n    WHEN barrier = 'hedge' THEN 'hedge'\n    WHEN barrier = 'wall' THEN 'wall'\n    WHEN \"natural\"='cliff' THEN 'cliff'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE COALESCE('aerialway', 'power', 'barrier', \"natural\") IS NOT NULL\n) AS data",
-        "key_field": "",
-        "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "2486104.25,8358564.06,3231128.61,9884027.86",
-        "dbname": "gis",
-        "host": "localhost",
-        "port": "5432",
-        "user": "renderer",
-        "password": "renderer",
-        "id": "constructs_line",
-        "project": "MTB-kartta_full",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
-      },
-      "id": "constructs_line",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "constructs_line"
-    },
-    {
       "geometry": "point",
       "extent": [
         16.766666697666025,
@@ -1076,7 +1073,7 @@
         "port": "5432",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, highway AS type, name, oneway, tunnel\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('residential', 'unclassified', 'road', 'service', 'living_street', 'unknown', 'path', 'track')\n) AS data",
+        "table": "( SELECT way, highway AS type, name, oneway, tunnel\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('residential', 'unclassified', 'road', 'service', 'living_street', 'unknown', 'path', 'track', 'cycleway', 'footway', 'steps')\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -1095,6 +1092,64 @@
         70.48379529530938
       ],
       "advanced": {}
+    },
+    {
+      "extent": [
+        22.904643696811686,
+        61.18276199477543,
+        24.830032696543626,
+        61.977188894798466
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "( SELECT osm_id, way, way_area AS area, wetland AS wetland_type\n  FROM planet_osm_polygon\n  WHERE wetland IS NOT NULL\n  ORDER BY way_area DESC\n) AS data",
+        "key_field": "",
+        "geometry_field": "",
+        "extent_cache": "auto",
+        "extent": "2549733.27313044,8667909.35053914,2764066.59615957,8853735.93320143",
+        "dbname": "gis",
+        "host": "localhost",
+        "port": "5432",
+        "user": "renderer",
+        "password": "renderer"
+      },
+      "id": "reedbeds",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "reedbeds"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        22.333054456894995,
+        59.81454700601614,
+        29.02572215318864,
+        66.02622780550627
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "/* constructs_line */\n( SELECT way,\n  CASE\n    WHEN aerialway IN ('drag_lift', 't-bar') THEN 'minor_line'\n    WHEN power = 'minor_line' THEN 'minor_line'\n    WHEN power = 'line' THEN 'major_line'\n    WHEN barrier = 'fence' THEN 'fence'\n    WHEN barrier = 'hedge' THEN 'hedge'\n    WHEN barrier = 'wall' THEN 'wall'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE COALESCE('aerialway', 'power', 'barrier') IS NOT NULL\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "2486104.25,8358564.06,3231128.61,9884027.86",
+        "dbname": "gis",
+        "host": "localhost",
+        "port": "5432",
+        "user": "renderer",
+        "password": "renderer",
+        "id": "constructs_line",
+        "project": "MTB-kartta_full",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "constructs_line",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "constructs_line"
     },
     {
       "extent": [
@@ -1125,33 +1180,6 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "markers"
-    },
-    {
-      "extent": [
-        22.904643696811686,
-        61.18276199477543,
-        24.830032696543626,
-        61.977188894798466
-      ],
-      "Datasource": {
-        "type": "postgis",
-        "table": "( SELECT osm_id, way, way_area AS area, wetland AS wetland_type\n  FROM planet_osm_polygon\n  WHERE wetland IS NOT NULL\n  ORDER BY way_area DESC\n) AS data",
-        "key_field": "",
-        "geometry_field": "",
-        "extent_cache": "auto",
-        "extent": "2549733.27313044,8667909.35053914,2764066.59615957,8853735.93320143",
-        "dbname": "gis",
-        "host": "localhost",
-        "port": "5432",
-        "user": "renderer",
-        "password": "renderer"
-      },
-      "id": "reedbeds",
-      "class": "",
-      "srs-name": "900913",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "advanced": {},
-      "name": "reedbeds"
     }
   ],
   "scale": 1,

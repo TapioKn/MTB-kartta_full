@@ -234,6 +234,7 @@
     text-face-name: @sans;
     text-size: 10;
     text-wrap-width:30;
+    text-line-spacing: -2;
     text-fill: darken(@building, 50%);
     text-halo-fill: #fff;
     text-clip: false;
@@ -362,12 +363,11 @@
   text-halo-fill:@road_halo;
   text-halo-radius:1.5;
   text-min-distance:40;
-  [type='path'],[type='track'] { text-dy: 7; }
-  [zoom=15]  { [type='path'],[type='track'] { text-size:10; } }
+  [zoom=15]  { [type='path'],[type='track'],[type='steps'],[type='cycleway'],[type='footway'] { text-size:10; text-dy: 8;} }
   [zoom=16]  { text-size:12; text-character-spacing:0.5; text-halo-radius:2.0;
-               [type='path'],[type='track'] { text-size:11; } }
+               [type='path'],[type='track'],[type='steps'],[type='cycleway'],[type='footway'] { text-size:11; text-dy: 9; } }
   [zoom>=17] { text-size:14; text-character-spacing:0.75; text-halo-radius:2.5;
-               [type='path'],[type='track'] { text-size:12; }}
+               [type='path'],[type='track'],[type='steps'],[type='cycleway'],[type='footway'] { text-size:12; text-dy: 10;} }
   [tunnel='yes'],
   [tunnel='1'] { text-opacity: 0; text-halo-radius: 0; }
 }

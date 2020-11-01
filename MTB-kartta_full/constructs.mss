@@ -1,11 +1,10 @@
 /* Line type constructs and similar elements */
 #constructs_line {
-  [type='hedge'] {
+  [type='hedge'][zoom>=15] {
     line-color: @hedge;
-    [zoom>=16] { line-width: 2; }
-    [zoom=15]  { line-width: 1.5; }
     [zoom=15]  { line-width: 1; }
-    [zoom<=14] { line-width: 0; }
+    [zoom=16]  { line-width: 2; }
+    [zoom>=17] { line-width: 2.5; }
   }
   [type='wall'][zoom>=15] {
     line-width: 1;
@@ -17,34 +16,34 @@
     line-color: darken(@building, 10%);
     [zoom>=15] { line-width: 1; }
   }
-  [type='minor_line'] {
+  [type='minor_line'][zoom>=14] {
     line-width: 1;
     line-color: darken(@building, 10%);
     line-opacity: 0.7;
-    [zoom<=14] { line-width: 0; }
   }
-  [type='major_line'] {
+  [type='major_line'][zoom>=13] {
     line-width: 1;
     line-color: darken(@building, 10%);
     line-opacity: 0.7;
-    [zoom<=13] { line-width: 0; }
-  }
-  [type='cliff'][zoom>=14] {
-    line-pattern-file: url("images/natural_cliff.png");
   }
 }
+
+#cliffs[zoom>=14] {
+  line-pattern-file: url("images/natural_cliff.png");
+}
+
 /* Point type physical elements, both constructs and natural */
 #constructs_point {
-  [power='pole'][zoom>=15] {
+  [power='pole'][zoom>=14] {
     marker-file: url('images/power_pole.png');
   }
-  [aerialway='pylon'][zoom>=14] {
+  [aerialway='pylon'][zoom>=13] {
     marker-file: url('images/aerialway_pylon.png');
   }
-  [aerialway='station'][zoom>=14] {
+  [aerialway='station'][zoom>=13] {
     marker-file: url('images/aerialway_station.png');
   }
-  [power='tower'][zoom>=14] {
+  [power='tower'][zoom>=13] {
     marker-file: url('images/power_tower.png');
   }
   [barrier='gate'][zoom>=15] {
