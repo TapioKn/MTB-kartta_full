@@ -243,14 +243,15 @@
 
 #markers {
   // Markers for parking
-  [type='parking'][zoom>=16] {
+  [type='parking'][zoom>=15] {
     text-name: "'P'";
     text-face-name: @sans_bold;
     text-fill: @parking-label;
     text-halo-fill: #fff;
     text-size: 12;
+    [zoom>=15] { text-size: 11; }
     text-halo-radius: 1.0;
-    text-opacity: 0.6;
+    text-opacity: 0.8;
     [access!=''][access!='permissive'][access!='yes'] {
       text-opacity: 0.3;
     }
@@ -439,5 +440,18 @@
     marker-file: url(images/amenity-drinking_water.png);
     marker-allow-overlap: true;
     marker-placement: point;
+  }
+  [amenity='parking'][zoom>=15] {
+    text-name: "'P'";
+    text-face-name: @sans_bold;
+    text-fill: @parking-label;
+    text-halo-fill: #fff;
+    text-size: 12;
+    [zoom>=15] { text-size: 11; }
+    text-halo-radius: 1.0;
+    text-opacity: 0.8;
+    [access!=''][access!='permissive'][access!='yes'] {
+      text-opacity: 0.3;
+    }
   }
 }
