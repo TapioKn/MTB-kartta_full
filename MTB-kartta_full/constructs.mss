@@ -53,17 +53,19 @@
   [natural='peak'][zoom>=14] {
     marker-allow-overlap: true;
     marker-file: url('images/natural_peak.png');
-    text-name: "[name]";
-    text-placement: point;
-    text-allow-overlap: true;
-    text-dy: 8;
-    text-face-name: @sans_lt;
-    text-size: 10;
-    [zoom<=14] { text-size: 9; }
-    text-wrap-width:30;
-    text-fill: @rock * 0.2;
-    text-halo-fill: lighten(@rock, 80%);
-    text-halo-radius:1;
+    ::peaknames {
+      text-name: "[name]";
+      text-placement: point;
+      text-allow-overlap: true;
+      text-dy: 8;
+      text-face-name: @sans_lt;
+      text-size: 10;
+      [zoom<=14] { text-size: 9; }
+      text-wrap-width:30;
+      text-fill: @rock * 0.2;
+      text-halo-fill: lighten(@rock, 80%);
+      text-halo-radius:1;
+    }
   }
   [leisure='firepit'][zoom>=13] {
     marker-allow-overlap: true;
@@ -100,5 +102,27 @@
       [shelter_type='public_transport'] {text-opacity: 0;}
     }
   }
-
+  [tourism='viewpoint'][zoom>=11] {
+    marker-allow-overlap: true;
+    marker-file: url('images/tourism_viewpoint.svg');
+    marker-fill: @parking-label; //#0091da;
+    marker-width: 13.0;
+    marker-height: 13.0;
+    [zoom>=14] { marker-width: 15.0;  marker-height: 15.0;}
+    [zoom>=15] { marker-width: 16.0;  marker-height: 16.0;}
+    [zoom>=16] { marker-width: 17.0;  marker-height: 17.0;}
+    [zoom>=13] {
+      text-name: "[name]";
+      text-placement: point;
+      text-allow-overlap: true;
+      text-dy: 8;
+      text-face-name: @sans;
+      text-size: 10;
+      [zoom<=14] { text-size: 9; }
+      text-wrap-width:30;
+      text-fill: @parking-label * 0.6;
+      text-halo-fill: lighten(@parking-label, 90%);
+      text-halo-radius:1;
+    }
+  }
 }
