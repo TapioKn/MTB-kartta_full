@@ -58,7 +58,7 @@
       text-placement: point;
       text-allow-overlap: true;
       text-dy: 8;
-      text-face-name: @sans_lt;
+      text-face-name: @sans;
       text-size: 10;
       [zoom<=14] { text-size: 9; }
       text-wrap-width:30;
