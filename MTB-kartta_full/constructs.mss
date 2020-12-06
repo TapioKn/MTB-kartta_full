@@ -82,9 +82,10 @@
   [type='amenity_shelter'][zoom>=10] {
     marker-allow-overlap: true;
     marker-file: url('images/amenity_shelter.svg');
-    marker-fill: @parking-label; //#0091da;
     marker-width: 13.0;
     marker-height: 13.0;
+    marker-fill: @parking-label; //#0091da
+    [access='private'] { marker-fill: @forbidden; } //#ff003d
     [zoom>=14] { marker-width: 15.0;  marker-height: 15.0;}
     [zoom>=15] { marker-width: 16.0;  marker-height: 16.0;}
     [zoom>=16] { marker-width: 17.0;  marker-height: 17.0;}
@@ -99,9 +100,11 @@
       text-wrap-width:30;
       text-fill: @parking-label * 0.6;
       text-halo-fill: lighten(@parking-label, 90%);
+      [access='private'],[access='no'] { text-fill: @forbidden * 0.6; text-halo-fill: lighten(@forbidden, 90%); }
       text-halo-radius:1;
     }
   }
+
   [type='tourism_viewpoint'][zoom>=13] {
     marker-allow-overlap: true;
     marker-file: url('images/tourism_viewpoint.svg');
