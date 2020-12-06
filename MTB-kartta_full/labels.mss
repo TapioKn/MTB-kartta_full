@@ -355,7 +355,7 @@
 }
 
 #minorroad_label[zoom>=15] {
-  text-name:[name];
+  text-name:'[name]';
   text-face-name:@sans;
   text-placement:line;
   text-size:11;
@@ -374,7 +374,7 @@
 }
 
 #othernames_label[zoom>=15] {
-  text-name: '('[mtb:name] + [alt_name] + [loc_name]')';
+  text-name:'[mtb:name]';
   text-face-name:@sans_italic;
   text-placement:line;
   text-size:10;
