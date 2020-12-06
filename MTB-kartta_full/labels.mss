@@ -355,7 +355,7 @@
 }
 
 #minorroad_label[zoom>=15] {
-  text-name:'[name]';
+  text-name:[name];
   text-face-name:@sans;
   text-placement:line;
   text-size:11;
@@ -371,6 +371,21 @@
                [type='path'],[type='track'],[type='steps'],[type='cycleway'],[type='footway'] { text-size:12; text-dy: 10;} }
   [tunnel='yes'],
   [tunnel='1'] { text-opacity: 0; text-halo-radius: 0; }
+}
+
+#othernames_label[zoom>=15] {
+  text-name: '('[mtb:name] + [alt_name] + [loc_name]')';
+  text-face-name:@sans_italic;
+  text-placement:line;
+  text-size:10;
+  text-character-spacing:0.35;
+  text-fill:@road_text;
+  text-halo-fill:@road_halo;
+  text-halo-radius:1.5;
+  text-min-distance:40;
+  [zoom=15]  { text-size:9; text-dy: -8; }
+  [zoom=16]  { text-size:11; text-character-spacing:0.5; text-halo-radius:2.0; text-dy: -9; }
+  [zoom>=17] { text-size:12; text-character-spacing:0.75; text-halo-radius:2.5; text-dy: -10; }
 }
 
 /* ================================================================== */

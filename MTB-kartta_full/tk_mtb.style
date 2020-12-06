@@ -155,6 +155,9 @@ node,way   obstacle                 text        linear
 way        trail_visibility         text        linear
 node,way   noexit                   text        linear
 node,way   mtb:description          text        linear
+node,way   mtb:name                 text        linear
+node,way   alt_name                 text        linear
+node,way   loc_name                 text        linear
 way        sidewalk                 text        linear
 way        sidewalk:left:bicycle    text        linear
 way        sidewalk:right:bicycle   text        linear
