@@ -6,9 +6,9 @@
     61.9332
   ],
   "center": [
-    23.73457,
-    61.49561,
-    17
+    23.62906,
+    61.50513,
+    16
   ],
   "format": "png8",
   "interactivity": false,
@@ -890,7 +890,7 @@
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT way, aerialway, barrier, power, fixme, noexit, \"natural\", ford, obstacle, highway, name, amenity, shelter_type, leisure, access, tourism\n    FROM planet_osm_point\n    WHERE COALESCE('aerialway', 'barrier', 'power', 'fixme', 'noexit', \"natural\", 'ford', 'obstacle', 'highway', 'name', 'amenity', 'shelter_type', 'leisure', 'tourism') IS NOT NULL\n) AS data",
+        "table": "/* constructs_point */\n( SELECT way, name, access,\n  CASE\n    WHEN power = 'pole' THEN 'power_pole'\n    WHEN power = 'tower' THEN 'power_tower'\n    WHEN aerialway = 'station' THEN 'aerialway_station'\n    WHEN aerialway = 'pylon' THEN 'aerialway_pylon'\n    WHEN barrier = 'gate' THEN 'barrier_gate'\n    WHEN leisure = 'firepit' THEN 'leisure_firepit'\n    WHEN amenity = 'shelter' AND ('shelter_type' != 'public_transport' OR 'shelter_type' IS NULL) AND ('access' != 'private' OR 'access' IS NULL) THEN 'amenity_shelter'\n    WHEN amenity IN ('drinking_water', 'water_point') THEN 'amenity_drinking_water'\n    WHEN amenity = 'parking' THEN 'amenity_parking'\n    WHEN tourism = 'viewpoint' THEN 'tourism_viewpoint'\n    WHEN fixme = 'continue' THEN 'fixme_continue'\n    WHEN fixme = 'resurvey' THEN 'fixme_resurvey'\n    WHEN noexit = 'yes' AND 'highway' IS NULL THEN 'noexit_yes'\n    WHEN ford = 'yes' THEN 'ford_yes'\n    WHEN obstacle = 'fallen_tree' THEN 'obstacle_fallen_tree'\n    WHEN 'natural' = 'peak' THEN 'natural_peak'\n    ELSE 'other' END AS type\n  FROM planet_osm_point\n  WHERE COALESCE('aerialway', 'barrier', 'power', 'fixme', 'noexit', \"natural\", 'ford', 'obstacle', 'amenity', 'leisure') IS NOT NULL\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",

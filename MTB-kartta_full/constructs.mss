@@ -34,40 +34,38 @@
 
 /* Point type physical elements, both constructs and natural */
 #constructs_point {
-  [power='pole'][zoom>=14] {
+  [type='power_pole'][zoom>=14] {
     marker-file: url('images/power_pole.png');
   }
-  [aerialway='pylon'][zoom>=13] {
+  [type='aerialway_pylon'][zoom>=13] {
     marker-file: url('images/aerialway_pylon.png');
   }
-  [aerialway='station'][zoom>=13] {
+  [type='aerialway_station'][zoom>=13] {
     marker-file: url('images/aerialway_station.png');
   }
-  [power='tower'][zoom>=13] {
+  [type='power_tower'][zoom>=13] {
     marker-file: url('images/power_tower.png');
   }
-  [barrier='gate'][zoom>=15] {
+  [type='barrier_gate'][zoom>=15] {
     marker-allow-overlap: true;
     marker-file: url('images/barrier_gate.png');
   }
-  [natural='peak'][zoom>=14] {
+  [type='natural_peak'][zoom>=14] {
     marker-allow-overlap: true;
     marker-file: url('images/natural_peak.png');
-    ::peaknames {
-      text-name: "[name]";
-      text-placement: point;
-      text-allow-overlap: true;
-      text-dy: 8;
-      text-face-name: @sans;
-      text-size: 10;
-      [zoom<=14] { text-size: 9; }
-      text-wrap-width:30;
-      text-fill: @rock * 0.2;
-      text-halo-fill: lighten(@rock, 80%);
-      text-halo-radius:1;
-    }
+    text-name: "[name]";
+    text-placement: point;
+    text-allow-overlap: true;
+    text-dy: 8;
+    text-face-name: @sans_lt;
+    text-size: 10;
+    [zoom<=14] { text-size: 9; }
+    text-wrap-width:30;
+    text-fill: @rock * 0.2;
+    text-halo-fill: lighten(@rock, 80%);
+    text-halo-radius:1;
   }
-  [leisure='firepit'][zoom>=13] {
+  [type='leisure_firepit'][zoom>=13] {
     marker-allow-overlap: true;
     marker-file: url('images/leisure_firepit.svg');
     marker-fill: @parking-label; //#0091da;
@@ -77,7 +75,7 @@
     [zoom>=15] { marker-width: 14.0;  marker-height: 14.0;}
     [zoom>=16] { marker-width: 15.0;  marker-height: 15.0;}
   }
-  [amenity='shelter'][zoom>=10] {
+  [type='amenity_shelter'][zoom>=10] {
     marker-allow-overlap: true;
     marker-file: url('images/amenity_shelter.svg');
     marker-fill: @parking-label; //#0091da;
@@ -86,7 +84,6 @@
     [zoom>=14] { marker-width: 15.0;  marker-height: 15.0;}
     [zoom>=15] { marker-width: 16.0;  marker-height: 16.0;}
     [zoom>=16] { marker-width: 17.0;  marker-height: 17.0;}
-    [shelter_type='public_transport'] {marker-opacity: 0;}
     [zoom>=13] {
       text-name: "[name]";
       text-placement: point;
@@ -99,30 +96,27 @@
       text-fill: @parking-label * 0.6;
       text-halo-fill: lighten(@parking-label, 90%);
       text-halo-radius:1;
-      [shelter_type='public_transport'] {text-opacity: 0;}
     }
   }
-  [tourism='viewpoint'][zoom>=11] {
+  [type='tourism_viewpoint'][zoom>=13] {
     marker-allow-overlap: true;
     marker-file: url('images/tourism_viewpoint.svg');
     marker-fill: @parking-label; //#0091da;
     marker-width: 13.0;
     marker-height: 13.0;
-    [zoom>=14] { marker-width: 15.0;  marker-height: 15.0;}
-    [zoom>=15] { marker-width: 16.0;  marker-height: 16.0;}
-    [zoom>=16] { marker-width: 17.0;  marker-height: 17.0;}
-    [zoom>=13] {
-      text-name: "[name]";
-      text-placement: point;
-      text-allow-overlap: true;
-      text-dy: 8;
-      text-face-name: @sans;
-      text-size: 10;
-      [zoom<=14] { text-size: 9; }
-      text-wrap-width:30;
-      text-fill: @parking-label * 0.6;
-      text-halo-fill: lighten(@parking-label, 90%);
-      text-halo-radius:1;
-    }
+    [zoom>=14] { marker-width: 14.0;  marker-height: 14.0;}
+    [zoom>=15] { marker-width: 15.0;  marker-height: 15.0;}
+    [zoom>=16] { marker-width: 16.0;  marker-height: 16.0;}
+    text-name: "[name]";
+    text-placement: point;
+    text-allow-overlap: true;
+    text-dy: 8;
+    text-face-name: @sans;
+    text-size: 10;
+    [zoom<=14] { text-size: 9; }
+    text-wrap-width:30;
+    text-fill: @parking-label * 0.6;
+    text-halo-fill: lighten(@parking-label, 90%);
+    text-halo-radius:1;
   }
 }

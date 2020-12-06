@@ -394,54 +394,43 @@
 /* FIXME/NOEXIT/ETC LABELS
 /* ================================================================== */
 #constructs_point[zoom>=15] {
-  [fixme='continue'] {
+  [type='fixme_continue'] {
     [zoom=15] { marker-file: url(images/fixme_continue-M.png); }
     [zoom>=16] { marker-file: url(images/fixme_continue-L.png); }
     marker-allow-overlap: true;
     marker-placement: point;
   }
-  [fixme='resurvey'] {
+  [type='fixme_resurvey'] {
     [zoom=15] { marker-file: url(images/fixme_resurvey-M.png); }
     [zoom>=16] { marker-file: url(images/fixme_resurvey-L.png); }
     marker-allow-overlap: true;
     marker-placement: point;
   }
-  [noexit='yes'] {
+  [type='noexit_yes'] {
     [zoom=15] { marker-file: url(images/noexit_yes-S.png); }
     [zoom=16] { marker-file: url(images/noexit_yes-S.png); }
     [zoom>=17] { marker-file: url(images/noexit_yes-M.png); }
     marker-allow-overlap: true;
     marker-placement: point;
     marker-opacity: 1.0;
-    [highway='turning_circle'] { marker-opacity: 0; }
   }
-  /*
-  [noexit='yes'] {
-    marker-fill :@forest;
-    marker-line-color: @path_line;
-    marker-line-width: 1;
-    marker-line-opacity: 0.5;
-    marker-allow-overlap: true;
-    [zoom=16] { marker-width: @paz16_cw * 2; }
-  }
-  */
-  [ford='yes'][zoom>=16] {
+  [type='ford_yes'][zoom>=16] {
     marker-file: url(images/ford_yes-L.png);
     marker-allow-overlap: true;
     marker-placement: point;
   }
-  [obstacle='fallen_tree'] {
+  [type='obstacle_fallen_tree'] {
     marker-file: url(images/obstacle_fallen_tree-M.png);
     [zoom>=16] { marker-file: url(images/obstacle_fallen_tree-L.png); }
     marker-allow-overlap: true;
     marker-placement: point;
   }
-  [amenity='drinking_water'],[amenity='water_point'] {
+  [type='amenity_drinking_water'] {
     marker-file: url(images/amenity-drinking_water.png);
     marker-allow-overlap: true;
     marker-placement: point;
   }
-  [amenity='parking'][zoom>=15] {
+  [type='amenity_parking'][zoom>=15] {
     text-name: "'P'";
     text-face-name: @sans_bold;
     text-fill: @parking-label;
