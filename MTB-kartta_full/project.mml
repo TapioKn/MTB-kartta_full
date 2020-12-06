@@ -6,8 +6,8 @@
     61.9332
   ],
   "center": [
-    23.8279,
-    61.4423,
+    23.5549,
+    61.4853,
     16
   ],
   "format": "png8",
@@ -1073,7 +1073,7 @@
         "port": "5432",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "/* minorroad_label */\n( SELECT way, highway AS type, name, \"mtb:name\", alt_name, loc_name, oneway, tunnel\n  FROM planet_osm_line\n  WHERE (COALESCE ('name', 'mtb:name', 'alt_name', 'loc_name') IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('residential', 'unclassified', 'road', 'service', 'living_street', 'unknown', 'path', 'track', 'cycleway', 'footway', 'steps')\n) AS data",
+        "table": "/* minorroad_label */\n( SELECT way, highway AS type, name, oneway, tunnel\n  FROM planet_osm_line\n  WHERE 'name' IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1')\n    AND highway IN ('residential', 'unclassified', 'road', 'service', 'living_street', 'unknown', 'path', 'track', 'cycleway', 'footway', 'steps')\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
