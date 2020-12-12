@@ -277,7 +277,7 @@ Map { background-color: @water; }
 }
 
 #waterway_high[zoom>=14] {
-  line-color: @water;
+  line-color: @waterway;
   [type='river'],
   [type='canal'] {
     line-cap: round;
