@@ -89,7 +89,7 @@ Map { font-directory: url(fonts); }
 @unpaved_case:     #815b15;
 
 @rail_regular:     #7c7b7b;
-@rail_abandoned:   #bfbfbf;
+@rail_disused:   #bfbfbf;
 @rail_fill:        #ffffff;
 
 @aeroway:          @building;
