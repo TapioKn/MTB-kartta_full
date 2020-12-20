@@ -1208,6 +1208,34 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "parking_area_markers"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        22.333054496891226,
+        60.749948194764535,
+        25.182332096494612,
+        63.03240199483504
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "/* point_names */\n( SELECT way, name,\n  CASE\n    WHEN \"natural\" = 'peak' THEN 'natural_peak'\n    ELSE 'other' END AS type\n  FROM planet_osm_point\n  WHERE (\"natural\" = 'peak' AND name IS NOT NULL)\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "auto",
+        "extent": "2486104.25445236,8568632.25566508,2803284.38596889,9108200.36179441",
+        "dbname": "gis",
+        "host": "localhost",
+        "port": "5432",
+        "user": "renderer",
+        "password": "renderer"
+      },
+      "id": "point_names",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "point_names"
     }
   ],
   "scale": 1,

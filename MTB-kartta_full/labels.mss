@@ -460,3 +460,21 @@
     }
   }
 }
+
+#point_names[zoom>=15] {
+  [type='natural_peak'] {
+    text-name: "[name]";
+    text-placement: point;
+    text-allow-overlap: true;
+    text-dy: 8;
+    text-face-name: @sans_lt;
+    text-size: 9;
+    [zoom=15]  { text-size: 10; }
+    [zoom=16]  { text-size: 11; }
+    [zoom>=17] { text-size: 12; }
+    text-wrap-width:30;
+    text-fill: @rock * 0.2;
+    text-halo-fill: lighten(@rock, 80%);
+    text-halo-radius:1.25;
+  }
+}
