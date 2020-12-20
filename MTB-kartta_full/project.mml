@@ -994,7 +994,7 @@
       "srs-name": "900913",
       "extent": [
         19.083209797343606,
-        58.41733559472438,
+        58.41733559472439,
         37.94663809471778,
         70.48655359530966
       ],
@@ -1042,7 +1042,7 @@
         "port": "5432",
         "project": "MTB-kartta_full",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "/* mainroad_label */\n( SELECT way, highway AS type, name, oneway, tunnel\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('primary', 'secondary', 'tertiary')\n    AND type NOT IN ('route')\n) AS data",
+        "table": "/* mainroad_label */\n( SELECT way, highway AS type, name, oneway, tunnel\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('primary', 'secondary', 'tertiary')\n    AND 'type' NOT IN ('route')\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "auto",
@@ -1181,33 +1181,33 @@
     },
     {
       "extent": [
-        23.340669496750962,
-        61.416733994781836,
-        23.67404209670452,
-        61.55463679478574
+        22.844499996819984,
+        61.03680669477165,
+        25.191827396493274,
+        62.999604994833774
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT amenity AS type, way_area AS area, access,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE amenity IN ('parking')\n    AND way && !bbox!\n    AND ST_IsValid(way)\n  ORDER BY area DESC\n\n) AS data",
+        "table": "( SELECT amenity, \"access\",\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE amenity = 'parking'\n    AND way && !bbox!\n    AND ST_IsValid(way)\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "auto",
-        "extent": "2598271.44315241,8722145.70849513,2635382.31122367,8754303.21981004",
+        "extent": "2543038.10707294,8634279.46567946,2804341.39792967,9100154.05156034",
         "dbname": "gis",
         "host": "localhost",
         "port": "5432",
         "user": "renderer",
         "password": "renderer",
-        "id": "markers",
+        "id": "parking_markers",
         "project": "MTB-kartta_full",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
-      "id": "markers",
+      "id": "parking_area_markers",
       "class": "",
       "srs-name": "900913",
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
-      "name": "markers"
+      "name": "parking_area_markers"
     }
   ],
   "scale": 1,

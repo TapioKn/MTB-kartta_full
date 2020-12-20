@@ -155,12 +155,12 @@
 
 #area_label {
   // Bring in labels gradually as one zooms in, based on polygon area
-  [zoom>=10][area>102400000][type!='building'],
-  [zoom>=11][area>25600000][type!='building'],
-  [zoom>=13][area>1600000][type!='building'],
-  [zoom>=14][area>320000][type!='building'],
-  [zoom>=15][area>120000][type!='building'],
-  [zoom>=16][area>20000][type!='building'] {
+  [zoom>=10][area>102400000][type!='building'][type!='parking'],
+  [zoom>=11][area>25600000][type!='building'][type!='parking'],
+  [zoom>=13][area>1600000][type!='building'][type!='parking'],
+  [zoom>=14][area>320000][type!='building'][type!='parking'],
+  [zoom>=15][area>120000][type!='building'][type!='parking'],
+  [zoom>=16][area>20000][type!='building'][type!='parking'] {
     text-name: "[name]";
     text-halo-radius: 1.5;
     text-face-name:@sans;
@@ -241,9 +241,10 @@
   }
 }
 
-#markers {
-  // Markers for parking
-  [type='parking'][zoom>=15] {
+#parking_area_markers {
+  [amenity='parking'][zoom>=15] {
+    text-placement: point;
+    text-allow-overlap: true;
     text-name: "'P'";
     text-face-name: @sans_bold;
     text-fill: @parking-label;
