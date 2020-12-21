@@ -467,7 +467,7 @@
     text-placement: point;
     text-allow-overlap: true;
     text-dy: 8;
-    text-face-name: @sans_lt;
+    text-face-name: @sans;
     text-size: 9;
     [zoom=15]  { text-size: 10; }
     [zoom=16]  { text-size: 11; }
