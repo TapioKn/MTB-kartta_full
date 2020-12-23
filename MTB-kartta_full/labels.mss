@@ -410,26 +410,6 @@
 /* FIXME/NOEXIT/ETC LABELS
 /* ================================================================== */
 #constructs_point[zoom>=15] {
-  [type='fixme_continue'] {
-    [zoom=15] { marker-file: url(images/fixme_continue-M.png); }
-    [zoom>=16] { marker-file: url(images/fixme_continue-L.png); }
-    marker-allow-overlap: true;
-    marker-placement: point;
-  }
-  [type='fixme_resurvey'] {
-    [zoom=15] { marker-file: url(images/fixme_resurvey-M.png); }
-    [zoom>=16] { marker-file: url(images/fixme_resurvey-L.png); }
-    marker-allow-overlap: true;
-    marker-placement: point;
-  }
-  [type='noexit_yes'] {
-    [zoom=15] { marker-file: url(images/noexit_yes-S.png); }
-    [zoom=16] { marker-file: url(images/noexit_yes-S.png); }
-    [zoom>=17] { marker-file: url(images/noexit_yes-M.png); }
-    marker-allow-overlap: true;
-    marker-placement: point;
-    marker-opacity: 1.0;
-  }
   [type='ford_yes'][zoom>=16] {
     marker-file: url(images/ford_yes-L.png);
     marker-allow-overlap: true;
@@ -460,6 +440,37 @@
     }
   }
 }
+
+#point_marker[zoom>=15] {
+  [type='fixme_continue'] {
+    [zoom=15] { marker-file: url(images/fixme_continue-M.png); }
+    [zoom>=16] { marker-file: url(images/fixme_continue-L.png); }
+    marker-allow-overlap: true;
+    marker-placement: point;
+  }
+  [type='fixme_resurvey'] {
+    [zoom=15] { marker-file: url(images/fixme_resurvey-M.png); }
+    [zoom>=16] { marker-file: url(images/fixme_resurvey-L.png); }
+    marker-allow-overlap: true;
+    marker-placement: point;
+  }
+  [type='noexit_yes'] {
+    [zoom=15] { marker-file: url(images/noexit_yes-S.png); }
+    [zoom=16] { marker-file: url(images/noexit_yes-S.png); }
+    [zoom>=17] { marker-file: url(images/noexit_yes-M.png); }
+    marker-allow-overlap: true;
+    marker-placement: point;
+    marker-opacity: 1.0;
+  }
+}
+
+#line_marker[type='fixme_resurvey'][zoom>=15] {
+  [zoom=15] { marker-file: url(images/fixme_resurvey-M.png); }
+  [zoom>=16] { marker-file: url(images/fixme_resurvey-L.png); }
+  marker-allow-overlap: true;
+  marker-placement: interior;
+}
+
 
 #point_names[zoom>=15] {
   [type='natural_peak'] {
