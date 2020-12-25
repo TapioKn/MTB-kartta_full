@@ -1,3 +1,3 @@
-# MTB-kartta-carto
+# MTB-kartta_full
 
-Mountain bike focused CartoCSS style based on OSM Bright.
+OSM Brightiin perustuva maastopyöräilypainotteinen Mapnik-karttatyyli.
