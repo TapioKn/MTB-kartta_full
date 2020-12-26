@@ -5,15 +5,14 @@
 /* directory to load fonts from in addition to the system directories */
 Map { font-directory: url(fonts); }
 
-@sans_lt:           "Noto Sans Light";
-@sans_lt_italic:    "Noto Sans Light Italic";
+@sans_lt:"DejaVu Sans";
+@sans_lt_italic:"DejaVu Sans Oblique";
 
-@sans:              "Noto Sans Medium";
-@sans_italic:       "Noto Sans Medium Italic";
+@sans:"DejaVu Sans Book";
+@sans_italic:"DejaVu Sans Oblique";
 
-@sans_bold:         "Noto Sans Bold";
-@sans_bold_italic:  "Noto Sans Bold Italic";
-
+@sans_bold:"DejaVu Sans Bold";
+@sans_bold_italic:"DejaVu Sans Bold Oblique";
 
 
 /* ================================================================== */

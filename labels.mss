@@ -177,7 +177,7 @@
     [type='recreation_ground'][zoom>=14],
     [type='wood'][zoom>=14],
     [type='forest'][zoom>=14] {
-      text-face-name: @sans_lt;
+      text-face-name: @sans;
       text-fill: @park * 0.1;
       text-halo-fill: lighten(@park, 80%);
     }
