@@ -166,7 +166,7 @@ way        cycleway                 text        linear
 way        cycleway:left            text        linear
 way        cycleway:right           text        linear
 way        cycleway:both            text        linear
-node       shelter_type             text        linear
+node,way   shelter_type             text        linear
 node,way   type                     text        linear
 
 # Area tags
