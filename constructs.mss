@@ -49,6 +49,7 @@
   [type='barrier_gate'][zoom>=15] {
     marker-allow-overlap: true;
     marker-file: url('images/barrier_gate.png');
+    [access='private'],[access='no'] { marker-file: url('images/barrier_gate_noaccess.png'); }
   }
   [type='natural_peak'][zoom>=14] {
     marker-allow-overlap: true;
@@ -58,8 +59,7 @@
     marker-allow-overlap: true;
     marker-file: url('images/leisure_firepit.svg');
     marker-fill: @parking-label; //#0091da;
-    marker-width: 12.0;
-    marker-height: 12.0;
+    marker-width: 12.0; marker-height: 12.0;
     [zoom>=14] { marker-width: 13.0;  marker-height: 13.0;}
     [zoom>=15] { marker-width: 14.0;  marker-height: 14.0;}
     [zoom>=16] { marker-width: 15.0;  marker-height: 15.0;}
@@ -70,7 +70,7 @@
     marker-width: 13.0;
     marker-height: 13.0;
     marker-fill: @parking-label; //#0091da
-    [access='private'] { marker-fill: @forbidden; } //#ff003d
+    [access='private'],[access='no'] { marker-fill: @forbidden; } //#ff003d
     [zoom>=14] { marker-width: 15.0;  marker-height: 15.0;}
     [zoom>=15] { marker-width: 16.0;  marker-height: 16.0;}
     [zoom>=16] { marker-width: 17.0;  marker-height: 17.0;}
