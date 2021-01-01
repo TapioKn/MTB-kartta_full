@@ -201,6 +201,18 @@
         [width>0.8] { line-offset: 10; [zoom=14] { line-offset: 8; } }
       }
     }
+    ::imbaoverlays[zoom>=15][informal='no'] {
+      line-width: @paz15_cw * 1.2;
+      line-cap: round;
+      line-dasharray: 0.1, 30.0;
+      line-offset: @paz15_cw * -1.7;
+      line-opacity: 0;
+      ['mtb:scale:imba'='0'] { line-opacity: 1; line-color: #96df1c; }
+      ['mtb:scale:imba'='1'] { line-opacity: 1; line-color: #0160ff; }
+      ['mtb:scale:imba'='2'] { line-opacity: 1; line-color: #ff0000; }
+      ['mtb:scale:imba'='3'] { line-opacity: 1; line-color: #000000; }
+      ['mtb:scale:imba'='4'] { line-opacity: 1; line-color: #000000; line-dasharray: 0.1, 4.0, 0.1, 26.0; }
+    }
   }
 }
 
