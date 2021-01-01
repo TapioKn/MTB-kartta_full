@@ -2,3 +2,5 @@
 *.py
 data/
 .git/
+*.xml
+*.bat
