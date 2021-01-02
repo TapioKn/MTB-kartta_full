@@ -202,16 +202,22 @@
       }
     }
     ::imbaoverlays[zoom>=15][informal='no'] {
-      line-width: @paz15_cw * 1.2;
+      line-width: @paz15_cw * 1.3;
+      line-offset: @paz15_cw * -1.7;
+      [zoom=16]  { line-width: @paz16_cw * 1.3; line-offset: @paz16_cw * -1.7; }
+      [zoom>=17] { line-width: @paz17_cw * 1.2; line-offset: @paz17_cw * -1.5; }
       line-cap: round;
       line-dasharray: 0.1, 30.0;
-      line-offset: @paz15_cw * -1.7;
       line-opacity: 0;
       ['mtb:scale:imba'='0'] { line-opacity: 1; line-color: #96df1c; }
       ['mtb:scale:imba'='1'] { line-opacity: 1; line-color: #0160ff; }
       ['mtb:scale:imba'='2'] { line-opacity: 1; line-color: #ff0000; }
       ['mtb:scale:imba'='3'] { line-opacity: 1; line-color: #000000; }
-      ['mtb:scale:imba'='4'] { line-opacity: 1; line-color: #000000; line-dasharray: 0.1, 4.0, 0.1, 26.0; }
+      ['mtb:scale:imba'='4'] { line-opacity: 1; line-color: #000000;
+                               line-dasharray: 0.1, 4.0, 0.1, 26.0;
+                               [zoom=16]  { line-dasharray: 0.1, 6.0, 0.1, 24.0; }
+                               [zoom>=17] { line-dasharray: 0.1, 8.0, 0.1, 28.0; }
+                             }
     }
   }
 }
