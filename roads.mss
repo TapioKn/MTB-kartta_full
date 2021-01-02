@@ -642,6 +642,26 @@ come in as well.
      [type='steps']         { line-width: @cwz17_cw; line-color: @footway; line-dasharray: 1, 2.5; }
    }
    [type='other']           { line-color: #ff00e6; line-opacity: 0; } /* For checking missing rendering */
+
+   ::accessoverlaysroads1[zoom>=14][type!='other'][type!='service'] {
+     [access='no'],[access='private'] {
+       line-dasharray: 1, 2.0;
+       line-color: @forbidden;
+       [zoom=14]  { line-width: 2.5; line-offset: -2.0; }
+       [zoom=15]  { line-width: 2.8; line-offset: -2.5; }
+       [zoom>=16] { line-width: 3.0; line-offset: -4.0; }
+     }
+   }
+   ::accessoverlaysroads2[zoom>=14][type!='other'][type!='service'] {
+     [access='no'],[access='private'] {
+       line-dasharray: 1, 2.0;
+       line-color: @forbidden;
+       [zoom=14]  { line-width: 2.5; line-offset: 2.0; }
+       [zoom=15]  { line-width: 2.8; line-offset: 2.5; }
+       [zoom>=16] { line-width: 3.0; line-offset: 4.0; }
+     }
+   }
+
  }
 
 

@@ -122,7 +122,7 @@
       }
     }
 
-    ::accessoverlays1[zoom>=14] {
+    ::accessoverlaysroads1[zoom>=14] {
       ['mtb:scale'='-1'],['bicycle'='no'] {
         line-dasharray: 1, 2.0;
         line-color: @forbidden;
@@ -142,7 +142,7 @@
         [width>0.8] { [zoom=14] { line-offset: -2.5; } [zoom=15] { line-offset: -3.5; } [zoom>=16] { line-offset: -4.5; } }
       }
     }
-    ::accessoverlays2[zoom>=14] {
+    ::accessoverlaysroads2[zoom>=14] {
       [access='no'],[access='private'] {
         line-dasharray: 1, 2.0;
         line-color: @forbidden;
@@ -153,18 +153,6 @@
         [width>0.8] { [zoom=14] { line-offset: 2.5; } [zoom=15] { line-offset: 3.5; } [zoom>=16] { line-offset: 4.5; } }
       }
     }
-
-      /* ONE SIDED OVERLAY BACKUP
-      [access='no'],[access='private'] {
-        line-dasharray: 1, 1.5;
-        line-color: @forbidden;
-        [zoom=14]  { line-width: 2.5; line-offset: -2.5; }
-        [zoom=15]  { line-width: 2.8; line-offset: -3.0; }
-        [zoom>=16] { line-width: 3.0; line-offset: -4.5; }
-        [width<0.6] { [zoom=14] { line-offset: -2.0; } [zoom=15] { line-offset: -2.3; } [zoom>=16] { line-offset: -2.5; } }
-        [width>0.8] { [zoom=14] { line-offset: -3.0; } [zoom=15] { line-offset: -4.0; } [zoom>=16] { line-offset: -5.0; } }
-      }
-      */
 
     ::mudorvegoverlay[zoom>=14] {
       [surface='mud'],[obstacle='vegetation'] {
