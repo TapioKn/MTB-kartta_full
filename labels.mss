@@ -13,6 +13,7 @@
   text-halo-radius:2;
   text-clip: false;
   text-allow-overlap: true;
+  text-transform: uppercase;
   [zoom<=8] {
     text-size: 10;
     text-halo-radius:1;
@@ -39,19 +40,16 @@
     text-size:14;
     text-character-spacing: 2;
     text-wrap-width: 200;
-    text-transform: uppercase;
   }
   [zoom=14] {
     text-size:15;
     text-character-spacing: 4;
     text-wrap-width: 300;
-    text-transform: uppercase;
   }
   [zoom=15] {
     text-size:16;
     text-character-spacing: 6;
     text-wrap-width: 400;
-    text-transform: uppercase;
   }
 }
 
@@ -68,6 +66,7 @@
   text-wrap-width: 50;
   text-clip: false;
   text-allow-overlap: true;
+  text-transform: uppercase;
   [zoom>=10] {
     text-halo-radius:2;
     text-size: 10;
@@ -78,7 +77,6 @@
     text-line-spacing: 1;
   }
   [zoom>=13]{
-    text-transform: uppercase;
     text-character-spacing: 1;
     text-line-spacing: 2;
   }
@@ -130,7 +128,6 @@
   [zoom=15] {
     text-size: 12;
     [type='locality'] { text-size: 11; }
-    [type!='locality'] { text-transform: uppercase; }
     text-halo-radius: 1.5;
     text-character-spacing: 1;
     text-wrap-width: 60;
@@ -139,8 +136,7 @@
   [zoom>=16] {
     text-size: 13;
     [type='locality'] { text-size: 11; }
-    [type!='locality'] { text-transform: uppercase;
-                         text-character-spacing: 2; }
+    [type!='locality'] { text-character-spacing: 2; }
     text-halo-radius: 2;
     text-wrap-width: 120;
     text-line-spacing: 2;
@@ -178,7 +174,7 @@
     [type='wood'][zoom>=14],
     [type='forest'][zoom>=14] {
       text-face-name: @sans;
-      text-fill: @park * 0.1;
+      text-fill: @park * 0.3;
       text-halo-fill: lighten(@park, 80%);
     }
     [type='golf_course'][zoom>=10] {
@@ -208,14 +204,14 @@
       text-fill: @water * 0.5;
       text-halo-fill: lighten(@water, 90%);
     }
-    [zoom=15][area>1500000] {
+    [zoom=16] {  //[area>50000]
       text-name: "[name]";
-      text-size: 12;
+      text-size: 11;
       text-wrap-width: 60;
       text-character-spacing: 1;
-      text-halo-radius: 2;
+      text-halo-radius: 1.5;
     }
-    [zoom=16][area>50000] {
+    [zoom>=16] {  //[area>50000]
       text-name: "[name]";
       text-size: 12;
       text-wrap-width: 60;

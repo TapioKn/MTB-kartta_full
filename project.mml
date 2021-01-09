@@ -939,37 +939,6 @@
       "name": "roofs"
     },
     {
-      "Datasource": {
-        "dbname": "gis",
-        "geometry_field": "way",
-        "host": "localhost",
-        "id": "place",
-        "key_field": "",
-        "password": "renderer",
-        "port": "5432",
-        "project": "foss4g-2011",
-        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
-        "type": "postgis",
-        "user": "renderer",
-        "extent_cache": "auto",
-        "extent": "1866456.79908472,7705808.50253016,3537239.99327491,11125533.6826785"
-      },
-      "class": "",
-      "geometry": "point",
-      "id": "place",
-      "name": "place",
-      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-      "srs-name": "900913",
-      "extent": [
-        16.76666669766603,
-        56.7333332947144,
-        31.775567495576848,
-        70.17383989528155
-      ],
-      "advanced": {}
-    },
-    {
       "extent": [
         22.904643696811686,
         61.18276199477543,
@@ -1292,6 +1261,37 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "advanced": {},
       "name": "line_marker"
+    },
+    {
+      "Datasource": {
+        "dbname": "gis",
+        "geometry_field": "way",
+        "host": "localhost",
+        "id": "place",
+        "key_field": "",
+        "password": "renderer",
+        "port": "5432",
+        "project": "foss4g-2011",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+        "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
+        "type": "postgis",
+        "user": "renderer",
+        "extent_cache": "auto",
+        "extent": "1866456.79908472,7705808.50253016,3537239.99327491,11125533.6826785"
+      },
+      "class": "",
+      "geometry": "point",
+      "id": "place",
+      "name": "place",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "extent": [
+        16.76666669766603,
+        56.7333332947144,
+        31.775567495576848,
+        70.17383989528155
+      ],
+      "advanced": {}
     }
   ],
   "scale": 1,
