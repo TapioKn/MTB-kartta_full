@@ -825,17 +825,17 @@
       "geometry": "linestring",
       "extent": [
         22.333054496891226,
-        60.99399609477055,
-        23.98148979666173,
-        62.00328089479927
+        60.749948194764535,
+        25.43746119645908,
+        63.03240199483504
       ],
       "Datasource": {
         "type": "postgis",
         "table": "( SELECT way, bridge, \"mtb:winter\", noexit, width, access,\n  CASE\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' AND \"mtb:scale\" IS NULL THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'other'\n    WHEN highway = 'pedestrian' AND bicycle != 'no' AND \"mtb:scale\" IS NULL THEN 'other'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' THEN 'path'\n    WHEN highway = 'path' AND bicycle = 'no' AND foot = 'designated' THEN 'other'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') AND \"mtb:scale\" IS NOT NULL THEN 'path'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'other'\n    WHEN highway = 'path' THEN 'path'\n    WHEN highway = 'track' THEN 'track'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN trail_visibility IN ('intermediate', 'bad', 'horrible', 'no') THEN 'bad'\n    ELSE 'good' END AS visibility,\n  CASE\n    WHEN \"mtb:scale\" = '0-' THEN '0-'\n    WHEN \"mtb:scale\" IN ('0', '0+') THEN '0'\n    WHEN \"mtb:scale\" IN ('1-', '1', '1+') THEN '1'\n    WHEN \"mtb:scale\" IN ('2-', '2', '2+') THEN '2'\n    WHEN \"mtb:scale\" IN ('3-', '3', '3+') THEN '3'\n    WHEN \"mtb:scale\" IN ('4-', '4', '4+') THEN '4'\n    WHEN \"mtb:scale\" IN ('5-', '5', '5+') THEN '5'\n    WHEN \"mtb:scale\" = '6' THEN '6'\n    WHEN \"mtb:scale\" = '-1' THEN '-1'\n    ELSE 'noscale' END AS \"mtb:scale\"\n  FROM planet_osm_line\n  WHERE (highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bridge IN ('1', 'yes', 'boardwalk'))\n ORDER BY z_order\n) AS data",
         "key_field": "",
         "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "2486104.25445236,8624444.74465984,2669607.23262847,8859920.79701009",
+        "extent_cache": "dynamic",
+        "extent": "",
         "dbname": "gis",
         "host": "localhost",
         "port": "5432",
@@ -893,8 +893,8 @@
         "table": "/* constructs_point */\n( SELECT way, name, access,\n  CASE\n    WHEN power = 'pole' THEN 'power_pole'\n    WHEN power = 'tower' THEN 'power_tower'\n    WHEN aerialway = 'station' THEN 'aerialway_station'\n    WHEN aerialway = 'pylon' THEN 'aerialway_pylon'\n    WHEN barrier IN ('gate', 'block', 'sliding_gate', 'hampshire_gate', 'kissing_gate', 'lift_gate', 'swing_gate', 'wicket_gate', 'chain', 'log', 'rope') THEN 'barrier_gate'\n    WHEN leisure = 'firepit' THEN 'leisure_firepit'\n    WHEN amenity = 'shelter' AND ('shelter_type' <> 'public_transport' OR 'shelter_type' IS NULL) THEN 'amenity_shelter'\n    WHEN amenity IN ('drinking_water', 'water_point') THEN 'amenity_drinking_water'\n    WHEN amenity = 'parking' THEN 'amenity_parking'\n    WHEN tourism = 'viewpoint' THEN 'tourism_viewpoint'\n    WHEN fixme = 'continue' THEN 'fixme_continue'\n    WHEN (fixme != 'continue' AND fixme IS NOT NULL) THEN 'fixme_resurvey'\n    WHEN noexit = 'yes' THEN 'noexit_yes'\n    WHEN ford = 'yes' THEN 'ford_yes'\n    WHEN obstacle = 'fallen_tree' THEN 'obstacle_fallen_tree'\n    WHEN \"natural\" = 'peak' THEN 'natural_peak'\n    ELSE 'other' END AS type\n  FROM planet_osm_point\n  WHERE COALESCE('aerialway', 'barrier', 'power', 'fixme', 'noexit', 'natural', 'ford', 'obstacle', 'amenity', 'leisure') IS NOT NULL\n) AS data",
         "key_field": "",
         "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "2486104.25445236,8568632.25566508,2803284.38596889,9108200.36179441",
+        "extent_cache": "dynamic",
+        "extent": "",
         "dbname": "gis",
         "host": "localhost",
         "port": "5432",
@@ -1124,8 +1124,8 @@
       "geometry": "linestring",
       "extent": [
         22.333054496891226,
-        60.75442519476463,
-        24.997605896520273,
+        60.749948194764535,
+        25.43746119645908,
         63.03240199483504
       ],
       "Datasource": {
@@ -1133,8 +1133,8 @@
         "table": "/* othernames_label */\n( SELECT way, \"mtb:name\", alt_name, loc_name\n  FROM planet_osm_line\n  WHERE COALESCE ('mtb:name', 'alt_name', 'loc_name') IS NOT NULL \n    AND highway IN ('residential', 'unclassified', 'road', 'service', 'living_street', 'unknown', 'path', 'track', 'cycleway', 'footway', 'bridleway', 'steps')\n) AS data",
         "key_field": "",
         "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "2486104.25445236,8569652.2918102,2782720.75945157,9108200.36179441",
+        "extent_cache": "dynamic",
+        "extent": "",
         "dbname": "gis",
         "host": "localhost",
         "port": "5432",
@@ -1150,7 +1150,7 @@
     },
     {
       "extent": [
-        22.844499996819984,
+        22.728724596836127,
         61.03680669477165,
         25.191827396493274,
         62.999604994833774
@@ -1160,8 +1160,8 @@
         "table": "( SELECT amenity, \"access\", shelter_type, name,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE (amenity IN ('parking', 'shelter') AND ((shelter_type <> public_transport) OR (shelter_type IS NULL)))\n    AND way && !bbox!\n    AND ST_IsValid(way)\n) AS data",
         "key_field": "",
         "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "2543038.10707294,8634279.46567946,2804341.39792967,9100154.05156034",
+        "extent_cache": "dynamic",
+        "extent": "",
         "dbname": "gis",
         "host": "localhost",
         "port": "5432",
@@ -1191,8 +1191,8 @@
         "table": "/* point_names */\n( SELECT way, name,\n  CASE\n    WHEN \"natural\" = 'peak' THEN 'natural_peak'\n    ELSE 'other' END AS type\n  FROM planet_osm_point\n  WHERE (\"natural\" = 'peak' AND name IS NOT NULL)\n) AS data",
         "key_field": "",
         "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "2486104.25445236,8568632.25566508,2803284.38596889,9108200.36179441",
+        "extent_cache": "dynamic",
+        "extent": "",
         "dbname": "gis",
         "host": "localhost",
         "port": "5432",
@@ -1219,8 +1219,8 @@
         "table": "/* point_marker */\n( SELECT way,\n  CASE\n    WHEN fixme = 'continue' THEN 'fixme_continue'\n    WHEN (fixme != 'continue' AND fixme IS NOT NULL) THEN 'fixme_resurvey'\n    WHEN noexit = 'yes' THEN 'noexit_yes'\n    ELSE 'other' END AS type\n  FROM planet_osm_point\n  WHERE COALESCE ('fixme', 'noexit') IS NOT NULL\n) AS data",
         "key_field": "",
         "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "2486104.25445236,8568632.25566508,2803284.38596889,9108200.36179441",
+        "extent_cache": "dynamic",
+        "extent": "",
         "dbname": "gis",
         "host": "localhost",
         "port": "5432",
@@ -1247,8 +1247,8 @@
         "table": "/* line_marker */\n( SELECT way,\n  CASE\n    WHEN (fixme != 'continue' AND fixme IS NOT NULL) THEN 'fixme_resurvey'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE fixme IS NOT NULL\n) AS data",
         "key_field": "",
         "geometry_field": "way",
-        "extent_cache": "auto",
-        "extent": "2486104.25445236,8568632.25566508,2831685.22746348,9108200.36179441",
+        "extent_cache": "dynamic",
+        "extent": "",
         "dbname": "gis",
         "host": "localhost",
         "port": "5432",
@@ -1276,8 +1276,8 @@
         "table": "( SELECT way, place AS type, name, z_order, population\n  FROM planet_osm_point\n  WHERE place in ('country', 'state', 'city', 'town', 'village', 'hamlet', 'suburb', 'neighbourhood', 'locality')\n  ORDER BY population DESC NULLS LAST\n) AS data",
         "type": "postgis",
         "user": "renderer",
-        "extent_cache": "auto",
-        "extent": "1866456.79908472,7705808.50253016,3537239.99327491,11125533.6826785"
+        "extent_cache": "dynamic",
+        "extent": ""
       },
       "class": "",
       "geometry": "point",
@@ -1286,10 +1286,10 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
-        16.76666669766603,
-        56.7333332947144,
-        31.775567495576848,
-        70.17383989528155
+        22.333054496891226,
+        60.749948194764535,
+        25.182332096494612,
+        63.03240199483504
       ],
       "advanced": {}
     }
