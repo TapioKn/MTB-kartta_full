@@ -254,9 +254,12 @@
     }
   }
 
-  [amenity='shelter'][zoom>=10] {
-    marker-allow-overlap: true;
+  [amenity='shelter'][zoom>=10],
+  [tourism='wilderness_hut'][zoom>=10] {
     marker-file: url('images/amenity_shelter.svg');
+    [amenity='shelter'][leisure='firepit'] { marker-file: url('images/amenity_shelter_firepit.svg'); }
+    [tourism='wilderness_hut'] { marker-file: url('images/tourism_wilderness_hut.svg'); }
+    marker-allow-overlap: true;
     marker-width: 13.0;
     marker-height: 13.0;
     marker-fill: @parking-label; //#0091da
