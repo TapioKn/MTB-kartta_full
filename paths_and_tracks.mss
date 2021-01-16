@@ -49,7 +49,7 @@
         [width>1.7],[type='track'] { line-width: @paz16_cw * 1.6; }
       }
     }
-
+ 
     ::ptlines[type!='service'] {
       line-color: @path_line;
       [seasonal='winter'],['noexit'='yes'] { line-opacity: 0.5; }
