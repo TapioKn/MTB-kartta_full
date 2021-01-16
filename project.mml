@@ -136,7 +136,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT osm_id, way, area AS areatype, way_area AS area, COALESCE(landuse, leisure, \"natural\", highway, amenity, man_made, power) AS type\n  FROM planet_osm_polygon\n  WHERE COALESCE(landuse, leisure, \"natural\", highway, amenity, man_made, power) IS NOT NULL\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
@@ -198,7 +198,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT osm_id, way, way_area AS area\n  FROM planet_osm_polygon\n  WHERE \"natural\" IN ('water', 'pond')\n    OR waterway IN ('basin', 'canal', 'mill_pond', 'pond', 'riverbank', 'stream')\n    AND way_area > 1000\n) AS data",
         "type": "postgis",
@@ -229,7 +229,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "( SELECT osm_id, way, \"natural\", way_area AS area, COALESCE(leisure, boundary) AS land_type, wetland AS wetland_type, barrier, landuse, man_made\n  FROM planet_osm_polygon\n  WHERE COALESCE(\"natural\", leisure, boundary, wetland, barrier, landuse, man_made) IS NOT NULL AND 'boundary' NOT IN ('administrative')\n  ORDER BY way_area DESC\n) AS data",
         "type": "postgis",
@@ -355,7 +355,7 @@
         "extent_cache": "dynamic",
         "extent": "1208977.18100533,7159071.11973415,4224200.43002062,11228036.8150679",
         "id": "waterway_high",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "class": "",
@@ -475,7 +475,7 @@
         "extent_cache": "dynamic",
         "extent": "2124333.1973415,8055502.46894884,4224200.43002062,11228955.9943898",
         "id": "buildings",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "class": "",
@@ -603,7 +603,7 @@
         "user": "renderer",
         "password": "renderer",
         "id": "roads_construction",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "roads_construction",
@@ -634,7 +634,7 @@
         "user": "renderer",
         "password": "renderer",
         "id": "paths_and_tracks",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "paths_and_tracks",
@@ -696,7 +696,7 @@
         "user": "renderer",
         "password": "renderer",
         "id": "sidewalks",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "sidewalks",
@@ -715,7 +715,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "/* roads_high */\n( SELECT way, 0 AS tunnel, 0 AS bridge, 'fill' AS render, access AS access,\n  CASE\n    WHEN highway = 'motorway' THEN 'motorway'\n    WHEN highway = 'motorway_link' THEN 'motorway_link'\n    WHEN highway = 'trunk' THEN 'trunk'\n    WHEN highway = 'trunk_link' THEN 'trunk_link'\n    WHEN highway = 'primary' THEN 'primary'\n    WHEN highway = 'primary_link' THEN 'primary_link'\n    WHEN highway IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN highway IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN highway IN ('residential', 'unclassified') THEN 'residential'\n    WHEN highway = 'living_street' THEN 'living_street'\n    WHEN highway = 'service' AND service = 'parking_aisle' THEN 'parking_aisle' \n    WHEN highway = 'service' AND service = 'driveway' THEN 'driveway' \n    WHEN highway IN ('service', 'road') THEN 'service'\n    WHEN highway = 'raceway' THEN 'raceway'\n\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' AND (\"mtb:scale\" IS NULL OR \"mtb:scale\" = '0-' OR 'surface' IN ('paved', 'asphalt')) THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND \"mtb:scale\" IS NOT NULL THEN 'other'\n    WHEN highway = 'footway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'footpath' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footpath' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'pedestrian' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'pedestrian' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'path' AND bicycle = 'no' THEN 'other'\n    WHEN highway = 'cycleway' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'footway'\n\n    WHEN highway = 'path' THEN 'other'\n    WHEN highway = 'track' THEN 'other'\n    WHEN highway = 'bridleway' THEN 'other'\n    WHEN highway = 'steps' THEN 'steps'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    WHEN railway IN ('disused') THEN 'rail_disused'\n    WHEN railway = 'platform' THEN 'footway'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN surface IN ('paved', 'asphalt', 'concrete', 'paving_stones') THEN 'paved'\n    WHEN surface IS NOT NULL THEN 'unpaved'\n    ELSE 'unknown' END AS surface\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
         "type": "postgis",
@@ -901,7 +901,7 @@
         "user": "renderer",
         "password": "renderer",
         "id": "constructs_point",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "constructs_point",
@@ -986,7 +986,7 @@
         "user": "renderer",
         "password": "renderer",
         "id": "constructs_line",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "constructs_line",
@@ -1036,7 +1036,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "/* motorway_label */\n( SELECT way, highway AS type, name, ref, tunnel, oneway, CHAR_LENGTH(ref) AS reflen\n    FROM planet_osm_line\n    WHERE highway IN ('motorway', 'trunk')\n      AND (name IS NOT NULL OR ref IS NOT NULL)\n) AS data",
         "type": "postgis",
@@ -1067,7 +1067,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "/* mainroad_label */\n( SELECT way, highway AS type, name, oneway, tunnel\n  FROM planet_osm_line\n  WHERE (name IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('primary', 'secondary', 'tertiary')\n    AND 'type' NOT IN ('route')\n) AS data",
         "type": "postgis",
@@ -1098,7 +1098,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
         "table": "/* minorroad_label */\n( SELECT way, highway AS type, name, oneway, tunnel\n  FROM planet_osm_line\n  WHERE ('name' IS NOT NULL OR oneway IN ('yes', 'true', '1', '-1'))\n    AND highway IN ('residential', 'unclassified', 'road', 'service', 'living_street', 'unknown', 'path', 'track', 'cycleway', 'footway', 'steps')\n) AS data",
         "type": "postgis",
@@ -1168,7 +1168,7 @@
         "user": "renderer",
         "password": "renderer",
         "id": "parking_markers",
-        "project": "MTB-kartta_full",
+        "project": "MTB-kartta_winter",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
       },
       "id": "area_marker",
@@ -1292,11 +1292,39 @@
         63.03240199483504
       ],
       "advanced": {}
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        22.333054496891226,
+        60.749948194764535,
+        25.43746119645908,
+        63.03240199483504
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "/* winter_overlays */\n( SELECT way, seasonal, \"mtb:winter\", \"bicycle:winter\", \"foot:winter\", \"piste:type\", \"piste:difficulty\"\n  FROM planet_osm_line\n  WHERE (highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway', 'service'))\n ORDER BY z_order\n) AS data",
+        "key_field": "",
+        "geometry_field": "way",
+        "extent_cache": "dynamic",
+        "extent": "",
+        "dbname": "gis",
+        "host": "localhost",
+        "port": "5432",
+        "user": "renderer",
+        "password": "renderer"
+      },
+      "id": "winter_overlays",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "winter_overlays"
     }
   ],
   "scale": 1,
   "metatile": 3,
   "attribution": "Data © OpenStreetMap (and) contributors, ODbL",
   "description": "",
-  "name": "MTB-kartta_full"
+  "name": "MTB-kartta_winter"
 }
