@@ -70,10 +70,12 @@
   }
   [type='amenity_shelter'][zoom>=10],
   [type='amenity_shelter_firepit'][zoom>=10],
-  [type='tourism_wilderness_hut'][zoom>=10] {
+  [type='tourism_wilderness_hut'][zoom>=10],
+  [type='military_bunker'][zoom>=10] {
     [type='amenity_shelter'] { marker-file: url('images/amenity_shelter.svg'); }
     [type='amenity_shelter_firepit'] { marker-file: url('images/amenity_shelter_firepit.svg'); }
     [type='tourism_wilderness_hut'] { marker-file: url('images/tourism_wilderness_hut.svg'); }
+    [type='military_bunker'][zoom>=10] { marker-file: url('images/military_bunker.svg'); }
     marker-allow-overlap: true;
     marker-width: 13.0;
     marker-height: 13.0;
