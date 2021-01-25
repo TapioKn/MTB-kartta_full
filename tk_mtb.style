@@ -173,6 +173,8 @@ way        cycleway:both            text        linear
 node,way   shelter_type             text        linear
 node,way   type                     text        linear
 way        informal                 text        linear
+way        snowplowing              text        linear
+way        winter_service           text        linear
 
 # Area tags
 # We don't make columns for these tags, but objects with them are areas.
