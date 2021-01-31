@@ -226,13 +226,23 @@
   [zoom>=15][area>4000][type='building'],
   [zoom>=16][area>2000][type='building'] {
     text-name: "[name]";
-    text-halo-radius: 1;
+    text-halo-radius: 1.0;
     text-face-name: @sans;
     text-size: 10;
     text-wrap-width:30;
     text-line-spacing: -2;
     text-fill: darken(@building, 50%);
     text-halo-fill: #fff;
+    text-clip: false;
+  }
+  // Address numbers, only for buildings that don't have a name
+  [zoom>=17][type='building'][hasname='no'] {
+    text-name: "[addr:housenumber]";
+    text-halo-radius: 1.0;
+    text-face-name: @sans;
+    text-size: 8.5;
+    text-fill: darken(@building, 35%);
+    text-halo-fill: #f2ece4;
     text-clip: false;
   }
 }

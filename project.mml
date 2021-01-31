@@ -730,10 +730,10 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
-        25.646675596429965,
-        62.179230594804906,
-        26.091205296368106,
-        62.35912879481087
+        22.333054496891226,
+        60.749948194764535,
+        25.43746119645908,
+        63.03240199483504
       ],
       "advanced": {}
     },
@@ -1007,7 +1007,7 @@
         "port": "5432",
         "project": "foss4g-2011",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "( SELECT COALESCE(landuse, leisure, \"natural\", highway, tourism, amenity, access) AS type,\n    name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND way && !bbox!\n    AND ST_IsValid(way)\n\n  UNION ALL\n\n  SELECT 'building' AS type, name, way_area AS area,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE name IS NOT NULL\n    AND building NOT IN ('', 'no', '0', 'false')\n    AND way && !bbox!\n    AND ST_IsValid(way)\n  ORDER BY area DESC\n) AS data",
+        "table": "( SELECT COALESCE(landuse, leisure, \"natural\", highway, tourism, amenity, access) AS type,\n    name, way_area AS area, \"addr:housenumber\",\n    CASE\n      WHEN name IS NULL THEN 'no'\n      ELSE 'yes' END AS hasname,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE (name IS NOT NULL OR \"addr:housenumber\" IS NOT NULL)\n    AND way && !bbox!\n    AND ST_IsValid(way)\n\n  UNION ALL\n\n  SELECT 'building' AS type, name, way_area AS area, \"addr:housenumber\",\n    CASE\n      WHEN name IS NULL THEN 'no'\n      ELSE 'yes' END AS hasname,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE (name IS NOT NULL OR \"addr:housenumber\" IS NOT NULL)\n    AND building NOT IN ('', 'no', '0', 'false')\n    AND way && !bbox!\n    AND ST_IsValid(way)\n  ORDER BY area DESC\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "custom",
@@ -1020,10 +1020,10 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
-        25.699409996422613,
-        62.20687609480581,
-        26.04166779637495,
-        62.32136439480962
+        22.728724596836127,
+        61.03680669477165,
+        25.191827396493274,
+        62.999604994833774
       ],
       "advanced": {}
     },
