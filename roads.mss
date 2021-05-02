@@ -651,7 +651,10 @@ come in as well.
        [zoom=14]  { line-width: 2.5; line-offset: -2.0; [type='footway'] { line-width: 2.0; line-offset: -1.0; } }
        [zoom=15]  { line-width: 2.8; line-offset: -2.5; [type='footway'] { line-width: 2.3; line-offset: -1.5; } }
        [zoom>=16] { line-width: 3.0; line-offset: -4.0; [type='footway'] { line-width: 2.4; line-offset: -3.0; } }
-
+       [foot='yes'][bicycle='yes'],
+       [foot='designated'][bicycle='yes'],
+       [foot='yes'][bicycle='designated'],
+       [foot='designated'][bicycle='designated']  { line-opacity: 0; }
      }
    }
    ::accessoverlaysroads2[zoom>=14][type!='other'][type!='service'] {
@@ -661,9 +664,10 @@ come in as well.
        [zoom=14]  { line-width: 2.5; line-offset: 2.0; [type='footway'] { line-width: 2.0; line-offset: 1.0; } }
        [zoom=15]  { line-width: 2.8; line-offset: 2.5; [type='footway'] { line-width: 2.3; line-offset: 1.5; } }
        [zoom>=16] { line-width: 3.0; line-offset: 4.0; [type='footway'] { line-width: 2.5; line-offset: 3.0; } }
+       [bicycle='yes'],
+       [bicycle='designated'] { line-opacity: 0; }
      }
    }
-
  }
 
 
