@@ -275,6 +275,7 @@
     marker-width: 13.0;
     marker-height: 13.0;
     marker-fill: @parking-label; //#0091da
+    [shelter_type='public_transport'] { marker-opacity: 0; }
     [access='private'] { marker-fill: @forbidden; } //#ff003d
     [zoom>=14] { marker-width: 15.0;  marker-height: 15.0;}
     [zoom>=15] { marker-width: 16.0;  marker-height: 16.0;}

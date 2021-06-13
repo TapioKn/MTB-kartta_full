@@ -1150,14 +1150,14 @@
     },
     {
       "extent": [
-        22.728724596836127,
-        61.03680669477165,
-        25.191827396493274,
-        62.999604994833774
+        23.10622729678361,
+        61.202643294775974,
+        24.0525090966519,
+        61.74664109479137
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "( SELECT amenity, \"access\", shelter_type, name, leisure, tourism, building, military,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE (\n        (amenity IN ('parking', 'shelter') AND ((shelter_type <> public_transport) OR (shelter_type IS NULL)))\n        OR tourism = 'wilderness_hut'\n        OR leisure = 'firepit'\n        OR building = 'bunker'\n        OR military = 'bunker'\n        )\n    AND way && !bbox!\n    AND ST_IsValid(way)\n) AS data",
+        "table": "( SELECT amenity, \"access\", shelter_type, name, leisure, tourism, building, military,\n    ST_PointOnSurface(way) AS way\n  FROM planet_osm_polygon\n  WHERE (\n        amenity = 'shelter'\n        OR amenity ='parking'\n        OR tourism = 'wilderness_hut'\n        OR leisure = 'firepit'\n        OR building = 'bunker'\n        OR military = 'bunker'\n        )\n    AND way && !bbox!\n    AND ST_IsValid(way)\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "custom",
