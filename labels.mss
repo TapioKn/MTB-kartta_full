@@ -469,14 +469,13 @@
     text-name: "'P'";
     text-face-name: @sans_bold;
     text-fill: @parking-label;
+    [access='no'],[access='private'],[access='customer'],[access='permit'] { text-fill: @forbidden; }
     text-halo-fill: #fff;
     text-size: 12;
     [zoom>=15] { text-size: 11; }
     text-halo-radius: 1.0;
-    text-opacity: 0.8;
-    [access!=''][access!='permissive'][access!='yes'] {
-      text-opacity: 0.3;
-    }
+    text-opacity: 0.4;
+    [access='permissive'],[access='yes'] { text-opacity: 0.8; }
   }
 }
 
