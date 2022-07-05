@@ -63,6 +63,7 @@
     marker-allow-overlap: true;
     marker-file: url('images/leisure_firepit.svg');
     marker-fill: @parking-label; //#0091da;
+    [access='private'],[access='no'] { marker-fill: @forbidden; } //#ff003d
     marker-width: 12.0; marker-height: 12.0;
     [zoom>=14] { marker-width: 13.0;  marker-height: 13.0;}
     [zoom>=15] { marker-width: 14.0;  marker-height: 14.0;}

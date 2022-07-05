@@ -276,7 +276,7 @@
     marker-height: 13.0;
     marker-fill: @parking-label; //#0091da
     [shelter_type='public_transport'] { marker-opacity: 0; }
-    [access='private'] { marker-fill: @forbidden; } //#ff003d
+    [access='private'],[access='no'] { marker-fill: @forbidden; } //#ff003d
     [zoom>=14] { marker-width: 15.0;  marker-height: 15.0;}
     [zoom>=15] { marker-width: 16.0;  marker-height: 16.0;}
     [zoom>=16] { marker-width: 17.0;  marker-height: 17.0;}
@@ -294,6 +294,27 @@
       [access='private'],[access='no'] { text-fill: @forbidden * 0.6; text-halo-fill: lighten(@forbidden, 90%); }
       text-halo-radius:1;
     }
+  }
+  [leisure='firepit'] {
+    marker-file: url('images/leisure_firepit.svg');
+    marker-allow-overlap: true;
+    marker-width: 13.0;
+    marker-height: 13.0;
+    marker-fill: @parking-label; //#0091da
+    [access='private'],[access='no']  { marker-fill: @forbidden; } //#ff003d
+    [zoom>=14] { marker-width: 15.0;  marker-height: 15.0;}
+    [zoom>=15] { marker-width: 16.0;  marker-height: 16.0;}
+    [zoom>=16] { marker-width: 17.0;  marker-height: 17.0;}
+  }
+
+  [amenity='toilets'][zoom>=14] {
+    marker-file: url(images/amenity_toilets.svg);
+    marker-allow-overlap: true;
+    marker-width: 15.0;  marker-height: 15.0;
+    [zoom>=15] { marker-width: 16.0;  marker-height: 16.0;}
+    [zoom>=16] { marker-width: 17.0;  marker-height: 17.0;}
+    marker-fill: @parking-label; //#0091da
+    [access='no'],[access='private'],[access='permit'] { marker-fill: @forbidden; }
   }
 
 }
@@ -448,13 +469,13 @@
 /* ================================================================== */
 /* FIXME/NOEXIT/ETC LABELS
 /* ================================================================== */
-#constructs_point[zoom>=15] {
+#constructs_point[zoom>=14] {
   [type='ford_yes'][zoom>=16] {
     marker-file: url(images/ford_yes-L.png);
     marker-allow-overlap: true;
     marker-placement: point;
   }
-  [type='obstacle_fallen_tree'] {
+  [type='obstacle_fallen_tree'][zoom>=15] {
     marker-file: url(images/obstacle_fallen_tree-M.png);
     [zoom>=16] { marker-file: url(images/obstacle_fallen_tree-L.png); }
     marker-allow-overlap: true;
@@ -465,6 +486,17 @@
     marker-allow-overlap: true;
     marker-placement: point;
   }
+
+  [type='amenity_toilets'] {
+    marker-file: url(images/amenity_toilets.svg);
+    marker-allow-overlap: true;
+    marker-width: 15.0;  marker-height: 15.0;
+    [zoom>=15] { marker-width: 16.0;  marker-height: 16.0;}
+    [zoom>=16] { marker-width: 17.0;  marker-height: 17.0;}
+    marker-fill: @parking-label; //#0091da
+    [access='no'],[access='private'],[access='permit'] { marker-fill: @forbidden; }
+  }
+
   [type='amenity_parking'][zoom>=15] {
     text-name: "'P'";
     text-face-name: @sans_bold;
