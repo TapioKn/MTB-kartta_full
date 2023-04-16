@@ -150,12 +150,13 @@ come in as well.
 @paz17_cw: 5.0;   @paz17_lw: 2.5;   @paz17_da: 6, 5;   @trz17_da: 10, 2.0;
 
 
-
+ 
 /* ---- CASING ----------------------------------------------- */
 
 #roads_high::outline[zoom>=11][zoom<=20],
 #tunnel[render='1_outline'][zoom>=11][zoom<=20],
 #bridge[render='1_outline'][zoom>=11][zoom<=20]{
+  [ice_road='yes'] { line-opacity: 0; }
   /* -- WAY CASING COLORS -- */
   line-cap: round;
   [bridge=1],
@@ -371,7 +372,7 @@ come in as well.
 #roads_high[zoom>=11][zoom<=20],
 #tunnel[render='3_inline'][zoom>=11][zoom<=20],
 #bridge[render='3_inline'][zoom>=11][zoom<=20]{
-
+  [ice_road='yes'] { line-opacity: 0; }
   /* -- Way fill line colors -- */
   line-color: @road_fill;
   [type='motorway'],
@@ -679,7 +680,8 @@ come in as well.
 #sidewalks[zoom>=14]{
 line-color: @footway;   //The default, altered for cycleways when present
 line-dasharray: 1.5, 2; //The default, altered for cycleways when present
-
+[ice_road='yes'] { line-opacity: 0; }
+  
   ::sidewalksleft {
     [footway_left='yes'],[cycleway_left='yes'] {
     line-color: @footway; //The default, altered for cycleways when present

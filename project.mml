@@ -89,10 +89,10 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
-        25.699409996422613,
-        62.20687609480581,
-        26.04166779637495,
-        62.32136439480962
+        23.1062273,
+        61.2026433017392,
+        24.05250910000001,
+        61.746641101639916
       ],
       "advanced": {}
     },
@@ -534,7 +534,7 @@
         "port": "5432",
         "project": "osm-bright-master",
         "srs": null,
-        "table": "/* tunnel */\n( SELECT way, 0 AS bridge, render, layer, 1 as tunnel, access, foot, bicycle,\n  CASE\n    WHEN highway = 'motorway' THEN 'motorway'\n    WHEN highway = 'motorway_link' THEN 'motorway_link'\n    WHEN highway = 'trunk' THEN 'trunk'\n    WHEN highway = 'trunk_link' THEN 'trunk_link'\n    WHEN highway = 'primary' THEN 'primary'\n    WHEN highway = 'primary_link' THEN 'primary_link'\n    WHEN highway IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN highway IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN highway IN ('residential', 'unclassified') THEN 'residential'\n    WHEN highway = 'living_street' THEN 'living_street'\n    WHEN highway = 'service' AND service = 'parking_aisle' THEN 'parking_aisle' \n    WHEN highway = 'service' AND service = 'driveway' THEN 'driveway' \n    WHEN highway IN ('service', 'road') THEN 'service'\n    WHEN highway = 'raceway' THEN 'raceway'\n\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND bicycle = 'designated' AND (\"mtb:scale\" IS NULL OR \"mtb:scale\" = '0-' OR 'surface' IN ('paved', 'asphalt')) THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND cycleway = 'track' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND \"mtb:scale\" IS NOT NULL THEN 'other'\n    WHEN highway = 'footway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'footpath' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footpath' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'pedestrian' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'pedestrian' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'path' AND bicycle = 'no' THEN 'other'\n    WHEN highway = 'cycleway' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'footway'\n\n    WHEN highway = 'path' THEN 'other'\n    WHEN highway = 'track' THEN 'other'\n    WHEN highway = 'bridleway' THEN 'other'\n    WHEN highway = 'steps' THEN 'steps'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    WHEN railway IN ('abandoned', 'disused') THEN 'rail_abandoned'\n    WHEN railway = 'platform' THEN 'footway'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN surface IN ('paved', 'asphalt', 'concrete', 'paving_stones') THEN 'paved'\n    WHEN surface IS NOT NULL THEN 'unpaved'\n    ELSE 'unknown' END AS surface\n  FROM (\n    SELECT *, '1_outline' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '2_line' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n  ) AS tunnels\n  ORDER BY layer ASC, render ASC\n) AS data",
+        "table": "/* tunnel */\n( SELECT way, 0 AS bridge, render, layer, 1 as tunnel, access, foot, bicycle, ice_road,\n  CASE\n    WHEN highway = 'motorway' THEN 'motorway'\n    WHEN highway = 'motorway_link' THEN 'motorway_link'\n    WHEN highway = 'trunk' THEN 'trunk'\n    WHEN highway = 'trunk_link' THEN 'trunk_link'\n    WHEN highway = 'primary' THEN 'primary'\n    WHEN highway = 'primary_link' THEN 'primary_link'\n    WHEN highway IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN highway IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN highway IN ('residential', 'unclassified') THEN 'residential'\n    WHEN highway = 'living_street' THEN 'living_street'\n    WHEN highway = 'service' AND service = 'parking_aisle' THEN 'parking_aisle' \n    WHEN highway = 'service' AND service = 'driveway' THEN 'driveway' \n    WHEN highway IN ('service', 'road') THEN 'service'\n    WHEN highway = 'raceway' THEN 'raceway'\n\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND bicycle = 'designated' AND (\"mtb:scale\" IS NULL OR \"mtb:scale\" = '0-' OR 'surface' IN ('paved', 'asphalt')) THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND cycleway = 'track' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND \"mtb:scale\" IS NOT NULL THEN 'other'\n    WHEN highway = 'footway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'footpath' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footpath' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'pedestrian' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'pedestrian' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'path' AND bicycle = 'no' THEN 'other'\n    WHEN highway = 'cycleway' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'footway'\n\n    WHEN highway = 'path' THEN 'other'\n    WHEN highway = 'track' THEN 'other'\n    WHEN highway = 'bridleway' THEN 'other'\n    WHEN highway = 'steps' THEN 'steps'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    WHEN railway IN ('abandoned', 'disused') THEN 'rail_abandoned'\n    WHEN railway = 'platform' THEN 'footway'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN surface IN ('paved', 'asphalt', 'concrete', 'paving_stones') THEN 'paved'\n    WHEN surface IS NOT NULL THEN 'unpaved'\n    ELSE 'unknown' END AS surface\n  FROM (\n    SELECT *, '1_outline' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '2_line' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM planet_osm_line\n    WHERE tunnel NOT IN ('', '0', 'no')\n  ) AS tunnels\n  ORDER BY layer ASC, render ASC\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "custom",
@@ -547,9 +547,9 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
-        22.333054496891226,
-        60.75442519476463,
-        24.997605896520273,
+        22.33305449689121,
+        60.74909579476451,
+        25.43746119645908,
         63.03240199483504
       ],
       "advanced": {}
@@ -678,14 +678,14 @@
     {
       "geometry": "linestring",
       "extent": [
-        25.646675596429965,
-        62.179230594804906,
-        26.091205296368106,
-        62.35912879481087
+        22.33305449689121,
+        60.74909579476451,
+        25.43746119645908,
+        63.03240199483504
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "/* sidewalks */\n( SELECT way, highway,\n  CASE\n    /*left side cycleway check*/\n    WHEN \"cycleway:both\"          IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"cycleway:left\"          IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"cycleway\"               IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"sidewalk:both:bicycle\"  IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"sidewalk:left:bicycle\"  IN ('yes', 'track', 'lane') THEN 'yes'\n    ELSE 'no' END AS cycleway_left,\n    /*right side cycleway check*/\n  CASE\n    WHEN \"cycleway:both\"          IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"cycleway:right\"         IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"cycleway\"               IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"sidewalk:both:bicycle\"  IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"sidewalk:right:bicycle\" IN ('yes', 'track', 'lane') THEN 'yes'\n    ELSE 'no' END AS cycleway_right,\n    /*left side footway check*/\n  CASE\n    WHEN \"sidewalk\" IN ('yes', 'both', 'left')  THEN 'yes'\n    ELSE 'no' END AS footway_left,\n    /*right side footway check*/\n  CASE\n    WHEN \"sidewalk\" IN ('yes', 'both', 'right') THEN 'yes'\n    ELSE 'no' END AS footway_right\n\n  FROM planet_osm_line\n  WHERE highway IN ('trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'living_street', 'service')\n) AS data",
+        "table": "/* sidewalks */\n( SELECT way, highway, ice_road,\n  CASE\n    /*left side cycleway check*/\n    WHEN \"cycleway:both\"          IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"cycleway:left\"          IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"cycleway\"               IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"sidewalk:both:bicycle\"  IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"sidewalk:left:bicycle\"  IN ('yes', 'track', 'lane') THEN 'yes'\n    ELSE 'no' END AS cycleway_left,\n    /*right side cycleway check*/\n  CASE\n    WHEN \"cycleway:both\"          IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"cycleway:right\"         IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"cycleway\"               IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"sidewalk:both:bicycle\"  IN ('yes', 'track', 'lane') THEN 'yes'\n    WHEN \"sidewalk:right:bicycle\" IN ('yes', 'track', 'lane') THEN 'yes'\n    ELSE 'no' END AS cycleway_right,\n    /*left side footway check*/\n  CASE\n    WHEN \"sidewalk\" IN ('yes', 'both', 'left')  THEN 'yes'\n    ELSE 'no' END AS footway_left,\n    /*right side footway check*/\n  CASE\n    WHEN \"sidewalk\" IN ('yes', 'both', 'right') THEN 'yes'\n    ELSE 'no' END AS footway_right\n\n  FROM planet_osm_line\n  WHERE highway IN ('trunk', 'trunk_link', 'primary', 'primary_link', 'secondary', 'secondary_link', 'tertiary', 'tertiary_link', 'residential', 'unclassified', 'living_street', 'service')\n) AS data",
         "key_field": "",
         "geometry_field": "",
         "extent_cache": "custom",
@@ -717,7 +717,7 @@
         "port": "5432",
         "project": "MTB-kartta_full",
         "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
-        "table": "/* roads_high */\n( SELECT way, 0 AS tunnel, 0 AS bridge, 'fill' AS render, access AS access, foot AS foot, bicycle AS bicycle,\n  CASE\n    WHEN highway = 'motorway' THEN 'motorway'\n    WHEN highway = 'motorway_link' THEN 'motorway_link'\n    WHEN highway = 'trunk' THEN 'trunk'\n    WHEN highway = 'trunk_link' THEN 'trunk_link'\n    WHEN highway = 'primary' THEN 'primary'\n    WHEN highway = 'primary_link' THEN 'primary_link'\n    WHEN highway IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN highway IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN highway IN ('residential', 'unclassified') THEN 'residential'\n    WHEN highway = 'living_street' THEN 'living_street'\n    WHEN highway = 'service' AND service = 'parking_aisle' THEN 'parking_aisle' \n    WHEN highway = 'service' AND service = 'driveway' THEN 'driveway' \n    WHEN highway IN ('service', 'road') THEN 'service'\n    WHEN highway = 'raceway' THEN 'raceway'\n\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' AND (\"mtb:scale\" IS NULL OR \"mtb:scale\" = '0-' OR 'surface' IN ('paved', 'asphalt')) THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND \"mtb:scale\" IS NOT NULL THEN 'other'\n    WHEN highway = 'footway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'footpath' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footpath' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'pedestrian' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'pedestrian' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'path' AND bicycle = 'no' THEN 'other'\n    WHEN highway = 'cycleway' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'footway'\n\n    WHEN highway = 'path' THEN 'other'\n    WHEN highway = 'track' THEN 'other'\n    WHEN highway = 'bridleway' THEN 'other'\n    WHEN highway = 'steps' THEN 'steps'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    WHEN railway IN ('disused') THEN 'rail_disused'\n    WHEN railway = 'platform' THEN 'footway'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN surface IN ('paved', 'asphalt', 'concrete', 'paving_stones') THEN 'paved'\n    WHEN surface IS NOT NULL THEN 'unpaved'\n    ELSE 'unknown' END AS surface\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
+        "table": "/* roads_high */\n( SELECT way, 0 AS tunnel, 0 AS bridge, 'fill' AS render, access AS access, foot AS foot, bicycle AS bicycle, ice_road AS ice_road,\n  CASE\n    WHEN highway = 'motorway' THEN 'motorway'\n    WHEN highway = 'motorway_link' THEN 'motorway_link'\n    WHEN highway = 'trunk' THEN 'trunk'\n    WHEN highway = 'trunk_link' THEN 'trunk_link'\n    WHEN highway = 'primary' THEN 'primary'\n    WHEN highway = 'primary_link' THEN 'primary_link'\n    WHEN highway IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN highway IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN highway IN ('residential', 'unclassified') THEN 'residential'\n    WHEN highway = 'living_street' THEN 'living_street'\n    WHEN highway = 'service' AND service = 'parking_aisle' THEN 'parking_aisle' \n    WHEN highway = 'service' AND service = 'driveway' THEN 'driveway' \n    WHEN highway IN ('service', 'road') THEN 'service'\n    WHEN highway = 'raceway' THEN 'raceway'\n\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND bicycle = 'designated' AND (\"mtb:scale\" IS NULL OR \"mtb:scale\" = '0-' OR 'surface' IN ('paved', 'asphalt')) THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND cycleway = 'track' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track', 'bridleway') AND \"mtb:scale\" IS NOT NULL THEN 'other'\n    WHEN highway = 'footway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'footpath' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footpath' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'pedestrian' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'pedestrian' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'path' AND bicycle = 'no' THEN 'other'\n    WHEN highway = 'cycleway' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'footway'\n\n    WHEN highway = 'path' THEN 'other'\n    WHEN highway = 'track' THEN 'other'\n    WHEN highway = 'bridleway' THEN 'other'\n    WHEN highway = 'steps' THEN 'steps'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    WHEN railway IN ('disused') THEN 'rail_disused'\n    WHEN railway = 'platform' THEN 'footway'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN surface IN ('paved', 'asphalt', 'concrete', 'paving_stones') THEN 'paved'\n    WHEN surface IS NOT NULL THEN 'unpaved'\n    ELSE 'unknown' END AS surface\n  FROM planet_osm_line\n  WHERE (highway IS NOT NULL OR railway IS NOT NULL)\n    AND (tunnel IS NULL OR tunnel = 'no')\n    AND (bridge IS NULL OR bridge = 'no')\n  ORDER BY z_order\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "custom",
@@ -730,9 +730,9 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
-        22.333054496891226,
-        60.75442519476463,
-        24.997605896520273,
+        22.33305449689121,
+        60.74909579476451,
+        25.43746119645908,
         63.03240199483504
       ],
       "advanced": {}
@@ -745,7 +745,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "table": "( SELECT way, highway,\n  CASE\n    WHEN highway = 'motorway' THEN 'motorway'\n    WHEN highway = 'motorway_link' THEN 'motorway_link'\n    WHEN highway = 'trunk' THEN 'trunk'\n    WHEN highway = 'trunk_link' THEN 'trunk_link'\n    WHEN highway = 'primary' THEN 'primary'\n    WHEN highway = 'primary_link' THEN 'primary_link'\n    WHEN highway IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN highway IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN highway IN ('residential', 'unclassified') THEN 'residential'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'tertiary', 'motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary_link', 'unclassified', 'residential')\n) AS data",
+        "table": "( SELECT way, highway, ice_road,\n  CASE\n    WHEN highway = 'motorway' THEN 'motorway'\n    WHEN highway = 'motorway_link' THEN 'motorway_link'\n    WHEN highway = 'trunk' THEN 'trunk'\n    WHEN highway = 'trunk_link' THEN 'trunk_link'\n    WHEN highway = 'primary' THEN 'primary'\n    WHEN highway = 'primary_link' THEN 'primary_link'\n    WHEN highway IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN highway IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN highway IN ('residential', 'unclassified') THEN 'residential'\n    ELSE 'other' END AS type\n  FROM planet_osm_line\n  WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'tertiary', 'motorway_link', 'trunk_link', 'primary_link', 'secondary_link', 'tertiary_link', 'unclassified', 'residential')\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "custom",
@@ -758,10 +758,10 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
-        25.646675596429965,
-        62.179230594804906,
-        26.091205296368106,
-        62.35912879481087
+        22.33305449689121,
+        60.74909579476451,
+        25.43746119645908,
+        63.03240199483504
       ],
       "advanced": {}
     },
@@ -773,7 +773,7 @@
         "key_field": "",
         "password": "renderer",
         "port": "5432",
-        "table": "( SELECT way, highway AS type, bridge, tunnel\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'tertiary')\n) AS data",
+        "table": "( SELECT way, highway AS type, bridge, tunnel, ice_road\n    FROM planet_osm_roads\n    WHERE highway IN ('motorway', 'trunk', 'primary', 'secondary', 'tertiary')\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "custom",
@@ -786,10 +786,10 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
-        25.720216596419743,
-        62.18067279480495,
-        26.07357629637057,
-        62.320306794809625
+        22.602203396853742,
+        60.85743049476714,
+        25.43746119645908,
+        62.12096999480302
       ],
       "advanced": {}
     },
@@ -860,7 +860,7 @@
         "port": "5432",
         "project": "osm-bright-master",
         "srs": null,
-        "table": "/* bridge */\n( SELECT way, 1 AS bridge, access, render, layer, 0 as tunnel, foot, bicycle,\n  CASE\n    WHEN highway = 'motorway' THEN 'motorway'\n    WHEN highway = 'motorway_link' THEN 'motorway_link'\n    WHEN highway = 'trunk' THEN 'trunk'\n    WHEN highway = 'trunk_link' THEN 'trunk_link'\n    WHEN highway = 'primary' THEN 'primary'\n    WHEN highway = 'primary_link' THEN 'primary_link'\n    WHEN highway IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN highway IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN highway IN ('residential', 'unclassified') THEN 'residential'\n    WHEN highway = 'living_street' THEN 'living_street'\n    WHEN highway = 'service' AND service = 'parking_aisle' THEN 'parking_aisle' \n    WHEN highway = 'service' AND service = 'driveway' THEN 'driveway' \n    WHEN highway IN ('service', 'road') THEN 'service'\n    WHEN highway = 'raceway' THEN 'raceway'\n\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND bicycle = 'designated' AND (\"mtb:scale\" IS NULL OR \"mtb:scale\" = '0-' OR 'surface' IN ('paved', 'asphalt')) THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND cycleway = 'track' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND \"mtb:scale\" IS NOT NULL THEN 'other'\n    WHEN highway = 'footway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'footpath' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footpath' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'pedestrian' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'pedestrian' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'path' AND bicycle = 'no' THEN 'other'\n    WHEN highway = 'cycleway' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'footway'\n\n    WHEN highway = 'path' THEN 'other'\n    WHEN highway = 'track' THEN 'other'\n    WHEN highway = 'bridleway' THEN 'other'\n    WHEN highway = 'steps' THEN 'steps'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    WHEN railway IN ('abandoned', 'disused') THEN 'rail_abandoned'\n    WHEN railway = 'platform' THEN 'footway'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN surface IN ('paved', 'asphalt', 'concrete', 'paving_stones') THEN 'paved'\n    WHEN surface IS NOT NULL THEN 'unpaved'\n    ELSE 'unknown' END AS surface\n  FROM (\n    SELECT *, '1_outline' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '2_line' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n  ) AS bridges\n  ORDER BY layer ASC, render ASC\n) AS data",
+        "table": "/* bridge */\n( SELECT way, 1 AS bridge, access, render, layer, 0 as tunnel, foot, bicycle, ice_road,\n  CASE\n    WHEN highway = 'motorway' THEN 'motorway'\n    WHEN highway = 'motorway_link' THEN 'motorway_link'\n    WHEN highway = 'trunk' THEN 'trunk'\n    WHEN highway = 'trunk_link' THEN 'trunk_link'\n    WHEN highway = 'primary' THEN 'primary'\n    WHEN highway = 'primary_link' THEN 'primary_link'\n    WHEN highway IN ('secondary', 'tertiary') THEN 'mainroad'\n    WHEN highway IN ('secondary_link', 'tertiary_link') THEN 'mainroad_link'\n    WHEN highway IN ('residential', 'unclassified') THEN 'residential'\n    WHEN highway = 'living_street' THEN 'living_street'\n    WHEN highway = 'service' AND service = 'parking_aisle' THEN 'parking_aisle' \n    WHEN highway = 'service' AND service = 'driveway' THEN 'driveway' \n    WHEN highway IN ('service', 'road') THEN 'service'\n    WHEN highway = 'raceway' THEN 'raceway'\n\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND bicycle = 'designated' AND (\"mtb:scale\" IS NULL OR \"mtb:scale\" = '0-' OR 'surface' IN ('paved', 'asphalt')) THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND cycleway = 'track' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian', 'path', 'track') AND \"mtb:scale\" IS NOT NULL THEN 'other'\n    WHEN highway = 'footway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'footpath' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'footpath' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'pedestrian' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'pedestrian' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'bridleway' AND bicycle = 'no' THEN 'nocycle'\n    WHEN highway = 'bridleway' AND bicycle = 'yes' THEN 'cycleway'\n    WHEN highway = 'path' AND bicycle = 'no' THEN 'other'\n    WHEN highway = 'cycleway' THEN 'cycleway'\n    WHEN highway IN ('footway', 'footpath', 'pedestrian') THEN 'footway'\n\n    WHEN highway = 'path' THEN 'other'\n    WHEN highway = 'track' THEN 'other'\n    WHEN highway = 'bridleway' THEN 'other'\n    WHEN highway = 'steps' THEN 'steps'\n    WHEN railway IN ('light_rail', 'subway', 'narrow_gauge', 'rail', 'tram') THEN 'railway'\n    WHEN railway IN ('abandoned', 'disused') THEN 'rail_abandoned'\n    WHEN railway = 'platform' THEN 'footway'\n    ELSE 'other' END AS type,\n  CASE\n    WHEN surface IN ('paved', 'asphalt', 'concrete', 'paving_stones') THEN 'paved'\n    WHEN surface IS NOT NULL THEN 'unpaved'\n    ELSE 'unknown' END AS surface\n  FROM (\n    SELECT *, '1_outline' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '2_line' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n    UNION ALL\n    SELECT *, '3_inline' AS render FROM planet_osm_line\n    WHERE bridge NOT IN ('', '0', 'no')\n  ) AS bridges\n  ORDER BY layer ASC, render ASC\n) AS data",
         "type": "postgis",
         "user": "renderer",
         "extent_cache": "custom",
@@ -873,9 +873,9 @@
       "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
       "srs-name": "900913",
       "extent": [
-        22.333054496891226,
-        60.75442519476463,
-        24.997605896520273,
+        22.33305449689121,
+        60.74909579476451,
+        25.43746119645908,
         63.03240199483504
       ],
       "advanced": {}
