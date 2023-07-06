@@ -6,19 +6,19 @@
 Map { font-directory: url(fonts); }
 
 @sans_lt:"DejaVu Sans";
-@sans_lt_italic:"DejaVu Sans Oblique";
+@sans_lt_italic:"DejaVu Sans Oblique"; 
 
 @sans:"DejaVu Sans Book";
-@sans_italic:"DejaVu Sans Oblique";
+@sans_italic:"DejaVu Sans Oblique"; 
 
 @sans_bold:"DejaVu Sans Bold";
 @sans_bold_italic:"DejaVu Sans Bold Oblique";
-
+ 
 
 /* ================================================================== */
-/* LANDUSE & LANDCOVER COLORS
+/* LANDUSE & LANDCOVER COLORS 
 /* ================================================================== */
-
+ 
 @allotments:        #f5f5ef;
 @beach:             #f6f7d7;
 @bog:               #dee4d3; //lighten(#c1c8a8, 14%);
