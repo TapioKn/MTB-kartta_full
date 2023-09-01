@@ -84,11 +84,11 @@ Map { font-directory: url(fonts); }
 
 @path_line:        #000000;
 
-@unpaved_fill:     #f2eade;
-@unpaved_case:     #815b15;
+@unpaved_fill:     #ded0bd;  //BACKUP: #f2eade;
+@unpaved_case:     #473005;  //BACKUP: #815b15;
 
 @rail_regular:     #7c7b7b;
-@rail_disused:   #bfbfbf;
+@rail_disused:     #bfbfbf;
 @rail_fill:        #ffffff;
 
 @aeroway:          @building;
