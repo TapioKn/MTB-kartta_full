@@ -22,6 +22,7 @@ Map { font-directory: url(fonts); }
 @allotments:        #f5f5ef;
 @beach:             #f6f7d7;
 @bog:               #dee4d3; //lighten(#c1c8a8, 14%);
+@border_zone:       #b255ff;
 @building:          #8a8682; //darken(#938f8b, 3%);
 @cemetery:          #c6dac6;
 @commercial:        #eef4f6;

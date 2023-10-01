@@ -187,7 +187,7 @@
       [zoom>=12] { line-width: 3.0; }
     }
   }
-
+  
   /* Hedges defined as areas */
   [barrier='hedge'] {
     [zoom>=14] { polygon-fill: @hedge; }
@@ -199,6 +199,12 @@
       polygon-pattern-opacity: 0.5;
       line-width: 1.5;
       line-color: @military;
+      line-opacity: 0.5;  }
+    [land_type='border_zone'] {
+      polygon-pattern-file: url("images/boundary_border_zone.png");
+      polygon-pattern-opacity: 0.5;
+      line-width: 1.5;
+      line-color: @border_zone;
       line-opacity: 0.5;  }
   }
 }
