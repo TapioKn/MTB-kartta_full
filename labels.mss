@@ -295,7 +295,7 @@
       text-halo-radius:1;
     }
   }
-  [leisure='firepit'] {
+  [leisure='firepit'][zoom>=10] {
     marker-file: url('images/leisure_firepit.svg');
     marker-allow-overlap: true;
     marker-width: 13.0;
