@@ -910,14 +910,14 @@
     {
       "geometry": "point",
       "extent": [
-        22.333054496891226,
-        60.75442519476463,
-        24.997605896520273,
-        63.03240199483504
+        22.33305449689121,
+        60.74931329476451,
+        25.182332096494587,
+        63.03224559483502
       ],
       "Datasource": {
         "type": "postgis",
-        "table": "/* constructs_point */\n( SELECT way, name, access,\n  CASE\n    WHEN power = 'pole' THEN 'power_pole'\n    WHEN power = 'tower' THEN 'power_tower'\n    WHEN aerialway = 'station' THEN 'aerialway_station'\n    WHEN aerialway = 'pylon' THEN 'aerialway_pylon'\n    WHEN barrier IN ('gate', 'block', 'sliding_gate', 'hampshire_gate', 'kissing_gate', 'lift_gate', 'swing_gate', 'wicket_gate', 'chain', 'log', 'rope') THEN 'barrier_gate'\n    WHEN amenity = 'shelter' AND leisure = 'firepit' THEN 'amenity_shelter_firepit'\n    WHEN leisure = 'firepit' THEN 'leisure_firepit'\n    WHEN amenity = 'shelter' AND ('shelter_type' <> 'public_transport' OR 'shelter_type' IS NULL) THEN 'amenity_shelter'\n    WHEN amenity IN ('drinking_water', 'water_point') THEN 'amenity_drinking_water'\n    WHEN amenity = 'toilets' THEN 'amenity_toilets'\n    WHEN amenity = 'parking' THEN 'amenity_parking'\n    WHEN tourism = 'viewpoint' THEN 'tourism_viewpoint'\n    WHEN fixme = 'continue' THEN 'fixme_continue'\n    WHEN (fixme != 'continue' AND fixme IS NOT NULL) THEN 'fixme_resurvey'\n    WHEN noexit = 'yes' THEN 'noexit_yes'\n    WHEN ford = 'yes' THEN 'ford_yes'\n    WHEN obstacle = 'fallen_tree' THEN 'obstacle_fallen_tree'\n    WHEN \"natural\" = 'peak' THEN 'natural_peak'\n    WHEN tourism = 'wilderness_hut' THEN 'tourism_wilderness_hut'\n    WHEN military = 'bunker' OR building = 'bunker' THEN 'military_bunker'\n    ELSE 'other' END AS type\n  FROM planet_osm_point\n  WHERE COALESCE('aerialway', 'barrier', 'power', 'fixme', 'noexit', 'natural', 'ford', 'obstacle', 'amenity', 'leisure', 'tourism') IS NOT NULL\n) AS data",
+        "table": "/* constructs_point */\n( SELECT way, name, access,\n  CASE\n    WHEN power = 'pole' THEN 'power_pole'\n    WHEN power = 'tower' THEN 'power_tower'\n    WHEN aerialway = 'station' THEN 'aerialway_station'\n    WHEN aerialway = 'pylon' THEN 'aerialway_pylon'\n    WHEN barrier IN ('gate', 'block', 'sliding_gate', 'hampshire_gate', 'kissing_gate', 'lift_gate', 'swing_gate', 'wicket_gate', 'chain', 'log', 'rope') THEN 'barrier_gate'\n    WHEN amenity = 'shelter' AND leisure = 'firepit' THEN 'amenity_shelter_firepit'\n    WHEN leisure = 'firepit' THEN 'leisure_firepit'\n    WHEN leisure = 'sauna' THEN 'leisure_sauna'\n    WHEN amenity = 'shelter' AND ('shelter_type' <> 'public_transport' OR 'shelter_type' IS NULL) THEN 'amenity_shelter'\n    WHEN amenity IN ('drinking_water', 'water_point') THEN 'amenity_drinking_water'\n    WHEN amenity = 'toilets' THEN 'amenity_toilets'\n    WHEN amenity = 'parking' THEN 'amenity_parking'\n    WHEN tourism = 'viewpoint' THEN 'tourism_viewpoint'\n    WHEN fixme = 'continue' THEN 'fixme_continue'\n    WHEN (fixme != 'continue' AND fixme IS NOT NULL) THEN 'fixme_resurvey'\n    WHEN noexit = 'yes' THEN 'noexit_yes'\n    WHEN ford = 'yes' THEN 'ford_yes'\n    WHEN obstacle = 'fallen_tree' THEN 'obstacle_fallen_tree'\n    WHEN \"natural\" = 'peak' THEN 'natural_peak'\n    WHEN tourism = 'wilderness_hut' THEN 'tourism_wilderness_hut'\n    WHEN military = 'bunker' OR building = 'bunker' THEN 'military_bunker'\n    ELSE 'other' END AS type\n  FROM planet_osm_point\n  WHERE COALESCE('aerialway', 'barrier', 'power', 'fixme', 'noexit', 'natural', 'ford', 'obstacle', 'amenity', 'leisure', 'tourism') IS NOT NULL\n) AS data",
         "key_field": "",
         "geometry_field": "way",
         "extent_cache": "custom",
