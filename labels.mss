@@ -266,11 +266,13 @@
   [amenity='shelter'][zoom>=10],
   [tourism='wilderness_hut'][zoom>=10],
   [military='bunker'][zoom>=10],
-  [building='bunker'][zoom>=10] {
+  [building='bunker'][zoom>=10],
+  [leisure='sauna'][zoom>=10] {
     marker-file: url('images/amenity_shelter.svg');
     [amenity='shelter'][leisure='firepit'] { marker-file: url('images/amenity_shelter_firepit.svg'); }
     [tourism='wilderness_hut'] { marker-file: url('images/tourism_wilderness_hut.svg'); }
     [military='bunker'],[building='bunker'] { marker-file: url('images/military_bunker.svg'); }
+    [leisure='sauna'] { marker-file: url('images/leisure_sauna.svg'); }
     marker-allow-overlap: true;
     marker-width: 13.0;
     marker-height: 13.0;
@@ -280,14 +282,14 @@
     [zoom>=14] { marker-width: 15.0;  marker-height: 15.0;}
     [zoom>=15] { marker-width: 16.0;  marker-height: 16.0;}
     [zoom>=16] { marker-width: 17.0;  marker-height: 17.0;}
-    [zoom>=13] {
+    [zoom>=15] {
       text-name: "[name]";
       text-placement: point;
       text-allow-overlap: true;
       text-dy: 8;
       text-face-name: @sans;
       text-size: 10;
-      [zoom<=14] { text-size: 9; }
+      [zoom=15] { text-size: 8; }
       text-wrap-width:30;
       text-fill: @parking-label * 0.6;
       text-halo-fill: lighten(@parking-label, 90%);
