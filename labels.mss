@@ -425,11 +425,12 @@
   text-halo-fill:@road_halo;
   text-halo-radius:1.5;
   text-min-distance:40;
-  [zoom=15]  { [type='path'],[type='track'],[type='steps'],[type='cycleway'],[type='footway'] { text-size:10; text-dy: 8;} }
+  [zoom=15]  { [type='path'],[type='track'],[type='steps'],[type='cycleway'],[type='footway'] { text-size:10; text-dy:8;} }
   [zoom=16]  { text-size:12; text-character-spacing:0.5; text-halo-radius:2.0;
-               [type='path'],[type='track'],[type='steps'],[type='cycleway'],[type='footway'] { text-size:11; text-dy: 9; } }
+               [type='path'],[type='track'],[type='steps'],[type='cycleway'],[type='footway'] { text-size:11; text-dy:9; } }
   [zoom>=17] { text-size:14; text-character-spacing:0.75; text-halo-radius:2.5;
-               [type='path'],[type='track'],[type='steps'],[type='cycleway'],[type='footway'] { text-size:12; text-dy: 10;} }
+               [type='path'],[type='track'],[type='steps'],[type='cycleway'],[type='footway'] { text-size:12; text-dy:10;} }
+  [route='ferry'] {text-placement:point; text-size:9; text-dy:8; text-fill: darken(@waterway, 40%); text-halo-radius:1.5; }
   [tunnel='yes'],
   [tunnel='1'] { text-opacity: 0; text-halo-radius: 0; }
 }

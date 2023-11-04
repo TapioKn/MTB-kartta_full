@@ -215,7 +215,7 @@ come in as well.
   }
   [tunnel=1] { line-opacity: 0; }
 
-  [type='other'],[type='path'],[type='steps'] { line-opacity: 0; }
+  [type='other'],[type='path'],[type='steps'],[type='ferry'] { line-opacity: 0; }
 
   /* -- WAY CASING WIDTHS -- */
   [zoom=11] {
@@ -236,7 +236,7 @@ come in as well.
     [type='cycleway']      { line-width: 0; }
 	  [type='footway']       { line-width: 0; }
     [type='railway']       { line-width: @rwzlo_cw; }
-    [type='rail_disused']{ line-width: 0; }
+    [type='rail_disused']  { line-width: 0; }
 
   }
   [zoom=12] {
@@ -257,7 +257,7 @@ come in as well.
     [type='cycleway']      { line-width: 0; }
 	  [type='footway']       { line-width: 0; }
     [type='railway']       { line-width: @rwzlo_cw; }
-    [type='rail_disused']{ line-width: 0; }
+    [type='rail_disused']  { line-width: 0; }
   }
   [zoom=13] {
     [type='motorway']      { line-width: @rdz13_mot + 2.5; }
@@ -408,6 +408,11 @@ come in as well.
   [type='railway'],
   [type='rail_disused'] {
     line-color: @rail_fill;
+    line-dasharray: @rwzlo_da;
+    [zoom>=15] { line-dasharray: @rwzhi_da; }
+  }
+  [type='ferry'] {
+    line-color: darken(@waterway, 20%);
     line-dasharray: @rwzlo_da;
     [zoom>=15] { line-dasharray: @rwzhi_da; }
   }
